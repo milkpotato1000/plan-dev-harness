@@ -51,14 +51,44 @@ a branch push. Tracked child AGENTS.md and CLAUDE.md remain the repository rules
 
 ## Workflow boundary
 
-This is the reusable distribution, not an installed target project. Its source
-assets include queue and guard scripts, but this repository does not currently
-activate those target-project hooks or an adopted-plan JSON record. Do not run
-`python3 scripts/work_queue.py` or `python3 scripts/contract_guard.py` here.
-Prepare and commit requirements on plan, review and integrate the exact commit
-on dev, implement and record verification there. Preserve failures and execution
-logs. Inspect branch/status before changes and follow standing push authorization.
-Self-installing the generated harness would require its own scoped plan.
+This is the reusable distribution and now also uses its own repository-local
+harness. Installed runtime/configuration under scripts/, .harness/ and docs/process/
+is separate from the distributable assets/. The setup scope and source are recorded
+in [the setup review](planning/reviews/local-harness-setup.md). Package changes do
+not automatically upgrade this installed runtime.
+
+Prepare requirements on plan, integrate and adopt the exact reviewed commit on dev,
+then implement and record verification there. Preserve failures and execution logs.
+Read the branch-specific `docs/process/agent-workflow.md` and `work-queue.md`.
+The pre-harness P001 remains historical; future parsed P cards begin at P002.
+
+```sh
+# Run from the selected child, not this container.
+python3 scripts/work_queue.py --owner all --brief
+# On dev:
+python3 scripts/contract_guard.py check --target worktree
+python3 scripts/contract_guard.py check --target index
+python3 scripts/contract_guard.py check --target HEAD
+```
+
+### Local hook activation
+
+The released main worktree has no installed runtime. Use worktree-specific hook
+settings for plan/dev so main's release tree and configuration stay unchanged.
+After reviewing the existing Git config (including core.worktree/core.bare), with
+all plan/dev runtime files committed and dev adoption recorded:
+
+```sh
+git -C plan-dev-harness_plan config --local extensions.worktreeConfig true
+git -C plan-dev-harness_plan config --worktree core.hooksPath .githooks
+git -C plan-dev-harness_dev config --worktree core.hooksPath .githooks
+```
+
+These Git settings and the outer entrypoints are local and need recreation after
+cloning. Do not use `contract_guard.py install` in this topology: it sets a shared
+hooksPath, which requires runtime files in every participating worktree. Main
+promotion and release hook setup require an explicit user request. Existing
+standing plan/dev push permission applies to the configured origin.
 
 ## Relocation verification (2026-10-29)
 
