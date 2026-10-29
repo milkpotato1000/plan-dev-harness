@@ -97,3 +97,61 @@ Existing v0.1.0 manifests support the same-option --upgrade path. New scripts an
 process documents are managed; live requests/checkpoints/handoffs and extra adapter
 hooks are not installer payloads. Review ownership additions before adopting on dev.
 Installation does not repair malformed historical records or install optional adapters.
+
+## Authorized delivery
+
+Follow [direct handoff](direct-handoff.md) for human authority, verified recipients,
+committed SHA/document, actual send/receipt evidence, deduplication and fallback.
+The installed project procedure is complete in docs/process/workflow-controls.md;
+queue/CLI reads never message a chat. A supported, authorized agent delivery is
+performed directly; it does not require a new permission or user copy step.
+
+## Source, project runtime and personal skill transitions
+
+The distribution source has VERSION, SKILL.md, references/, scripts/ and assets/.
+install_harness.py copies assets into a project's scripts/ and docs/process/ with
+.harness/installation.json hashes; changing source assets does not update a project.
+Project --upgrade requires its original flags and unmodified managed hashes.
+Preview is read-only; review options, manifest, extra hooks, instructions and live
+records before applying under that project's authority. Commit reviewed changes
+on plan, integrate/adopt the exact SHA on dev and verify again. Legacy installs
+without a manifest need reviewed integration, not a fabricated manifest.
+
+install_skill.py separately copies a self-contained skill package. It has no
+--upgrade flag. Its Codex default is ~/.agents/skills; a loaded ~/.codex/skills
+installation is a different path. Claude defaults to ~/.claude/skills. Inspect the
+actual loaded skill path, VERSION and payload before choosing a transition; same
+name does not mean same version or active copy. Never change personal installations
+as a side effect of a project task.
+
+For an authorized skill transition, preserve/back up the old payload and user
+extensions, preview a fresh destination with --skills-dir, then apply using the
+same flags. Test its standalone scripts, references and assets before selecting
+it in the host. Do not leave two copies simultaneously active under the same name.
+Choose the supported discovery path deliberately, reopen/refresh discovery if
+needed and reread the selected SKILL.md. File copying alone proves no activation.
+Conflict refusal preserves the old destination; it is not permission to force it.
+
+## Legacy setup capabilities retained in this workflow
+
+Before setup, inspect instructions, status, branches, worktrees, remotes, upstreams,
+hooks and active writers. Infer the local parent/name and existing repository from
+that evidence; ask together only for missing destination/branch decisions. Reuse
+suitable checkouts. For a new hosted repository verify the authenticated identity,
+exact owner/name, nonexistence and agreed visibility; do not assume an organization
+or reuse another project's accounts. A visibility choice and publication require
+human authority. Never request tokens in chat.
+
+New local bootstrap creates infrastructure only. GitHub discovery/creation and
+remote configuration are separate host connector/CLI actions, not features of
+install_harness.py. Add only agreed exact remotes and publish only authorized
+branches with normal pushes; verify destination SHAs. Main publication/promotion
+needs explicit authorization. Existing histories must not be reset or force-joined.
+For existing repositories add only missing linked worktrees, coordinate active
+writers and preserve dirty/ignored files. See [workspace migration](workspace-layout.md).
+
+Keep existing project instructions and optional service adapters. Use --agent none
+and reviewed instruction integration when necessary; do not remove extensions to
+make a package fit. P-card ownership, immutable intake, exact adoption, pauses and
+evidence remain in the installed workflow. Report local-only versus pushed state,
+actual checks, loaded paths and unverified limits across computers.

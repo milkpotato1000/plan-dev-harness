@@ -52,4 +52,8 @@ explicit user pauses. Read [controls](assets/docs/process/workflow-controls.md)
 when installing/upgrading these features. Preserve legacy decisions/checkpoints,
 plan-owned scope classification and actual delivery evidence. A package upgrade
 must not resume work or replace a project's same-named daily-work skill.
+For authorized delivery to an existing role chat, follow
+[direct handoff](references/direct-handoff.md). Verify the human grant and recipient,
+send directly when supported, and observe actual receipt without ACK loops.
+This procedure grants no messaging authority by itself.
 External integrations follow [adapter boundaries](assets/docs/process/optional-adapters.md).

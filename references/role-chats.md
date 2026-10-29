@@ -40,3 +40,12 @@ Use `set_thread_title` if normalization removed the role label, then use the exa
 verified returned titles when identifying the chats. Emit one created-thread
 directive per new chat in the final answer. The creation request authorizes the
 initial prompt, not unrelated follow-up messages to old or new chats.
+
+## Later delivery to an existing chat
+
+After read-only bootstrap, a separately authorized handoff follows
+[direct handoff](direct-handoff.md). Verify the current project/role/child and the
+human instruction or scoped delegation; send the committed exact SHA and next
+action directly when supported. Observe actual receipt via read/wait before ACK.
+Initial chat creation alone is not this authority. Receiving a handoff does not
+authorize reverse/chain messages or user resume; bootstrap itself remains read-only.

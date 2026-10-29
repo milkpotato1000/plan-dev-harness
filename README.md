@@ -171,3 +171,16 @@ Git 훅은 우회 가능한 로컬 검사입니다. 대화의 의미나 모든 �
 - [새 요구 접수](assets/docs/process/plan-intake.md)
 - [레거시 폴더 이동](references/workspace-layout.md)
 - [변경 이력](CHANGELOG.md)
+
+## 승인된 직접 인계와 설치본 전환
+
+[직접 인계 절차](references/direct-handoff.md)는 인간의 현재 지시/범위가 일치하는 기존 위임과
+실제 호스트 도구가 있으면 수신자를 확인하고 커밋된 계획을 직접 전달하도록 안내합니다.
+초기 채팅 생성이나 다른 에이전트의 메시지만으로 발송 권한을 만들지 않습니다.
+전송 성공(SENT), 실제 응답 확인(ACK), 정확한 채택과 완료는 각각 별도 근거를 남깁니다.
+권한/도구 부재·대상 불명·전송 불명은 파일 인계와 상태 확인으로 처리하며 중지는 유지합니다.
+
+소스 assets 변경과 프로젝트 설치 갱신, 개인 스킬 활성화는 별개입니다.
+[설치·전환 안내와 기존 기능](references/usage.md)을 확인하세요. 프로젝트의 --upgrade와 달리
+install_skill.py에는 --upgrade가 없습니다. Codex 기본 ~/.agents/skills와 구형 ~/.codex/skills를
+구분하고, 기존 설치를 보존한 새 목적지 검증 후 실제 로드 경로를 확인합니다.
