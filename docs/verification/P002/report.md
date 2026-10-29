@@ -18,3 +18,6 @@ This input wait affects P002 only. No actual project PAUSED/OPEN record exists;
 independent adopted P003 policy/distribution work may proceed. The empty fixture
 queue and one session's preparation are insufficient for C1 PASS. Automatic
 regression is supplementary and cannot replace two-session evidence.
+
+Supplementary full regression: regression.log, Python 3.9.6, 67 PASS (P003 final run).
+This adds no actual-session PASS and does not advance C1–C5.

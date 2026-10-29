@@ -129,7 +129,9 @@ class DistributionTests(unittest.TestCase):
                 actual=project/'docs/process'/name
                 self.assertEqual(actual.read_bytes(),(BASE/'docs/process'/name).read_bytes())
             self.assertEqual((project/'docs/process/agent-workflow.md').read_bytes(),
-                             (BASE/'docs/process/agent-workflow.md').read_bytes())
+                             (skill/'assets/instructions/agent-workflow.md').read_bytes())
+            self.assertEqual((project/'AGENTS.md').read_bytes(),
+                             (skill/'assets/instructions/AGENTS.md').read_bytes())
             self.assert_local_links(project,['docs/process/workflow-controls.md',
                 'docs/process/optional-adapters.md','docs/process/handoff-template.md',
                 'docs/process/agent-workflow.md'])
@@ -137,6 +139,38 @@ class DistributionTests(unittest.TestCase):
             for name,digest in manifest['files'].items():
                 self.assertEqual(hashlib.sha256((project/name).read_bytes()).hexdigest(),digest)
             self.cmd(sys.executable,str(project/'scripts/workflow_control.py'),'--help')
+
+            # Bootstrap from each independent package too: its generated outer
+            # entrypoint and every child must carry the rule, not just SKILL.md.
+            name='workspace-'+agent
+            bootstrap=[sys.executable,str(skill/'scripts/bootstrap_workspace.py'),
+                '--parent',str(self.root),'--name',name,
+                '--author-name','Harness Test','--author-email','fixture@example.invalid']
+            self.cmd(*bootstrap)
+            self.assertFalse((self.root/name).exists())
+            self.cmd(*bootstrap,'--apply')
+            workspace=self.root/name
+            expected=(skill/'assets/workspace/AGENTS.md.template').read_text()
+            for key,value in {'PROJECT':name,'PLAN_BRANCH':'plan','DEV_BRANCH':'dev',
+                'RELEASE_BRANCH':'main','PLAN_DIR_QUOTED':name+'_plan',
+                'DEV_DIR_QUOTED':name+'_dev'}.items():
+                expected=expected.replace('{{'+key+'}}',value)
+            self.assertEqual((workspace/'AGENTS.md').read_text(),expected)
+            for role in ('main','plan','dev'):
+                child=workspace/(name+'_'+role)
+                self.assertEqual((child/'AGENTS.md').read_bytes(),(project/'AGENTS.md').read_bytes())
+                self.assertEqual((child/'docs/process/agent-workflow.md').read_bytes(),
+                                 (project/'docs/process/agent-workflow.md').read_bytes())
+                self.assertEqual((child/'docs/process/workspace-AGENTS.md').read_text(),expected)
+            for role in ('plan','dev'):
+                prompt=skill/('assets/workspace/'+role+'-chat.md.template')
+                self.assertEqual(prompt.read_bytes(),(BASE/prompt.relative_to(skill)).read_bytes())
+            dev=workspace/(name+'_dev')
+            queue=json.loads(self.cmd(sys.executable,'scripts/work_queue.py',
+                '--owner','all','--json',cwd=dev).stdout)
+            self.assertEqual(queue['tasks'],[])
+            self.assertEqual(queue['handoffs'],[])
+            self.assertEqual(self.cmd('git','remote','-v',cwd=dev).stdout,'')
 
     def test_bootstrap_preview_then_real_shared_worktrees(self):
         args=['--parent',str(self.root),'--name','demo','--plan-branch','design',

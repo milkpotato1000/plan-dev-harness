@@ -1,0 +1,82 @@
+[
+  {
+    "at": "2026-10-29T08:12:48.301001+00:00",
+    "argv": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-29T08:12:48.594619+00:00",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "worktree"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "stdout": "PASS: contracts match adopted plan 283ddd331eb5\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-29T08:12:49.103566+00:00",
+    "argv": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 283ddd331eb5 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P002\",\n      \"depends_on\": [],\n      \"title\": \"실제 세션 간 결정 대기·중지·인계 흐름 검증\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"BLOCKED\",\n      \"reason\": \"S0 격리 환경 준비 완료; 실제 사용자 run/path 전달 및 별도 plan 세션 참여 입력 대기. 중지/결정 기록을 생성하지 않으며 C1 미체크; docs/verification/P002/report.md에서 재개.\",\n      \"work_order\": \"docs/planning/plans/P002.md\",\n      \"checked\": 0,\n      \"total\": 5,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"S0에서 서로 다른 실제 plan/dev 채팅과 역할별 writer·경로·소스 및 채택 SHA를 확인하고, 검증 환경 격리·preview·초기 상태 증거를 커밋했다.\",\n        \"C2\": \"S1의 미분류 전체 차단·범위 분류·정확한 채택 전후·관련 및 의존 차단·무관 작업 진행·결정 해결과 SHA 거부 검사를 실제 세션별 증거로 통과했다.\",\n        \"C3\": \"S2~S3의 미커밋/커밋 가시성·역할 및 전체 중지·명시 재개·상대 중지 및 결정 유지가 단계별 실제 사용자 발언과 세션 행동·큐 증거에 일치했다.\",\n        \"C4\": \"S4의 실제 양방향 인계가 중복·잘못된 전이 거부를 포함해 PENDING→SENT→ACKNOWLEDGED로 진행했고, 모든 전달·수신 상태에 실제 근거가 있다.\",\n        \"C5\": \"S5에서 전체 회귀·guard·큐와 증거 정합성을 확인하고, 실패·재검증·미확인 경계 및 보존 상태를 담은 결과 보고서와 각 조건의 최신 PASS 증거를 dev에 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P003\",\n      \"depends_on\": [],\n      \"title\": \"명시 승인된 직접 인계 절차와 배포 정합성 개선\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"DONE\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P003.md\",\n      \"checked\": 5,\n      \"total\": 5,\n      \"completed_checks\": [\n        \"C1\",\n        \"C2\",\n        \"C3\",\n        \"C4\",\n        \"C5\"\n      ],\n      \"acceptance\": {\n        \"C1\": \"인간의 명시 지시/범위 한정 위임과 비승인을 구별하는 직접 인계 절차가 소스·배포 지침에 연결되고 M1~M3의 기대값을 충족했다.\",\n        \"C2\": \"대상·정확 SHA·문서·다음 행동·권한 근거와 실제 전달/수신 증거를 연결하며 중복·ACK 핑퐁·불명 결과·무권한 발송을 막는 M4~M8 검토를 통과했다.\",\n        \"C3\": \"미승인/도구 부재/대상 불명/명시 중지의 fallback과 exact adoption을 보존하고 기존 P002 및 제어 회귀와 충돌하지 않았다.\",\n        \"C4\": \"임시 Codex/Claude 패키지와 프로젝트 설치/업그레이드 검증에서 링크·payload·manifest 및 충돌/구형 설치 보존을 확인하고 실제 설치 전환과 구별했다.\",\n        \"C5\": \"소스·배포·설치본 차이 및 전환 안내, 기능 보존 대조표, 전체 회귀·guard·큐와 실패/한계의 커밋된 증거가 일치한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": [\n    {\n      \"schema_version\": 1,\n      \"kind\": \"WORK_READY\",\n      \"target_role\": \"dev\",\n      \"source_role\": \"plan\",\n      \"commit\": \"9fd7644e9c4973dc468bf27001dc5821f0c676dc\",\n      \"document\": \"docs/planning/reviews/P002-P003-dev-handoff.md\",\n      \"summary\": \"P002/P003 준비 완료와 프로젝트 한정 직접 전달·착수 위임\",\n      \"next_action\": \"정확한 발송 snapshot 통합·채택 후 P002 준비와 허용된 독립 P003 구현 착수\",\n      \"status\": \"ACKNOWLEDGED\",\n      \"history\": [\n        {\n          \"status\": \"PENDING\",\n          \"at\": \"2026-10-29T08:00:42.080509+00:00\",\n          \"evidence\": \"Created locally; not sent\"\n        },\n        {\n          \"status\": \"SENT\",\n          \"at\": \"2026-10-29T08:01:48.457914+00:00\",\n          \"evidence\": \"docs/planning/reviews/P002-P003-delivery.md: send_message_to_thread 실제 성공, 검증된 dev 대상과 80dbb3b4e53ffd8f7427e48cb7c827a22f6aa5f4 전달\"\n        },\n        {\n          \"status\": \"ACKNOWLEDGED\",\n          \"at\": \"2026-10-29T08:02:48.928916+00:00\",\n          \"evidence\": \"docs/planning/reviews/P002-P003-delivery.md: read_thread의 실제 SHA·문서 수신 응답과 git show 성공; 별도 dev 77b757cce25dd2f5ee5b3751dbfb26fb70d88d08 정확 채택 확인\"\n        }\n      ],\n      \"id\": \"0e9df2a244fbbfa12538d901139956f3a44383033fe49ab4fd866d2b30ae905f\",\n      \"path\": \"docs/progress/handoffs/plan/0e9df2a244fbbfa12538d901139956f3a44383033fe49ab4fd866d2b30ae905f.json\"\n    },\n    {\n      \"schema_version\": 1,\n      \"kind\": \"WORK_READY\",\n      \"target_role\": \"dev\",\n      \"source_role\": \"plan\",\n      \"commit\": \"a4658cfedbd36036079b68b043984b4ae0bde3c0\",\n      \"document\": \"docs/planning/reviews/P003-installable-rule.md\",\n      \"summary\": \"P003 설치형 플러그인 본체·생성 AGENTS·역할 템플릿의 직접 인계 규칙 반영 구체화\",\n      \"next_action\": \"기존 작업 보존 후 이 발송 snapshot 정확 재채택·P003 배포 반영 및 독립 설치 출력 검증\",\n      \"status\": \"ACKNOWLEDGED\",\n      \"history\": [\n        {\n          \"status\": \"PENDING\",\n          \"at\": \"2026-10-29T08:05:38.111899+00:00\",\n          \"evidence\": \"Created locally; not sent\"\n        },\n        {\n          \"status\": \"SENT\",\n          \"at\": \"2026-10-29T08:06:30.758677+00:00\",\n          \"evidence\": \"docs/planning/reviews/P003-installable-delivery.md: 정확 snapshot 283ddd331eb5196bc6b2f36b0ced15ad3ce2ba74 설치형 반영 지시 send_message_to_thread 성공\"\n        },\n        {\n          \"status\": \"ACKNOWLEDGED\",\n          \"at\": \"2026-10-29T08:09:02.060328+00:00\",\n          \"evidence\": \"docs/planning/reviews/P003-installable-delivery.md: 실제 dev 응답·계약 git show 성공 및 84ea10a 정확 재채택 확인\"\n        }\n      ],\n      \"id\": \"4e519d44993ec87c8ab8e3cf8b27fdd400ab380970112ebdfefa0e9e38386a4c\",\n      \"path\": \"docs/progress/handoffs/plan/4e519d44993ec87c8ab8e3cf8b27fdd400ab380970112ebdfefa0e9e38386a4c.json\"\n    }\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-29T08:12:49.655468+00:00",
+    "argv": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--open"
+    ],
+    "exit_code": 1,
+    "expected_exit": 1,
+    "stdout": "dev는 채택한 plan 283ddd331eb5 기준. 이후 plan 초안은 자동 채택하지 않음.\nplan 다음 작업: 실행 가능한 승인 작업 없음\ndev 다음 작업: 실행 가능한 승인 작업 없음\nplan 새 요구 검토 대기: 0건 (구현 승인과 별개)\n[차단] P002 실제 세션 간 결정 대기·중지·인계 흐름 검증 — 0/5 (dev)\n  S0 격리 환경 준비 완료; 실제 사용자 run/path 전달 및 별도 plan 세션 참여 입력 대기. 중지/결정 기록을 생성하지 않으며 C1 미체크; docs/verification/P002/report.md에서 재개.\n조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-29T08:12:49.668942+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "main"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "stdout": "803d658a8c61dc6aa007645a98d4160b16746faa\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-29T08:12:49.680995+00:00",
+    "argv": [
+      "git",
+      "config",
+      "--show-origin",
+      "--get",
+      "core.hooksPath"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "stdout": "file:<workspace>/plan-dev-harness_main/.git/worktrees/plan-dev-harness-v020/config.worktree\t.githooks\n",
+    "stderr": ""
+  }
+]

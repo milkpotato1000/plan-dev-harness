@@ -49,3 +49,7 @@ human instruction or scoped delegation; send the committed exact SHA and next
 action directly when supported. Observe actual receipt via read/wait before ACK.
 Initial chat creation alone is not this authority. Receiving a handoff does not
 authorize reverse/chain messages or user resume; bootstrap itself remains read-only.
+
+인간이 해당 프로젝트의 plan→dev 전달·착수를 위임한 경우 plan은 검토된 READY 계획의 정확 SHA를
+확인된 기존 dev에 직접 전달하고, dev는 기존 작업·실패를 보존해 통합·정확 채택·커밋·guard/큐
+확인 후 승인 범위를 시작합니다. 설치 자체는 위임이 아니며 초기화는 읽기 전용 대기를 유지합니다.

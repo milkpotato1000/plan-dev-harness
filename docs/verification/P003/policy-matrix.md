@@ -38,3 +38,11 @@ P002/P003 handoff, read docs/planning/reviews/P002-P003-dev-handoff.md, integrat
 and adopted its specified full snapshot at 77b757cce25dd2f5ee5b3751dbfb26fb70d88d08.
 The source plan owns SENT/ACK records; this chat did not change them or send a
 reverse message. This is not P002's fixture S4 or a full live M1–M8 campaign.
+
+
+Follow-up clarification 283ddd331eb5196bc6b2f36b0ced15ad3ce2ba74 was adopted at
+84ea10a after preserving work. Project/workspace AGENTS and common instructions now
+carry the same conditional READY delivery and dev exact-adoption/start rule; both
+role templates retain read-only bootstrap and human grant requirements. Raw
+installed outputs and fingerprints are preserved in outputs/ and payload-hashes.json.
+These additions do not modify the M1–M8 expectations or P002's actual-input gates.

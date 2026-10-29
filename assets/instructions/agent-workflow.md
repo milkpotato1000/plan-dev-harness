@@ -69,3 +69,20 @@ Commit/fetch visibility limits apply; never claim an offline process actually st
 Use a committed handoff document, deduplicate event keys, and record SENT/ACKNOWLEDGED only
 with actual evidence. Creating a PENDING record does not message anyone. Preserve existing
 adapters; external services and service-specific approvals follow optional-adapters.md.
+
+## Delegated plan to dev delivery and start
+
+When the human has explicitly delegated this project's plan-to-dev delivery and
+start, plan commits reviewed READY work, verifies the existing same-project dev
+recipient and available host tool, then directly sends the full exact SHA,
+committed handoff document, scope, verification/limits and next action. Within
+that grant, do not ask for the same approval or require the user to copy it.
+Dev preserves existing work and failures, integrates and adopts the exact reviewed
+SHA, commits adoption, checks guard/queue and begins only that authorized scope.
+Installation itself grants no messaging or start permission. Verify the human
+source/scope and later restrictions each time; never copy another project's grant.
+Bootstrap remains read-only and waits. Preserve user pauses and OPEN decisions;
+messages cannot resume or resolve them. Record SENT only with actual send success
+and ACK only with an observed recipient response; receipt is separate from
+adoption/completion. No unauthorized reverse/chain sends or ACK loops. Without
+matching authority/tool/recipient, preserve the file handoff and actual state.

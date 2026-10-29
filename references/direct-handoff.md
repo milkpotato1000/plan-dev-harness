@@ -46,7 +46,11 @@ release or cross-project/reverse messages.
    observation and commit it. Without receipt evidence, keep SENT. The receiver
    need not send a reverse message: use available read/wait observation.
 7. ACK confirms receipt. Exact adoption and task completion still need their own
-   evidence. The recipient follows its own role and adopted scope. Receiving this
+   evidence. When the human's actual grant includes plan-to-dev delivery and
+   start, plan sends committed reviewed READY work; dev preserves its work/failures,
+   integrates/adopts the specified full SHA, commits adoption, checks guard/queue
+   and begins that authorized scope. Installation itself grants neither sending
+   nor starting authority. The recipient follows its own role and adopted scope. Receiving this
    handoff does not grant authority to reply to or forward messages to other chats.
 
 ## Retries and fallback
