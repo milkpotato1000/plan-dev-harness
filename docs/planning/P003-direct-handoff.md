@@ -94,6 +94,11 @@ plan이 정책 계약 변경과 구현 범위를 확정했다. dev는 정확한 
   references/usage.md·README.md의 진입 링크와 안내를 갱신한다. 위 docs/process의 확정된
   제어·확장·양식 내용을 대응하는 assets/docs/process 파일에 반영하고, 승인된 역할 절차를
   assets/instructions/agent-workflow.md와 기존 역할 프롬프트 두 개에 반영한다.
+- [설치형 반영 검토](reviews/P003-installable-rule.md)에 따라 assets/instructions/AGENTS.md와
+  assets/workspace/AGENTS.md.template에도 같은 인계 절차의 진입점을 제공한다.
+  스킬 설치·프로젝트 설치·새 workspace 생성의 실제 출력물에서 조건부 직접 인계와 dev 착수,
+  정확한 채택·중지·증거 경계를 독립적으로 읽을 수 있어야 한다.
+  이 프로젝트의 실제 사용자 인용·대상 채팅·기존 위임을 범용 템플릿에 복제하지 않는다.
 - 설치본/배포본의 동일 기능과 유효한 링크를 확인한다. 설치 payload에서 source references로
   끊어진 링크를 만들지 않는다. 기존 installer가 새 파일을 누락한다면 기존 payload에 이미
   포함되는 문서에서 절차가 완결되도록 배치한다. 새 런타임/CLI flag를 추가하지 않는다.
@@ -116,6 +121,9 @@ M1~M8은 공개 가능한 시나리오·권한 근거·대상·명령/payload·�
 ## 필요한 검증과 결과 보고
 
 - 임시 Codex/Claude 스킬 payload의 새 reference/절차 파일·내부 링크와 설치 스크립트 실행을 검사한다.
+- 소스 저장소에 의존하지 않는 복사본으로 프로젝트 설치 및 새 workspace 생성을 수행해,
+  생성된 AGENTS/공통 절차/역할 프롬프트에 직접 인계·정확 채택 후 착수 규칙이 전파되는지 확인한다.
+  읽기 전용 bootstrap이 시작 권한으로 바뀌거나 실제 위임 없는 자동 발송이 추가되면 실패다.
 - 프로젝트 신규 설치와 기존 manifest 업그레이드의 preview 무변경, 동일 옵션 갱신, 사용자 수정
   충돌 시 보존을 실제 CLI로 검증한다. 구형 스킬 충돌 거부·원본 불변·새 경로 설치를 검사한다.
 - 기존 tests/test_distribution.py와 dev의 tests/test_workflow_controls.py를 포함해 전체 회귀를 수행한다.

@@ -7,12 +7,22 @@
   "document": "docs/planning/reviews/P002-P003-dev-handoff.md",
   "summary": "P002/P003 준비 완료와 프로젝트 한정 직접 전달·착수 위임",
   "next_action": "정확한 발송 snapshot 통합·채택 후 P002 준비와 허용된 독립 P003 구현 착수",
-  "status": "PENDING",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-10-29T08:00:42.080509+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-10-29T08:01:48.457914+00:00",
+      "evidence": "docs/planning/reviews/P002-P003-delivery.md: send_message_to_thread 실제 성공, 검증된 dev 대상과 80dbb3b4e53ffd8f7427e48cb7c827a22f6aa5f4 전달"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-10-29T08:02:48.928916+00:00",
+      "evidence": "docs/planning/reviews/P002-P003-delivery.md: read_thread의 실제 SHA·문서 수신 응답과 git show 성공; 별도 dev 77b757cce25dd2f5ee5b3751dbfb26fb70d88d08 정확 채택 확인"
     }
   ]
 }
