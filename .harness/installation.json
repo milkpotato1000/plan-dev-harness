@@ -24,10 +24,10 @@
     "docs/planning/plans/_TEMPLATE.md": "7ac1e72d1f8eba89899a3b7d290c6fd087e65011bc584d106dd18a7d10abfae8",
     "docs/process/work-queue.md": "b576c70ea2f614d776ebd47ede8aa5c1aa9272d1608398da59189357f167c0ea",
     "docs/process/plan-intake.md": "c7991e05ca6ba568ff21b5776fe38299cbdc7ce89b69577d0883aead15d55f72",
-    "docs/process/workflow-controls.md": "9a0a37deab0cfe13700e658eb941ca9b1c74690879ed74aef0ab4fa34a82d2aa",
-    "docs/process/optional-adapters.md": "3c99530984b3916da4da372fd5c7522e0faaa7fe792b1adfafff14444d6a3fdf",
+    "docs/process/workflow-controls.md": "7a3226518eb3a37e05956f443cf5a4116746aa88c9c1c86c48175a61b144b2a3",
+    "docs/process/optional-adapters.md": "0356c4384d839f0304f942c07593019e48ffcb83813b1e5ac7fbea06736d11bd",
     "docs/process/checkpoint-template.md": "79fcd8e681239b085c7e46e05c3607234d63220e4397f997f544f7885471dcea",
-    "docs/process/handoff-template.md": "e05128a29acb61b54f442134303bb5c5d3d352afb352b372a4befea3fc0260fc",
+    "docs/process/handoff-template.md": "03be4b2ac25287ec71c185f516431a546a4b71750f4c24c560a6053b41500b83",
     ".harness/policy.json": "2401af3b9f22ca0661a1ad6d793d59f2fbb05c2149ae2e4132b11336198737d5"
   }
 }

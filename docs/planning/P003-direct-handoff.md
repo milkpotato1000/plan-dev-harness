@@ -1,9 +1,10 @@
-# P003 직접 인계·배포 정합성 제안 계약
+# P003 직접 인계·배포 정합성 계약
 
-상태: 검토용 초안. [P003](plans/P003.md)의 요구 제안이며 현재 발송/설치 위임이 아니다.
+상태: 준비 검토 완료. [P003](plans/P003.md)의 확정 범위이며 상시 발송/개인 설치 위임이 아니다.
 요청과 실측 근거는 [접수 검토](reviews/P003-request-review.md)에 기록한다.
+확정 근거와 인수 절차는 [준비 검토](reviews/P003-readiness.md)를 따른다.
 
-## 제안하는 직접 인계 절차
+## 직접 인계 절차
 
 1. **인간 권한 확인.** 사용자의 현재 명시적 전달 지시 또는 실제 인간이 이미 부여한
    범위 한정 위임의 출처·시각/참조·프로젝트·수신 역할·허용 행동·유효 범위를 확인한다.
@@ -61,26 +62,56 @@
 P002는 이미 승인된 수동/선택적 도구 경로 그대로 진행한다. P003 때문에 P002 조건을
 추가하거나 기존 실패를 완료로 바꾸지 않는다.
 
-## 배포·설치 전환 제안
+## 배포·설치 전환 계약
 
-| 계층 | 후보 변경/검증 | 보존·권한 경계 |
+| 계층 | 변경/검증 | 보존·권한 경계 |
 | --- | --- | --- |
-| 배포 소스 | SKILL.md와 references/role-chats.md 또는 별도 handoff reference, references/usage.md, README의 연결 | 현재 dev의 v0.2 기능을 기준으로 구현. plan의 과거 배포 파일로 덮지 않음 |
+| 배포 소스 | SKILL.md·references/role-chats.md·references/usage.md·README에서 references/direct-handoff.md 절차로 연결 | 현재 dev의 v0.2 기능을 기준으로 구현. plan의 과거 배포 파일로 덮지 않음 |
 | 배포 assets | instructions/agent-workflow.md, 역할 프롬프트, docs/process/workflow-controls.md·optional-adapters.md·handoff-template.md의 절차/링크 | 임시 신규 설치·업그레이드에서 최종 payload에 포함되는지 검증 |
 | 이 저장소 installed 계약 | docs/process의 승인된 절차 개정은 plan이 작성·검토하고 dev가 정확히 채택 | assets 수정만으로 설치본이 갱신됐다고 하지 않음. 보호 계약을 dev가 임의 수정하지 않음 |
 | 다른 프로젝트 설치 | 기존 옵션·manifest hash와 사용자 확장을 비교하는 preview/동일 옵션 --upgrade 안내 | 이 카드가 다른 프로젝트에 apply하는 권한을 만들지 않음 |
 | 개인 스킬 패키지 | install_skill.py로 부재한 임시 --skills-dir에 preview/apply. Codex/Claude 독립 실행·상대 링크 확인 | 현재 CLI에는 개인 스킬 --upgrade가 없음. 존재하지 않는 플래그를 안내하지 않음 |
 | 구형 개인 설치 | 실제 로드 경로·payload·구형 기능을 비교하고 백업/새 목적지 설치/선택적 전환 안내 | ~/.codex/skills와 ~/.agents/skills를 같은 경로로 취급하지 않음. 묵시 덮어쓰기·동시 중복 활성화 금지 |
 
-초기 구현 후보는 기존 CLI와 호환되는 문서 어댑터 및 배포 검증이다. 새로운 스킬 업그레이더나
+구현 범위는 기존 CLI와 호환되는 문서 어댑터 및 배포 검증이다. 새로운 스킬 업그레이더나
 호스트 API 호출 런타임이 필요하다고 판단되면 별도 요구로 분리해 검토한다.
 긴 구형 SKILL의 프로젝트 목적지/저장소 탐색·생성·원격 권한·기존 확장 안내가 최신판에서
 어디로 이동/유지/변경되는지 대조표를 남겨, 단순 파일 교체로 사용자 기능을 잃지 않게 한다.
 
-준비 완료 전 plan은 정책 계약 변경과 구현 범위를 확정한다. dev는 정확한 계획 채택 후
-소스/배포 파일과 테스트를 변경한다. 개인 설치의 실제 전환은 별도 대상·시점·권한을 확인한 뒤
+plan이 정책 계약 변경과 구현 범위를 확정했다. dev는 정확한 계획 채택 후
+아래 소스/배포 파일과 테스트를 변경한다. 개인 설치의 실제 전환은 별도 대상·시점·권한을 확인한 뒤
 수행하며, 스킬을 다시 읽거나 앱의 검색 상태를 확인하지 않은 채 새 절차가 활성화됐다고 쓰지 않는다.
 이 저장소의 plan/dev 전용 훅 설정과 main 릴리스 상태는 보존한다.
+
+### 변경 파일과 인수 경계
+
+- plan 소유 확정본: docs/process/agent-workflow.md, workflow-controls.md,
+  optional-adapters.md, handoff-template.md 및 .harness/installation.json의 관리 대상 세 hash.
+  --agent none으로 수동 병합된 agent-workflow.md는 기존 manifest 관리 대상이 아니므로
+  이번에도 목록에 추가하지 않는다.
+  런타임 코드/설치 옵션/version/기존 managed 파일 목록은 바꾸지 않는다.
+- dev 배포 작업: references/direct-handoff.md 추가, SKILL.md·references/role-chats.md·
+  references/usage.md·README.md의 진입 링크와 안내를 갱신한다. 위 docs/process의 확정된
+  제어·확장·양식 내용을 대응하는 assets/docs/process 파일에 반영하고, 승인된 역할 절차를
+  assets/instructions/agent-workflow.md와 기존 역할 프롬프트 두 개에 반영한다.
+- 설치본/배포본의 동일 기능과 유효한 링크를 확인한다. 설치 payload에서 source references로
+  끊어진 링크를 만들지 않는다. 기존 installer가 새 파일을 누락한다면 기존 payload에 이미
+  포함되는 문서에서 절차가 완결되도록 배치한다. 새 런타임/CLI flag를 추가하지 않는다.
+- tests/test_distribution.py 및 필요한 해당 배포 검증 파일을 수정한다. 신규 의미 있는 검증은
+  실제 임시 설치·독립 payload·preview 무변경·legacy/충돌 보존에 둔다. 재사용할 수 있는
+  기존 회귀는 재사용하며 실제 호스트 메시지 분기를 모의 성공만으로 인증하지 않는다.
+- dev는 plan 소유 계약·hash를 임의 재작성하지 않는다. 구현 중 다른 계약이 필요하면
+  기존 intake→plan 검토→정확한 재채택을 따른다. 테스트/배포 소스 수정이 같은 이름의
+  installed scripts를 자동 갱신하거나 다른 프로젝트에 apply하는 것은 아니다.
+
+### P003 완료 판정의 실행 범위
+
+M1~M8은 공개 가능한 시나리오·권한 근거·대상·명령/payload·예상/실제·판정의 표로 검토한다.
+정책 검토와 패키지 회귀는 필수이며 실제 호스트의 live 발송은 별도 인간 권한이 있을 때만 한다.
+그 권한이 없을 때 live 발송 미수행을 보고하는 것은 P003의 정책/배포 검증과 구별한다.
+실제 세션 검증을 요구하는 P002 C1~C4는 여전히 별도이며 모의 검사로 충족되지 않는다.
+실제 수신/사용자 발언이 필요한 P002가 입력 대기이면 그 근거를 남기고, 별개 승인된 P003은
+해당 중지·결정 영향 범위가 허용하는 경우에 진행할 수 있다. P002를 완료로 바꾸지 않는다.
 
 ## 필요한 검증과 결과 보고
 
