@@ -57,3 +57,13 @@ Use the installed `docs/process/plan-intake.md`: immutable dev request, committe
 plan decision, prepared card, exact adoption. Use `CLAUDE.md` with `@AGENTS.md` to
 load the same ownership instructions in Claude Code. These are Git-owned rules;
 no particular chat API or coding agent is required.
+
+## Decisions, explicit stops and durable handoffs
+
+Use installed docs/process/workflow-controls.md. Unclassified decisions stop dev;
+plan-owned classifications can limit the stop to affected cards and their dependents.
+User pauses are independent, persist across sessions, and need explicit resume records.
+Do not delete or rewrite stops or delivery history to unblock a queue. Send messages
+only under user authorization and record actual delivery/receipt evidence. Existing
+project-local skills may share this skill's name; merge their operating rules deliberately
+instead of replacing them with this setup skill. Preserve optional project adapters.

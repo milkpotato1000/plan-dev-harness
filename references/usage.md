@@ -84,3 +84,16 @@ workflow, and add a Claude import without removing existing instructions. Review
 policy path changes explicitly. For a legacy installation without a manifest, the
 installer refuses to overwrite it; integrate the diff on plan rather than fabricating
 an installation manifest to bypass conflict detection.
+
+## v0.2 workflow controls
+
+See [workflow-controls](../assets/docs/process/workflow-controls.md) for the complete
+CLI. Decision requests and generic intake serve different purposes: only a critical
+OPEN decision or a user pause blocks queue selection. Impact classifications belong
+to plan and must be adopted. Old records without scope remain conservative all-role
+pauses/all-dev decisions. A RESOLVED decision needs a full adopted plan SHA.
+
+Existing v0.1.0 manifests support the same-option --upgrade path. New scripts and
+process documents are managed; live requests/checkpoints/handoffs and extra adapter
+hooks are not installer payloads. Review ownership additions before adopting on dev.
+Installation does not repair malformed historical records or install optional adapters.

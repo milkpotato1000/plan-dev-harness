@@ -58,6 +58,8 @@ class DistributionTests(unittest.TestCase):
             self.assertIn('name: plan-dev-harness',(skill/'SKILL.md').read_text())
             self.cmd(sys.executable,str(skill/'scripts/install_harness.py'),'--help')
             self.assertTrue((skill/'assets/scripts/plan_intake.py').exists())
+            self.cmd(sys.executable,str(skill/'assets/scripts/workflow_control.py'),'--help')
+            self.assertTrue((skill/'assets/docs/process/workflow-controls.md').is_file())
 
     def test_skill_collision_and_symlink_refused(self):
         p=self.root/'skills';dest=p/'plan-dev-harness';dest.mkdir(parents=True)
@@ -70,13 +72,13 @@ class DistributionTests(unittest.TestCase):
     def test_upgrade_preview_and_unchanged_files_only(self):
         p=self.repo();self.install(p,'--apply')
         package=self.root/'next';shutil.copytree(BASE,package,ignore=shutil.ignore_patterns('.git','__pycache__'))
-        (package/'VERSION').write_text('0.1.1\n')
+        (package/'VERSION').write_text('0.3.0\n')
         target=package/'assets/scripts/plan_intake.py';target.write_text(target.read_text()+'\n# fixture next version\n')
         call=[sys.executable,str(package/'scripts/install_harness.py'),'--repo',str(p),'--protect','specs','--agent','both','--upgrade']
         before=(p/'scripts/plan_intake.py').read_bytes()
         self.cmd(*call);self.assertEqual((p/'scripts/plan_intake.py').read_bytes(),before)
         self.cmd(*call,'--apply');self.assertIn('fixture next version',(p/'scripts/plan_intake.py').read_text())
-        self.assertEqual(json.loads((p/'.harness/installation.json').read_text())['version'],'0.1.1')
+        self.assertEqual(json.loads((p/'.harness/installation.json').read_text())['version'],'0.3.0')
         (p/'scripts/plan_intake.py').write_text('User customization\n')
         self.cmd(*call,'--apply',ok=False)
         self.assertEqual((p/'scripts/plan_intake.py').read_text(),'User customization\n')

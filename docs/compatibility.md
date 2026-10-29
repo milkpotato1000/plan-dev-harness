@@ -8,7 +8,7 @@ Both agents read the same installed project rules; role is plan/dev, not tool na
 | --- | --- | --- |
 | Codex | AGENTS.md; self-contained skill in .agents/skills | CLI installer output, skill structure, runnable copied scripts |
 | Claude Code | CLAUDE.md importing @AGENTS.md; skill in .claude/skills | Same files/commands and conflict/standalone tests |
-| Common | Git hooks, exact adoption, P cards, queues, immutable intake | Real temporary Git repositories/worktrees |
+| Common | Git hooks, exact adoption, P cards, queues, immutable intake, workflow controls | Real temporary Git repositories/worktrees |
 
 No autonomous model session was launched to certify end-to-end compliance. CLI/skill
 support does not guarantee all models follow instructions or bypass host sandbox rules.
@@ -26,3 +26,8 @@ Official integration references checked 2026-10-29:
 The Claude bridge explicitly imports shared AGENTS.md, so the distribution does not
 rely on a specific release's implicit AGENTS.md discovery. Native app marketplace
 plugin packaging and automatic cross-host session orchestration are not included.
+
+Version 0.2 adds read-only control fields to queue JSON without removing old keys.
+Legacy Markdown decisions/checkpoints are read conservatively. v0.1 manifests can
+upgrade with the same install options. A customized or manifest-less project needs
+reviewed manual integration; no deployment/board/agent-specific rules are imported.

@@ -45,3 +45,18 @@ Without a messaging tool, Git and the handoff documents remain the shared record
 Explicit stops remain stopped until the human resumes; saving a checkpoint is not
 permission to restart work. Git hooks are local, bypassable checks, not a security
 boundary. CI/branch protection may be added independently but are not prerequisites.
+
+## Queue controls and handoffs
+
+Read `workflow-controls.md`. General intake does not pause unrelated work. When a
+critical decision blocks implementation, dev records PLAN_DECISION; plan classifies
+impact in protected decision-scopes, and dev adopts before applying that scope.
+Unclassified/legacy OPEN blocks all dev selection; scoped decisions also block dependents.
+Resolve only after adopting the actual decision plan, using its full SHA. Preserve requests.
+Record an explicit user stop using workflow_control.py pause and write the remaining work
+in the checkpoint. The default stops both roles; role-only scope needs matching user intent.
+Resume only from an actual human request. Another role's pause or an OPEN decision remains.
+Commit/fetch visibility limits apply; never claim an offline process actually stopped.
+Use a committed handoff document, deduplicate event keys, and record SENT/ACKNOWLEDGED only
+with actual evidence. Creating a PENDING record does not message anyone. Preserve existing
+adapters; external services and service-specific approvals follow optional-adapters.md.

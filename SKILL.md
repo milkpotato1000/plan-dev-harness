@@ -46,3 +46,10 @@ authorization and host support. When no tool exists, leave durable handoff files
 Optional legacy sibling-worktree migration uses `scripts/nest_worktrees.py`; read
 [its boundary](references/workspace-layout.md) and coordinate writers before moving.
 Never install/update this skill globally as a side effect of project installation.
+
+The installed v0.2 controls distinguish ordinary intake, critical decisions and
+explicit user pauses. Read [controls](assets/docs/process/workflow-controls.md)
+when installing/upgrading these features. Preserve legacy decisions/checkpoints,
+plan-owned scope classification and actual delivery evidence. A package upgrade
+must not resume work or replace a project's same-named daily-work skill.
+External integrations follow [adapter boundaries](assets/docs/process/optional-adapters.md).
