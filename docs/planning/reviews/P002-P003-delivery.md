@@ -18,4 +18,19 @@
 
 ## 수신 관찰
 
-대기 중. 송신 plan이 read/wait로 실제 응답을 확인한 뒤 별도로 기록한다.
+송신 plan이 wait_threads와 read_thread로 같은 dev의 실제 응답과 수행을 관찰했다.
+
+- dev는 응답에 수신한 `80dbb3b4e53ffd8f7427e48cb7c827a22f6aa5f4`와
+  `docs/planning/reviews/P002-P003-dev-handoff.md`를 명시했다.
+- 실제 dev child에서 위 SHA의 인계 문서·AGENTS·P002/P003 작업서·상세 계약·준비 검토·
+  프로젝트 위임을 git show로 읽은 명령들이 exit 0으로 완료된 것을 확인했다.
+- 해당 SHA의 merge와 adopt, 채택 파일 stage 및 merge commit이 exit 0으로 완료되었다.
+  커밋된 dev `77b757cce25dd2f5ee5b3751dbfb26fb70d88d08`의 채택 파일을 별도 확인했고
+  정확한 기준은 `80dbb3b4e53ffd8f7427e48cb7c827a22f6aa5f4`였다.
+- dev의 worktree/index/HEAD guard와 queue 확인 명령이 exit 0으로 완료되었고, 이어 실제
+  bootstrap·배포 소스·기존 회귀를 읽으며 준비/구현 검토를 시작한 상태였다.
+
+위 실제 수신 응답·문서 읽기를 근거로 ACKNOWLEDGED를 기록한다. 채택 커밋 확인은
+별도의 후속 관찰이며 제품 구현/시나리오 완료 증거는 아니다. 실제 사용자 입력이 필요한
+P002 단계와 P003 구현 결과는 해당 카드의 dev 실행/검증 증거로 판정한다.
+별도 역방향 ACK 메시지를 보내거나 수신 응답을 이유로 같은 인계를 재전송하지 않았다.
