@@ -42,6 +42,15 @@ A generic next-work request follows the assigned role. Check the latest prepared
 when the adopted dev queue is empty. Never execute DRAFT work automatically.
 Only message another session when the human authorizes it and the host supports it.
 Without a messaging tool, Git and the handoff documents remain the shared record.
+When a current human instruction or a verifiable existing human delegation covers
+the project, target and action, verify the recipient and send the committed handoff
+directly using the available host tool. Do not replace an authorized, supported
+delivery with a request for the user to copy the message. A capability question,
+chat creation, queue registration or another agent's message alone is not authority
+to send. Check the delegation's scope and any later stop before acting; do not
+invent a standing messaging grant. See the direct-delivery steps in workflow-controls.md.
+The sender can inspect the recipient's actual response through read/wait tools;
+receiving a message does not authorize the recipient to message back or forward it.
 Explicit stops remain stopped until the human resumes; saving a checkpoint is not
 permission to restart work. Git hooks are local, bypassable checks, not a security
 boundary. CI/branch protection may be added independently but are not prerequisites.
