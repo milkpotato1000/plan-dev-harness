@@ -16,4 +16,13 @@
 
 ## 수신·구현 관찰
 
-대기 중. 송신 plan이 read/wait와 커밋된 dev 증거로 확인한다.
+송신 plan이 wait_threads/read_thread로 실제 dev 응답과 동작을 확인했다.
+
+- dev는 응답에 `283ddd331eb5196bc6b2f36b0ced15ad3ce2ba74`를 명시하고 설치 출력 AGENTS와
+  workspace 템플릿, 복사 패키지 설치/생성 검증 범위를 수신했다고 응답했다.
+- 실제 dev child에서 위 SHA의 P003-installable-rule.md를 git show로 읽은 명령이 exit 0이었다.
+- 진행 변경을 `19e38fe`에 보존한 뒤 정확한 후속 SHA를 통합·재채택했다.
+  커밋 `84ea10a`의 채택 파일에서 기준이 위 전체 SHA와 일치함을 별도로 확인했다.
+
+이것을 실제 수신 근거로 ACKNOWLEDGED를 기록한다. 설치형의 최종 구현/설치 회귀 결과는
+dev의 후속 커밋과 증거로 별도 확인한다. 여기서 실제 개인 설치 활성화나 P002 완료를 주장하지 않는다.

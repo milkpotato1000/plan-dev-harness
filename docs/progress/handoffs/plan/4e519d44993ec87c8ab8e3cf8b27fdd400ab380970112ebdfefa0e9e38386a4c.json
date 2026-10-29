@@ -7,7 +7,7 @@
   "document": "docs/planning/reviews/P003-installable-rule.md",
   "summary": "P003 설치형 플러그인 본체·생성 AGENTS·역할 템플릿의 직접 인계 규칙 반영 구체화",
   "next_action": "기존 작업 보존 후 이 발송 snapshot 정확 재채택·P003 배포 반영 및 독립 설치 출력 검증",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-10-29T08:06:30.758677+00:00",
       "evidence": "docs/planning/reviews/P003-installable-delivery.md: 정확 snapshot 283ddd331eb5196bc6b2f36b0ced15ad3ce2ba74 설치형 반영 지시 send_message_to_thread 성공"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-10-29T08:09:02.060328+00:00",
+      "evidence": "docs/planning/reviews/P003-installable-delivery.md: 실제 dev 응답·계약 git show 성공 및 84ea10a 정확 재채택 확인"
     }
   ]
 }
