@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "9fd7644e9c4973dc468bf27001dc5821f0c676dc",
+  "document": "docs/planning/reviews/P002-P003-dev-handoff.md",
+  "summary": "P002/P003 준비 완료와 프로젝트 한정 직접 전달·착수 위임",
+  "next_action": "정확한 발송 snapshot 통합·채택 후 P002 준비와 허용된 독립 P003 구현 착수",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-10-29T08:00:42.080509+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
