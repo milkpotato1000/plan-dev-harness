@@ -62,3 +62,19 @@ release/tag, a force push, or sending messages to other chats. Honor standing
 non-force plan/dev push authorization to the existing configured remote.
 
 Setup/review reference: `docs/planning/reviews/local-harness-setup.md`.
+
+## Project-specific plan to dev delivery delegation
+
+On 2026-10-29 the human requested: "plan이 자동으로 dev 로 계획 넘겨서 시작하게 해줘."
+For this repository, plan sends committed, reviewed READY work directly to the
+verified existing dev chat in the same project and asks it to integrate, adopt the
+exact full plan SHA and begin the authorized queue. Do not ask the human to copy
+the handoff or reapprove the same scoped delivery. Check the current recipient,
+queue, user stops and actual delivery evidence on each handoff; deduplicate events.
+This applies when plan finishes preparing work within a human-authorized project
+objective, not to drafts or newly invented scope. It does not grant cross-project
+messaging, reverse/chain messages, new chats, personal skill updates, releases or
+resuming a user stop. Queue/CLI reads do not send messages. Use the existing host
+send tool, then read/wait for actual receipt; preserve SENT versus ACK versus
+adoption/completion. If the host cannot send, leave the committed file handoff.
+See `docs/planning/reviews/plan-dev-delivery-delegation.md` for scope and evidence.
