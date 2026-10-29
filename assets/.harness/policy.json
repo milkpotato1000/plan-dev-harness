@@ -1,0 +1,24 @@
+{
+  "planning_branch": "plan",
+  "development_branch": "dev",
+  "release_branch": "main",
+  "protected_paths": [
+    "AGENTS.md",
+    "docs/planning",
+    "docs/architecture",
+    "docs/process",
+    "config",
+    ".harness/policy.json",
+    "scripts/contract_guard.py",
+    ".githooks",
+    "docs/planning/plans",
+    "scripts/work_queue.py",
+    "scripts/plan_cards.py",
+    "CLAUDE.md",
+    "scripts/plan_intake.py",
+    "docs/planning/request-decisions",
+    ".harness/installation.json"
+  ],
+  "baseline_file": ".harness/adopted-plan.json",
+  "p_card_execution": true
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "기획·개발 분리 하네스"
+  short_description: "저장소·plan/dev 폴더부터 P번호 기획·개발 큐와 보호 규칙까지 구성"
+  default_prompt: "$plan-dev-harness로 이 프로젝트에 기획·개발 분리 하네스를 구성해줘."
