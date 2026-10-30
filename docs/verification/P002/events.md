@@ -8,3 +8,6 @@
 
 Timestamps, command inputs, output, exit codes and fixture commits are in S0/commands.json.
 No counterpart observation commit is asserted before its actual participation.
+
+| P002-20261029-A / S0 recheck 2026-10-30T11:37:48+09:00 | session-dev received follow-up and revalidated retained fixture | clean/original hashes/guards/no records expected; observed | S0/recheck-20261030.json |
+| same / S0 actual input request | session-dev showed exact per-role paths and human message text in this dev chat | real user participation and plan card SHA required; pending | S0/next-input.md |
