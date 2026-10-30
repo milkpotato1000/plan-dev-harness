@@ -37,3 +37,19 @@ commands, patch and hashes are exported here. Local shared-Git visibility only.
 S2 step 3 remains pending a later actual human resume directly in session-plan.
 The current pause stays active. Dev requested that direct input and performed
 only state/evidence work. C3 covers S2 and S3, so C3 remains unchecked; overall 2/5.
+
+## S2 explicit human resume — PASS, S2 complete
+
+After the pause and both visibility observations, the actual human directly told
+session-plan “P002-20261029-A 시험의 plan 역할을 이제 재개해줘.” Session-dev
+read this direct human message using the host tool. Session-plan resumed only its
+own fixture role, preserving PAUSE history, and committed checkpoint/evidence at
+8e1ae7d56149937914c507e470a5cb99356a0671. Its actual report and exported records
+show next.plan=P904, next.dev=P901 and no pauses or decisions. Session-dev then
+independently queried its own queue with the same expected result and verified
+original PAUSE history remains present with a new RESUME entry. Guard passes.
+See resume-dev-commands.json, resume-dev-queue.json and resume-exports.json.
+
+S2 PASS: actual separate stop/resume inputs and actual role-separated observations
+support pre/post commit visibility and restored plan selection. C3 still includes
+S3 and remains unchecked. No future pause/resume is authorized by this input.
