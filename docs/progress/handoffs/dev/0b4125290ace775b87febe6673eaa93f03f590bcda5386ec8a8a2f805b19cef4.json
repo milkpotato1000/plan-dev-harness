@@ -7,7 +7,7 @@
   "document": "docs/verification/P002/S1/coordination.md",
   "summary": "P002 S1 실제 영향 범위 검토 요청",
   "next_action": "fixture 질문5295c5b의 P901 scope만 별도 검토·커밋하고 전체 SHA 응답",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-10-30T02:49:00.477726+00:00",
       "evidence": "2026-10-30 host send_message_to_thread 실제 성공, session-plan 응답 대기"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-10-30T02:50:07.448021+00:00",
+      "evidence": "docs/verification/P002/S1/coordination.md: actual plan response full acdaf30c scope/review and next action observed via wait_threads"
     }
   ]
 }
