@@ -24,3 +24,22 @@ Status SENT only at this observation. A target becoming active is not ACK or S0
 completion. The actual response will be observed via read/wait and recorded later.
 No receiver reverse message is requested. This real coordination is not fixture
 S4, and does not satisfy future actual human pause/resume inputs.
+
+## Verified receipt gap and second attempt
+
+The first bounded wait completed on an unrelated upgrade-advice answer. read_thread
+showed a real intervening human question, no S0 SHA/document acknowledgment, and
+fixture plan remained 13cca35f6398478a495a3333e42637490d192458 with no P901.
+Therefore no ACK was recorded. After checking both recipient response and Git,
+the sender made one explicit continuation attempt under the same human send
+authority, same event/document/key. The second send tool succeeded and the target
+was active. This was not a blind timeout retry, new event or ACK resend.
+Awaiting its actual S0 response; neither tool success nor active status is PASS.
+
+## Actual receipt observed
+
+A later bounded wait returned session-plan's actual S0 completion response naming
+11706bf5ea2b4091be46784911ad38a4f2e507e0, P901–P904/readiness/participation, guard PASS, next.plan=P904 and
+next.dev=P901. read_thread confirmed it directly inspected the human reply and
+committed its own evidence. This is sufficient for this coordination ACK; fixture
+dev adoption was separately performed at 632cc4b4ab5c57546c6fd505cb558e17ed19bbb1. Neither implies all P002 complete.

@@ -7,7 +7,7 @@
   "document": "docs/verification/P002/S0/plan-participation-handoff.md",
   "summary": "실제 인간 S0 입력과 fixture plan 참여 요청의 승인된 전달",
   "next_action": "P002-20261029-A fixture plan에서 P901~P904 준비 커밋과 실제 참여 근거·전체 SHA 응답",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-10-30T02:40:02.876249+00:00",
       "evidence": "docs/verification/P002/S0/plan-participation-delivery.md: 실제 send_message_to_thread 성공; 현재 응답 대기"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-10-30T02:43:25.066199+00:00",
+      "evidence": "docs/verification/P002/S0/plan-participation-delivery.md: wait/read의 실제 plan 11706bf5 전체 SHA·S0 문서·다음 행동 응답 관찰"
     }
   ]
 }
