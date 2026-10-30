@@ -32,3 +32,14 @@ create a separate reviewed marker decision VERIFIED-P002-20261029-A. Return
 full decision SHA, review path and plan queue/guard evidence. Keep OPEN unresolved;
 dev must first test rejection using the unadopted full decision SHA, adopt exactly,
 test the short SHA rejection, then resolve using the adopted full SHA.
+
+## Actual decision delivery and final receipt
+
+The marker request was delivered successfully with the host send tool. Actual plan
+responded with decision e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee and its
+review/commands. Dev read and exactly adopted it, then completed the prescribed
+rejected/accepted resolution sequence. A subsequent successful host delivery asked
+plan to read committed final dev295237313 and prepare only the S2 observation
+protocol. Plan independently returned observation9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd.
+These are actual observed responses, not presumed receipts. S2 still awaits an
+actual human message directly in session-plan; no stop/resume was relayed.

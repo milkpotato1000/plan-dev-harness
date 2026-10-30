@@ -20,3 +20,9 @@ Raw exports, hashes and fixture-S1.patch preserve the decision/scope/question/ca
 history independently of the temporary fixture. Guard worktree/index/HEAD passed.
 Expected rejection exit2 values are successful negative tests, not hidden failures.
 Only harmless P902 ran. S2–S5 remain unexecuted; no pause or resume was invented.
+
+Actual session-plan independently observed committed final dev295237313 at
+9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd. Its exported S1-plan-final-observation.md and
+S1-plan-final-commands.json confirm empty pending decisions, next plan=P904/dev=P901,
+P903 WAITING and passing guards. No contract changed, so this evidence-only plan
+commit does not change the dev adopted decision SHA e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee.

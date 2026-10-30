@@ -1,0 +1,14 @@
+[
+  {
+    "commit": "9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd",
+    "path": "docs/verification/P002-20261029-A/S1-plan-final-commands.json",
+    "export": "docs/verification/P002/S1/exports/final-plan/docs/verification/P002-20261029-A/S1-plan-final-commands.json",
+    "sha256": "b4a53903939a757af6e3ca75c5ceb488a04a5e56e00f4b84d91fdb3cc92e2234"
+  },
+  {
+    "commit": "9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd",
+    "path": "docs/verification/P002-20261029-A/S1-plan-final-observation.md",
+    "export": "docs/verification/P002/S1/exports/final-plan/docs/verification/P002-20261029-A/S1-plan-final-observation.md",
+    "sha256": "bdb6bfd155b75a64be978aab876d03b468e15962233c6468a218b1d3668245fa"
+  }
+]
