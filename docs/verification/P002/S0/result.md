@@ -28,11 +28,11 @@ Source and isolated bootstrap/hash evidence remain in environment.md and origina
 S0 files. Guard/check outputs after adoption are in dev-post-adoption.json.
 
 Raw plan cards/review/participation/commands are exported under fixture-plan/,
-with hashes in exports.json. The raw plan command log has a trailing literal
-backslash-n after JSON; it is preserved unchanged and a clearly named derived
-normalized copy removes only that suffix for inspection. This formatting issue
-is not a runtime control failure or a fabricated new command run. Fixture S0
-changes/adoption are preserved as fixture-S0.patch; original temp repo is retained.
+with hashes in exports.json. The actual exported plan command log passed strict
+JSON parsing; its original bytes were preserved and no normalized copy was needed.
+Fixture S0 changes/adoption are preserved as fixture-S0.patch; original temp repo
+is retained. This corrects the earlier speculative formatting note using the
+actual parser result; no command-log or runtime failure occurred.
 
 C1 is satisfied for actual distinct role participation and initial-state evidence.
 C2–C5 and S1–S5 remain incomplete. No fixture marker output was executed at S0.

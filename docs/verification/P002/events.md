@@ -11,3 +11,8 @@ No counterpart observation commit is asserted before its actual participation.
 
 | P002-20261029-A / S0 recheck 2026-10-30T11:37:48+09:00 | session-dev received follow-up and revalidated retained fixture | clean/original hashes/guards/no records expected; observed | S0/recheck-20261030.json |
 | same / S0 actual input request | session-dev showed exact per-role paths and human message text in this dev chat | real user participation and plan card SHA required; pending | S0/next-input.md |
+
+| P002-20261029-A / S0 actual roles | user instructed dev participation and plan relay; separate plan read the human source and authored its cards | both roles distinct; observed | plan 11706bf5ea2b4091be46784911ad38a4f2e507e0; dev participation 749054a149134767b7eb613fc311b785e85a59b7 |
+| same / S0 exact adoption | session-dev integrated and adopted that exact plan | next.plan=P904, next.dev=P901, no controls; observed | 632cc4b4ab5c57546c6fd505cb558e17ed19bbb1; S0/result.md |
+| same / S1 step 1 | session-dev committed marker question | unclassified OPEN blocks all dev; next.dev=null; observed | 5295c5b0722e77de276e1a502be691402cc5c0f1; S1/01-unclassified-queue.json |
+| same / S1 peer gate 2026-10-30T11:44:40+09:00 | session-dev prepared next classification input | awaiting actual plan commit and applicable delivery authority | S1/next-plan-action.md |
