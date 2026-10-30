@@ -1,0 +1,32 @@
+[
+  {
+    "commit": "3bab8892fa6fa503b94a54f1ce109d07bcd4427c",
+    "path": "docs/progress/sessions/plan.md",
+    "export": "docs/verification/P002/S2/exports/docs/progress/sessions/plan.md",
+    "sha256": "18845ee61bef1bf753a276755208f507607f1f0e9158274f98447e465fca06b5"
+  },
+  {
+    "commit": "3bab8892fa6fa503b94a54f1ce109d07bcd4427c",
+    "path": "docs/verification/P002-20261029-A/S2-plan-pause-commit-commands.json",
+    "export": "docs/verification/P002/S2/exports/docs/verification/P002-20261029-A/S2-plan-pause-commit-commands.json",
+    "sha256": "1b20f16524ae48d033d5092938acd181b1f976085abeb4fd3e44d22805afaba4"
+  },
+  {
+    "commit": "3bab8892fa6fa503b94a54f1ce109d07bcd4427c",
+    "path": "docs/verification/P002-20261029-A/S2-plan-pause-uncommitted.json",
+    "export": "docs/verification/P002/S2/exports/docs/verification/P002-20261029-A/S2-plan-pause-uncommitted.json",
+    "sha256": "3d58fe434e2243b39223d81a6317326c6e6441dbfcf2c38d4f7a83c135975aa8"
+  },
+  {
+    "commit": "3bab8892fa6fa503b94a54f1ce109d07bcd4427c",
+    "path": "docs/verification/P002-20261029-A/S2-plan-pause-uncommitted.md",
+    "export": "docs/verification/P002/S2/exports/docs/verification/P002-20261029-A/S2-plan-pause-uncommitted.md",
+    "sha256": "33d74f8d6d3581a7359f4086742ff7448c69e9b31daa75e4e9ed5955def940f4"
+  },
+  {
+    "base": "9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd",
+    "end": "3bab8892fa6fa503b94a54f1ce109d07bcd4427c",
+    "export": "docs/verification/P002/S2/fixture-plan-pause.patch",
+    "sha256": "4b8b29d5b13bb304d8a37a5bf7d3867a72fb213b8e36ca8865f0160ab368a809"
+  }
+]

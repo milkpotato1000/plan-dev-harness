@@ -1,6 +1,6 @@
 # P002 — actual-session validation in progress
 
-Current status: C1 and C2 PASS (2/5); S1 complete; S2 actual human plan-role pause input pending.
+Current status: C1 and C2 PASS (2/5); S2 role pause visibility PASS, actual human plan resume pending.
 Run P002-20261029-A.
 
 ## Initial preparation checkpoint (historical)
@@ -89,3 +89,12 @@ S2 now needs an actual human plan-role stop addressed directly to session-plan,
 then a later distinct resume. [Next input](S2/next-input.md) records the exact scope
 and pre-commit visibility barrier. Coordination authorization is not a stop/resume.
 No fixture PAUSED record exists yet, and no P901/P903 execution occurred.
+
+## S2 actual role pause — 2026-10-30T12:00:38+09:00
+
+Actual human directly requested fixture plan-only pause. Actual plan prepared it
+without committing, dev observed the pause invisible, plan committed only its
+checkpoint/evidence at3bab8892fa6fa503b94a54f1ce109d07bcd4427c, and dev then
+observed next.plan=null, next.dev=P901 with one plan role pause. Both observations
+match the contract; [S2 evidence](S2/observation.md) preserves raw records and hashes.
+Plan remains PAUSED pending a separate actual human resume. S3–S5 remain unexecuted.

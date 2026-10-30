@@ -18,3 +18,5 @@ No counterpart observation commit is asserted before its actual participation.
 | same / S1 peer gate 2026-10-30T11:44:40+09:00 | session-dev prepared next classification input | awaiting actual plan commit and applicable delivery authority | S1/next-plan-action.md |
 
 - 2026-10-30T11:51:49+09:00 | P002-20261029-A | S1 | session-dev/session-plan | separate scope and decision, exact adoption, actual P902, rejected resolves, valid resolve | expected=actual PASS | dev 295237313c3e36025b67e1b65cd1ddfb05230424 | plan e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee | S1/result.md
+
+- 2026-10-30T12:00:38+09:00 | P002-20261029-A | S2 | session-plan/session-dev | actual human role pause; pre/post commit visibility | expected=actual | plan 3bab8892fa6fa503b94a54f1ce109d07bcd4427c, dev295237313c3e36025b67e1b65cd1ddfb05230424 | S2/observation.md | human resume pending
