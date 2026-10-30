@@ -14,3 +14,15 @@ that actual request dev writes its default all-role checkpoint and commits only
 state/evidence; plan reads the committed status. A later distinct user request to
 plan is needed for its own pause (step 3). Future resumes and resolution-only
 exception likewise require their own later human inputs. C3 remains incomplete.
+
+## S3 step 2 actual human all-role pause — 2026-10-30T12:08:32+09:00
+
+Human directly requested in session-dev: “P002-20261029-A 시험의 plan과 dev를
+지금 모두 중지해줘”. Dev wrote default scope=all pause in its own checkpoint and
+committed 86ba359b879fb69bb196484eb23966662381b8c4. Its own queue reports both
+next selections null, one dev all-role pause and the second OPEN question. The
+question's full byte hash is unchanged. No product/fixture task output continued.
+Raw commands, queue and checkpoint exports are retained in this S3 directory.
+Actual plan has been asked only to observe/preserve the committed stopped state
+under the human's request. Its separate own pause still needs later human input.
+No resume or resolution is authorized. Overall C1/C2 PASS; C3–C5 incomplete.

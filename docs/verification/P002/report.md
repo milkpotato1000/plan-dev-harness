@@ -1,6 +1,6 @@
 # P002 — actual-session validation in progress
 
-Current status: C1 and C2 PASS (2/5); S2 PASS; S3 step 1 complete, actual human all-role pause pending.
+Current status: C1 and C2 PASS (2/5); S2 PASS; S3 step 2 actual human all-role pause recorded; both fixture roles stopped.
 Run P002-20261029-A.
 
 ## Initial preparation checkpoint (historical)
@@ -113,3 +113,11 @@ second question OPEN with identical bytes. Plan/dev are ACTIVE; only the pending
 P901 decision blocks P901/P903. [S3 checkpoint](S3/checkpoint.md) and raw exports
 record this state. The next required human input is a fixture-only all-role stop
 addressed to dev. No future stop/resume is inferred from the S2 resumption.
+
+## S3 actual all-role pause — 2026-10-30T12:08:32+09:00
+
+The human explicitly stopped both fixture roles. Dev default scope=all checkpoint
+is committed at86ba359b879fb69bb196484eb23966662381b8c4. Both next selections
+are null and the second question remains OPEN/unchanged. Only state observation
+and evidence preservation continue. Plan's independent read of this committed
+state is pending; future human controls remain separate. [Checkpoint](S3/checkpoint.md).
