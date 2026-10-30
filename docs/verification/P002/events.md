@@ -16,3 +16,5 @@ No counterpart observation commit is asserted before its actual participation.
 | same / S0 exact adoption | session-dev integrated and adopted that exact plan | next.plan=P904, next.dev=P901, no controls; observed | 632cc4b4ab5c57546c6fd505cb558e17ed19bbb1; S0/result.md |
 | same / S1 step 1 | session-dev committed marker question | unclassified OPEN blocks all dev; next.dev=null; observed | 5295c5b0722e77de276e1a502be691402cc5c0f1; S1/01-unclassified-queue.json |
 | same / S1 peer gate 2026-10-30T11:44:40+09:00 | session-dev prepared next classification input | awaiting actual plan commit and applicable delivery authority | S1/next-plan-action.md |
+
+- 2026-10-30T11:51:49+09:00 | P002-20261029-A | S1 | session-dev/session-plan | separate scope and decision, exact adoption, actual P902, rejected resolves, valid resolve | expected=actual PASS | dev 295237313c3e36025b67e1b65cd1ddfb05230424 | plan e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee | S1/result.md

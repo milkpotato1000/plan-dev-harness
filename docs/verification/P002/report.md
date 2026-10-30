@@ -1,6 +1,6 @@
 # P002 — actual-session validation in progress
 
-Current status: C1 PASS (1/5); S1 step 1 complete, next actual plan classification pending.
+Current status: C1 and C2 PASS (2/5); S1 complete; S2 actual human plan-role pause input pending.
 Run P002-20261029-A.
 
 ## Initial preparation checkpoint (historical)
@@ -74,3 +74,18 @@ Evidence-format note: git diff --check flagged the original question's final bla
 line when copied as Markdown. Its export is now a lossless .raw.json envelope
 with verbatim text and original SHA-256, preserving all bytes while avoiding that
 artifact whitespace warning. The fixture control record was never edited.
+
+## S1 completion — 2026-10-30T11:51:49+09:00
+
+The actual human authorized remaining S1–S5 coordination. Actual plan separately
+classified the first question and later decided the marker after directly reviewing
+P902 completion. Dev completed every S1 transition and negative test under exact
+adoption; [C2 result](S1/result.md) is PASS. Original source evidence and hashes are
+exported. Both failed resolve attempts left OPEN and the full file hash unchanged;
+valid resolution preserved the immutable question body. Fixture final dev commit:
+295237313c3e36025b67e1b65cd1ddfb05230424.
+
+S2 now needs an actual human plan-role stop addressed directly to session-plan,
+then a later distinct resume. [Next input](S2/next-input.md) records the exact scope
+and pre-commit visibility barrier. Coordination authorization is not a stop/resume.
+No fixture PAUSED record exists yet, and no P901/P903 execution occurred.
