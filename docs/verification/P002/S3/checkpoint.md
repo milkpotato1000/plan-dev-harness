@@ -41,3 +41,18 @@ Next required actual human input for S3 step 3 goes directly to session-plan:
 dev의 기존 중지는 유지하고, 재개하지 마.”
 This tests that two independent stop records survive a later single-role resume.
 Only checkpoint/evidence and requested status observations may occur while stopped.
+
+## S3 step 3 separate actual human plan pause — 2026-10-30T12:20:10+09:00
+
+The human directly told session-plan to separately record an all-role stop while
+preserving dev's stop and not resuming. Session-dev independently read that actual
+human message through the host tool. Actual plan committed its own checkpoint and
+evidence at 6d04038121ae96bb9ca6ab8ac4ad0761e94dfbc3; session-dev then independently queried
+its own queue: two pauses (plan/all and dev/all), both next=null, second question
+OPEN. Existing dev checkpoint bytes and second question full hash are unchanged.
+Guards pass; raw queues, commands, source plan records and patch hashes preserved.
+Only state/evidence work occurred. Both roles remain stopped.
+
+Next S3 step 4 requires a separate actual human request in session-dev to resume
+only dev's own checkpoint. That future action must leave plan's all-role stop and
+the OPEN decision intact, keeping both next=null. It has not been authorized yet.

@@ -1,6 +1,6 @@
 # P002 — actual-session validation in progress
 
-Current status: C1 and C2 PASS (2/5); S2 PASS; S3 step 2 actual human all-role pause recorded; both fixture roles stopped.
+Current status: C1 and C2 PASS (2/5); S2 PASS; S3 step 3 verified: independent plan/all and dev/all pauses; both fixture roles stopped.
 Run P002-20261029-A.
 
 ## Initial preparation checkpoint (historical)
@@ -122,3 +122,11 @@ are null and the second question remains OPEN/unchanged. Only state observation
 and evidence preservation continue. Plan independently confirmed this committed
 state at ee7dd573f8ea255a6c50d28178a2831aadcbe0ec. S3 step 3 now awaits a separate
 actual human request to plan for its own all-role pause; future human controls remain separate. [Checkpoint](S3/checkpoint.md).
+
+## S3 separate plan pause — 2026-10-30T12:20:10+09:00
+
+Actual human separately instructed plan to record its own all-role pause. Plan
+committed 6d04038121ae96bb9ca6ab8ac4ad0761e94dfbc3; dev independently confirmed two pauses,
+both next=null and second OPEN unchanged. Original dev checkpoint bytes remain
+identical. [Evidence](S3/checkpoint.md). Next is the separate actual dev-only
+resumption input; no resume has occurred. C3 remains incomplete, overall 2/5.
