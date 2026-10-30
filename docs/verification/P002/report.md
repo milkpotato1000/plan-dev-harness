@@ -69,3 +69,8 @@ existing plan chat are authorized for this run; no broader reverse grant has bee
 invented. Future actual user stop/resume inputs remain separate either way.
 No actual project user PAUSED or distribution OPEN decision was created. P003
 completion, product runtime, main and personal installations remain unchanged.
+
+Evidence-format note: git diff --check flagged the original question's final blank
+line when copied as Markdown. Its export is now a lossless .raw.json envelope
+with verbatim text and original SHA-256, preserving all bytes while avoiding that
+artifact whitespace warning. The fixture control record was never edited.
