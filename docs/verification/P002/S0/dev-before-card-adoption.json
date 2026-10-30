@@ -1,0 +1,88 @@
+[
+  {
+    "at": "2026-10-30T02:41:28.501845+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "stdout": "749054a149134767b7eb613fc311b785e85a59b7\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T02:41:28.514546+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "plan"
+    ],
+    "stdout": "13cca35f6398478a495a3333e42637490d192458\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T02:41:28.537149+00:00",
+    "argv": [
+      "git",
+      "status",
+      "--short",
+      "--branch"
+    ],
+    "stdout": "## dev\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T02:41:28.784252+00:00",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "worktree"
+    ],
+    "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T02:41:29.134953+00:00",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T02:41:29.483636+00:00",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "HEAD"
+    ],
+    "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T02:41:29.866078+00:00",
+    "argv": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 13cca35f6398 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+]

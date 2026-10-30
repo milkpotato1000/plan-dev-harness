@@ -1,0 +1,7 @@
+{
+  "original_path": "docs/feedback/dev/P901-decision-3dd251cf50c6.md",
+  "original_sha256": "7b4dbba64bfa6028fad506174da80822d19c655e096d9d33e45a3f5332cc5993",
+  "encoding": "utf-8",
+  "verbatim_content": "# Decision request\n\n> 유형: PLAN_DECISION\n> 상태: OPEN\n> 작업: P901\n> 결정 plan: -\n\nRun P002-20261029-A, S1. Which completion marker should fixture P901 record at S5?\nPlease classify the impact first in a separate plan commit: P901 is the originating\nquestion, P903 depends on it, and P902 is independent. Do not resolve merely by\nclassifying. After that scope is adopted and P902 is exercised, record the actual\nmarker decision in a different plan commit under the existing P002 contract.\nThis is a harmless fixture validation question, not a product or external decision.\n\n",
+  "note": "Lossless envelope for raw exported control record; original trailing newlines are preserved in the string. Original fixture file is untouched."
+}

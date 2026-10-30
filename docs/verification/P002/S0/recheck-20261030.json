@@ -1,0 +1,146 @@
+{
+  "run_id": "P002-20261029-A",
+  "fixture_dev_head": "08e09466163ad0483bb9e0fc78aa609b60d1c3aa",
+  "fixture_plan_head": "13cca35f6398478a495a3333e42637490d192458",
+  "fixture_adopted_plan": {
+    "commit": "13cca35f6398478a495a3333e42637490d192458",
+    "review_reference": "Local workspace bootstrap infrastructure only; no product approval"
+  },
+  "status": "preserved, clean, ready for actual S0 participant input",
+  "runtime_matches_original_source": "77b757cce25dd2f5ee5b3751dbfb26fb70d88d08",
+  "runtime_hashes": {
+    "plan_cards.py": "c79afa41e72cc36842d4e59e909af71a1a93edee73061b822586959142913196",
+    "plan_intake.py": "c49bbb3d9a58c3a1b7b3967cc302effd40c2b82621ebc6cff15a77509fcdd4f8",
+    "workflow_control.py": "c7e195a7e295d25f9d014f0370b446bba2369782a87476c3478df927486837c0",
+    "work_queue.py": "d0329fe031d1611bc857a6afe24ef34fbfa257d5b27189e73768384368300627",
+    "contract_guard.py": "c1c693adf831f6f87bdb85985e03e5f73507f0066648fe6d2f54f7e757e9850f"
+  },
+  "managed_hashes_match": true,
+  "records": [
+    {
+      "at": "2026-10-30T02:37:02.835125+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "stdout": "dev\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "at": "2026-10-30T02:37:02.849906+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "at": "2026-10-30T02:37:02.859055+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "stdout": "08e09466163ad0483bb9e0fc78aa609b60d1c3aa\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "at": "2026-10-30T02:37:02.868973+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "git",
+        "rev-parse",
+        "plan"
+      ],
+      "stdout": "13cca35f6398478a495a3333e42637490d192458\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "at": "2026-10-30T02:37:03.061945+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "worktree"
+      ],
+      "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "at": "2026-10-30T02:37:03.354911+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "index"
+      ],
+      "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "at": "2026-10-30T02:37:03.646231+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "HEAD"
+      ],
+      "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "at": "2026-10-30T02:37:03.961785+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "python3",
+        "scripts/work_queue.py",
+        "--owner",
+        "all",
+        "--json"
+      ],
+      "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 13cca35f6398 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "at": "2026-10-30T02:37:03.972110+00:00",
+      "role": "session-dev",
+      "cwd": "<fixture-root>/p002-session-run_dev",
+      "argv": [
+        "git",
+        "remote",
+        "-v"
+      ],
+      "stdout": "",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ]
+}

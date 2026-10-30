@@ -1,0 +1,170 @@
+[
+  {
+    "at": "2026-10-30T11:52:27+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:27+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "rev-parse",
+      "dev"
+    ],
+    "exit_code": 0,
+    "stdout": "295237313c3e36025b67e1b65cd1ddfb05230424\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:27+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "show",
+      "295237313c3e36025b67e1b65cd1ddfb05230424:docs/verification/P002-20261029-A/S1-dev-result.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# S1 actual dev result — PASS\n\nRun P002-20261029-A. Actual session-plan independently classified impact at\nacdaf30c88389c5209bee0055b51ace17f5cb85b. Dev observed full blocking before\nadoption and scoped P901/P903 blocking with P902 selection after adoption.\nP902 actually completed at b08c60422d555a2ef4c55927d0ca8e35ec9d860f.\nPlan separately decided the marker at e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee.\nDev attempted resolution with that unadopted full SHA: exit 2, OPEN/hash unchanged.\nAfter exact adoption, shortened SHA also returned exit 2 with OPEN/hash unchanged.\nFull adopted SHA resolution succeeded. Question body bytes excluding the two\nmutable status/decision fields match the original exactly. Original full bytes\nremain in Git and distribution export. next.plan=P904, next.dev=P901,\npending_decisions=[], P903 WAITING. P901/P903 outputs remain absent until S5.\nCommand/queue evidence: S1-dev-scope-commands.json and S1-dev-resolution-commands.json.\nActual human pause/resume inputs for S2/S3 have not occurred; these remain pending.\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:27+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "show",
+      "295237313c3e36025b67e1b65cd1ddfb05230424:docs/verification/P002-20261029-A/S1-dev-resolution-commands.json"
+    ],
+    "exit_code": 0,
+    "stdout": "[\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"branch\",\n      \"--show-current\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"dev\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"rev-parse\",\n      \"HEAD\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"b08c60422d555a2ef4c55927d0ca8e35ec9d860f\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"rev-parse\",\n      \"plan\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"status\",\n      \"--short\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"cat\",\n      \".harness/adopted-plan.json\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"{\\n  \\\"commit\\\": \\\"acdaf30c88389c5209bee0055b51ace17f5cb85b\\\",\\n  \\\"review_reference\\\": \\\"docs/planning/reviews/P002-S1-scope.md\\\"\\n}\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"python3\",\n      \"scripts/work_queue.py\",\n      \"--owner\",\n      \"all\",\n      \"--json\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"{\\n  \\\"branch\\\": \\\"dev\\\",\\n  \\\"owner\\\": \\\"all\\\",\\n  \\\"notices\\\": [\\n    \\\"dev는 채택한 plan acdaf30c8838 기준. 이후 plan 초안은 자동 채택하지 않음.\\\",\\n    \\\"기획 결정 대기: 분류된 작업 또는 dev 전체가 차단됩니다.\\\"\\n  ],\\n  \\\"next\\\": {\\n    \\\"plan\\\": \\\"P904\\\",\\n    \\\"dev\\\": null\\n  },\\n  \\\"tasks\\\": [\\n    {\\n      \\\"id\\\": \\\"P901\\\",\\n      \\\"depends_on\\\": [],\\n      \\\"title\\\": \\\"결정된 완료 marker 기록\\\",\\n      \\\"owner\\\": \\\"dev\\\",\\n      \\\"priority\\\": 10,\\n      \\\"state\\\": \\\"READY\\\",\\n      \\\"reason\\\": \\\"\\\",\\n      \\\"work_order\\\": \\\"docs/planning/plans/P901.md\\\",\\n      \\\"checked\\\": 0,\\n      \\\"total\\\": 1,\\n      \\\"completed_checks\\\": [],\\n      \\\"acceptance\\\": {\\n        \\\"C1\\\": \\\"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\\\"\\n      },\\n      \\\"blocked_by_decisions\\\": [\\n        \\\"docs/feedback/dev/P901-decision-3dd251cf50c6.md\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"P902\\\",\\n      \\\"depends_on\\\": [],\\n      \\\"title\\\": \\\"marker와 무관한 독립 확인\\\",\\n      \\\"owner\\\": \\\"dev\\\",\\n      \\\"priority\\\": 20,\\n      \\\"state\\\": \\\"DONE\\\",\\n      \\\"reason\\\": \\\"\\\",\\n      \\\"work_order\\\": \\\"docs/planning/plans/P902.md\\\",\\n      \\\"checked\\\": 1,\\n      \\\"total\\\": 1,\\n      \\\"completed_checks\\\": [\\n        \\\"C1\\\"\\n      ],\\n      \\\"acceptance\\\": {\\n        \\\"C1\\\": \\\"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\\\"\\n      },\\n      \\\"blocked_by_decisions\\\": []\\n    },\\n    {\\n      \\\"id\\\": \\\"P903\\\",\\n      \\\"depends_on\\\": [\\n        \\\"P901\\\"\\n      ],\\n      \\\"title\\\": \\\"P901 완료 후 의존 확인\\\",\\n      \\\"owner\\\": \\\"dev\\\",\\n      \\\"priority\\\": 30,\\n      \\\"state\\\": \\\"WAITING\\\",\\n      \\\"reason\\\": \\\"선행 작업: P901\\\",\\n      \\\"work_order\\\": \\\"docs/planning/plans/P903.md\\\",\\n      \\\"checked\\\": 0,\\n      \\\"total\\\": 1,\\n      \\\"completed_checks\\\": [],\\n      \\\"acceptance\\\": {\\n        \\\"C1\\\": \\\"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\\\"\\n      },\\n      \\\"blocked_by_decisions\\\": [\\n        \\\"docs/feedback/dev/P901-decision-3dd251cf50c6.md\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"P904\\\",\\n      \\\"depends_on\\\": [],\\n      \\\"title\\\": \\\"plan 초안 선택 관찰\\\",\\n      \\\"owner\\\": \\\"plan\\\",\\n      \\\"priority\\\": 40,\\n      \\\"state\\\": \\\"DRAFT\\\",\\n      \\\"reason\\\": \\\"\\\",\\n      \\\"work_order\\\": \\\"docs/planning/plans/P904.md\\\",\\n      \\\"checked\\\": 0,\\n      \\\"total\\\": 1,\\n      \\\"completed_checks\\\": [],\\n      \\\"acceptance\\\": {\\n        \\\"C1\\\": \\\"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\\\"\\n      },\\n      \\\"blocked_by_decisions\\\": []\\n    }\\n  ],\\n  \\\"plan_requests\\\": [],\\n  \\\"pending_decisions\\\": [\\n    {\\n      \\\"path\\\": \\\"docs/feedback/dev/P901-decision-3dd251cf50c6.md\\\",\\n      \\\"task\\\": \\\"P901\\\",\\n      \\\"scope\\\": \\\"tasks\\\",\\n      \\\"tasks\\\": [\\n        \\\"P901\\\"\\n      ],\\n      \\\"reason\\\": \\\"P901 marker choice affects P901 and dependent P903; P902 has no dependency and writes a fixed independent confirmation.\\\"\\n    }\\n  ],\\n  \\\"paused_sessions\\\": [],\\n  \\\"handoffs\\\": []\\n}\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"python3\",\n      \"scripts/workflow_control.py\",\n      \"resolve\",\n      \"docs/feedback/dev/P901-decision-3dd251cf50c6.md\",\n      \"--plan-commit\",\n      \"e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\"\n    ],\n    \"exit_code\": 2,\n    \"stdout\": \"\",\n    \"stderr\": \"CONTROL ERROR: Adopt decision plan before resolution\\n\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"status\",\n      \"--porcelain\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:07+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"merge\",\n      \"--no-ff\",\n      \"--no-commit\",\n      \"e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"Automatic merge went well; stopped before committing as requested\\n\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:08+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"python3\",\n      \"scripts/contract_guard.py\",\n      \"adopt\",\n      \"e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\",\n      \"--review-reference\",\n      \"docs/planning/reviews/P002-S1-marker-decision.md\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"PASS: contracts match adopted plan e6dc181e0a33\\nAdoption recorded. Stage and commit .harness/adopted-plan.json; pending semantic decisions remain pending.\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:08+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"add\",\n      \".harness/adopted-plan.json\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:08+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"python3\",\n      \"scripts/contract_guard.py\",\n      \"check\",\n      \"--target\",\n      \"index\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"PASS: contracts match adopted plan e6dc181e0a33\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:08+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"commit\",\n      \"-m\",\n      \"Adopt exact P002 S1 plan e6dc181e0a33\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"[dev 5eedd1c] Adopt exact P002 S1 plan e6dc181e0a33\\n\",\n    \"stderr\": \"PASS: contracts match adopted plan e6dc181e0a33\\n\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:08+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"python3\",\n      \"scripts/workflow_control.py\",\n      \"resolve\",\n      \"docs/feedback/dev/P901-decision-3dd251cf50c6.md\",\n      \"--plan-commit\",\n      \"e6dc181e0a33\"\n    ],\n    \"exit_code\": 2,\n    \"stdout\": \"\",\n    \"stderr\": \"CONTROL ERROR: Dev resolution requires full plan SHA\\n\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:08+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"status\",\n      \"--porcelain\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:09+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"python3\",\n      \"scripts/workflow_control.py\",\n      \"resolve\",\n      \"docs/feedback/dev/P901-decision-3dd251cf50c6.md\",\n      \"--plan-commit\",\n      \"e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"docs/feedback/dev/P901-decision-3dd251cf50c6.md: local record only; review and commit. No message or work was executed.\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:09+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"branch\",\n      \"--show-current\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"dev\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:09+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"rev-parse\",\n      \"HEAD\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"5eedd1c3283d64b0045bbe58bab34b3de3646978\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:09+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"rev-parse\",\n      \"plan\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:09+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"git\",\n      \"status\",\n      \"--short\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \" M docs/feedback/dev/P901-decision-3dd251cf50c6.md\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:09+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"cat\",\n      \".harness/adopted-plan.json\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"{\\n  \\\"commit\\\": \\\"e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\\\",\\n  \\\"review_reference\\\": \\\"docs/planning/reviews/P002-S1-marker-decision.md\\\"\\n}\\n\",\n    \"stderr\": \"\"\n  },\n  {\n    \"at\": \"2026-10-30T11:51:09+09:00\",\n    \"cwd\": \"<fixture-dev>\",\n    \"argv\": [\n      \"python3\",\n      \"scripts/work_queue.py\",\n      \"--owner\",\n      \"all\",\n      \"--json\"\n    ],\n    \"exit_code\": 0,\n    \"stdout\": \"{\\n  \\\"branch\\\": \\\"dev\\\",\\n  \\\"owner\\\": \\\"all\\\",\\n  \\\"notices\\\": [\\n    \\\"dev는 채택한 plan e6dc181e0a33 기준. 이후 plan 초안은 자동 채택하지 않음.\\\"\\n  ],\\n  \\\"next\\\": {\\n    \\\"plan\\\": \\\"P904\\\",\\n    \\\"dev\\\": \\\"P901\\\"\\n  },\\n  \\\"tasks\\\": [\\n    {\\n      \\\"id\\\": \\\"P901\\\",\\n      \\\"depends_on\\\": [],\\n      \\\"title\\\": \\\"결정된 완료 marker 기록\\\",\\n      \\\"owner\\\": \\\"dev\\\",\\n      \\\"priority\\\": 10,\\n      \\\"state\\\": \\\"READY\\\",\\n      \\\"reason\\\": \\\"\\\",\\n      \\\"work_order\\\": \\\"docs/planning/plans/P901.md\\\",\\n      \\\"checked\\\": 0,\\n      \\\"total\\\": 1,\\n      \\\"completed_checks\\\": [],\\n      \\\"acceptance\\\": {\\n        \\\"C1\\\": \\\"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\\\"\\n      },\\n      \\\"blocked_by_decisions\\\": []\\n    },\\n    {\\n      \\\"id\\\": \\\"P902\\\",\\n      \\\"depends_on\\\": [],\\n      \\\"title\\\": \\\"marker와 무관한 독립 확인\\\",\\n      \\\"owner\\\": \\\"dev\\\",\\n      \\\"priority\\\": 20,\\n      \\\"state\\\": \\\"DONE\\\",\\n      \\\"reason\\\": \\\"\\\",\\n      \\\"work_order\\\": \\\"docs/planning/plans/P902.md\\\",\\n      \\\"checked\\\": 1,\\n      \\\"total\\\": 1,\\n      \\\"completed_checks\\\": [\\n        \\\"C1\\\"\\n      ],\\n      \\\"acceptance\\\": {\\n        \\\"C1\\\": \\\"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\\\"\\n      },\\n      \\\"blocked_by_decisions\\\": []\\n    },\\n    {\\n      \\\"id\\\": \\\"P903\\\",\\n      \\\"depends_on\\\": [\\n        \\\"P901\\\"\\n      ],\\n      \\\"title\\\": \\\"P901 완료 후 의존 확인\\\",\\n      \\\"owner\\\": \\\"dev\\\",\\n      \\\"priority\\\": 30,\\n      \\\"state\\\": \\\"WAITING\\\",\\n      \\\"reason\\\": \\\"선행 작업: P901\\\",\\n      \\\"work_order\\\": \\\"docs/planning/plans/P903.md\\\",\\n      \\\"checked\\\": 0,\\n      \\\"total\\\": 1,\\n      \\\"completed_checks\\\": [],\\n      \\\"acceptance\\\": {\\n        \\\"C1\\\": \\\"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\\\"\\n      },\\n      \\\"blocked_by_decisions\\\": []\\n    },\\n    {\\n      \\\"id\\\": \\\"P904\\\",\\n      \\\"depends_on\\\": [],\\n      \\\"title\\\": \\\"plan 초안 선택 관찰\\\",\\n      \\\"owner\\\": \\\"plan\\\",\\n      \\\"priority\\\": 40,\\n      \\\"state\\\": \\\"DRAFT\\\",\\n      \\\"reason\\\": \\\"\\\",\\n      \\\"work_order\\\": \\\"docs/planning/plans/P904.md\\\",\\n      \\\"checked\\\": 0,\\n      \\\"total\\\": 1,\\n      \\\"completed_checks\\\": [],\\n      \\\"acceptance\\\": {\\n        \\\"C1\\\": \\\"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\\\"\\n      },\\n      \\\"blocked_by_decisions\\\": []\\n    }\\n  ],\\n  \\\"plan_requests\\\": [],\\n  \\\"pending_decisions\\\": [],\\n  \\\"paused_sessions\\\": [],\\n  \\\"handoffs\\\": []\\n}\\n\",\n    \"stderr\": \"\"\n  }\n]\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:27+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "show",
+      "5295c5b0722e77de276e1a502be691402cc5c0f1:docs/feedback/dev/P901-decision-3dd251cf50c6.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# Decision request\n\n> 유형: PLAN_DECISION\n> 상태: OPEN\n> 작업: P901\n> 결정 plan: -\n\nRun P002-20261029-A, S1. Which completion marker should fixture P901 record at S5?\nPlease classify the impact first in a separate plan commit: P901 is the originating\nquestion, P903 depends on it, and P902 is independent. Do not resolve merely by\nclassifying. After that scope is adopted and P902 is exercised, record the actual\nmarker decision in a different plan commit under the existing P002 contract.\nThis is a harmless fixture validation question, not a product or external decision.\n\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:27+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "show",
+      "295237313c3e36025b67e1b65cd1ddfb05230424:docs/feedback/dev/P901-decision-3dd251cf50c6.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# Decision request\n\n> 유형: PLAN_DECISION\n> 상태: RESOLVED\n> 작업: P901\n> 결정 plan: e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\n\nRun P002-20261029-A, S1. Which completion marker should fixture P901 record at S5?\nPlease classify the impact first in a separate plan commit: P901 is the originating\nquestion, P903 depends on it, and P902 is independent. Do not resolve merely by\nclassifying. After that scope is adopted and P902 is exercised, record the actual\nmarker decision in a different plan commit under the existing P002 contract.\nThis is a harmless fixture validation question, not a product or external decision.\n\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:28+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"branch\": \"plan\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"plan은 작업 트리의 기획 + dev 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": \"P904\",\n    \"dev\": \"P901\"\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P901\",\n      \"depends_on\": [],\n      \"title\": \"결정된 완료 marker 기록\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P901.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P902\",\n      \"depends_on\": [],\n      \"title\": \"marker와 무관한 독립 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"DONE\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P902.md\",\n      \"checked\": 1,\n      \"total\": 1,\n      \"completed_checks\": [\n        \"C1\"\n      ],\n      \"acceptance\": {\n        \"C1\": \"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P903\",\n      \"depends_on\": [\n        \"P901\"\n      ],\n      \"title\": \"P901 완료 후 의존 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 30,\n      \"state\": \"WAITING\",\n      \"reason\": \"선행 작업: P901\",\n      \"work_order\": \"docs/planning/plans/P903.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P904\",\n      \"depends_on\": [],\n      \"title\": \"plan 초안 선택 관찰\",\n      \"owner\": \"plan\",\n      \"priority\": 40,\n      \"state\": \"DRAFT\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P904.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:28+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "worktree"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:28+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:28+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:28+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "add",
+      "docs/verification/P002-20261029-A/S1-plan-final-observation.md",
+      "docs/verification/P002-20261029-A/S1-plan-final-commands.json"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:28+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T11:52:28+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\n",
+    "stderr": ""
+  }
+]

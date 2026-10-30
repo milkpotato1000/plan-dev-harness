@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.0 — Unreleased
+
+- Add plan-owned decision impact classification and dependency-aware queue blocking.
+- Preserve legacy OPEN/RESOLVED and PAUSED/ACTIVE records; unresolved scope fails closed.
+- Add explicit pause/resume records, role-scoped stops, and plan/dev history guards.
+- Add committed handoff events with deduplication and evidence-backed delivery states.
+- Keep generic intake independent of workflow stops; expose additive queue JSON fields.
+- Fix default queue owner selection to retain the actual configured worktree role.
+- Upgrade an unmodified v0.1.0 installation while retaining custom post hooks and records.
+- Document optional adapter boundaries without adding external service side effects.
+
 ## 0.1.0 — 2026-10-29
 
 - Publish generic Git/Python harness with configurable plan/dev/release branches.

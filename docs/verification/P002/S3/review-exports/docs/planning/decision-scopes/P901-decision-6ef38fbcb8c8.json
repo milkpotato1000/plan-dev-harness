@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request": "docs/feedback/dev/P901-decision-6ef38fbcb8c8.md",
+  "request_sha256": "ac4e246fa0d00d3e5bb2eb29f20de253d4492a5ace8f07bd96623f4a23c64410",
+  "scope": "tasks",
+  "tasks": [
+    "P901"
+  ],
+  "reason": "Only P901 marker retention is questioned; P903 depends on P901; completed independent P902 is unaffected.",
+  "review_reference": "docs/planning/reviews/P002-S3-marker-retention.md"
+}

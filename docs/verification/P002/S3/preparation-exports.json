@@ -1,0 +1,26 @@
+[
+  {
+    "commit": "c24af9db2772a73636ca4ebe003a92c708074c1d",
+    "path": "docs/planning/decision-scopes/P901-decision-6ef38fbcb8c8.json",
+    "export": "docs/verification/P002/S3/review-exports/docs/planning/decision-scopes/P901-decision-6ef38fbcb8c8.json",
+    "sha256": "1ec6892e815b94c458737cd4d41822ae6f05024bfe5fe4630c1dfd75e92236d1"
+  },
+  {
+    "commit": "c24af9db2772a73636ca4ebe003a92c708074c1d",
+    "path": "docs/planning/reviews/P002-S3-marker-retention.md",
+    "export": "docs/verification/P002/S3/review-exports/docs/planning/reviews/P002-S3-marker-retention.md",
+    "sha256": "2bd9ead1ae2f82c8ca1467c6d93bf26deab555341e813927e81cdaf4fad2d1ba"
+  },
+  {
+    "commit": "c24af9db2772a73636ca4ebe003a92c708074c1d",
+    "path": "docs/verification/P002-20261029-A/S3-plan-review-commands.json",
+    "export": "docs/verification/P002/S3/review-exports/docs/verification/P002-20261029-A/S3-plan-review-commands.json",
+    "sha256": "1a35253253f86feb8a5fce9f36cb8e2c5f96e6bcf5a7da90f004d26acd690dfe"
+  },
+  {
+    "base": "295237313c3e36025b67e1b65cd1ddfb05230424",
+    "end": "d1d7b2a58639fb8d9c21ee64ab365577e80d49c3",
+    "export": "docs/verification/P002/S3/fixture-S3-preparation.patch",
+    "sha256": "8d400c8a8b9b92671e42346846426ae238b4fc3ac79983769db44257c1471e3f"
+  }
+]

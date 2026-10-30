@@ -1,0 +1,144 @@
+[
+  {
+    "at": "2026-10-29T08:02:44.368753+00:00",
+    "cwd": "<distribution-dev>",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "stdout": "77b757cce25dd2f5ee5b3751dbfb26fb70d88d08\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:44.473290+00:00",
+    "cwd": "<distribution-dev>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/bootstrap_workspace.py",
+      "--parent",
+      "<fixture-parent>",
+      "--name",
+      "p002-session-run",
+      "--author-name",
+      "Harness Session Fixture",
+      "--author-email",
+      "fixture@example.invalid"
+    ],
+    "stdout": "CREATE <fixture-parent>/p002-session-run/p002-session-run_main\nCREATE <fixture-parent>/p002-session-run/p002-session-run_plan\nCREATE <fixture-parent>/p002-session-run/p002-session-run_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nPreview only; repeat with --apply.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:45.824521+00:00",
+    "cwd": "<distribution-dev>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/bootstrap_workspace.py",
+      "--parent",
+      "<fixture-parent>",
+      "--name",
+      "p002-session-run",
+      "--author-name",
+      "Harness Session Fixture",
+      "--author-email",
+      "fixture@example.invalid",
+      "--apply"
+    ],
+    "stdout": "CREATE <fixture-parent>/p002-session-run/p002-session-run_main\nCREATE <fixture-parent>/p002-session-run/p002-session-run_plan\nCREATE <fixture-parent>/p002-session-run/p002-session-run_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nCreated <fixture-parent>/p002-session-run adopted plan 13cca35f6398478a495a3333e42637490d192458\nOpen the container in either agent; initialize plan/dev roles explicitly. Queue is empty.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:46.076764+00:00",
+    "cwd": "<fixture-parent>/p002-session-run/p002-session-run_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "worktree"
+    ],
+    "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:46.431355+00:00",
+    "cwd": "<fixture-parent>/p002-session-run/p002-session-run_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:46.778295+00:00",
+    "cwd": "<fixture-parent>/p002-session-run/p002-session-run_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "HEAD"
+    ],
+    "stdout": "PASS: contracts match adopted plan 13cca35f6398\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:47.204408+00:00",
+    "cwd": "<fixture-parent>/p002-session-run/p002-session-run_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 13cca35f6398 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:47.224459+00:00",
+    "cwd": "<fixture-parent>/p002-session-run/p002-session-run_dev",
+    "argv": [
+      "git",
+      "remote",
+      "-v"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:47.238918+00:00",
+    "cwd": "<fixture-parent>/p002-session-run/p002-session-run_dev",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "stdout": "08e09466163ad0483bb9e0fc78aa609b60d1c3aa\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:02:47.258941+00:00",
+    "cwd": "<distribution-dev>",
+    "argv": [
+      "git",
+      "--version"
+    ],
+    "stdout": "git version 2.50.1 (Apple Git-155)\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+]

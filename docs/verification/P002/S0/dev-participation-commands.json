@@ -1,0 +1,89 @@
+[
+  {
+    "at": "2026-10-30T11:39:29+09:00",
+    "cwd": "<fixture-root>/p002-session-run_dev",
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T11:39:29+09:00",
+    "cwd": "<fixture-root>/p002-session-run_dev",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "stdout": "08e09466163ad0483bb9e0fc78aa609b60d1c3aa\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T11:39:29+09:00",
+    "cwd": "<fixture-root>/p002-session-run_dev",
+    "argv": [
+      "git",
+      "rev-parse",
+      "plan"
+    ],
+    "stdout": "13cca35f6398478a495a3333e42637490d192458\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T11:39:30+09:00",
+    "cwd": "<fixture-root>/p002-session-run_dev",
+    "argv": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 13cca35f6398 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T11:39:30+09:00",
+    "cwd": "<fixture-root>/p002-session-run_dev",
+    "argv": [
+      "git",
+      "add",
+      "docs/verification/P002-20261029-A/S0-dev-participation.md"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T11:39:30+09:00",
+    "cwd": "<fixture-root>/p002-session-run_dev",
+    "argv": [
+      "git",
+      "commit",
+      "-m",
+      "Record actual fixture dev participation for P002 S0"
+    ],
+    "stdout": "[dev 749054a] Record actual fixture dev participation for P002 S0\n 1 file changed, 16 insertions(+)\n create mode 100644 docs/verification/P002-20261029-A/S0-dev-participation.md\n",
+    "stderr": "PASS: contracts match adopted plan 13cca35f6398\n",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-30T11:39:30+09:00",
+    "cwd": "<fixture-root>/p002-session-run_dev",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "stdout": "749054a149134767b7eb613fc311b785e85a59b7\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+]

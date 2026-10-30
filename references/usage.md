@@ -84,3 +84,78 @@ workflow, and add a Claude import without removing existing instructions. Review
 policy path changes explicitly. For a legacy installation without a manifest, the
 installer refuses to overwrite it; integrate the diff on plan rather than fabricating
 an installation manifest to bypass conflict detection.
+
+## v0.2 workflow controls
+
+See [workflow-controls](../assets/docs/process/workflow-controls.md) for the complete
+CLI. Decision requests and generic intake serve different purposes: only a critical
+OPEN decision or a user pause blocks queue selection. Impact classifications belong
+to plan and must be adopted. Old records without scope remain conservative all-role
+pauses/all-dev decisions. A RESOLVED decision needs a full adopted plan SHA.
+
+Existing v0.1.0 manifests support the same-option --upgrade path. New scripts and
+process documents are managed; live requests/checkpoints/handoffs and extra adapter
+hooks are not installer payloads. Review ownership additions before adopting on dev.
+Installation does not repair malformed historical records or install optional adapters.
+
+## Authorized delivery
+
+Follow [direct handoff](direct-handoff.md) for human authority, verified recipients,
+committed SHA/document, actual send/receipt evidence, deduplication and fallback.
+The installed project procedure is complete in docs/process/workflow-controls.md;
+queue/CLI reads never message a chat. A supported, authorized agent delivery is
+performed directly; it does not require a new permission or user copy step.
+
+## Source, project runtime and personal skill transitions
+
+The distribution source has VERSION, SKILL.md, references/, scripts/ and assets/.
+install_harness.py copies assets into a project's scripts/ and docs/process/ with
+.harness/installation.json hashes; changing source assets does not update a project.
+Project --upgrade requires its original flags and unmodified managed hashes.
+Preview is read-only; review options, manifest, extra hooks, instructions and live
+records before applying under that project's authority. Commit reviewed changes
+on plan, integrate/adopt the exact SHA on dev and verify again. Legacy installs
+without a manifest need reviewed integration, not a fabricated manifest.
+
+install_skill.py separately copies a self-contained skill package. It has no
+--upgrade flag. Its Codex default is ~/.agents/skills; a loaded ~/.codex/skills
+installation is a different path. Claude defaults to ~/.claude/skills. Inspect the
+actual loaded skill path, VERSION and payload before choosing a transition; same
+name does not mean same version or active copy. Never change personal installations
+as a side effect of a project task.
+
+For an authorized skill transition, preserve/back up the old payload and user
+extensions, preview a fresh destination with --skills-dir, then apply using the
+same flags. Test its standalone scripts, references and assets before selecting
+it in the host. Do not leave two copies simultaneously active under the same name.
+Choose the supported discovery path deliberately, reopen/refresh discovery if
+needed and reread the selected SKILL.md. File copying alone proves no activation.
+Conflict refusal preserves the old destination; it is not permission to force it.
+
+## Legacy setup capabilities retained in this workflow
+
+Before setup, inspect instructions, status, branches, worktrees, remotes, upstreams,
+hooks and active writers. Infer the local parent/name and existing repository from
+that evidence; ask together only for missing destination/branch decisions. Reuse
+suitable checkouts. For a new hosted repository verify the authenticated identity,
+exact owner/name, nonexistence and agreed visibility; do not assume an organization
+or reuse another project's accounts. A visibility choice and publication require
+human authority. Never request tokens in chat.
+
+New local bootstrap creates infrastructure only. GitHub discovery/creation and
+remote configuration are separate host connector/CLI actions, not features of
+install_harness.py. Add only agreed exact remotes and publish only authorized
+branches with normal pushes; verify destination SHAs. Main publication/promotion
+needs explicit authorization. Existing histories must not be reset or force-joined.
+For existing repositories add only missing linked worktrees, coordinate active
+writers and preserve dirty/ignored files. See [workspace migration](workspace-layout.md).
+
+Keep existing project instructions and optional service adapters. Use --agent none
+and reviewed instruction integration when necessary; do not remove extensions to
+make a package fit. P-card ownership, immutable intake, exact adoption, pauses and
+evidence remain in the installed workflow. Report local-only versus pushed state,
+actual checks, loaded paths and unverified limits across computers.
+
+인간이 해당 프로젝트의 plan→dev 전달·착수를 위임한 경우 plan은 검토된 READY 계획의 정확 SHA를
+확인된 기존 dev에 직접 전달하고, dev는 기존 작업·실패를 보존해 통합·정확 채택·커밋·guard/큐
+확인 후 승인 범위를 시작합니다. 설치 자체는 위임이 아니며 초기화는 읽기 전용 대기를 유지합니다.

@@ -1,0 +1,26 @@
+[
+  {
+    "commit": "8e1ae7d56149937914c507e470a5cb99356a0671",
+    "path": "docs/progress/sessions/plan.md",
+    "export": "docs/verification/P002/S2/resume-exports/docs/progress/sessions/plan.md",
+    "sha256": "35a55cc98af0e5766a79f238b52beb978065d5e99636610e6c8b26ad12f08702"
+  },
+  {
+    "commit": "8e1ae7d56149937914c507e470a5cb99356a0671",
+    "path": "docs/verification/P002-20261029-A/S2-plan-resume-commands.json",
+    "export": "docs/verification/P002/S2/resume-exports/docs/verification/P002-20261029-A/S2-plan-resume-commands.json",
+    "sha256": "c83745d21546112146408e312aaaf59aa4a229a9bd4534cbbe511c1508dfaa1e"
+  },
+  {
+    "commit": "8e1ae7d56149937914c507e470a5cb99356a0671",
+    "path": "docs/verification/P002-20261029-A/S2-plan-resume.md",
+    "export": "docs/verification/P002/S2/resume-exports/docs/verification/P002-20261029-A/S2-plan-resume.md",
+    "sha256": "0a68638c478a450f66570fca55bafcb37f3dc8e9cb33ed89790da5b080c2ae56"
+  },
+  {
+    "base": "3bab8892fa6fa503b94a54f1ce109d07bcd4427c",
+    "end": "8e1ae7d56149937914c507e470a5cb99356a0671",
+    "export": "docs/verification/P002/S2/fixture-plan-resume.patch",
+    "sha256": "184f80faac1245faae84341db64cdf08ed5dff6249914555efc956efa276d700"
+  }
+]

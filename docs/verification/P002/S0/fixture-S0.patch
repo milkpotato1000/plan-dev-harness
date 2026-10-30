@@ -1,0 +1,480 @@
+diff --git a/.harness/adopted-plan.json b/.harness/adopted-plan.json
+new file mode 100644
+index 0000000..5d08513
+--- /dev/null
++++ b/.harness/adopted-plan.json
+@@ -0,0 +1,4 @@
++{
++  "commit": "11706bf5ea2b4091be46784911ad38a4f2e507e0",
++  "review_reference": "docs/planning/reviews/P002-S0-readiness.md"
++}
+diff --git a/docs/planning/plans/P901.md b/docs/planning/plans/P901.md
+new file mode 100644
+index 0000000..92d48e4
+--- /dev/null
++++ b/docs/planning/plans/P901.md
+@@ -0,0 +1,40 @@
++# P901 — 결정된 완료 marker 기록
++
++> 준비: 준비 완료
++> 실행: 미착수
++> 우선순위: 10
++> 선행: 없음
++> 승인 근거: P002-20261029-A 실제 사용자 S0 참여 요청 및 docs/planning/reviews/P002-S0-readiness.md; P904는 관찰 전용 초안
++
++## 목적
++
++실제 두 역할 세션의 결정 대기·의존성·독립 실행을 확인하는 비민감 fixture다.
++
++## 기획 준비
++
++배포 P002 계약의 가상 카드이며 제품 작업이 아니다. plan이 작성·검토하고 dev는 정확한 커밋을 채택한다.
++P901 marker 판단은 S1의 별도 결정 절차에서 확정한다. 판단 미확정은 준비된 검증 절차의 입력이다.
++
++## 범위와 계약
++
++S1에서 plan이 별도 판단 커밋으로 확정하고 dev가 정확히 채택·해결한 marker를 docs/verification/P002-20261029-A/P901-marker.txt에 한 줄로 기록한다. 결정 전 marker를 임의 선택하지 않는다. S1~S4를 마친 S5에서 실행한다.
++각 역할은 자기 worktree만 쓰며 runtime·원격·main을 변경하지 않는다.
++실제 사용자 중지와 OPEN 결정은 설치된 제어 규칙대로 유지한다.
++
++## 검증 계획
++
++S0 독립 기대값은 plan next=P904, dev next=P901, 제어 기록은 비어 있음이다.
++S1은 미분류 전체 차단, scope(tasks P901) 채택 뒤 P901/P903 차단과 P902 선택을 확인한다.
++작업별 출력은 위 리터럴 또는 채택된 판단과 대조하고 docs/verification/P002-20261029-A/에 근거를 보존한다.
++최신 PASS와 비어 있지 않은 커밋 증거가 있을 때만 dev가 완료 표시한다. 실패·이전 기록은 보존한다.
++
++## 완료 조건
++
++<!-- CHECKLIST:START -->
++- [ ] C1: 기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.
++<!-- CHECKLIST:END -->
++
++## 실행 로그
++
++<!-- EXECUTION:START -->
++<!-- EXECUTION:END -->
+diff --git a/docs/planning/plans/P902.md b/docs/planning/plans/P902.md
+new file mode 100644
+index 0000000..8378518
+--- /dev/null
++++ b/docs/planning/plans/P902.md
+@@ -0,0 +1,40 @@
++# P902 — marker와 무관한 독립 확인
++
++> 준비: 준비 완료
++> 실행: 미착수
++> 우선순위: 20
++> 선행: 없음
++> 승인 근거: P002-20261029-A 실제 사용자 S0 참여 요청 및 docs/planning/reviews/P002-S0-readiness.md; P904는 관찰 전용 초안
++
++## 목적
++
++실제 두 역할 세션의 결정 대기·의존성·독립 실행을 확인하는 비민감 fixture다.
++
++## 기획 준비
++
++배포 P002 계약의 가상 카드이며 제품 작업이 아니다. plan이 작성·검토하고 dev는 정확한 커밋을 채택한다.
++P901 marker 판단은 S1의 별도 결정 절차에서 확정한다. 판단 미확정은 준비된 검증 절차의 입력이다.
++
++## 범위와 계약
++
++docs/verification/P002-20261029-A/P902-independent.txt에 INDEPENDENT-P002-20261029-A를 한 줄로 기록한다. P901 marker나 결과를 읽거나 변경하지 않는다. S1의 scope 채택 후 큐가 P902를 선택할 때만 실행한다.
++각 역할은 자기 worktree만 쓰며 runtime·원격·main을 변경하지 않는다.
++실제 사용자 중지와 OPEN 결정은 설치된 제어 규칙대로 유지한다.
++
++## 검증 계획
++
++S0 독립 기대값은 plan next=P904, dev next=P901, 제어 기록은 비어 있음이다.
++S1은 미분류 전체 차단, scope(tasks P901) 채택 뒤 P901/P903 차단과 P902 선택을 확인한다.
++작업별 출력은 위 리터럴 또는 채택된 판단과 대조하고 docs/verification/P002-20261029-A/에 근거를 보존한다.
++최신 PASS와 비어 있지 않은 커밋 증거가 있을 때만 dev가 완료 표시한다. 실패·이전 기록은 보존한다.
++
++## 완료 조건
++
++<!-- CHECKLIST:START -->
++- [ ] C1: P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.
++<!-- CHECKLIST:END -->
++
++## 실행 로그
++
++<!-- EXECUTION:START -->
++<!-- EXECUTION:END -->
+diff --git a/docs/planning/plans/P903.md b/docs/planning/plans/P903.md
+new file mode 100644
+index 0000000..3719d46
+--- /dev/null
++++ b/docs/planning/plans/P903.md
+@@ -0,0 +1,40 @@
++# P903 — P901 완료 후 의존 확인
++
++> 준비: 준비 완료
++> 실행: 미착수
++> 우선순위: 30
++> 선행: P901
++> 승인 근거: P002-20261029-A 실제 사용자 S0 참여 요청 및 docs/planning/reviews/P002-S0-readiness.md; P904는 관찰 전용 초안
++
++## 목적
++
++실제 두 역할 세션의 결정 대기·의존성·독립 실행을 확인하는 비민감 fixture다.
++
++## 기획 준비
++
++배포 P002 계약의 가상 카드이며 제품 작업이 아니다. plan이 작성·검토하고 dev는 정확한 커밋을 채택한다.
++P901 marker 판단은 S1의 별도 결정 절차에서 확정한다. 판단 미확정은 준비된 검증 절차의 입력이다.
++
++## 범위와 계약
++
++P901 완료와 해당 PASS 증거를 확인한 뒤 docs/verification/P002-20261029-A/P903-dependent.txt에 DEPENDENT-P002-20261029-A를 한 줄로 기록한다. P901 미완료 중 실행하지 않는다.
++각 역할은 자기 worktree만 쓰며 runtime·원격·main을 변경하지 않는다.
++실제 사용자 중지와 OPEN 결정은 설치된 제어 규칙대로 유지한다.
++
++## 검증 계획
++
++S0 독립 기대값은 plan next=P904, dev next=P901, 제어 기록은 비어 있음이다.
++S1은 미분류 전체 차단, scope(tasks P901) 채택 뒤 P901/P903 차단과 P902 선택을 확인한다.
++작업별 출력은 위 리터럴 또는 채택된 판단과 대조하고 docs/verification/P002-20261029-A/에 근거를 보존한다.
++최신 PASS와 비어 있지 않은 커밋 증거가 있을 때만 dev가 완료 표시한다. 실패·이전 기록은 보존한다.
++
++## 완료 조건
++
++<!-- CHECKLIST:START -->
++- [ ] C1: P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.
++<!-- CHECKLIST:END -->
++
++## 실행 로그
++
++<!-- EXECUTION:START -->
++<!-- EXECUTION:END -->
+diff --git a/docs/planning/plans/P904.md b/docs/planning/plans/P904.md
+new file mode 100644
+index 0000000..f742fab
+--- /dev/null
++++ b/docs/planning/plans/P904.md
+@@ -0,0 +1,40 @@
++# P904 — plan 초안 선택 관찰
++
++> 준비: 초안
++> 실행: 미착수
++> 우선순위: 40
++> 선행: 없음
++> 승인 근거: P002-20261029-A 실제 사용자 S0 참여 요청 및 docs/planning/reviews/P002-S0-readiness.md; P904는 관찰 전용 초안
++
++## 목적
++
++실제 두 역할 세션의 결정 대기·의존성·독립 실행을 확인하는 비민감 fixture다.
++
++## 기획 준비
++
++배포 P002 계약의 가상 카드이며 제품 작업이 아니다. plan이 작성·검토하고 dev는 정확한 커밋을 채택한다.
++P901 marker 판단은 S1의 별도 결정 절차에서 확정한다. 판단 미확정은 준비된 검증 절차의 입력이다.
++
++## 범위와 계약
++
++plan 큐의 다음 작업이 초안 P904인지 관찰하기 위한 카드다. 이번 검증에서 준비 완료로 전환하거나 dev 실행하지 않는다.
++각 역할은 자기 worktree만 쓰며 runtime·원격·main을 변경하지 않는다.
++실제 사용자 중지와 OPEN 결정은 설치된 제어 규칙대로 유지한다.
++
++## 검증 계획
++
++S0 독립 기대값은 plan next=P904, dev next=P901, 제어 기록은 비어 있음이다.
++S1은 미분류 전체 차단, scope(tasks P901) 채택 뒤 P901/P903 차단과 P902 선택을 확인한다.
++작업별 출력은 위 리터럴 또는 채택된 판단과 대조하고 docs/verification/P002-20261029-A/에 근거를 보존한다.
++최신 PASS와 비어 있지 않은 커밋 증거가 있을 때만 dev가 완료 표시한다. 실패·이전 기록은 보존한다.
++
++## 완료 조건
++
++<!-- CHECKLIST:START -->
++- [ ] C1: 별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.
++<!-- CHECKLIST:END -->
++
++## 실행 로그
++
++<!-- EXECUTION:START -->
++<!-- EXECUTION:END -->
+diff --git a/docs/planning/reviews/P002-S0-readiness.md b/docs/planning/reviews/P002-S0-readiness.md
+new file mode 100644
+index 0000000..c48f931
+--- /dev/null
++++ b/docs/planning/reviews/P002-S0-readiness.md
+@@ -0,0 +1,23 @@
++# P002-20261029-A S0 fixture readiness
++
++Source contract: distribution plan 283ddd331eb5196bc6b2f36b0ced15ad3ce2ba74,
++docs/planning/P002-session-validation.md and docs/planning/plans/P002.md.
++Reviewed by the existing session-plan, acting as the only fixture plan writer.
++
++P901/P902/P903 are READY, priorities 10/20/30; P903 depends on P901.
++P904 is DRAFT priority 40 and remains unexecuted. The only operations are harmless
++fixture evidence files. Exact paths, independent values, dependencies, verification
++and acceptance criteria are specified in each card. No product scope is introduced.
++P901's marker is intentionally unanswered until S1's separate classification and
++actual decision commits; readiness authorizes the prescribed validation flow.
++
++Expected S0 after exact dev adoption: next.plan=P904, next.dev=P901, no pending
++ decisions, pauses or handoffs, both roles' guards pass. A pre-adoption dev queue
++may still be empty and is not counted as the post-adoption result.
++
++S1: unclassified question blocks all dev; adopted scope P901 blocks P901 and P903,
++while P902 proceeds. Scope classification and marker decision must be separate
++commits. Rejected full unadopted/short SHA resolves remain recorded.
++S2/S3 still require stage-specific actual human stop/resume requests. S4 actual
++delivery/receipt evidence remains required. This review does not assert S0/C1 or
++P002 complete, and does not authorize automatic pause/resume or fabricate receipt.
+diff --git a/docs/verification/P002-20261029-A/S0-dev-participation.md b/docs/verification/P002-20261029-A/S0-dev-participation.md
+new file mode 100644
+index 0000000..2e18656
+--- /dev/null
++++ b/docs/verification/P002-20261029-A/S0-dev-participation.md
+@@ -0,0 +1,16 @@
++# session-dev actual S0 participation
++
++Observed at 2026-10-30T11:39:30+09:00. Run P002-20261029-A. Role: fixture dev, branch dev.
++This is the existing distribution dev chat acting only as the fixture dev writer.
++The human's actual reply to the S0 input request explicitly provided this run,
++fixture dev path and participation instruction, and separately asked this chat to
++send the fixture plan participation instruction to the existing plan chat.
++Private absolute paths/chat references are omitted from public evidence.
++
++Directly read my own outer/child instructions, installed workflow, policy and
++adoption. Dev base: 08e09466163ad0483bb9e0fc78aa609b60d1c3aa; observed counterpart committed plan: 13cca35f6398478a495a3333e42637490d192458.
++Current adoption equals 13cca35f6398478a495a3333e42637490d192458; initial queue empty, no decisions/pauses/handoffs.
++The earlier guard/hash recheck remains valid; no fixture runtime was replaced.
++No plan writer is impersonated; P901–P904 await that separate chat's commit.
++No pause/resume input has been received or executed. S0/C1 is still incomplete
++until both-role actions and exact adoption of fixture cards are recorded.
+diff --git a/docs/verification/P002-20261029-A/S0-plan-commands.json b/docs/verification/P002-20261029-A/S0-plan-commands.json
+new file mode 100644
+index 0000000..98b3874
+--- /dev/null
++++ b/docs/verification/P002-20261029-A/S0-plan-commands.json
+@@ -0,0 +1,198 @@
++[
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "git",
++      "branch",
++      "--show-current"
++    ],
++    "exit_code": 0,
++    "stdout": "plan\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "git",
++      "status",
++      "--porcelain"
++    ],
++    "exit_code": 0,
++    "stdout": "",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "git",
++      "rev-parse",
++      "HEAD"
++    ],
++    "exit_code": 0,
++    "stdout": "13cca35f6398478a495a3333e42637490d192458\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "git",
++      "rev-parse",
++      "dev"
++    ],
++    "exit_code": 0,
++    "stdout": "749054a149134767b7eb613fc311b785e85a59b7\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "git",
++      "show",
++      "749054a149134767b7eb613fc311b785e85a59b7:docs/verification/P002-20261029-A/S0-dev-participation.md"
++    ],
++    "exit_code": 0,
++    "stdout": "# session-dev actual S0 participation\n\nObserved at 2026-10-30T11:39:30+09:00. Run P002-20261029-A. Role: fixture dev, branch dev.\nThis is the existing distribution dev chat acting only as the fixture dev writer.\nThe human's actual reply to the S0 input request explicitly provided this run,\nfixture dev path and participation instruction, and separately asked this chat to\nsend the fixture plan participation instruction to the existing plan chat.\nPrivate absolute paths/chat references are omitted from public evidence.\n\nDirectly read my own outer/child instructions, installed workflow, policy and\nadoption. Dev base: 08e09466163ad0483bb9e0fc78aa609b60d1c3aa; observed counterpart committed plan: 13cca35f6398478a495a3333e42637490d192458.\nCurrent adoption equals 13cca35f6398478a495a3333e42637490d192458; initial queue empty, no decisions/pauses/handoffs.\nThe earlier guard/hash recheck remains valid; no fixture runtime was replaced.\nNo plan writer is impersonated; P901–P904 await that separate chat's commit.\nNo pause/resume input has been received or executed. S0/C1 is still incomplete\nuntil both-role actions and exact adoption of fixture cards are recorded.\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "git",
++      "remote",
++      "-v"
++    ],
++    "exit_code": 0,
++    "stdout": "",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "python3",
++      "scripts/work_queue.py",
++      "--owner",
++      "all",
++      "--json"
++    ],
++    "exit_code": 0,
++    "stdout": "{\n  \"branch\": \"plan\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"plan은 작업 트리의 기획 + dev 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "python3",
++      "scripts/contract_guard.py",
++      "check",
++      "--target",
++      "worktree"
++    ],
++    "exit_code": 0,
++    "stdout": "PASS: plan checkpoint and handoff history\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:10+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "python3",
++      "scripts/contract_guard.py",
++      "check",
++      "--target",
++      "index"
++    ],
++    "exit_code": 0,
++    "stdout": "PASS: plan checkpoint and handoff history\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:11+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "python3",
++      "scripts/contract_guard.py",
++      "check",
++      "--target",
++      "HEAD"
++    ],
++    "exit_code": 0,
++    "stdout": "PASS: plan checkpoint and handoff history\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:11+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "git",
++      "diff",
++      "--check"
++    ],
++    "exit_code": 0,
++    "stdout": "",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:11+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "python3",
++      "scripts/work_queue.py",
++      "--owner",
++      "all",
++      "--json"
++    ],
++    "exit_code": 0,
++    "stdout": "{\n  \"branch\": \"plan\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"plan은 작업 트리의 기획 + dev 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": \"P904\",\n    \"dev\": \"P901\"\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P901\",\n      \"depends_on\": [],\n      \"title\": \"결정된 완료 marker 기록\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P901.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P902\",\n      \"depends_on\": [],\n      \"title\": \"marker와 무관한 독립 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P902.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P903\",\n      \"depends_on\": [\n        \"P901\"\n      ],\n      \"title\": \"P901 완료 후 의존 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 30,\n      \"state\": \"WAITING\",\n      \"reason\": \"선행 작업: P901\",\n      \"work_order\": \"docs/planning/plans/P903.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P904\",\n      \"depends_on\": [],\n      \"title\": \"plan 초안 선택 관찰\",\n      \"owner\": \"plan\",\n      \"priority\": 40,\n      \"state\": \"DRAFT\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P904.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:11+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "python3",
++      "scripts/contract_guard.py",
++      "check",
++      "--target",
++      "worktree"
++    ],
++    "exit_code": 0,
++    "stdout": "PASS: plan checkpoint and handoff history\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:11+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "python3",
++      "scripts/contract_guard.py",
++      "check",
++      "--target",
++      "index"
++    ],
++    "exit_code": 0,
++    "stdout": "PASS: plan checkpoint and handoff history\n",
++    "stderr": ""
++  },
++  {
++    "at": "2026-10-30T11:42:11+09:00",
++    "cwd": "<fixture-plan>",
++    "argv": [
++      "python3",
++      "scripts/contract_guard.py",
++      "check",
++      "--target",
++      "HEAD"
++    ],
++    "exit_code": 0,
++    "stdout": "PASS: plan checkpoint and handoff history\n",
++    "stderr": ""
++  }
++]
+diff --git a/docs/verification/P002-20261029-A/S0-plan-participation.md b/docs/verification/P002-20261029-A/S0-plan-participation.md
+new file mode 100644
+index 0000000..658bafd
+--- /dev/null
++++ b/docs/verification/P002-20261029-A/S0-plan-participation.md
+@@ -0,0 +1,25 @@
++# session-plan actual S0 participation
++
++Run: P002-20261029-A. Observed at 2026-10-30T11:42:11+09:00. App: Codex desktop.
++Role: existing distribution plan chat, sole fixture plan writer; branch plan.
++Own worktree: <fixture-root>/p002-session-run_plan. Starting HEAD: 13cca35f6398478a495a3333e42637490d192458.
++Observed committed counterpart dev HEAD: 749054a149134767b7eb613fc311b785e85a59b7.
++Directly read counterpart participation at 749054a149134767b7eb613fc311b785e85a59b7,
++docs/verification/P002-20261029-A/S0-dev-participation.md.
++
++The incoming dev relay supplied the exact run/path. I independently read the
++actual human answer in session-dev with the host read_thread tool. That answer
++explicitly instructs sending this plan participation text to the existing plan
++chat. This is verified human-directed relay, not a direct typed user message in
++session-plan and not authority inferred solely from an agent assertion. Private
++source message identifiers and exact paths are retained in the local private
++execution reference, not exported here. The public evidence cannot independently
++reproduce the private conversation. No requirement or future stop/resume gate is
++waived; this record makes the input route explicit for the final reviewer.
++
++Read outer/child AGENTS, installed workflow/queue/intake/control rules, policy,
++card template and original P002 contract. Authored only fixture plan cards and
++review/evidence. Dev participation was observed, not authored or impersonated.
++P901/P902/P903 READY and P904 DRAFT follow the original contract. No fixture
++execution, pause/resume, runtime replacement, remote or main change performed.
++S0 is pending dev exact adoption and both-role post-adoption observations.

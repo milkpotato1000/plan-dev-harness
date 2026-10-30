@@ -1,0 +1,278 @@
+[
+  {
+    "at": "2026-10-29T08:09:36.515021+00:00",
+    "cwd": "<payload-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<distribution-dev>/scripts/install_skill.py",
+      "--agent",
+      "codex",
+      "--skills-dir",
+      "<payload-fixture>/codex-skills"
+    ],
+    "stdout": "CREATE <payload-fixture>/codex-skills/plan-dev-harness for codex (38 files)\nPreview only; repeat with --apply.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:36.569718+00:00",
+    "cwd": "<payload-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<distribution-dev>/scripts/install_skill.py",
+      "--agent",
+      "codex",
+      "--skills-dir",
+      "<payload-fixture>/codex-skills",
+      "--apply"
+    ],
+    "stdout": "CREATE <payload-fixture>/codex-skills/plan-dev-harness for codex (38 files)\nInstalled. Reopen the agent session if discovery has not refreshed.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:36.685107+00:00",
+    "cwd": "<payload-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<payload-fixture>/codex-skills/plan-dev-harness/scripts/bootstrap_workspace.py",
+      "--parent",
+      "<payload-fixture>",
+      "--name",
+      "demo-codex",
+      "--author-name",
+      "Harness Test",
+      "--author-email",
+      "fixture@example.invalid"
+    ],
+    "stdout": "CREATE <payload-fixture>/demo-codex/demo-codex_main\nCREATE <payload-fixture>/demo-codex/demo-codex_plan\nCREATE <payload-fixture>/demo-codex/demo-codex_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nPreview only; repeat with --apply.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:38.002640+00:00",
+    "cwd": "<payload-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<payload-fixture>/codex-skills/plan-dev-harness/scripts/bootstrap_workspace.py",
+      "--parent",
+      "<payload-fixture>",
+      "--name",
+      "demo-codex",
+      "--author-name",
+      "Harness Test",
+      "--author-email",
+      "fixture@example.invalid",
+      "--apply"
+    ],
+    "stdout": "CREATE <payload-fixture>/demo-codex/demo-codex_main\nCREATE <payload-fixture>/demo-codex/demo-codex_plan\nCREATE <payload-fixture>/demo-codex/demo-codex_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nCreated <payload-fixture>/demo-codex adopted plan 6c65489a458ab7ff819395b1ef64bb03fac74119\nOpen the container in either agent; initialize plan/dev roles explicitly. Queue is empty.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:38.301927+00:00",
+    "cwd": "<payload-fixture>/demo-codex/demo-codex_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "worktree"
+    ],
+    "stdout": "PASS: contracts match adopted plan 6c65489a458a\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:38.763854+00:00",
+    "cwd": "<payload-fixture>/demo-codex/demo-codex_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "stdout": "PASS: contracts match adopted plan 6c65489a458a\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:39.229469+00:00",
+    "cwd": "<payload-fixture>/demo-codex/demo-codex_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "HEAD"
+    ],
+    "stdout": "PASS: contracts match adopted plan 6c65489a458a\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:39.711245+00:00",
+    "cwd": "<payload-fixture>/demo-codex/demo-codex_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 6c65489a458a 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:39.726837+00:00",
+    "cwd": "<payload-fixture>/demo-codex/demo-codex_dev",
+    "argv": [
+      "git",
+      "remote",
+      "-v"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:39.768108+00:00",
+    "cwd": "<payload-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<distribution-dev>/scripts/install_skill.py",
+      "--agent",
+      "claude",
+      "--skills-dir",
+      "<payload-fixture>/claude-skills"
+    ],
+    "stdout": "CREATE <payload-fixture>/claude-skills/plan-dev-harness for claude (38 files)\nPreview only; repeat with --apply.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:39.819049+00:00",
+    "cwd": "<payload-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<distribution-dev>/scripts/install_skill.py",
+      "--agent",
+      "claude",
+      "--skills-dir",
+      "<payload-fixture>/claude-skills",
+      "--apply"
+    ],
+    "stdout": "CREATE <payload-fixture>/claude-skills/plan-dev-harness for claude (38 files)\nInstalled. Reopen the agent session if discovery has not refreshed.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:39.932375+00:00",
+    "cwd": "<payload-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<payload-fixture>/claude-skills/plan-dev-harness/scripts/bootstrap_workspace.py",
+      "--parent",
+      "<payload-fixture>",
+      "--name",
+      "demo-claude",
+      "--author-name",
+      "Harness Test",
+      "--author-email",
+      "fixture@example.invalid"
+    ],
+    "stdout": "CREATE <payload-fixture>/demo-claude/demo-claude_main\nCREATE <payload-fixture>/demo-claude/demo-claude_plan\nCREATE <payload-fixture>/demo-claude/demo-claude_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nPreview only; repeat with --apply.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:41.032531+00:00",
+    "cwd": "<payload-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<payload-fixture>/claude-skills/plan-dev-harness/scripts/bootstrap_workspace.py",
+      "--parent",
+      "<payload-fixture>",
+      "--name",
+      "demo-claude",
+      "--author-name",
+      "Harness Test",
+      "--author-email",
+      "fixture@example.invalid",
+      "--apply"
+    ],
+    "stdout": "CREATE <payload-fixture>/demo-claude/demo-claude_main\nCREATE <payload-fixture>/demo-claude/demo-claude_plan\nCREATE <payload-fixture>/demo-claude/demo-claude_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nCreated <payload-fixture>/demo-claude adopted plan dba5a4822ea0d0dbcfb95f15f3c94592041a3afd\nOpen the container in either agent; initialize plan/dev roles explicitly. Queue is empty.\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:41.278949+00:00",
+    "cwd": "<payload-fixture>/demo-claude/demo-claude_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "worktree"
+    ],
+    "stdout": "PASS: contracts match adopted plan dba5a4822ea0\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:41.650316+00:00",
+    "cwd": "<payload-fixture>/demo-claude/demo-claude_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "stdout": "PASS: contracts match adopted plan dba5a4822ea0\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:42.073737+00:00",
+    "cwd": "<payload-fixture>/demo-claude/demo-claude_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "HEAD"
+    ],
+    "stdout": "PASS: contracts match adopted plan dba5a4822ea0\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:42.591656+00:00",
+    "cwd": "<payload-fixture>/demo-claude/demo-claude_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan dba5a4822ea0 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:09:42.609415+00:00",
+    "cwd": "<payload-fixture>/demo-claude/demo-claude_dev",
+    "argv": [
+      "git",
+      "remote",
+      "-v"
+    ],
+    "stdout": "",
+    "stderr": "",
+    "exit_code": 0
+  }
+]

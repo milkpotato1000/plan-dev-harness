@@ -1,0 +1,132 @@
+# P002 — actual-session validation in progress
+
+Current status: C1 and C2 PASS (2/5); S2 PASS; S3 step 3 verified: independent plan/all and dev/all pauses; both fixture roles stopped.
+Run P002-20261029-A.
+
+## Initial preparation checkpoint (historical)
+The [environment](environment.md) and S0 CLI evidence record actual preparation.
+No fixture product cards, decisions, scope classifications, user stops/resumes or
+handoff receipts have been authored by this chat. S1–S5 are not executed.
+
+Resume at S0: the human supplies this same run ID and exact fixture paths to both
+existing role chats. session-plan confirms its fixture plan writer/path and creates
+P901–P904 under the contract, commits and exposes its exact SHA. session-dev reads
+that committed plan, integrates/adopts it and records both roles' initial state.
+Actual later pause/resume statements must arrive at their respective steps; none
+are inferred from the setup or incoming agent delivery. The private path mapping
+is /private/tmp/p002-session-location.json. Preserve the fixture until evidence is
+committed/exported. No reverse chat message is authorized or sent here.
+
+This input wait affects P002 only. No actual project PAUSED/OPEN record exists;
+independent adopted P003 policy/distribution work may proceed. The empty fixture
+queue and one session's preparation are insufficient for C1 PASS. Automatic
+regression is supplementary and cannot replace two-session evidence.
+
+Supplementary full regression: regression.log, Python 3.9.6, 67 PASS (P003 final run).
+This adds no actual-session PASS and does not advance C1–C5.
+
+## Follow-up on 2026-10-30
+
+At 2026-10-30T11:37:48+09:00, session-dev received session-plan's delivery of the human request
+to proceed with P002. It re-read the adopted contract and rechecked the retained
+fixture: [actual commands/state](S0/recheck-20261030.json). Source plan
+57c26ebb87634e6fba9b6f0f1fbcd624fc796285 has no changes to the three P002
+contract/readiness files compared with the existing exact adoption; no new
+adoption or product work was needed. P003 completion remains preserved.
+
+Current stage: S0 actual participant input. Both exact local role paths and
+complete human input wording were requested in this dev chat.
+[The continuation checkpoint](S0/next-input.md) specifies plan's card/participation
+commit, expected full SHA response and dev's subsequent exact adoption.
+No actual human run/path input is claimed from the forwarded request.
+No fixture role was impersonated, no pause/resume executed and no PASS advanced.
+
+## Actual S0 and S1 progress — 2026-10-30T11:44:40+09:00
+
+The human's actual reply in this dev chat supplied the dev run/path and explicitly
+asked to deliver the exact plan participation input. The verified existing plan
+chat independently read that original human reply, acted as its own fixture writer
+and committed P901–P904/review/participation at
+11706bf5ea2b4091be46784911ad38a4f2e507e0. Dev exactly adopted it at
+632cc4b4ab5c57546c6fd505cb558e17ed19bbb1, preserving its own participation
+749054a149134767b7eb613fc311b785e85a59b7. Both-role guards/initial independent
+queue expectations match. [C1/S0 result](S0/result.md) is PASS with exported raw
+source records, patch/hashes, actual host response and disclosed human-relay route.
+The real coordination event was SENT then ACK only after actual recipient evidence;
+it does not replace the future fixture S4 trial.
+
+S1's actual dev question was committed at
+5295c5b0722e77de276e1a502be691402cc5c0f1.
+[Commands](S1/01-unclassified-commands.json) and
+[queue](S1/01-unclassified-queue.json) show unclassified OPEN scope=all,
+next.plan=P904 and next.dev=null. P901/P903 were not executed.
+C2 remains incomplete: [next plan action](S1/next-plan-action.md) requires a
+separate classification/review commit before dev adoption and P902 execution.
+
+The present reverse-delivery authorization covered the S0 request. A concrete
+question now asks the human whether remaining S1–S5 coordination messages to the
+existing plan chat are authorized for this run; no broader reverse grant has been
+invented. Future actual user stop/resume inputs remain separate either way.
+No actual project user PAUSED or distribution OPEN decision was created. P003
+completion, product runtime, main and personal installations remain unchanged.
+
+Evidence-format note: git diff --check flagged the original question's final blank
+line when copied as Markdown. Its export is now a lossless .raw.json envelope
+with verbatim text and original SHA-256, preserving all bytes while avoiding that
+artifact whitespace warning. The fixture control record was never edited.
+
+## S1 completion — 2026-10-30T11:51:49+09:00
+
+The actual human authorized remaining S1–S5 coordination. Actual plan separately
+classified the first question and later decided the marker after directly reviewing
+P902 completion. Dev completed every S1 transition and negative test under exact
+adoption; [C2 result](S1/result.md) is PASS. Original source evidence and hashes are
+exported. Both failed resolve attempts left OPEN and the full file hash unchanged;
+valid resolution preserved the immutable question body. Fixture final dev commit:
+295237313c3e36025b67e1b65cd1ddfb05230424.
+
+S2 now needs an actual human plan-role stop addressed directly to session-plan,
+then a later distinct resume. [Next input](S2/next-input.md) records the exact scope
+and pre-commit visibility barrier. Coordination authorization is not a stop/resume.
+No fixture PAUSED record exists yet, and no P901/P903 execution occurred.
+
+## S2 actual role pause — 2026-10-30T12:00:38+09:00
+
+Actual human directly requested fixture plan-only pause. Actual plan prepared it
+without committing, dev observed the pause invisible, plan committed only its
+checkpoint/evidence at3bab8892fa6fa503b94a54f1ce109d07bcd4427c, and dev then
+observed next.plan=null, next.dev=P901 with one plan role pause. Both observations
+match the contract; [S2 evidence](S2/observation.md) preserves raw records and hashes.
+Plan remains PAUSED pending a separate actual human resume. S3–S5 remain unexecuted.
+
+## S2 completion and S3 preparation — 2026-10-30T12:03:33+09:00
+
+Actual human separately resumed plan; plan preserved its pause history and committed
+8e1ae7d56149937914c507e470a5cb99356a0671. Actual dev independently observed restored
+plan=P904/dev=P901 and no pauses/decisions. [S2](S2/observation.md) is PASS.
+C3 also requires S3, so its checkbox remains open.
+
+S3's second question was committed by dev at aee7050a36867aceb40886cc919e3c021053b554.
+Actual plan reviewed scope and unchanged marker at c24af9db2772a73636ca4ebe003a92c708074c1d.
+Dev exactly adopted it at d1d7b2a58639fb8d9c21ee64ab365577e80d49c3 and kept the
+second question OPEN with identical bytes. Plan/dev are ACTIVE; only the pending
+P901 decision blocks P901/P903. [S3 checkpoint](S3/checkpoint.md) and raw exports
+record this state. The next required human input is a fixture-only all-role stop
+addressed to dev. No future stop/resume is inferred from the S2 resumption.
+
+## S3 actual all-role pause — 2026-10-30T12:08:32+09:00
+
+The human explicitly stopped both fixture roles. Dev default scope=all checkpoint
+is committed at86ba359b879fb69bb196484eb23966662381b8c4. Both next selections
+are null and the second question remains OPEN/unchanged. Only state observation
+and evidence preservation continue. Plan independently confirmed this committed
+state at ee7dd573f8ea255a6c50d28178a2831aadcbe0ec. S3 step 3 now awaits a separate
+actual human request to plan for its own all-role pause; future human controls remain separate. [Checkpoint](S3/checkpoint.md).
+
+## S3 separate plan pause — 2026-10-30T12:20:10+09:00
+
+Actual human separately instructed plan to record its own all-role pause. Plan
+committed 6d04038121ae96bb9ca6ab8ac4ad0761e94dfbc3; dev independently confirmed two pauses,
+both next=null and second OPEN unchanged. Original dev checkpoint bytes remain
+identical. [Evidence](S3/checkpoint.md). Next is the separate actual dev-only
+resumption input; no resume has occurred. C3 remains incomplete, overall 2/5.

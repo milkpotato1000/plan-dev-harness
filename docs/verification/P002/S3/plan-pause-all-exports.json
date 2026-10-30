@@ -1,0 +1,26 @@
+[
+  {
+    "commit": "6d04038121ae96bb9ca6ab8ac4ad0761e94dfbc3",
+    "path": "docs/progress/sessions/plan.md",
+    "export": "docs/verification/P002/S3/plan-pause-all-exports/docs/progress/sessions/plan.md",
+    "sha256": "170c85d13fa7ec7293a93ce60c30b6f5390f1b3a005c439c7f9373a8eb8b80e4"
+  },
+  {
+    "commit": "6d04038121ae96bb9ca6ab8ac4ad0761e94dfbc3",
+    "path": "docs/verification/P002-20261029-A/S3-plan-pause-all-commands.json",
+    "export": "docs/verification/P002/S3/plan-pause-all-exports/docs/verification/P002-20261029-A/S3-plan-pause-all-commands.json",
+    "sha256": "ff94829c6e04607c9981e40e4505dfa19df6b11f043bad4774efb2e0417f7dc1"
+  },
+  {
+    "commit": "6d04038121ae96bb9ca6ab8ac4ad0761e94dfbc3",
+    "path": "docs/verification/P002-20261029-A/S3-plan-pause-all.md",
+    "export": "docs/verification/P002/S3/plan-pause-all-exports/docs/verification/P002-20261029-A/S3-plan-pause-all.md",
+    "sha256": "4c5c39988537d26fbe3a0aa9a890e5375a3c77231da41e1394cd11d0edfa4cc7"
+  },
+  {
+    "base": "ee7dd573f8ea255a6c50d28178a2831aadcbe0ec",
+    "end": "6d04038121ae96bb9ca6ab8ac4ad0761e94dfbc3",
+    "export": "docs/verification/P002/S3/fixture-plan-second-pause.patch",
+    "sha256": "58dfd60684136299481dce1e8f61579c54597346068fead5ebea8bc72a7b0711"
+  }
+]

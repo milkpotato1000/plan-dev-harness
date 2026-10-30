@@ -40,7 +40,7 @@ class ContractGuardTests(unittest.TestCase):
         self.git("config", "commit.gpgsign", "false")
         # Do not inherit host hooks in disposable test repos.
         self.git("config", "core.hooksPath", ".githooks")
-        for name in (".harness/policy.json", "scripts/contract_guard.py", "scripts/plan_cards.py", "scripts/work_queue.py", "scripts/plan_intake.py"):
+        for name in (".harness/policy.json", "scripts/contract_guard.py", "scripts/plan_cards.py", "scripts/work_queue.py", "scripts/plan_intake.py", "scripts/workflow_control.py"):
             target = self.root / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(SOURCE / name, target)

@@ -1,0 +1,107 @@
+[
+  {
+    "at": "2026-10-29T08:09:08.163242+00:00",
+    "argv": [
+      "git",
+      "init",
+      "-b",
+      "plan",
+      "<upgrade-fixture>/project"
+    ],
+    "stdout": "Initialized empty Git repository in <upgrade-fixture>/project/.git/\n",
+    "stderr": "",
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "at": "2026-10-29T08:09:08.304336+00:00",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<upgrade-fixture>/old/scripts/install_harness.py",
+      "--repo",
+      "<upgrade-fixture>/project",
+      "--protect",
+      "specs",
+      "--agent",
+      "both"
+    ],
+    "stdout": "CREATE scripts/contract_guard.py\nCREATE scripts/work_queue.py\nCREATE scripts/plan_intake.py\nCREATE scripts/workflow_control.py\nCREATE .githooks/pre-commit\nCREATE .githooks/pre-push\nCREATE scripts/plan_cards.py\nCREATE docs/planning/plans/_TEMPLATE.md\nCREATE docs/process/work-queue.md\nCREATE docs/process/plan-intake.md\nCREATE docs/process/workflow-controls.md\nCREATE docs/process/optional-adapters.md\nCREATE docs/process/checkpoint-template.md\nCREATE docs/process/handoff-template.md\nCREATE .harness/policy.json\nCREATE AGENTS.md\nCREATE docs/process/agent-workflow.md\nCREATE CLAUDE.md\nCREATE .harness/installation.json\nPreview only; repeat with --apply to write files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+    "stderr": "",
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "at": "2026-10-29T08:09:08.464367+00:00",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<upgrade-fixture>/old/scripts/install_harness.py",
+      "--repo",
+      "<upgrade-fixture>/project",
+      "--protect",
+      "specs",
+      "--agent",
+      "both",
+      "--apply"
+    ],
+    "stdout": "CREATE scripts/contract_guard.py\nCREATE scripts/work_queue.py\nCREATE scripts/plan_intake.py\nCREATE scripts/workflow_control.py\nCREATE .githooks/pre-commit\nCREATE .githooks/pre-push\nCREATE scripts/plan_cards.py\nCREATE docs/planning/plans/_TEMPLATE.md\nCREATE docs/process/work-queue.md\nCREATE docs/process/plan-intake.md\nCREATE docs/process/workflow-controls.md\nCREATE docs/process/optional-adapters.md\nCREATE docs/process/checkpoint-template.md\nCREATE docs/process/handoff-template.md\nCREATE .harness/policy.json\nCREATE AGENTS.md\nCREATE docs/process/agent-workflow.md\nCREATE CLAUDE.md\nCREATE .harness/installation.json\nApplied local files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+    "stderr": "",
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "at": "2026-10-29T08:09:08.641907+00:00",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<distribution-dev>/scripts/install_harness.py",
+      "--repo",
+      "<upgrade-fixture>/project",
+      "--protect",
+      "specs",
+      "--agent",
+      "both",
+      "--upgrade"
+    ],
+    "stdout": "KEEP scripts/contract_guard.py\nKEEP scripts/work_queue.py\nKEEP scripts/plan_intake.py\nKEEP scripts/workflow_control.py\nKEEP .githooks/pre-commit\nKEEP .githooks/pre-push\nKEEP scripts/plan_cards.py\nKEEP docs/planning/plans/_TEMPLATE.md\nKEEP docs/process/work-queue.md\nKEEP docs/process/plan-intake.md\nUPDATE docs/process/workflow-controls.md\nUPDATE docs/process/optional-adapters.md\nKEEP docs/process/checkpoint-template.md\nUPDATE docs/process/handoff-template.md\nKEEP .harness/policy.json\nUPDATE AGENTS.md\nUPDATE docs/process/agent-workflow.md\nKEEP CLAUDE.md\nUPDATE .harness/installation.json\nPreview only; repeat with --apply to write files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+    "stderr": "",
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "at": "2026-10-29T08:09:08.808793+00:00",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<distribution-dev>/scripts/install_harness.py",
+      "--repo",
+      "<upgrade-fixture>/project",
+      "--protect",
+      "specs",
+      "--agent",
+      "both",
+      "--upgrade",
+      "--apply"
+    ],
+    "stdout": "KEEP scripts/contract_guard.py\nKEEP scripts/work_queue.py\nKEEP scripts/plan_intake.py\nKEEP scripts/workflow_control.py\nKEEP .githooks/pre-commit\nKEEP .githooks/pre-push\nKEEP scripts/plan_cards.py\nKEEP docs/planning/plans/_TEMPLATE.md\nKEEP docs/process/work-queue.md\nKEEP docs/process/plan-intake.md\nUPDATE docs/process/workflow-controls.md\nUPDATE docs/process/optional-adapters.md\nKEEP docs/process/checkpoint-template.md\nUPDATE docs/process/handoff-template.md\nKEEP .harness/policy.json\nUPDATE AGENTS.md\nUPDATE docs/process/agent-workflow.md\nKEEP CLAUDE.md\nUPDATE .harness/installation.json\nApplied local files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+    "stderr": "",
+    "exit_code": 0,
+    "expected_exit": 0
+  },
+  {
+    "at": "2026-10-29T08:09:08.981019+00:00",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<distribution-dev>/scripts/install_harness.py",
+      "--repo",
+      "<upgrade-fixture>/project",
+      "--protect",
+      "specs",
+      "--agent",
+      "both",
+      "--upgrade",
+      "--apply"
+    ],
+    "stdout": "",
+    "stderr": "FAIL: Existing file differs; review/integrate instead of overwriting: docs/process/workflow-controls.md\n",
+    "exit_code": 1,
+    "expected_exit": 1
+  }
+]
