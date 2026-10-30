@@ -26,3 +26,18 @@ Raw commands, queue and checkpoint exports are retained in this S3 directory.
 Actual plan has been asked only to observe/preserve the committed stopped state
 under the human's request. Its separate own pause still needs later human input.
 No resume or resolution is authorized. Overall C1/C2 PASS; C3–C5 incomplete.
+
+## Actual plan confirms both-role stop
+
+Session-plan read the committed dev pause and independently queried its own queue.
+Its observation commit ee7dd573f8ea255a6c50d28178a2831aadcbe0ec confirms both
+next selections null, dev all-role pause and second OPEN unchanged. It preserved
+only evidence and did not create its own new pause or resume. Both roles remain
+stopped. Original plan records and hashes are exported here. S3 step 2 observation
+is complete; C3 remains incomplete.
+
+Next required actual human input for S3 step 3 goes directly to session-plan:
+“P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘.
+dev의 기존 중지는 유지하고, 재개하지 마.”
+This tests that two independent stop records survive a later single-role resume.
+Only checkpoint/evidence and requested status observations may occur while stopped.

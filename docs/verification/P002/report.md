@@ -119,5 +119,6 @@ addressed to dev. No future stop/resume is inferred from the S2 resumption.
 The human explicitly stopped both fixture roles. Dev default scope=all checkpoint
 is committed at86ba359b879fb69bb196484eb23966662381b8c4. Both next selections
 are null and the second question remains OPEN/unchanged. Only state observation
-and evidence preservation continue. Plan's independent read of this committed
-state is pending; future human controls remain separate. [Checkpoint](S3/checkpoint.md).
+and evidence preservation continue. Plan independently confirmed this committed
+state at ee7dd573f8ea255a6c50d28178a2831aadcbe0ec. S3 step 3 now awaits a separate
+actual human request to plan for its own all-role pause; future human controls remain separate. [Checkpoint](S3/checkpoint.md).

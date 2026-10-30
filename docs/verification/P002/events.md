@@ -22,3 +22,5 @@ No counterpart observation commit is asserted before its actual participation.
 - 2026-10-30T12:00:38+09:00 | P002-20261029-A | S2 | session-plan/session-dev | actual human role pause; pre/post commit visibility | expected=actual | plan 3bab8892fa6fa503b94a54f1ce109d07bcd4427c, dev295237313c3e36025b67e1b65cd1ddfb05230424 | S2/observation.md | human resume pending
 
 - 2026-10-30T12:03:33+09:00 | P002-20261029-A | S2→S3 | session-plan/session-dev | actual human resume, restored queue; second question reviewed/adopted but OPEN | expected=actual | plan c24af9db2772a73636ca4ebe003a92c708074c1d / dev d1d7b2a58639fb8d9c21ee64ab365577e80d49c3 | S2/observation.md, S3/checkpoint.md
+
+- 2026-10-30T12:09:00+09:00 | P002-20261029-A | S3 step 2 | session-dev/session-plan | actual all-role stop and independent plan read | both next=null, second question OPEN | dev86ba359b879fb69bb196484eb23966662381b8c4 / plan ee7dd573f8ea255a6c50d28178a2831aadcbe0ec | S3/checkpoint.md
