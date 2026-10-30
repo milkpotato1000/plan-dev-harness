@@ -1,6 +1,6 @@
 # P002 — actual-session validation in progress
 
-Current status: C1 and C2 PASS (2/5); S2 role pause visibility PASS, actual human plan resume pending.
+Current status: C1 and C2 PASS (2/5); S2 PASS; S3 step 1 complete, actual human all-role pause pending.
 Run P002-20261029-A.
 
 ## Initial preparation checkpoint (historical)
@@ -98,3 +98,18 @@ checkpoint/evidence at3bab8892fa6fa503b94a54f1ce109d07bcd4427c, and dev then
 observed next.plan=null, next.dev=P901 with one plan role pause. Both observations
 match the contract; [S2 evidence](S2/observation.md) preserves raw records and hashes.
 Plan remains PAUSED pending a separate actual human resume. S3–S5 remain unexecuted.
+
+## S2 completion and S3 preparation — 2026-10-30T12:03:33+09:00
+
+Actual human separately resumed plan; plan preserved its pause history and committed
+8e1ae7d56149937914c507e470a5cb99356a0671. Actual dev independently observed restored
+plan=P904/dev=P901 and no pauses/decisions. [S2](S2/observation.md) is PASS.
+C3 also requires S3, so its checkbox remains open.
+
+S3's second question was committed by dev at aee7050a36867aceb40886cc919e3c021053b554.
+Actual plan reviewed scope and unchanged marker at c24af9db2772a73636ca4ebe003a92c708074c1d.
+Dev exactly adopted it at d1d7b2a58639fb8d9c21ee64ab365577e80d49c3 and kept the
+second question OPEN with identical bytes. Plan/dev are ACTIVE; only the pending
+P901 decision blocks P901/P903. [S3 checkpoint](S3/checkpoint.md) and raw exports
+record this state. The next required human input is a fixture-only all-role stop
+addressed to dev. No future stop/resume is inferred from the S2 resumption.

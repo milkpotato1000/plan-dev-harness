@@ -20,3 +20,5 @@ No counterpart observation commit is asserted before its actual participation.
 - 2026-10-30T11:51:49+09:00 | P002-20261029-A | S1 | session-dev/session-plan | separate scope and decision, exact adoption, actual P902, rejected resolves, valid resolve | expected=actual PASS | dev 295237313c3e36025b67e1b65cd1ddfb05230424 | plan e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee | S1/result.md
 
 - 2026-10-30T12:00:38+09:00 | P002-20261029-A | S2 | session-plan/session-dev | actual human role pause; pre/post commit visibility | expected=actual | plan 3bab8892fa6fa503b94a54f1ce109d07bcd4427c, dev295237313c3e36025b67e1b65cd1ddfb05230424 | S2/observation.md | human resume pending
+
+- 2026-10-30T12:03:33+09:00 | P002-20261029-A | S2→S3 | session-plan/session-dev | actual human resume, restored queue; second question reviewed/adopted but OPEN | expected=actual | plan c24af9db2772a73636ca4ebe003a92c708074c1d / dev d1d7b2a58639fb8d9c21ee64ab365577e80d49c3 | S2/observation.md, S3/checkpoint.md
