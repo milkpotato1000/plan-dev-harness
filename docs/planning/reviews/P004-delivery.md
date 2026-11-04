@@ -18,3 +18,11 @@ Payload requested exact adoption then complete P004 source/install/test/update
 scope, preserving fixture pauses, dev logs, main, unrelated projects and real
 permission boundaries. No actual receipt/adoption/completion claimed yet.
 Private host/thread identifiers are omitted from public evidence.
+
+## Actual receipt and adoption observed
+
+Host wait_threads reported actual session-dev accepting the P004 scope and
+starting the authorized work. Shared committed dev adoption at 8f5e756 records
+exact SHA 46e22e4de27db7074a62d8ccaeb721febdf1fb93 and review
+ docs/planning/reviews/P004-readiness.md. Plan directly inspected that committed
+record. This establishes receipt/adoption, not implementation completion.
