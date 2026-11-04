@@ -7,12 +7,22 @@
   "document": "docs/planning/reviews/P005-readiness.md",
   "summary": "P005 existing-installation upgrade review; prepare protected-file proposals first",
   "next_action": "Adopt exact reviewed P005; inventory and test isolated proposals; wait for target-specific plan review before applying protected files",
-  "status": "PENDING",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-04T02:43:31.134160+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-04T02:44:12.009352+00:00",
+      "evidence": "2026-11-04 host send_message_to_thread succeeded for verified existing same-project dev; P005 baseline 28c8b4c43d261717ccb7d65d326ae2d6df44d6ab and proposal stage delivered"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-04T02:47:07.953161+00:00",
+      "evidence": "2026-11-04 observed existing dev response confirming P005 exact adoption and isolated proposal preparation; dev committed adoption refers to 28c8b4c43d261717ccb7d65d326ae2d6df44d6ab"
     }
   ]
 }
