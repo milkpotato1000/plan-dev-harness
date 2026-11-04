@@ -1,3 +1,7 @@
+Current result: **COMPLETE (5/5)**. See [final report](final-report.md),
+[target results](target-results.json), and [managed results](managed-final.json).
+The text below is the preserved earlier proposal checkpoint, not current status.
+
 # P005 preservation upgrade — proposal checkpoint
 
 Four actual installations were inspected: this managed installation and three

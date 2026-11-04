@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-04T12:15:49.291554+09:00",
+  "version": "0.2.1",
+  "payload_hashes_match": 15,
+  "outer_matches": true,
+  "main": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "hooks_unchanged": true,
+  "p002_preserved_files": 107,
+  "p002_status": "2/5; PAUSED/OPEN preserved; no resume/recreation",
+  "adoption": {
+    "commit": "5030f3524b56e78192a989ec2e283e734d62905d",
+    "review_reference": "docs/planning/reviews/P005-target-integration.md"
+  }
+}
