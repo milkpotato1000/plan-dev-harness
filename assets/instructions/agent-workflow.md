@@ -86,3 +86,46 @@ messages cannot resume or resolve them. Record SENT only with actual send succes
 and ACK only with an observed recipient response; receipt is separate from
 adoption/completion. No unauthorized reverse/chain sends or ACK loops. Without
 matching authority/tool/recipient, preserve the file handoff and actual state.
+
+## Fresh sessions and document delivery
+
+On every new or resumed session, before any material write, read the outer and
+selected child AGENTS.md (and CLAUDE.md where applicable), policy, actual Git
+branch/status, exact adoption, current P cards, committed dev progress and scoped
+stops/decisions. Reconstruct state from these files; earlier chat history is not
+required. An existing explicit human role assignment persists. A directory,
+branch name, title or Markdown extension alone is not a role grant. Initialization
+only means read/status/wait; an actual change request proceeds within its scope.
+
+For an unassigned session receiving a material change request, use the project's
+plan -> exact dev adoption -> dev execution workflow. First reuse an applicable
+P card or prepare the next unused P number with bounded review/acceptance. A
+plan-assigned session prepares and hands off; it does not implement in plan or
+silently become dev. A session authorized for both roles may perform the stages
+sequentially in their proper worktrees only when no other writer owns them.
+Check existing writers before mutation; do not create chats or message anyone
+without the project's human authorization. Missing transport leaves an explicit
+pending file handoff, never an invented completed delivery.
+
+Classify documents by purpose, not .md: planning requirements/reviews/governance
+are plan-owned; product README, user guides, release notes and repository-facing
+usage documentation are implementation deliverables authored by dev after exact
+P-card adoption. A plan-owned document needed by dev is integrated/adopted there;
+plan-only commit or push is not completion of a requested cross-branch delivery.
+Explicit planning-only/draft requests may end on plan and must say so. Questions
+and read-only reviews do not need new P cards. Reuse a fitting existing card for
+small changes; do not bypass the workflow merely because a change is documentation.
+
+For GitHub/document update requests, record the requested file, target repository,
+branch/ref and completion evidence in the P card. A local commit, a push to plan,
+dev adoption, a push to dev and visibility on GitHub's default branch are distinct
+outcomes. Verify the authorized target SHA/ref (and file content where applicable)
+before claiming delivery. If the user specifies no branch, follow configured
+plan/dev delivery and report those branches; never infer main promotion from
+"GitHub update". Existing main/release and remote permissions still apply.
+
+Existing plan guards validate checkpoint/handoff history, not a universal plan
+file allowlist. Passing hooks does not authorize plan implementation or prove a
+P-card exists. This routing procedure is an agent obligation, not a mechanical
+block of arbitrary writes. Preserve scoped user pauses without applying a fixture
+pause to an unrelated authorized task or resuming the fixture as a side effect.

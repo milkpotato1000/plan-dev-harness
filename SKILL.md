@@ -11,6 +11,16 @@ Read [workflow and ownership](references/project-instructions.md) for setup and
 [usage](references/usage.md) for actual commands. Scripts resolve assets from this
 skill directory; invoke them by absolute path if the current directory is a project.
 
+For the generated project's new or resumed sessions, require file-based state
+reconstruction and preserve explicit roles. Unassigned material requests follow
+P-card preparation -> exact dev adoption -> dev execution; plan-only drafts and
+read-only questions keep their narrower scope. Product documentation is dev work,
+while planning contracts belong to plan and must reach dev when needed. A plan
+push alone is not completed delivery. See
+[fresh sessions and document delivery](assets/instructions/agent-workflow.md#fresh-sessions-and-document-delivery)
+for role, writer, target-ref and pause boundaries. Put these rules in actual
+outer/child entrypoints during setup or reviewed upgrades, not only this skill.
+
 1. Inspect project AGENTS.md/CLAUDE.md, status, worktrees, branches, remotes, adoption,
    hooks and active writers. Preserve existing work. Infer existing destinations;
    ask only for missing identifiers or decisions. Setup is not product approval.

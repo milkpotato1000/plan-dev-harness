@@ -9,10 +9,31 @@ Git commands and project scripts run inside the selected worktree.
 | `{{PROJECT}}_dev/` | `{{DEV_BRANCH}}` | Adopted implementation, verification and execution logs |
 | `{{PROJECT}}_main/` | `{{RELEASE_BRANCH}}` | Release baseline; promotion requires an explicit request |
 
-For planning requests, enter `{{PROJECT}}_plan/` and read its AGENTS.md.
-For implementation, fixes, verification or “다음 큐 진행”, enter `{{PROJECT}}_dev/`
-and read its AGENTS.md. A request covering both roles proceeds plan → dev, with
-readiness review, integration and exact adoption before implementation.
+Start a new or resumed session by reading this entrypoint and the appropriate
+child AGENTS.md/CLAUDE.md, policy, actual status/branch, adoption, current P cards,
+committed dev progress, active writers and scoped stops/decisions. Earlier chat
+history is not needed. Keep an explicit human role assignment. A directory or
+branch name does not assign a role. In a plan-assigned chat, implementation
+requests become plan preparation/review/handoff, never implementation on plan.
+Unassigned material requests follow P-card preparation in `{{PROJECT}}_plan/`
+then exact adoption and implementation in `{{PROJECT}}_dev/`. Reuse an applicable
+card or prepare the next unused one. A session may perform both stages only with
+matching authority and no competing writer; use the proper child for each stage.
+Read-only questions need no new P card; an explicit planning-only draft can end
+on plan. Initialization alone reads status and waits.
+
+README, user guides and release notes are dev deliverables after exact adoption.
+Planning requirements/reviews/governance are plan-owned; changes needed by dev
+still require integration and adoption. For document delivery, record file,
+repository and target ref. A plan push is not dev adoption or target-ref delivery.
+Check requested ref/content before claiming completion. With no requested ref,
+follow configured plan/dev delivery and report branches; do not infer main promotion.
+Missing messaging authority/tools leaves a pending file handoff, not sent work.
+Preserve scoped pauses/OPEN decisions and existing writers. Passing plan hooks
+is not proof of an approved card or a mechanical barrier to plan implementation.
+Full procedure: selected child's `docs/process/agent-workflow.md`, section
+"Fresh sessions and document delivery".
+
 If a missing business decision changes the scope, ask before dependent work.
 Do not choose a role from the workspace root's name or run Git at this level.
 Use explicit working directories; do not assume a previous shell's `cd` persists.

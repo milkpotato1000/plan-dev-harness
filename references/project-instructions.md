@@ -67,3 +67,15 @@ Do not delete or rewrite stops or delivery history to unblock a queue. Send mess
 only under user authorization and record actual delivery/receipt evidence. Existing
 project-local skills may share this skill's name; merge their operating rules deliberately
 instead of replacing them with this setup skill. Preserve optional project adapters.
+
+## Fresh sessions and document delivery
+
+Use the shared [startup and delivery rules](../assets/instructions/agent-workflow.md#fresh-sessions-and-document-delivery).
+Read actual files/branch/adoption/queue/stops and check writers before material writes.
+Preserve an assigned role; unassigned changes use an existing suitable P card or a
+reviewed new one, then exact dev adoption and implementation. Plan does not implement
+product README/user guides; planning-only drafts may finish on plan, and read-only
+questions need no card. Record file/repository/target ref and verify actual delivery;
+plan push, dev adoption and default-branch visibility are separate outcomes.
+Only authorized, uncontested sessions perform both roles in separate worktrees.
+Bootstrap, absent messaging authority and scoped pauses retain their boundaries.

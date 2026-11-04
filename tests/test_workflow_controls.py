@@ -242,7 +242,7 @@ class ReleaseUpgradeTests(unittest.TestCase):
             before=(repo/'scripts/contract_guard.py').read_bytes();run(*call)
             self.assertEqual((repo/'scripts/contract_guard.py').read_bytes(),before)
             run(*call,'--apply')
-            self.assertEqual(json.loads((repo/'.harness/installation.json').read_text())['version'],'0.2.0')
+            self.assertEqual(json.loads((repo/'.harness/installation.json').read_text())['version'], (BASE/'VERSION').read_text().strip())
             self.assertEqual(extra.read_text(),'# existing adapter\n');self.assertEqual(record.read_text(),'Existing session data\n')
             self.assertTrue((repo/'scripts/workflow_control.py').exists())
             (repo/'AGENTS.md').write_text('User customization\n')

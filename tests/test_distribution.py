@@ -158,6 +158,7 @@ class DistributionTests(unittest.TestCase):
             self.assertEqual((workspace/'AGENTS.md').read_text(),expected)
             for role in ('main','plan','dev'):
                 child=workspace/(name+'_'+role)
+                self.assertEqual((child/'CLAUDE.md').read_text(),'@AGENTS.md\n')
                 self.assertEqual((child/'AGENTS.md').read_bytes(),(project/'AGENTS.md').read_bytes())
                 self.assertEqual((child/'docs/process/agent-workflow.md').read_bytes(),
                                  (project/'docs/process/agent-workflow.md').read_bytes())
@@ -199,6 +200,43 @@ class DistributionTests(unittest.TestCase):
         p=self.repo()
         self.script('bootstrap_workspace.py','--parent',str(p),'--name','nested',ok=False)
         self.assertFalse((p/'nested').exists())
+
+    def test_document_delivery_distinguishes_plan_adoption_and_remote_refs(self):
+        self.script('bootstrap_workspace.py','--parent',str(self.root),'--name','delivery',
+            '--author-name','Harness Test','--author-email','fixture@example.invalid','--apply')
+        workspace=self.root/'delivery';plan=workspace/'delivery_plan';dev=workspace/'delivery_dev'
+        remote=self.root/'remote.git';self.cmd('git','init','--bare',str(remote))
+        self.cmd('git','remote','add','origin',str(remote),cwd=plan)
+        self.cmd('git','push','origin','main','plan','dev',cwd=plan)
+        git=lambda *args,cwd=plan:self.cmd('git',*args,cwd=cwd).stdout.strip()
+        main=git('rev-parse','main');old_dev=git('rev-parse','dev')
+        document='docs/planning/document-delivery.md'
+        (plan/document).write_text('Reviewed README target: origin/dev; main excluded.\n')
+        card=(plan/'docs/planning/plans/_TEMPLATE.md').read_text().replace(
+            '> 준비: 초안','> 준비: 준비 완료').replace('> 승인 근거: 미확정',
+            '> 승인 근거: docs/planning/document-delivery.md')
+        (plan/'docs/planning/plans/P001.md').write_text(card)
+        git('add',document,'docs/planning/plans/P001.md');git('commit','-m','Prepare document change')
+        reviewed=git('rev-parse','HEAD');git('push','origin','plan')
+        self.assertEqual(git('--git-dir='+str(remote),'rev-parse','dev'),old_dev)
+        self.assertFalse((dev/document).exists())
+        self.assertNotEqual(git('--git-dir='+str(remote),'rev-parse','plan'),old_dev)
+        git('merge','--no-ff','--no-commit',reviewed,cwd=dev)
+        self.cmd(sys.executable,'scripts/contract_guard.py','adopt',reviewed,
+            '--review-reference',document,cwd=dev)
+        git('add','.harness/adopted-plan.json',cwd=dev);git('commit','-m','Adopt document plan',cwd=dev)
+        self.assertEqual(json.loads((dev/'.harness/adopted-plan.json').read_text())['commit'],reviewed)
+        self.assertEqual((dev/document).read_bytes(),(plan/document).read_bytes())
+        self.assertEqual(git('--git-dir='+str(remote),'rev-parse','dev'),old_dev)
+        readme=(dev/'README.md').read_text()+'\nApproved documentation delivered on dev.\n'
+        (dev/'README.md').write_text(readme);git('add','README.md',cwd=dev)
+        git('commit','-m','Implement reviewed README update',cwd=dev)
+        delivered=git('rev-parse','HEAD',cwd=dev);git('push','origin','dev',cwd=dev)
+        self.assertEqual(git('--git-dir='+str(remote),'rev-parse','dev'),delivered)
+        self.assertEqual(self.cmd('git','--git-dir='+str(remote),'show','dev:README.md').stdout,readme)
+        self.assertEqual(git('--git-dir='+str(remote),'rev-parse','main'),main)
+        self.assertNotEqual(self.cmd('git','--git-dir='+str(remote),'show','main:README.md').stdout,readme)
+        self.assertNotIn('Approved documentation delivered on dev.',(plan/'README.md').read_text())
 
     def test_z_timestamp_compatibility(self):
         import importlib.util

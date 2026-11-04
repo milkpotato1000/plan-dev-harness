@@ -1,0 +1,48 @@
+[
+  {
+    "at": "2026-11-04T02:03:23.958297+00:00",
+    "cwd": "<distribution-dev>",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "8f5e7567bf45637455b3222f085e0181f3f1b676\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:03:23.971290+00:00",
+    "cwd": "<distribution-dev>",
+    "argv": [
+      "python3",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Python 3.9.6\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:03:23.980106+00:00",
+    "cwd": "<distribution-dev>",
+    "argv": [
+      "git",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "git version 2.50.1 (Apple Git-155)\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:03:23.989455+00:00",
+    "cwd": "<P002-parent>/p002-session-run/p002-session-run_plan",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 128,
+    "stdout": "",
+    "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+  }
+]

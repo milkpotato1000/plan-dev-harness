@@ -53,3 +53,15 @@ authorize reverse/chain messages or user resume; bootstrap itself remains read-o
 인간이 해당 프로젝트의 plan→dev 전달·착수를 위임한 경우 plan은 검토된 READY 계획의 정확 SHA를
 확인된 기존 dev에 직접 전달하고, dev는 기존 작업·실패를 보존해 통합·정확 채택·커밋·guard/큐
 확인 후 승인 범위를 시작합니다. 설치 자체는 위임이 아니며 초기화는 읽기 전용 대기를 유지합니다.
+
+## Fresh sessions and document delivery
+
+Use the shared [startup and delivery rules](../assets/instructions/agent-workflow.md#fresh-sessions-and-document-delivery).
+Read actual files/branch/adoption/queue/stops and check writers before material writes.
+Preserve an assigned role; unassigned changes use an existing suitable P card or a
+reviewed new one, then exact dev adoption and implementation. Plan does not implement
+product README/user guides; planning-only drafts may finish on plan, and read-only
+questions need no card. Record file/repository/target ref and verify actual delivery;
+plan push, dev adoption and default-branch visibility are separate outcomes.
+Only authorized, uncontested sessions perform both roles in separate worktrees.
+Bootstrap, absent messaging authority and scoped pauses retain their boundaries.
