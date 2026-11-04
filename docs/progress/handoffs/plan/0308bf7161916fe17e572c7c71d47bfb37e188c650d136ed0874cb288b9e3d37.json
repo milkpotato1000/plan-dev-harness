@@ -7,7 +7,7 @@
   "document": "docs/planning/reviews/P005-local-install-upgrade.md",
   "summary": "P005 own managed installation reviewed and updated; target legacy proposals remain isolated",
   "next_action": "Integrate/adopt exact 269d904 baseline; verify own managed0.2.1 while preparing other target proposals",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-04T02:48:05.043691+00:00",
       "evidence": "2026-11-04 host successfully delivered reviewed local upgrade SHA269d904889f1245194869a7cd175223296d9a489 to verified existing dev"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-04T02:59:43.276923+00:00",
+      "evidence": "2026-11-04 observed existing dev completion and committed adoption of269d904 local managed upgrade; private legacy proposal prepared separately"
     }
   ]
 }
