@@ -7,12 +7,22 @@
   "document": "docs/planning/reviews/P004-readiness.md",
   "summary": "P004 새 세션 역할 복원과 문서 dev 전달 규칙 수정",
   "next_action": "검토된 plan SHA 정확 채택 후 P004 구현·검증·로드 스킬 안전 전환",
-  "status": "PENDING",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-04T02:00:16.537589+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-04T02:00:59.112556+00:00",
+      "evidence": "docs/planning/reviews/P004-delivery.md: actual host send success to verified session-dev"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-04T02:02:11.605032+00:00",
+      "evidence": "docs/planning/reviews/P004-delivery.md: actual dev receipt and exact committed adoption at 8f5e756"
     }
   ]
 }
