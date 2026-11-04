@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "b6f3d3d976cbce26320fd3ca5aa27c1ba48c4fe1",
+  "document": "docs/planning/reviews/P004-readiness.md",
+  "summary": "P004 새 세션 역할 복원과 문서 dev 전달 규칙 수정",
+  "next_action": "검토된 plan SHA 정확 채택 후 P004 구현·검증·로드 스킬 안전 전환",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-04T02:00:16.537589+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}

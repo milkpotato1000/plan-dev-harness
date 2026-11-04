@@ -78,3 +78,13 @@ resuming a user stop. Queue/CLI reads do not send messages. Use the existing hos
 send tool, then read/wait for actual receipt; preserve SENT versus ACK versus
 adoption/completion. If the host cannot send, leave the committed file handoff.
 See `docs/planning/reviews/plan-dev-delivery-delegation.md` for scope and evidence.
+
+## New sessions and documentation work
+
+Read docs/process/agent-workflow.md section "Fresh sessions and document delivery"
+on every new/resumed session before material changes. Preserve an assigned role;
+unassigned material requests follow P-card preparation -> exact dev adoption ->
+dev execution. Product README/user-guide changes are dev deliverables, not plan
+implementation. Planning/governance documents remain plan-owned, with adoption
+when needed by dev. A plan-only push is not cross-branch or GitHub default-branch
+completion. Record the actual authorized target and verify delivery separately.
