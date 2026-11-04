@@ -52,3 +52,26 @@ three targets and queue/state/hash parity; then normal-pushes reviewed plan/dev 
 existing authorized remotes and verifies refs. No latest-plan product scope adoption,
 product queue execution, external service writes, cross-project chat messages or
 P002 resume. Complete actual results under P005 evidence before checking criteria.
+
+## Existing remote work composition for legacy target3
+
+Normal push exposed remote plan/dev advancement after the cached local baselines.
+All existing remotes agree on plan05bf17d2a5ee17adb71e223ea4b4fc4e66e37b47 and
+devc3891ecbaf76408eafdfbfcea14dc10e2d9558b3. The latter already adopts exactly
+the former. Neither remote changes upgrade/runtime/control/hook paths. This is
+preservation of existing adopted work, not new scope approval or queue execution.
+
+Plan normally merged that exact remote plan into the reviewed local upgrade and
+added target review docs/process/harness-0.2.1-remote-review.md. New exact combined
+baseline:7e82a2792da5db39ff012bcf07aedd75c1f13578. Plan guards worktree/index/HEAD
+pass. The original maintenance commit remains an ancestor, with all remote plan
+history preserved. This supplements, rather than discards, the original review.
+
+Dev may preserve both current local dev maintenance/evidence history and the exact
+remote dev history, resolve adoption to this reviewed combined plan after isolation
+rehearsal, and verify product state against the already adopted remote baseline.
+Do not report initial stale local task counts as unchanged. Existing remote cards,
+execution/evidence and control bytes remain intact; only reviewed upgrade files,
+adoption and dedicated upgrade evidence may differ from that remote product state.
+This bounded reconciliation is necessary for normal authorized plan/dev delivery.
+No force, product rerun, new approval/decision, external service or main/FE changes.
