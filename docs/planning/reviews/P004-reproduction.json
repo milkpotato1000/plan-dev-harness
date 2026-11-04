@@ -1,0 +1,143 @@
+{
+  "source_commit": "0aa032b0276373fd70a06098ebb8873beb20658b",
+  "kind": "local CLI negative probe plus instruction review, not actual fresh model session",
+  "observations": {
+    "plan_implementation_without_card_commit_accepted": true,
+    "plan_readme_change_not_present_in_dev": true,
+    "queue_empty_after_commit": true,
+    "dev_unchanged": true,
+    "loaded_skill_differs_from_source": true,
+    "loaded_skill_has_version": false
+  },
+  "commands": [
+    {
+      "at": "2026-11-04T10:57:56.000951+09:00",
+      "cwd": "<distribution-dev>",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "0aa032b0276373fd70a06098ebb8873beb20658b\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-04T10:57:56.086331+09:00",
+      "cwd": "<distribution-dev>",
+      "argv": [
+        "python3",
+        "<distribution-dev>/scripts/bootstrap_workspace.py",
+        "--parent",
+        "<probe-parent>",
+        "--name",
+        "routing-probe",
+        "--author-name",
+        "Harness Diagnostic",
+        "--author-email",
+        "diagnostic@example.invalid"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <probe-parent>/routing-probe/routing-probe_main\nCREATE <probe-parent>/routing-probe/routing-probe_plan\nCREATE <probe-parent>/routing-probe/routing-probe_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nPreview only; repeat with --apply.\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-04T10:57:56.962666+09:00",
+      "cwd": "<distribution-dev>",
+      "argv": [
+        "python3",
+        "<distribution-dev>/scripts/bootstrap_workspace.py",
+        "--parent",
+        "<probe-parent>",
+        "--name",
+        "routing-probe",
+        "--author-name",
+        "Harness Diagnostic",
+        "--author-email",
+        "diagnostic@example.invalid",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <probe-parent>/routing-probe/routing-probe_main\nCREATE <probe-parent>/routing-probe/routing-probe_plan\nCREATE <probe-parent>/routing-probe/routing-probe_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nCreated <probe-parent>/routing-probe adopted plan 636733f3e1d232a131e2642faa0a16b084cfa250\nOpen the container in either agent; initialize plan/dev roles explicitly. Queue is empty.\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-04T10:57:56.972486+09:00",
+      "cwd": "<probe-parent>/routing-probe/routing-probe_dev",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "ddb1f17eb0c64a1fc1aaf1f24b9521be3143dc25\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-04T10:57:56.985518+09:00",
+      "cwd": "<probe-parent>/routing-probe/routing-probe_plan",
+      "argv": [
+        "git",
+        "add",
+        "probe_implementation.py",
+        "README.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-04T10:57:57.128531+09:00",
+      "cwd": "<probe-parent>/routing-probe/routing-probe_plan",
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "index"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: plan checkpoint and handoff history\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-04T10:57:57.759218+09:00",
+      "cwd": "<probe-parent>/routing-probe/routing-probe_plan",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "Diagnostic implementation and docs without P card"
+      ],
+      "exit_code": 0,
+      "stdout": "[plan 6422748] Diagnostic implementation and docs without P card\n 2 files changed, 4 insertions(+)\n create mode 100644 probe_implementation.py\n",
+      "stderr": "PASS: plan checkpoint and handoff history\n"
+    },
+    {
+      "at": "2026-11-04T10:57:57.920305+09:00",
+      "cwd": "<probe-parent>/routing-probe/routing-probe_plan",
+      "argv": [
+        "python3",
+        "scripts/work_queue.py",
+        "--owner",
+        "all",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"branch\": \"plan\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"plan은 작업 트리의 기획 + dev 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-04T10:57:57.930390+09:00",
+      "cwd": "<probe-parent>/routing-probe/routing-probe_dev",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "ddb1f17eb0c64a1fc1aaf1f24b9521be3143dc25\n",
+      "stderr": ""
+    }
+  ]
+}
