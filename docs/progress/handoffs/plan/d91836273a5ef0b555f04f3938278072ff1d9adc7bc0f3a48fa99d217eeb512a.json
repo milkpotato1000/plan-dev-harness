@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P005-target-integration.md",
   "summary": "P005 remote-existing-work composition reviewed; no new product execution",
   "next_action": "Adopt central supplement and exact reviewed target7e82a279; preserve remote dev history, verify and normal-push",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-04T03:11:00.075060+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-04T03:11:18.150671+00:00",
+      "evidence": "2026-11-04 successful host delivery to verified dev of central5030f352 and target7e82a279 exact reviewed remote-preservation baselines"
     }
   ]
 }
