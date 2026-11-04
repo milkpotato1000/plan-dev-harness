@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-04T11:56:02.104694+09:00",
+  "status": "PROPOSAL_READY; target plan review/application/exact adoption pending for legacy installations",
+  "inventory_sha256": "528dee086f9ace1640d6b8ecb010ffbf7fbe9072e33837c16252df340f60a278",
+  "preservation_sha256": "a3b19957fa8c8368fc341eaa8a115c18cd641540d3b1226b48ed08042b48f4b5",
+  "writer_snapshot": "Known app role chats inspected; recheck before live writes. notLoaded is not proof of no external writer.",
+  "legacy_guard_and_parser_tests": 12,
+  "existing_custom_guard_timestamp_tests": 9,
+  "targets": [
+    {
+      "target": "legacy-1",
+      "proposal_file_count": 15,
+      "preview": "manual integration required; differing legacy guard refused",
+      "runtime_cases_latest_pass": 68,
+      "runtime_test_method": "67 passed in suite; one fixture-path setup error repaired and targeted case passed",
+      "initial_failures": "attempt1: 25 test-fixture setup errors; attempt2: one missing reference-doc fixture; original logs retained privately",
+      "git_rehearsal": "PASS",
+      "task_control_next_parity": true,
+      "protected_paths_retained": true,
+      "live_target_changed": false,
+      "tracked_hashes_preserved": 2366,
+      "final_diff_sha256": "893cb0a9e171838049bdf214be184bd28a5a2f66d2d3c4c942fd7eb363f2eac2",
+      "private_manifest_sha256": "09214f5a6ae494f6a401fd0375390338d6520b9487dc976c5083c193b8830da3"
+    },
+    {
+      "target": "legacy-2",
+      "proposal_file_count": 18,
+      "preview": "manual integration required; differing legacy guard refused",
+      "runtime_cases_latest_pass": 68,
+      "runtime_test_method": "67 passed in suite; one fixture-path setup error repaired and targeted case passed",
+      "initial_failures": "attempt1: 25 test-fixture setup errors; attempt2: one missing reference-doc fixture; original logs retained privately",
+      "git_rehearsal": "PASS",
+      "task_control_next_parity": true,
+      "protected_paths_retained": true,
+      "live_target_changed": false,
+      "tracked_hashes_preserved": 544,
+      "final_diff_sha256": "df92f6308b4af24e506061d63e53e150670448b2d0c45445ced9b4d0198264cf",
+      "private_manifest_sha256": "985cb868d4d8aedfa0d11fb7c517b24b1b4d9cd5c9c98006ed00437ea75d9bfa"
+    },
+    {
+      "target": "legacy-3",
+      "proposal_file_count": 19,
+      "preview": "manual integration required; differing legacy guard refused",
+      "runtime_cases_latest_pass": 68,
+      "runtime_test_method": "67 passed in suite; one fixture-path setup error repaired and targeted case passed",
+      "initial_failures": "attempt1: 25 test-fixture setup errors; attempt2: one missing reference-doc fixture; original logs retained privately",
+      "git_rehearsal": "PASS",
+      "task_control_next_parity": true,
+      "protected_paths_retained": true,
+      "live_target_changed": false,
+      "tracked_hashes_preserved": 24391,
+      "final_diff_sha256": "60aaa0d5d41bd7aa74e4e6bfc59c5862c9a73782ac37d7b95a317047f03f13ed",
+      "private_manifest_sha256": "e4a9cf7c7f2ca6021b7f80437234c720fbc79d8569e29e4a2bfd0bcf323e11e0"
+    }
+  ]
+}
