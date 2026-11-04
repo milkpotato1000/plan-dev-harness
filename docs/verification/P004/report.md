@@ -53,3 +53,27 @@ no new write allowlist or schema was added. Policy review is not a live-agent
 PASS. Existing projects/outer files require separately scoped upgrades; publishing
 the skill does not update them. P002 remains stopped with its last committed
 PAUSED/OPEN evidence intact; no fixture control was changed or recreated.
+
+## Final verification — PASS
+
+Implementation commit: 14e73e9 (full SHA available in Git). Final complete suite:
+68 tests PASS (regression-final.log); initial failed run retained. Focused package
+suite: 10 PASS. Local bare-remote delivery scenario: PASS with raw commands/ref SHAs.
+Guard worktree/index/HEAD PASS and preservation.json verifies unchanged source and
+installed runtime algorithms, hooks, main803d658, P001/P002/P003 cards, remaining
+P002 files, active skill and original backup hashes. P002 temporary Git metadata
+was already unavailable at the first read; live fixture queue cannot be certified.
+No P002 controls were written or replayed. Its last exported PAUSED/OPEN state is
+still authoritative for the unfinished test, not resumed by this independent task.
+
+Source, new package installs and active Codex skill identify 0.2.1. This repository's
+local installation manifest remains 0.2.0 with the plan-reviewed instruction hashes:
+its runtime was intentionally not upgraded by editing distributable assets. The
+reviewed P004 instruction changes arrived via exact plan adoption. No other
+project's runtime or outer instruction file was implicitly upgraded.
+
+P004 completion covers the adopted bounded policy/package/transition scope. It is
+not a claim of fresh-model behavioral success, refreshed current-chat context,
+mechanical prevention of plan writes, or publication on main/GitHub Releases.
+Target delivery is the existing origin/dev; remote ref confirmation is recorded
+separately after normal push. P002 remains incomplete independently.
