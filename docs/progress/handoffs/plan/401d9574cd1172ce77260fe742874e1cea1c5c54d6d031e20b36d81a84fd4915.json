@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "d05555f972d6ce19c65c9eda76f7f922835ec709",
+  "document": "docs/planning/reviews/P002-S4-reverse-start.md",
+  "summary": "Actual first S4 direction complete; next reverse-direction trial required",
+  "next_action": "Read fixture3c29422a3aeb14fe3f9869a2c0fa650d3b753e2a ACK tests then author and send reverse DECISION_REQUEST trial",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:44:22.165875+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
