@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "1d9a3410d281645da89aae5eb80c44e4c82341e0",
+  "document": "docs/verification/P002/recovery-20261105/final-resume-input-handoff.md",
+  "summary": "Resolution-only verified: no pending decisions but explicit dev role pause persists",
+  "next_action": "Inspect actual result then ask distinct S3.7 human dev resume once; until answer keep paused and do not execute tasks",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:37:01.502882+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
