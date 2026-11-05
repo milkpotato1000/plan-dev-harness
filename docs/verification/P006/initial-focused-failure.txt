@@ -1,0 +1,5 @@
+Initial focused run: 5 tests in 15.111s; 1 failure.
+FAIL: test_n6_new_handoffs_preserve_role_all_legacy_pauses_and_open
+AssertionError: P010 != P011 at queue next assertion.
+Cause: fixture card priority replacement expected template priority 100, but the actual template default was 10. All fixture cards retained priority 10. Corrected the fixture replacement to 10 and added explicit priority assertions. No runtime or acceptance rule changed.
+The busy-dev test passed before the correction but did not yet demonstrate the intended different priorities; its corrected version is rechecked.

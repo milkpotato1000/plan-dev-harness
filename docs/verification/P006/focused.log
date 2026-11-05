@@ -1,0 +1,10 @@
+test_n1_n4_sent_returns_without_ack_then_later_observation (test_asynchronous_handoff.AsyncHandoffTests) ... ok
+test_n2_n3_n7_busy_dev_preserved_then_exact_adoption_priority_dependency (test_asynchronous_handoff.AsyncHandoffTests) ... ok
+test_n5_failure_unknown_and_missing_capabilities_never_fake_sent_or_retry (test_asynchronous_handoff.AsyncHandoffTests) ... ok
+test_n6_new_handoffs_preserve_role_all_legacy_pauses_and_open (test_asynchronous_handoff.AsyncHandoffTests) ... ok
+test_n8_real_021_upgrade_delivers_async_docs_without_runtime_change (test_asynchronous_handoff.AsyncUpgradeTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 15.350s
+
+OK

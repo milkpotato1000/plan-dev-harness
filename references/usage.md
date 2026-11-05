@@ -171,3 +171,15 @@ questions need no card. Record file/repository/target ref and verify actual deli
 plan push, dev adoption and default-branch visibility are separate outcomes.
 Only authorized, uncontested sessions perform both roles in separate worktrees.
 Bootstrap, absent messaging authority and scoped pauses retain their boundaries.
+
+## Asynchronous handoff and parallel planning
+
+Use the shared [asynchronous workflow](../assets/instructions/agent-workflow.md#asynchronous-handoff-and-parallel-planning).
+After authorized send success, record/commit/push SENT and end the plan response;
+do not wait or poll for ACK, adoption or dev completion. On a later natural
+planning/status request record ACK only from observed evidence. Busy dev preserves
+its current P and failures, then adopts the exact reviewed handoff at a safe
+completed/checkpointed commit boundary and follows readiness, priorities and
+dependencies. Keep pauses, OPEN decisions, roles and single writers. Separate
+sessions can overlap P stages; a one-chat fallback is sequential. No daemon,
+new goal, chat, monitor or messaging authority follows from this procedure.

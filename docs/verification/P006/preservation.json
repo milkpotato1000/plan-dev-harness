@@ -1,0 +1,17 @@
+{
+  "p002_and_p005_file_count": 115,
+  "p002_and_p005_all_hashes_unchanged": true,
+  "runtime_unchanged": true,
+  "main": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "hooks_unchanged": true,
+  "source_version": "0.2.2",
+  "loaded_skill_disk_version": "0.2.2",
+  "local_managed_version": "0.2.1",
+  "managed_file_count": 15,
+  "managed_hashes_match": true,
+  "active_preview_no_writes": true,
+  "adoption": {
+    "commit": "b3bc7d8b0dd87f48d1fce62958918c0fb68780ac",
+    "review_reference": "docs/planning/reviews/P006-dev-handoff.md"
+  }
+}

@@ -64,7 +64,13 @@ plan-owned scope classification and actual delivery evidence. A package upgrade
 must not resume work or replace a project's same-named daily-work skill.
 For authorized delivery to an existing role chat, follow
 [direct handoff](references/direct-handoff.md). Verify the human grant and recipient,
-send directly when supported, and observe actual receipt without ACK loops.
+send directly when supported, record/commit/push actual SENT, then finish the plan
+response without waiting for ACK, adoption or dev completion. Observe receipts
+only on a later natural planning/status request; unobserved ACK stays SENT.
+Busy dev preserves its current P and failures, and adopts the exact reviewed
+handoff only at a safe completed/checkpointed commit boundary. Choose the next P
+by readiness, priority, dependencies and existing stops/decisions. See the shared
+[parallel planning rules](assets/instructions/agent-workflow.md#asynchronous-handoff-and-parallel-planning).
 This procedure grants no messaging authority by itself.
 External integrations follow [adapter boundaries](assets/docs/process/optional-adapters.md).
 

@@ -46,7 +46,11 @@ initial prompt, not unrelated follow-up messages to old or new chats.
 After read-only bootstrap, a separately authorized handoff follows
 [direct handoff](direct-handoff.md). Verify the current project/role/child and the
 human instruction or scoped delegation; send the committed exact SHA and next
-action directly when supported. Observe actual receipt via read/wait before ACK.
+action directly when supported. Commit/push actual SENT and finish the plan turn;
+do not wait for ACK, adoption or dev completion. Observe ACK only on a later natural
+planning/status request. Busy dev preserves current work and adopts reviewed exact
+handoffs at a safe completed/checkpointed commit boundary, then follows priorities,
+dependencies and stops. See the shared asynchronous handoff rules.
 Initial chat creation alone is not this authority. Receiving a handoff does not
 authorize reverse/chain messages or user resume; bootstrap itself remains read-only.
 

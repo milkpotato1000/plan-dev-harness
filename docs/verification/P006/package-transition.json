@@ -1,0 +1,32 @@
+{
+  "codex_standalone_package": "0.2.2 PASS",
+  "claude_standalone_package": "0.2.2 PASS",
+  "both_bootstrap_entrypoints_match": true,
+  "bootstrap_no_tasks_handoffs_remotes": true,
+  "source_and_installed_runtime_unchanged": true,
+  "old_custom_files_and_ui_preserved": true,
+  "extra_file_hashes": {
+    "tests/test_installer.py": "82d664155baee2537a6408912f187468cc95270613dd88bdd7e1fddca4073b59",
+    "tests/test_contract_guard.py": "583fe864ac1b51cb5138560cbb33cf1c9156ebd2bccb1f6e1fd5ad8e8a97a577",
+    "tests/test_numbered_queue.py": "5e50b468e2ba9b09c1cc3bd6e0ebd6721d1b166aa660000a8b6bd6db65a295c7",
+    "tests/test_workspace_layout.py": "69a299ab6abb0dd98344383e13f6f0e9e6a979fc0cd50fd1788fc47ba5234684"
+  },
+  "ui_sha256": "2d9b89a0bd6dd3f7d5ebad552a38aa86471c95f0c471090579271505dcbdca7c",
+  "active_same_catalog_path": true,
+  "active_disk_version": "0.2.2",
+  "candidate_all_hashes_match": true,
+  "backup_outside_discovery": true,
+  "original_backup_all_hashes_verified": true,
+  "new_duplicate_active_copy": false,
+  "quick_validate": "Skill is valid!",
+  "skill_reread_after_transition": true,
+  "automatic_new_session_refresh": "not observed",
+  "retained_legacy_tests": {
+    "total": 31,
+    "passed": 20,
+    "failed": 11,
+    "unchanged_failure_set": true,
+    "reason": "Pre-existing retained fixture copies only guard and plan_cards; missing plan_intake import dependency. User extension kept intact."
+  },
+  "initial_fixture_failures_preserved": true
+}

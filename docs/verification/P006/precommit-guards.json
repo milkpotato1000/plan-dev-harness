@@ -1,0 +1,17 @@
+[
+  {
+    "target": "worktree",
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan b3bc7d8b0dd8\n"
+  },
+  {
+    "target": "index",
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan b3bc7d8b0dd8\n"
+  },
+  {
+    "target": "HEAD",
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan b3bc7d8b0dd8\n"
+  }
+]

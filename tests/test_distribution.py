@@ -127,11 +127,15 @@ class DistributionTests(unittest.TestCase):
             self.cmd(*installer,'--apply')
             for name in ('workflow-controls.md','optional-adapters.md','handoff-template.md'):
                 actual=project/'docs/process'/name
-                self.assertEqual(actual.read_bytes(),(BASE/'docs/process'/name).read_bytes())
+                # Installed local governance can intentionally remain an older
+                # managed version. Compare the delivered package's own assets.
+                self.assertEqual(actual.read_bytes(),(BASE/'assets/docs/process'/name).read_bytes())
             self.assertEqual((project/'docs/process/agent-workflow.md').read_bytes(),
                              (skill/'assets/instructions/agent-workflow.md').read_bytes())
             self.assertEqual((project/'AGENTS.md').read_bytes(),
                              (skill/'assets/instructions/AGENTS.md').read_bytes())
+            self.assertIn('Asynchronous handoff and parallel planning',
+                          (project/'docs/process/agent-workflow.md').read_text())
             self.assert_local_links(project,['docs/process/workflow-controls.md',
                 'docs/process/optional-adapters.md','docs/process/handoff-template.md',
                 'docs/process/agent-workflow.md'])
@@ -156,6 +160,7 @@ class DistributionTests(unittest.TestCase):
                 'DEV_DIR_QUOTED':name+'_dev'}.items():
                 expected=expected.replace('{{'+key+'}}',value)
             self.assertEqual((workspace/'AGENTS.md').read_text(),expected)
+            self.assertIn('Asynchronous handoff and parallel planning', expected)
             for role in ('main','plan','dev'):
                 child=workspace/(name+'_'+role)
                 self.assertEqual((child/'CLAUDE.md').read_text(),'@AGENTS.md\n')

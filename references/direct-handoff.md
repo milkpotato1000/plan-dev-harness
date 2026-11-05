@@ -19,7 +19,7 @@ insufficient. Do not create a replacement chat or guess the target. Resolve only
 missing identifiers. A send grant does not authorize resume, new implementation,
 release or cross-project/reverse messages.
 
-## Prepare, send, observe
+## Prepare, send, return
 
 1. Read source/destination instructions, queue, exact adoption, pauses and OPEN
    decisions. Preserve them. While PAUSED, process only records/status explicitly
@@ -36,20 +36,26 @@ release or cross-project/reverse messages.
    constraints use [workflow controls](../assets/docs/process/workflow-controls.md).
 4. With matching authority and a real host send tool, send the full SHA, document,
    cards, scope/limits, next action and stop boundaries to the verified recipient.
-   For Codex desktop, discover the actual list/read/send/wait tools. Other hosts
+   For Codex desktop, discover the actual list/read/send tools. Other hosts
    use their supported tools or file handoff. Do not assume these APIs exist.
 5. Only after actual tool success, the sender records SENT with the delivery
-   receipt/reference and commits it. Push, PENDING creation, queue output and
-   drafted message text are not delivery evidence.
-6. The sender reads/waits for the recipient's actual response acknowledging the
-   designated SHA, document and next action. Record ACKNOWLEDGED only with that
-   observation and commit it. Without receipt evidence, keep SENT. The receiver
-   need not send a reverse message: use available read/wait observation.
+   receipt/reference, commits and pushes it, then finishes the plan response.
+   Do not poll, sleep, read/wait for ACK, adoption or implementation completion.
+   Plan remains available for the user's next planning request while dev works.
+   Push, PENDING creation, queue output and drafted text are not delivery evidence.
+6. On a later natural planning/status request, observe the recipient's actual
+   response acknowledging the designated SHA, document and next action. Record
+   ACKNOWLEDGED only with that evidence and commit it. Until then keep SENT, even
+   if dev is busy or silent. No reverse ACK message or monitoring loop is required.
 7. ACK confirms receipt. Exact adoption and task completion still need their own
    evidence. When the human's actual grant includes plan-to-dev delivery and
    start, plan sends committed reviewed READY work; dev preserves its work/failures,
-   integrates/adopts the specified full SHA, commits adoption, checks guard/queue
-   and begins that authorized scope. Installation itself grants neither sending
+   treats a new handoff as pending work while busy, then integrates/adopts the
+   specified full SHA at a safe completed/checkpointed commit boundary, commits
+   adoption and checks guard/queue. Select the next prepared P by priority and
+   dependencies within adopted scope. A handoff never cancels/restarts current
+   work, drops failures, adopts an unreviewed latest tip or retroactively changes
+   current criteria. An urgent human stop takes precedence. Installation grants neither sending
    nor starting authority. The recipient follows its own role and adopted scope. Receiving this
    handoff does not grant authority to reply to or forward messages to other chats.
 
@@ -61,8 +67,9 @@ resend a simple ACK or create an ACK loop. Each separate/reverse send needs actu
 human authority. Preserve the sender's event history and original commit.
 
 On a definite failure, preserve the attempted payload, error and current state.
-On an unknown outcome or timeout, inspect delivery/recipient state before any
-retry; silence is not failure or success. Do not blindly resend or manufacture SENT.
+On an unknown outcome or timeout, preserve the uncertain attempt and current state,
+report it and return. Inspect delivery/recipient state on a later natural request
+before any retry; silence is not failure or success. Do not blindly resend or manufacture SENT.
 If authority/tools are absent, leave PENDING and the committed file, full SHA,
 next action and unsent reason. If the recipient is unclear, resolve its identity
 before sending. State the exact missing condition. Files remain the durable
@@ -77,6 +84,12 @@ last state. Keep private IDs and raw conversations outside public evidence.
 The policy review covers M1–M8 (explicit instruction, delegated scope, non-grants,
 fallback, SENT/ACK separation, deduplication, unknown outcomes, stops/adoption).
 A simulated policy review is not a live-host delivery test.
+
+Separate plan/dev sessions can overlap different P stages while preserving each
+P's plan -> review -> exact adoption -> implementation order and one writer per
+worktree. One-chat fallback remains sequential. Host message injection/scheduling
+does not guarantee immediate parallel execution. Do not create new goals, chats,
+daemons or monitors to achieve this handoff. Pauses and OPEN decisions still apply.
 
 ## Distribution and activation
 

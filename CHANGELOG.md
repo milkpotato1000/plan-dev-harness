@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2 — Unreleased
+
+- Finish plan handoffs after actual SENT is committed/pushed; observe ACK on a later natural request.
+- Preserve busy dev work and adopt reviewed exact handoffs at safe commit boundaries.
+- Carry asynchronous planning rules through both host packages, prompts, bootstrap and upgrade output.
+- Retain existing runtime/schema, pauses, decisions, permissions and single-writer boundaries.
+
 ## 0.2.0 — Unreleased
 
 - Add plan-owned decision impact classification and dependency-aware queue blocking.
