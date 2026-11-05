@@ -112,3 +112,27 @@ file allowlist. Passing hooks does not authorize plan implementation or prove a
 P-card exists. This routing procedure is an agent obligation, not a mechanical
 block of arbitrary writes. Preserve scoped user pauses without applying a fixture
 pause to an unrelated authorized task or resuming the fixture as a side effect.
+
+## Asynchronous handoff and parallel planning
+
+Plan prepares/reviews/commits authorized P cards, sends the exact reviewed SHA to
+an authorized existing dev recipient, records actual SENT and commits/pushes the
+record, then finishes its response. Do not poll, sleep or wait for ACK, adoption
+or dev completion to finish a planning handoff. Keep SENT when no receipt has been
+observed. On a later natural planning/status request, record ACK only from actual
+evidence. Report planning/delivery complete separately from implementation pending.
+This leaves plan available for the user's next discussion and authorized P cards.
+
+Busy dev preserves its current adopted P, work, failures and processes; a new
+handoff is pending work, not permission to cancel/restart. At a safe completed or
+checkpointed/committed boundary, integrate/adopt the exact reviewed handoff SHA,
+commit adoption, check guard/queue and choose eligible prepared work by priority
+and dependencies. Do not automatically adopt an unreviewed latest plan tip or
+retroactively rewrite the current P. A real urgent human stop takes precedence.
+Preserve role/all/legacy pauses, OPEN decisions, human role grants and one writer
+per worktree. Neither handoffs nor time elapsed resume stopped work. Failed or
+unknown sends keep their real state and evidence; never invent SENT or retry
+blindly. Missing authority/tool leaves a pending file handoff. No new goals,
+chats, monitors or reverse/chain messaging authority follow from this rule.
+Parallel sessions require actual independent workers; one-chat fallback is
+sequential. Host scheduling limits and simulated tests must be reported honestly.

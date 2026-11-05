@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "5030f3524b56e78192a989ec2e283e734d62905d",
+  "document": "docs/planning/reviews/P005-target-integration.md",
+  "summary": "P005 remote-existing-work composition reviewed; no new product execution",
+  "next_action": "Adopt central supplement and exact reviewed target7e82a279; preserve remote dev history, verify and normal-push",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-04T03:11:00.075060+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-04T03:11:18.150671+00:00",
+      "evidence": "2026-11-04 successful host delivery to verified dev of central5030f352 and target7e82a279 exact reviewed remote-preservation baselines"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-04T03:14:28.040211+00:00",
+      "evidence": "2026-11-04 observed existing dev committed1efffb3 adoption of central5030f3524b56e78192a989ec2e283e734d62905d and confirmed exact combined target review"
+    }
+  ]
+}

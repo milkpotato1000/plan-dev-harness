@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "26c17fcacf233b1ce912ed4bae418dc8ae329bae",
+  "document": "docs/planning/reviews/P006-dev-handoff.md",
+  "summary": "P006 READY: nonblocking plan handoff and busy-dev safe-boundary adoption; package0.2.2 and loaded Codex update",
+  "next_action": "Preserve existing work/pauses; integrate/adopt exact P006 plan; implement source/installable rules and verify; plan sender returns after SENT",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T07:18:37.130217+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}

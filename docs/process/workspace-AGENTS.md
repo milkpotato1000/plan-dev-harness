@@ -67,3 +67,15 @@ Record the requested repository/file/target ref; plan push, exact adoption, dev
 push and default-branch visibility are distinct. No target ref implies configured
 plan/dev delivery, never automatic main promotion. Existing messaging grants,
 writer ownership, unresolved decisions and explicit stops remain in force.
+
+## Asynchronous plan/dev handoff
+
+Plan finishes its turn after reviewed commit, authorized exact-SHA delivery and
+actual SENT record/commit/push. Do not wait/poll for ACK, adoption or dev completion.
+Observe receipt later on a natural planning/status request; keep unobserved ACK
+as SENT. Plan remains available for further authorized planning while dev works.
+Busy dev preserves its current P and adopts queued exact reviewed handoffs only
+at a safe completed/checkpointed boundary. Preserve priorities/dependencies,
+explicit roles, single writers, pauses and OPEN decisions. See the child's
+agent-workflow.md section Asynchronous handoff and parallel planning. No automatic
+new goals, chats, monitors, reverse messaging or pause resumption is authorized.
