@@ -1,0 +1,7 @@
+{
+  "fixture_export_commit": "b41187a4abf639007b4ad2c472efe4274801a570",
+  "artifact_commit": "77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30",
+  "pending_tests_commit": "15f5f566f10f8e8753bd91fed701c90de152061f",
+  "role": "actual session-plan",
+  "status": "SENT; no receiver receipt observed at export; C4/C5 incomplete"
+}

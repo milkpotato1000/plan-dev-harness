@@ -1,0 +1,108 @@
+{
+  "at": "2026-11-05T08:43:54.357934+00:00",
+  "receipt_commit": "e86217895835cb2a77786aba5f17c3699894dc9d",
+  "event": "72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed",
+  "ack_event_sha256": "cb4ced23ee470670480c897c756e97fd831a800ede41a58b3952a36b83b33ed5",
+  "post_ack_keep_and_repeated_ack_preserve_bytes_history_count": true,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "e86217895835cb2a77786aba5f17c3699894dc9d:docs/verification/P002-20261029-A-CONT-20261105/S4/dev-receipt.md"
+      ],
+      "exit_code": 0,
+      "stdout": "# Actual session-dev receipt of S4 plan artifact\n\nAt 2026-11-05T08:43:04.075035+00:00, actual session-dev directly\nread artifact 77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30, docs/planning/reviews/P002-S4-plan-to-dev.md,\nevent 72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed from committed plan b41187a4abf639007b4ad2c472efe4274801a570.\nObserved status SENT with PENDING→SENT history, target dev. Artifact SHA256\n4e91785106c420ae93ac6810180f9e61cf38215031c2d71c82ce5a16f3a66c2a; event SHA256 e05c15a8c3bd4daaf5690854592827377c6a687f27286ea6d59ccf546e0120f9.\n\nActual received content: S3 completed with documented historical/continuation\nlimits, S4 first direction ongoing, C4/C5 incomplete. P901/P903 execution remains\nS5-only, P904 DRAFT. I directly read the sender's committed pre-delivery tests;\nthis does not claim I authored or reran plan's tests. Both roles active, controls\nempty, plan=P904/dev=P901. No task output was written.\n\nNext actual sender action: use this real committed receiver observation to record\nACKNOWLEDGED on the same event, then identical original creation must KEEP and\nrepeated ACK must exit2 without changing event bytes/history/count. Commit those\nresults and deliver the next reverse-direction trial action to dev. This is the\nfinite S4 receipt/test sequence, not a monitoring loop or a guessed receipt.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff-status",
+        "72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed",
+        "--status",
+        "ACKNOWLEDGED",
+        "--evidence",
+        "Actual session-dev committed receipt e86217895835cb2a77786aba5f17c3699894dc9d, S4/dev-receipt.md; actual session-plan directly read it on 2026-11-05; exact artifact/event/content/next action independently confirmed."
+      ],
+      "exit_code": 0,
+      "stdout": "docs/progress/handoffs/plan/72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed.json: local record only; review and commit. No message or work was executed.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff",
+        "--kind",
+        "WORK_READY",
+        "--target-role",
+        "dev",
+        "--commit",
+        "77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30",
+        "--document",
+        "docs/planning/reviews/P002-S4-plan-to-dev.md",
+        "--summary",
+        "P002 S4 actual plan-to-dev artifact delivery trial",
+        "--next-action",
+        "Actual dev reads exact artifact/event and commits receipt for finite S4 ACK tests; no task execution until S5"
+      ],
+      "exit_code": 0,
+      "stdout": "KEEP docs/progress/handoffs/plan/72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed.json\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff-status",
+        "72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed",
+        "--status",
+        "ACKNOWLEDGED",
+        "--evidence",
+        "Repeated ACK negative test"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "CONTROL ERROR: Record the next delivery state only\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "worktree"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: plan checkpoint and handoff history\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "index"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: plan checkpoint and handoff history\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: plan checkpoint and handoff history\n",
+      "stderr": ""
+    }
+  ],
+  "result": "PASS actual plan-to-dev direction; reverse direction and C4/C5 still pending"
+}
