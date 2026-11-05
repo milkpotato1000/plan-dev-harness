@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "DECISION_REQUEST",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "fdf0e69c5462dc75c5193309c1fa0bb591a71e80",
+  "document": "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md",
+  "summary": "P002 S4 actual dev-to-plan result delivery trial",
+  "next_action": "Actual plan reads exact artifact/event and commits receipt enabling final dev ACK and post-ACK tests; no task execution",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:45:39.644232+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
