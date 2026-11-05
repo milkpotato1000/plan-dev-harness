@@ -79,3 +79,16 @@ at a safe completed/checkpointed boundary. Preserve priorities/dependencies,
 explicit roles, single writers, pauses and OPEN decisions. See the child's
 agent-workflow.md section Asynchronous handoff and parallel planning. No automatic
 new goals, chats, monitors, reverse messaging or pause resumption is authorized.
+
+## User review and decision gateway
+
+Plan is the normal user-facing review and decision channel. Dev implements/tests
+and hands committed results/necessary decisions to plan under a real project grant,
+with one common request key, artifact version/hash and question scope. Plan opens
+read-only results, checks existing answers and asks necessary human judgment once.
+Verifiable answers given in dev are reused for their exact scope. Commit plan
+choices and adopt exact reviewed decisions on dev. Preserve asynchronous delivery,
+existing work, required human checks, pauses and OPEN decisions. This project's
+narrow actual human dev→plan grant is in the child's
+ docs/planning/reviews/dev-to-plan-review-delegation.md. No cross-project send,
+new chat, permission bypass, automatic resume or ACK loop follows from this rule.

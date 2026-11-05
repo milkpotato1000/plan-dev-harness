@@ -136,3 +136,34 @@ blindly. Missing authority/tool leaves a pending file handoff. No new goals,
 chats, monitors or reverse/chain messaging authority follow from this rule.
 Parallel sessions require actual independent workers; one-chat fallback is
 sequential. Host scheduling limits and simulated tests must be reported honestly.
+
+## User review and decisions through plan
+
+Dev implements/tests within the adopted P without routine user completion checks.
+Send committed result/review or decision packets to the verified existing plan
+only under actual human project messaging authority. Include P/criterion, artifact
+commit/version/hash, stable common request key, question type/scope, evidence and
+failures, existing human responses, options/impact and safe next action.
+Use docs/process/user-review-template.md. Existing transport event deduplication
+alone does not deduplicate a user question across roles, commits and resumed chats.
+
+Plan owns the common review/decision ledger and user-facing question. Inspect
+actual available result files/views first, record what was really observed, then
+ask only necessary human judgment once. Reuse a verifiable existing response for
+the same artifact/version/scope, including one received in dev; never reissue a
+pending question or broaden UI approval into content approval. Material changes
+require renewed scoped review. Decisions within existing delegated scope can be
+made by plan; new business meaning or permissions require actual human authority.
+Commit plan decisions and have dev integrate/adopt the exact reviewed SHA before
+applying them. Product verification, user review pending and approval are distinct.
+
+Optional review does not stop unrelated eligible work. Required human criteria
+stay incomplete; critical OPEN decisions keep existing conservative blocking until
+reviewed classification/adoption. Preserve pauses; no handoff resumes them.
+Users may inspect code or ask dev directly; respond without duplicating the review
+question. Platform-required approvals and safety restrictions remain in force.
+No routing around denied permissions. Dev worktrees remain dev-owned; plan opens
+read-only results, not product execution or edits. Missing viewer/host/authority
+must be reported honestly with durable pending records, never invented delivery.
+P006 asynchronous handoff remains: record real SENT and finish, no ACK/completion
+polling. Reverse delivery needs its own human grant; this protocol grants none.

@@ -130,3 +130,12 @@ Plan은 SENT 후 다음 사용자 기획에 사용 가능해야 한다. Dev는 �
 중단하지 않고 안전한 완료/체크포인트·커밋 경계에서 정확 검토 SHA를 통합·채택한다. 이후 준비·
 우선순위·의존성으로 다음 작업을 고른다. 긴급 사용자 중지는 우선한다. 기존 PAUSED/OPEN은
 해제하지 않는다. 상세 운영 규칙은 agent-workflow.md의 Asynchronous handoff and parallel planning.
+
+## 사용자 검토·결정의 plan 단일 창구
+
+Dev 결과 검토는 기존 WORK_READY(target plan, 검토 목적 명시), critical 결정은 기존
+DECISION_REQUEST로 커밋된 문서를 전달할 수 있다. 실제 해당 프로젝트 인간 위임과 도구가
+필요하다. 이 프로토콜 자체는 reverse 메시징 권한을 만들지 않는다. 일반 검토 때문에
+PLAN_DECISION/OPEN을 만들지 않는다. 공통 request key·대상 hash/범위·기존 질문/실제 답변을
+확인하고 plan이 필요한 질문을 한 번만 한다. Plan 결정 commit을 dev가 정확 채택해야 한다.
+중지/OPEN 범위를 임의 축소하지 않는다. user-review-template.md와 agent-workflow.md를 따른다.

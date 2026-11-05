@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "6bc3d9db5032806b04ca1f239adcfbb3fc7fb05d",
+  "document": "docs/planning/reviews/P007-dev-handoff.md",
+  "summary": "P007 READY after P006: plan-only user review and decision gateway with durable question deduplication",
+  "next_action": "Preserve current P006 and existing pauses; finish predecessor then adopt exact P007; implement source/installable0.2.3 and test common-review protocol",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T07:34:51.870889+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
