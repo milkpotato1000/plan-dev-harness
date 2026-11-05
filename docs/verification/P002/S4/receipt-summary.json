@@ -1,0 +1,8 @@
+{
+  "fixture_receipt_commit": "e86217895835cb2a77786aba5f17c3699894dc9d",
+  "document": "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-receipt.md",
+  "observed_plan": "b41187a4abf639007b4ad2c472efe4274801a570",
+  "artifact": "77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30",
+  "event": "72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed",
+  "status": "SENT observed; actual dev receipt committed; sender ACK not yet observed"
+}
