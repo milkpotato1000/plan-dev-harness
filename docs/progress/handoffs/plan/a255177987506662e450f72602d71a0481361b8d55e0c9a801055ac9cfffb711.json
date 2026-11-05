@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "STOP",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "78a4b567d9f094f2985c7bbe2f543fce5ae2a078",
+  "document": "docs/planning/reviews/user-reviews/P002-S3.6-dev-role-pause-20261105.md",
+  "summary": "Actual human now pauses P002 fixture dev role only; OPEN and plan ACTIVE preserved",
+  "next_action": "Apply own fixture pause --scope role from actual human answer; preserve and verify checkpoint/OPEN; deliver committed evidence for later distinct resolution-only input",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:24:16.961025+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
