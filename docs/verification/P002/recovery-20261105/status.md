@@ -54,3 +54,10 @@ evidence HEADd459aea8f44e1727f5c46d98e99220e3a3de5076. Both ACTIVE, pauses=[],
 decisions=[], plan=P904/dev=P901. C3-result.md links historical and continuation
 evidence and explicitly describes the S3.4/5 input-form difference. C3 PASS, total
 3/5. Next is actual plan-led S4 first-direction trial; task outputs remain absent.
+
+## Final completion
+
+P002 C1–C5 PASS, 5/5. S4 actual two-role bidirectional receipt and rejection tests
+completed. S5 exact P901/P903 execution, final queues/guards and current source83
+tests PASS. See ../report.md and ../S5/result.md. Old statuses above are append-only
+history. The old report remains byte-identical in ../S5/historical-report-through-S3-step3.md.

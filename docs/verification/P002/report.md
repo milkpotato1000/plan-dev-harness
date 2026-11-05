@@ -1,7 +1,7 @@
 # P002 actual-session validation — final verification
 
-Current result: C1–C4 PASS; S5 fixture and latest source regression PASS, final
-distribution commit/guard/queue checks pending before C5 completion.
+Current result: **C1–C5 PASS, P002 complete (5/5).** Actual S5 fixture, latest
+source regression and committed distribution guard/queue/preservation checks pass.
 Original run: P002-20261029-A. Continuation: P002-20261029-A-CONT-20261105.
 
 | Criterion | Result and evidence |
@@ -10,7 +10,7 @@ Original run: P002-20261029-A. Continuation: P002-20261029-A-CONT-20261105.
 | C2 / S1 | Historical PASS: [S1/result.md](S1/result.md), scoped decision/adoption/independent work/SHA rejection |
 | C3 / S2–S3 | PASS: [C3-result.md](recovery-20261105/C3-result.md), historical visibility and explicit continuation pause/resume/resolve-only |
 | C4 / S4 | PASS: [S4/result.md](S4/result.md), actual bidirectional delivery/receipts and negative transitions |
-| C5 / S5 | Fixture/source PASS; final commit checks pending: [fixture-result.json](S5/fixture-result.json), [regression](S5/regression-20261105.log), [preservation](S5/preservation.json) |
+| C5 / S5 | PASS: [S5/result.md](S5/result.md); [fixture-result.json](S5/fixture-result.json), [regression](S5/regression-20261105.log), [preservation](S5/preservation.json) |
 
 ## Final fixture and regression results
 
