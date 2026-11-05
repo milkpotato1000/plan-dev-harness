@@ -46,3 +46,11 @@ RESOLVED, pending decisions=[], but dev checkpoint bytes unchanged and dev remai
 PAUSED/role, next.dev=null. Plan remains ACTIVE/next.plan=P904. Actual evidence
 HEAD2ebdb04795abf4516618ddb1b5f5adaba3c381b9, resolution-only.json. No task outputs.
 Next required input is a separate actual S3.7 dev resume, asked once through plan.
+
+## S3 completion, S4 starting
+
+Actual later human final resume was directly verified and executed, fixture
+evidence HEADd459aea8f44e1727f5c46d98e99220e3a3de5076. Both ACTIVE, pauses=[],
+decisions=[], plan=P904/dev=P901. C3-result.md links historical and continuation
+evidence and explicitly describes the S3.4/5 input-form difference. C3 PASS, total
+3/5. Next is actual plan-led S4 first-direction trial; task outputs remain absent.
