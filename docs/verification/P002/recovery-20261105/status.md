@@ -38,3 +38,11 @@ Next input is a separate resolution-only instruction requested once by plan;
 no resolution or future resume has been authorized. Previous sections are history.
 Public new continuation command logs now alias automatically printed Git identity;
 identity-redactions.json distinguishes public hashes from preserved private raw logs.
+
+## Later S3.6 resolution-only checkpoint
+
+Actual separate human exception was verified and executed: second question now
+RESOLVED, pending decisions=[], but dev checkpoint bytes unchanged and dev remains
+PAUSED/role, next.dev=null. Plan remains ACTIVE/next.plan=P904. Actual evidence
+HEAD2ebdb04795abf4516618ddb1b5f5adaba3c381b9, resolution-only.json. No task outputs.
+Next required input is a separate actual S3.7 dev resume, asked once through plan.
