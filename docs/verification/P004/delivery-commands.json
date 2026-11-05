@@ -1,0 +1,334 @@
+[
+  {
+    "at": "2026-11-04T02:05:52.293585+00:00",
+    "cwd": "<delivery-fixture>",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<distribution-dev>/scripts/bootstrap_workspace.py",
+      "--parent",
+      "<delivery-fixture>",
+      "--name",
+      "delivery",
+      "--author-name",
+      "Harness Test",
+      "--author-email",
+      "fixture@example.invalid",
+      "--apply"
+    ],
+    "exit_code": 0,
+    "stdout": "CREATE <delivery-fixture>/delivery/delivery_main\nCREATE <delivery-fixture>/delivery/delivery_plan\nCREATE <delivery-fixture>/delivery/delivery_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nCreated <delivery-fixture>/delivery adopted plan 977ada87cc2a43a1733d54d919306b73b47f9460\nOpen the container in either agent; initialize plan/dev roles explicitly. Queue is empty.\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:52.309687+00:00",
+    "cwd": "<delivery-fixture>",
+    "argv": [
+      "git",
+      "init",
+      "--bare",
+      "<delivery-fixture>/remote.git"
+    ],
+    "exit_code": 0,
+    "stdout": "Initialized empty Git repository in <delivery-fixture>/remote.git/\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:52.322033+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "remote",
+      "add",
+      "origin",
+      "<delivery-fixture>/remote.git"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:52.849770+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "push",
+      "origin",
+      "main",
+      "plan",
+      "dev"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\nPASS: contracts match adopted plan 977ada87cc2a\n",
+    "stderr": "To <delivery-fixture>/remote.git\n * [new branch]      main -> main\n * [new branch]      plan -> plan\n * [new branch]      dev -> dev\n"
+  },
+  {
+    "at": "2026-11-04T02:05:52.861047+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "rev-parse",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "977ada87cc2a43a1733d54d919306b73b47f9460\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:52.871505+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "rev-parse",
+      "dev"
+    ],
+    "exit_code": 0,
+    "stdout": "d67e8b9cbba03fdddd03c09523e45f7b12d52e69\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:52.886022+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "add",
+      "docs/planning/document-delivery.md",
+      "docs/planning/plans/P001.md"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:53.234122+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "commit",
+      "-m",
+      "Prepare document change"
+    ],
+    "exit_code": 0,
+    "stdout": "[plan 7711b54] Prepare document change\n 2 files changed, 40 insertions(+)\n create mode 100644 docs/planning/document-delivery.md\n create mode 100644 docs/planning/plans/P001.md\n",
+    "stderr": "PASS: plan checkpoint and handoff history\n"
+  },
+  {
+    "at": "2026-11-04T02:05:53.245552+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "7711b54a53b91c9bf3873ecabf857728eb044577\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:53.415121+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "push",
+      "origin",
+      "plan"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\n",
+    "stderr": "To <delivery-fixture>/remote.git\n   977ada8..7711b54  plan -> plan\n"
+  },
+  {
+    "at": "2026-11-04T02:05:53.426437+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "--git-dir=<delivery-fixture>/remote.git",
+      "rev-parse",
+      "dev"
+    ],
+    "exit_code": 0,
+    "stdout": "d67e8b9cbba03fdddd03c09523e45f7b12d52e69\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:53.436123+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "--git-dir=<delivery-fixture>/remote.git",
+      "rev-parse",
+      "plan"
+    ],
+    "exit_code": 0,
+    "stdout": "7711b54a53b91c9bf3873ecabf857728eb044577\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:53.459406+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_dev",
+    "argv": [
+      "git",
+      "merge",
+      "--no-ff",
+      "--no-commit",
+      "7711b54a53b91c9bf3873ecabf857728eb044577"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Automatic merge went well; stopped before committing as requested\n"
+  },
+  {
+    "at": "2026-11-04T02:05:53.687901+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_dev",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "adopt",
+      "7711b54a53b91c9bf3873ecabf857728eb044577",
+      "--review-reference",
+      "docs/planning/document-delivery.md"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan 7711b54a53b9\nAdoption recorded. Stage and commit .harness/adopted-plan.json; pending semantic decisions remain pending.\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:53.700756+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_dev",
+    "argv": [
+      "git",
+      "add",
+      ".harness/adopted-plan.json"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:54.145382+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_dev",
+    "argv": [
+      "git",
+      "commit",
+      "-m",
+      "Adopt document plan"
+    ],
+    "exit_code": 0,
+    "stdout": "[dev 3479db7] Adopt document plan\n",
+    "stderr": "PASS: contracts match adopted plan 7711b54a53b9\n"
+  },
+  {
+    "at": "2026-11-04T02:05:54.158763+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "--git-dir=<delivery-fixture>/remote.git",
+      "rev-parse",
+      "dev"
+    ],
+    "exit_code": 0,
+    "stdout": "d67e8b9cbba03fdddd03c09523e45f7b12d52e69\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:54.172527+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_dev",
+    "argv": [
+      "git",
+      "add",
+      "README.md"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:54.398463+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_dev",
+    "argv": [
+      "git",
+      "commit",
+      "-m",
+      "Implement reviewed README update"
+    ],
+    "exit_code": 0,
+    "stdout": "[dev c5fb966] Implement reviewed README update\n 1 file changed, 2 insertions(+)\n",
+    "stderr": "PASS: contracts match adopted plan 7711b54a53b9\n"
+  },
+  {
+    "at": "2026-11-04T02:05:54.410144+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_dev",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "c5fb96641712dd296509000e2493026664d6ce41\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:54.913483+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_dev",
+    "argv": [
+      "git",
+      "push",
+      "origin",
+      "dev"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan 7711b54a53b9\n",
+    "stderr": "To <delivery-fixture>/remote.git\n   d67e8b9..c5fb966  dev -> dev\n"
+  },
+  {
+    "at": "2026-11-04T02:05:54.925565+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "--git-dir=<delivery-fixture>/remote.git",
+      "rev-parse",
+      "dev"
+    ],
+    "exit_code": 0,
+    "stdout": "c5fb96641712dd296509000e2493026664d6ce41\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:54.938280+00:00",
+    "cwd": "<delivery-fixture>",
+    "argv": [
+      "git",
+      "--git-dir=<delivery-fixture>/remote.git",
+      "show",
+      "dev:README.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# delivery\n\nProject workspace initialized; no product work is approved.\n\nApproved documentation delivered on dev.\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:54.948944+00:00",
+    "cwd": "<delivery-fixture>/delivery/delivery_plan",
+    "argv": [
+      "git",
+      "--git-dir=<delivery-fixture>/remote.git",
+      "rev-parse",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "977ada87cc2a43a1733d54d919306b73b47f9460\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-11-04T02:05:54.961005+00:00",
+    "cwd": "<delivery-fixture>",
+    "argv": [
+      "git",
+      "--git-dir=<delivery-fixture>/remote.git",
+      "show",
+      "main:README.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# delivery\n\nProject workspace initialized; no product work is approved.\n",
+    "stderr": ""
+  }
+]

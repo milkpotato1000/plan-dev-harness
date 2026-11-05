@@ -1,0 +1,13 @@
+test_m3_transport_keys_differ_while_review_identity_stays_the_same (test_user_review.ReviewGitTests) ... ok
+test_m6_m7_optional_required_critical_and_exact_plan_decision (test_user_review.ReviewGitTests) ... ok
+test_m1_m3_pending_and_answered_reviews_survive_events_commits_and_restart (test_user_review.ReviewProtocolTests) ... ok
+test_m2_m11_viewer_limits_and_permissions_cannot_be_relabelled_as_human_approval (test_user_review.ReviewProtocolTests) ... ok
+test_m4_m10_reuse_valid_dev_human_answer_but_never_an_agent_claim (test_user_review.ReviewProtocolTests) ... ok
+test_m5_scope_material_change_and_evidence_for_nonmaterial_equivalence (test_user_review.ReviewProtocolTests) ... ok
+test_m6_existing_delegated_decision_needs_no_human_question (test_user_review.ReviewProtocolTests) ... ok
+test_m12_real_022_upgrade_adds_template_and_preserves_runtime_extensions (test_user_review.ReviewUpgradeTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 8.862s
+
+OK

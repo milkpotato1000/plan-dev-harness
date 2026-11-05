@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "DECISION_REQUEST",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "adfcf669828677624cd52885534c8e133b0367e7",
+  "document": "docs/verification/P002/recovery-20261105/resolve-only-input-handoff.md",
+  "summary": "Actual S3.6 dev-role pause verified; distinct resolution-only human input now needed",
+  "next_action": "Inspect committed PAUSED role and OPEN state, ask resolution-only question once in plan ledger, then deliver actual answer; no resume or product work",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:26:39.734098+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:26:55.814751+00:00",
+      "evidence": "docs/verification/P002/recovery-20261105/resolve-only-input-delivery.md"
+    }
+  ]
+}

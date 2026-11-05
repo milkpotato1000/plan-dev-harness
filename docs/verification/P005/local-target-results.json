@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-04T12:10:49.316325+09:00",
+  "local_application": "All three legacy installations applied and verified",
+  "targets": [
+    {
+      "target": "legacy-1",
+      "version": "0.2.1",
+      "plan": "908075f798c0caa5c358b68097fc6e4da28b0777",
+      "maintenance": "e019a35a2ad9c671167d2adad54c4890a8c02f99",
+      "dev_adoption": "35427012a324905dc9b9f3f0323320bccff2d6c7",
+      "dev_verified_evidence": "d64155863f80b27ba041c919fdb15e60e9bc851e",
+      "guard_targets": "plan/dev worktree,index,HEAD and dev evidence index/HEAD PASS",
+      "queue_and_control_parity": true,
+      "original_content_dirty_hooks_refs_preserved_at_upgrade_boundary": true,
+      "remote_delivery": {
+        "result": "PASS",
+        "at": "2026-11-04T12:06:09.462939+09:00",
+        "refs": {
+          "plan": "908075f798c0caa5c358b68097fc6e4da28b0777",
+          "dev": "d64155863f80b27ba041c919fdb15e60e9bc851e"
+        },
+        "remotes": {
+          "personal": {
+            "dev": "d64155863f80b27ba041c919fdb15e60e9bc851e",
+            "plan": "c8c3843577aa84980d0d695afc9a48b0e22fc7c6"
+          }
+        },
+        "verification": "Expected upgrade refs equal or are ancestors of observed remote refs",
+        "concurrent_product_work": "Plan advanced after upgrade verification; live worktrees not mutated for delivery; only exact verified dev maintenance/evidence commit pushed from isolated clone. Newer product plan not adopted by this task."
+      },
+      "private_verification_sha256": "215c159bcb8916e8850b01de4adb3711a9bea63e718414825a6bfe14fb64f303",
+      "concurrent_work": "Independent product writer advanced plan/dev after upgrade validation. No further live mutation by upgrade; exact verified dev commit delivered via isolated clone."
+    },
+    {
+      "target": "legacy-2",
+      "version": "0.2.1",
+      "plan": "39d3e85b5b52993b3b4a36641c269275463f86c6",
+      "maintenance": "65bd7b86e2a61cad770f79974f148513452e27f0",
+      "dev_adoption": "2c9a8d3b6896be1ef263d507a0782eefe6ae8f97",
+      "dev_verified_evidence": "475ee56899861d1b8d3605058d61439604e9f0aa",
+      "guard_targets": "plan/dev worktree,index,HEAD and dev evidence index/HEAD PASS",
+      "queue_and_control_parity": true,
+      "original_content_dirty_hooks_refs_preserved_at_upgrade_boundary": true,
+      "remote_delivery": {
+        "result": "PASS",
+        "at": "2026-11-04T12:05:10.763835+09:00",
+        "refs": {
+          "plan": "39d3e85b5b52993b3b4a36641c269275463f86c6",
+          "dev": "475ee56899861d1b8d3605058d61439604e9f0aa"
+        },
+        "remotes": {
+          "personal": {
+            "dev": "475ee56899861d1b8d3605058d61439604e9f0aa",
+            "plan": "39d3e85b5b52993b3b4a36641c269275463f86c6"
+          }
+        }
+      },
+      "private_verification_sha256": "6d2515e9ce2684ff7ce71bdcc2ed146e14935df6e05d75199c59d5d48bbe9957"
+    },
+    {
+      "target": "legacy-3",
+      "version": "0.2.1",
+      "plan": "4fab7227e48763bf7b0b11882be995319c811f56",
+      "maintenance": "7da28684453a8f2609b127b7f60ac84045fb9fa5",
+      "dev_adoption": "3f0c6eb6a3d18964ebce89bff2e4d982f4138889",
+      "dev_verified_evidence": "62489f26de4cd34a06536e49be585a6e1d9d08c5",
+      "guard_targets": "plan/dev worktree,index,HEAD and dev evidence index/HEAD PASS",
+      "queue_and_control_parity": true,
+      "original_content_dirty_hooks_refs_preserved_at_upgrade_boundary": true,
+      "remote_delivery": {
+        "result": "PENDING",
+        "reason": "All three remotes contain newer existing product work; additional remote-adopted-baseline proposal requires plan review; normal push rejection preserved."
+      },
+      "private_verification_sha256": "2b35b549220b7b428fd141ac279f4378b5e0b8abd5ba8e0b7fc6cd4e71026b0e"
+    }
+  ]
+}

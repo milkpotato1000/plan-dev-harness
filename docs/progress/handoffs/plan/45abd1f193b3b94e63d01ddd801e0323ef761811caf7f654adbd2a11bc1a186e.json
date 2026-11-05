@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "DECISION_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "a6eaf12360aeece3527466ed8a806f5899a15ac3",
+  "document": "docs/planning/reviews/P002-continuation-plan-import.md",
+  "summary": "Actual fixture plan snapshots restored and separate continuation decision committed",
+  "next_action": "Adopt fixture60a500f9a29932d74d24e2d1131790eb87a0ec32 then restore own dev state and capture dev-only resume intermediate block",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:15:02.545136+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:15:33.619768+00:00",
+      "evidence": "2026-11-05 actual host send succeeded to verified same-project dev; fixture decision60a500f9a29932d74d24e2d1131790eb87a0ec32 and distribution dcc8bbcfbbb69eb4206288db4b39d9229585aa03 delivered for concrete dev reconstruction/resume action; no ACK/adoption inferred."
+    }
+  ]
+}

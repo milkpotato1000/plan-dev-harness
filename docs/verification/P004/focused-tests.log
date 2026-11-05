@@ -1,0 +1,15 @@
+test_agent_entrypoints_and_idempotence (test_distribution.DistributionTests) ... ok
+test_bootstrap_preview_then_real_shared_worktrees (test_distribution.DistributionTests) ... ok
+test_bootstrap_refuses_invalid_and_nested_destinations (test_distribution.DistributionTests) ... ok
+test_document_delivery_distinguishes_plan_adoption_and_remote_refs (test_distribution.DistributionTests) ... ok
+test_existing_agent_instructions_refuse_every_write (test_distribution.DistributionTests) ... ok
+test_independent_skill_payload_installs_complete_project_procedure (test_distribution.DistributionTests) ... ok
+test_skill_collision_and_symlink_refused (test_distribution.DistributionTests) ... ok
+test_skill_install_both_agents_and_standalone_scripts (test_distribution.DistributionTests) ... ok
+test_upgrade_preview_and_unchanged_files_only (test_distribution.DistributionTests) ... ok
+test_z_timestamp_compatibility (test_distribution.DistributionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 10.836s
+
+OK

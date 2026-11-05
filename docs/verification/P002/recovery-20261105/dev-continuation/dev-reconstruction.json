@@ -1,0 +1,65 @@
+{
+  "kind": "explicit continuation metadata reconstruction; no original Git history recovered or fresh S1 run",
+  "adoption_commit": "5abced71333139eae012279490ac173ba135e510",
+  "old_decision": "e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee",
+  "new_fixture_decision": "60a500f9a29932d74d24e2d1131790eb87a0ec32",
+  "first_question": {
+    "original_sha256": "ee1737dfb7134d243da7076362b176c03eb14b4ac2ff27bd6494650ee2350b09",
+    "new_sha256": "85bf519a7e1f6a6ae3e506dfcdc03da36f8862e926d7d2fd5926a7b0dafff4d7",
+    "fingerprint_before": "75337c803fd679923426d787762463d5532b678e2779254742e3ce290d93873d",
+    "fingerprint_after": "75337c803fd679923426d787762463d5532b678e2779254742e3ce290d93873d",
+    "one_field_diff": [
+      "--- archived-original\n",
+      "+++ reconstructed-live\n",
+      "@@ -3,7 +3,7 @@\n",
+      " > 유형: PLAN_DECISION\n",
+      " > 상태: RESOLVED\n",
+      " > 작업: P901\n",
+      "-> 결정 plan: e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee\n",
+      "+> 결정 plan: 60a500f9a29932d74d24e2d1131790eb87a0ec32\n",
+      " \n",
+      " Run P002-20261029-A, S1. Which completion marker should fixture P901 record at S5?\n",
+      " Please classify the impact first in a separate plan commit: P901 is the originating\n"
+    ],
+    "ancestor_exit": 0
+  },
+  "second_open": {
+    "raw_sha256": "40fc3d247b2d386f8d8f2761e5f81791a60ca5f4468f335522e61dc213d9f8c7",
+    "fingerprint": "ac4e246fa0d00d3e5bb2eb29f20de253d4492a5ace8f07bd96623f4a23c64410",
+    "byte_identical": true
+  },
+  "restored_files": [
+    {
+      "source": "docs/verification/P002/S3/pause-all-exports/docs/progress/sessions/dev.md",
+      "target": "docs/progress/sessions/dev.md",
+      "sha256": "231f8d7ca42c2a37010c1aa5214fc69445971a56d73c6bfee3790dbdc4990cc8",
+      "byte_identical": true
+    },
+    {
+      "source": "docs/verification/P002/S1/exports/independent/docs/planning/plans/P902.md",
+      "target": "docs/planning/plans/P902.md",
+      "sha256": "d41c32da91d23f2766d65d162bcb5ceb5eee5779ab306476922931885c49ea80",
+      "byte_identical": true
+    },
+    {
+      "source": "docs/verification/P002/S1/exports/independent/docs/verification/P002-20261029-A/P902-result.md",
+      "target": "docs/verification/P002-20261029-A/P902-result.md",
+      "sha256": "256629422a0afa396f5370b5cf687868c3de40edbec1220fdf65c214cb21760f",
+      "byte_identical": true
+    },
+    {
+      "source": "docs/verification/P002/S1/exports/independent/docs/verification/P002-20261029-A/P902-independent.txt",
+      "target": "docs/verification/P002-20261029-A/P902-independent.txt",
+      "sha256": "fc6f65326cbff3b76f1564b802b761bfa644f400f8b2c5637446362c2d0da794",
+      "byte_identical": true
+    },
+    {
+      "source": "docs/verification/P002/S1/exports/independent/docs/verification/P002-20261029-A/S1-dev-scope-commands.json",
+      "target": "docs/verification/P002-20261029-A/S1-dev-scope-commands.json",
+      "sha256": "3ee0c251d1461cedb8e15e4b1af4b2bd10eb5dbf5382f80afc456c71986e2da1",
+      "byte_identical": true
+    }
+  ],
+  "P902": "historical completed snapshot and evidence; not newly executed",
+  "P901_P903_outputs_absent": true
+}

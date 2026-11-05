@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "request": "docs/feedback/dev/P901-decision-3dd251cf50c6.md",
+  "request_sha256": "75337c803fd679923426d787762463d5532b678e2779254742e3ce290d93873d",
+  "scope": "tasks",
+  "tasks": [
+    "P901"
+  ],
+  "reason": "P901 marker choice affects P901 and dependent P903; P902 has no dependency and writes a fixed independent confirmation.",
+  "review_reference": "docs/planning/reviews/P002-S1-scope.md"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "RESUME",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "1109d258a1faa81fd13f51b587096579d2661f59",
+  "document": "docs/planning/reviews/P002-resume-20261105.md",
+  "summary": "Actual human resumed both P002 fixture roles; recover preserved environment and finish remaining validation",
+  "next_action": "Adopt exact reviewed continuation; preserve and diagnose fixture; dev resumes own checkpoint after recovery and routes actual plan action with evidence",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:04:03.626134+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:04:42.004968+00:00",
+      "evidence": "2026-11-05 send_message_to_thread succeeded to verified existing same-project dev; exact e3e0074202e1f2471b95ea3d5a625c4618ace67d and actual human dual resume source delivered. ACK/recovery/checkpoint resumes not yet observed."
+    }
+  ]
+}

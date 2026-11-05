@@ -1,0 +1,102 @@
+{
+  "branch": "dev",
+  "owner": "all",
+  "notices": [
+    "dev는 채택한 plan acdaf30c8838 기준. 이후 plan 초안은 자동 채택하지 않음.",
+    "기획 결정 대기: 분류된 작업 또는 dev 전체가 차단됩니다."
+  ],
+  "next": {
+    "plan": "P904",
+    "dev": "P902"
+  },
+  "tasks": [
+    {
+      "id": "P901",
+      "depends_on": [],
+      "title": "결정된 완료 marker 기록",
+      "owner": "dev",
+      "priority": 10,
+      "state": "READY",
+      "reason": "",
+      "work_order": "docs/planning/plans/P901.md",
+      "checked": 0,
+      "total": 1,
+      "completed_checks": [],
+      "acceptance": {
+        "C1": "기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다."
+      },
+      "blocked_by_decisions": [
+        "docs/feedback/dev/P901-decision-3dd251cf50c6.md"
+      ]
+    },
+    {
+      "id": "P902",
+      "depends_on": [],
+      "title": "marker와 무관한 독립 확인",
+      "owner": "dev",
+      "priority": 20,
+      "state": "READY",
+      "reason": "",
+      "work_order": "docs/planning/plans/P902.md",
+      "checked": 0,
+      "total": 1,
+      "completed_checks": [],
+      "acceptance": {
+        "C1": "P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다."
+      },
+      "blocked_by_decisions": []
+    },
+    {
+      "id": "P903",
+      "depends_on": [
+        "P901"
+      ],
+      "title": "P901 완료 후 의존 확인",
+      "owner": "dev",
+      "priority": 30,
+      "state": "WAITING",
+      "reason": "선행 작업: P901",
+      "work_order": "docs/planning/plans/P903.md",
+      "checked": 0,
+      "total": 1,
+      "completed_checks": [],
+      "acceptance": {
+        "C1": "P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다."
+      },
+      "blocked_by_decisions": [
+        "docs/feedback/dev/P901-decision-3dd251cf50c6.md"
+      ]
+    },
+    {
+      "id": "P904",
+      "depends_on": [],
+      "title": "plan 초안 선택 관찰",
+      "owner": "plan",
+      "priority": 40,
+      "state": "DRAFT",
+      "reason": "",
+      "work_order": "docs/planning/plans/P904.md",
+      "checked": 0,
+      "total": 1,
+      "completed_checks": [],
+      "acceptance": {
+        "C1": "별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다."
+      },
+      "blocked_by_decisions": []
+    }
+  ],
+  "plan_requests": [],
+  "pending_decisions": [
+    {
+      "path": "docs/feedback/dev/P901-decision-3dd251cf50c6.md",
+      "task": "P901",
+      "scope": "tasks",
+      "tasks": [
+        "P901"
+      ],
+      "reason": "P901 marker choice affects P901 and dependent P903; P902 has no dependency and writes a fixed independent confirmation."
+    }
+  ],
+  "paused_sessions": [],
+  "handoffs": []
+}

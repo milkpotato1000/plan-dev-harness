@@ -1,0 +1,11 @@
+{
+  "commit": "f41feeb98f35cf9fdc2c5f878425cc84161abf75",
+  "files_sha256": {
+    "docs/planning/plans/P901.md": "a2a4afa667edddbaf7f9fe32979c2860e9d7b7c26dc2686e4f80e6ae2b5c7f80",
+    "docs/planning/plans/P903.md": "c5bd6fffce3caa6a0380ceb1c42653c14bd581be0a9b9d028ad25b7fea13ca81",
+    "docs/verification/P002-20261029-A/P901-marker.txt": "391e5df3abca6b59e7557c0e2ed0db65260eda8d077d8d6bcfff75fe4f18a1f6",
+    "docs/verification/P002-20261029-A/P903-dependent.txt": "324825275512b217cb568fee15184117dff27c7f5b2327f35894b8d1ad3ba5b8",
+    "docs/verification/P002-20261029-A-CONT-20261105/S5/P901-result.md": "dcbf81364660f0ef2d3c176c1802d552172e232abf8d515218e433123c1d5592",
+    "docs/verification/P002-20261029-A-CONT-20261105/S5/P903-result.md": "3a78073920d86e22a8dd046a57b9dcab3ae8e4e5f27f829c38c33fa570533af3"
+  }
+}

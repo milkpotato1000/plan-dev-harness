@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "DECISION_REQUEST",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "b72b967157d4287f60d94d4f148a9edc116d948f",
+  "document": "docs/feedback/dev/reviews/P002-reconstruction-20261105.md",
+  "summary": "P002 original fixture has no files or Git objects; review historical-source continuation proposal",
+  "next_action": "Review immutable archive, role-owned reconstruction and explicit old/new decision SHA mapping; commit exact method and hand off next fixture action without repeating current human resume",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:08:31.111808+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:09:20.817036+00:00",
+      "evidence": "docs/verification/P002/recovery-20261105/delivery.md"
+    }
+  ]
+}

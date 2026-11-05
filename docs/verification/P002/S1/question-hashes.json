@@ -1,0 +1,7 @@
+{
+  "original_sha256": "7b4dbba64bfa6028fad506174da80822d19c655e096d9d33e45a3f5332cc5993",
+  "after_each_rejected_resolve_sha256": "7b4dbba64bfa6028fad506174da80822d19c655e096d9d33e45a3f5332cc5993",
+  "resolved_sha256": "ee1737dfb7134d243da7076362b176c03eb14b4ac2ff27bd6494650ee2350b09",
+  "immutable_body_sha256": "75337c803fd679923426d787762463d5532b678e2779254742e3ce290d93873d",
+  "body_unchanged": true
+}

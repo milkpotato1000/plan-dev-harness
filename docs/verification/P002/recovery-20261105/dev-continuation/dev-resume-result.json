@@ -1,0 +1,32 @@
+{
+  "before": "f30f613cac07dcf38dbd75531d556384859e214b",
+  "resume_commit": "83e0f06d0e1d6d2fb06e6b9b9547551ab5d69196",
+  "actual_human_request": "Actual human in existing session-plan on 2026-11-05, directly verified by session-dev; P002-resume-20261105 review: 그럼 P002 시험의 plan/dev 중지를 재개하고 남은 검증도 마무리해줘. Apply this single bilateral request to own dev record only after continuation baseline verification.",
+  "one_bilateral_request_not_two_separate_utterances": true,
+  "dev_checkpoint_before_sha256": "231f8d7ca42c2a37010c1aa5214fc69445971a56d73c6bfee3790dbdc4990cc8",
+  "dev_checkpoint_after_sha256": "ee5bc42ba40a42eda6caa576e664a8aa39f5413c00d7133eb837d7ef67520e81",
+  "plan_checkpoint_unchanged": true,
+  "second_question_unchanged_sha256": "40fc3d247b2d386f8d8f2761e5f81791a60ca5f4468f335522e61dc213d9f8c7",
+  "next": {
+    "plan": null,
+    "dev": null
+  },
+  "paused": [
+    [
+      "plan",
+      "all"
+    ]
+  ],
+  "pending_decisions": [
+    {
+      "path": "docs/feedback/dev/P901-decision-6ef38fbcb8c8.md",
+      "task": "P901",
+      "scope": "tasks",
+      "tasks": [
+        "P901"
+      ],
+      "reason": "Only P901 marker retention is questioned; P903 depends on P901; completed independent P902 is unaffected."
+    }
+  ],
+  "result": "PASS current S3.4 continuation intermediate invariant; C3 incomplete pending actual plan resume and future S3.6/7 inputs"
+}

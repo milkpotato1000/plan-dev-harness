@@ -1,0 +1,185 @@
+[
+  {
+    "at": "2026-10-30T12:19:38+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:38+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "ee7dd573f8ea255a6c50d28178a2831aadcbe0ec\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:38+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "rev-parse",
+      "dev"
+    ],
+    "exit_code": 0,
+    "stdout": "86ba359b879fb69bb196484eb23966662381b8c4\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:38+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "show",
+      "86ba359b879fb69bb196484eb23966662381b8c4:docs/progress/sessions/dev.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# Session checkpoint\n\n> 역할: dev\n> 상태: PAUSED\n> 범위: all\n> 사용자 요청: Actual human reply in session-dev, observed 2026-10-30T12:08:02+09:00, fixture only: P002-20261029-A 시험의 plan과 dev를 지금 모두 중지해줘\n> 재개 요청: -\n\n- 2026-10-30T03:08:02.782463+00:00 | PAUSE | Actual human reply in session-dev, observed 2026-10-30T12:08:02+09:00, fixture only: P002-20261029-A 시험의 plan과 dev를 지금 모두 중지해줘\n\n## S3 step 2 actual human all-role pause\n\nRun P002-20261029-A, fixture only. Actual human request observed 2026-10-30T12:08:02+09:00.\nBoth roles stop work under this default scope=all dev checkpoint. No task output\nor other fixture work continues. No running fixture process was present; this is\nnot evidence of process termination. Permitted activity is checkpoint/evidence\npreservation and human-requested state observation only.\n\nCompleted: S0, S1 and S2. S3 step 1 exact decision adoption c24af9db2772a73636ca4ebe003a92c708074c1d\nat d1d7b2a58639fb8d9c21ee64ab365577e80d49c3. Second question docs/feedback/dev/P901-decision-6ef38fbcb8c8.md remains OPEN.\nObserved plan commit: c24af9db2772a73636ca4ebe003a92c708074c1d. P901/P903 outputs have not been executed.\nRemaining: S3 independent plan checkpoint, separate role resumptions, separate\ndev role pause and resolution-only exception, final resume, S4 and S5. These\nrequire their own actual human inputs at the corresponding stages. Do not infer\nthem from this pause, time passing or a plan review. Preserve previous evidence.\nNext permitted action: commit this checkpoint/evidence and have actual plan read\nthe committed state under the user's request; both next selections must be null.\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:38+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "show",
+      "86ba359b879fb69bb196484eb23966662381b8c4:docs/feedback/dev/P901-decision-6ef38fbcb8c8.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# Decision request\n\n> 유형: PLAN_DECISION\n> 상태: OPEN\n> 작업: P901\n> 결정 plan: -\n\nRun P002-20261029-A, S3 second harmless fixture question for P901.\nAfter the prescribed S3 pause/resume independence checks, may P901 retain the\nalready decided VERIFIED-P002-20261029-A marker for execution only at S5?\nPlease review scope tasks=[P901], with dependent P903 affected and P902 independent,\nand commit the answer/review under the existing P002 contract. No new product\nchoice or change of marker, card acceptance, runtime or execution stage is proposed.\nDev must adopt the exact reviewed commit but keep this question OPEN throughout\nS3 steps 2–5. Resolution occurs only at S3 step 6 after a separate actual human\nrequest while dev remains role-paused. Answer/adoption alone does not resolve it.\n\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:38+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"branch\": \"plan\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"plan은 작업 트리의 기획 + dev 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.\",\n    \"사용자 중지 기록이 적용됩니다. 명시적 재개 전에는 해당 역할을 선택하지 않습니다.\",\n    \"기획 결정 대기: 분류된 작업 또는 dev 전체가 차단됩니다.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P901\",\n      \"depends_on\": [],\n      \"title\": \"결정된 완료 marker 기록\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P901.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": [\n        \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\"\n      ]\n    },\n    {\n      \"id\": \"P902\",\n      \"depends_on\": [],\n      \"title\": \"marker와 무관한 독립 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"DONE\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P902.md\",\n      \"checked\": 1,\n      \"total\": 1,\n      \"completed_checks\": [\n        \"C1\"\n      ],\n      \"acceptance\": {\n        \"C1\": \"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P903\",\n      \"depends_on\": [\n        \"P901\"\n      ],\n      \"title\": \"P901 완료 후 의존 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 30,\n      \"state\": \"WAITING\",\n      \"reason\": \"선행 작업: P901\",\n      \"work_order\": \"docs/planning/plans/P903.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": [\n        \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\"\n      ]\n    },\n    {\n      \"id\": \"P904\",\n      \"depends_on\": [],\n      \"title\": \"plan 초안 선택 관찰\",\n      \"owner\": \"plan\",\n      \"priority\": 40,\n      \"state\": \"DRAFT\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P904.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [\n    {\n      \"path\": \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\",\n      \"task\": \"P901\",\n      \"scope\": \"tasks\",\n      \"tasks\": [\n        \"P901\"\n      ],\n      \"reason\": \"Only P901 marker retention is questioned; P903 depends on P901; completed independent P902 is unaffected.\"\n    }\n  ],\n  \"paused_sessions\": [\n    {\n      \"role\": \"dev\",\n      \"state\": \"PAUSED\",\n      \"scope\": \"all\",\n      \"request\": \"Actual human reply in session-dev, observed 2026-10-30T12:08:02+09:00, fixture only: P002-20261029-A 시험의 plan과 dev를 지금 모두 중지해줘\",\n      \"resume\": \"-\",\n      \"path\": \"docs/progress/sessions/dev.md\"\n    }\n  ],\n  \"handoffs\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:39+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/workflow_control.py",
+      "pause",
+      "--scope",
+      "all",
+      "--request",
+      "Actual direct human request in session-plan, observed 2026-10-30T12:19:38+09:00, fixture only: P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘. dev의 기존 중지는 유지하고, 재개하지 마."
+    ],
+    "exit_code": 0,
+    "stdout": "docs/progress/sessions/plan.md: local record only; review and commit. No message or work was executed.\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:39+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"branch\": \"plan\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"plan은 작업 트리의 기획 + dev 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.\",\n    \"사용자 중지 기록이 적용됩니다. 명시적 재개 전에는 해당 역할을 선택하지 않습니다.\",\n    \"기획 결정 대기: 분류된 작업 또는 dev 전체가 차단됩니다.\"\n  ],\n  \"next\": {\n    \"plan\": null,\n    \"dev\": null\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P901\",\n      \"depends_on\": [],\n      \"title\": \"결정된 완료 marker 기록\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P901.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": [\n        \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\"\n      ]\n    },\n    {\n      \"id\": \"P902\",\n      \"depends_on\": [],\n      \"title\": \"marker와 무관한 독립 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"DONE\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P902.md\",\n      \"checked\": 1,\n      \"total\": 1,\n      \"completed_checks\": [\n        \"C1\"\n      ],\n      \"acceptance\": {\n        \"C1\": \"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P903\",\n      \"depends_on\": [\n        \"P901\"\n      ],\n      \"title\": \"P901 완료 후 의존 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 30,\n      \"state\": \"WAITING\",\n      \"reason\": \"선행 작업: P901\",\n      \"work_order\": \"docs/planning/plans/P903.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": [\n        \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\"\n      ]\n    },\n    {\n      \"id\": \"P904\",\n      \"depends_on\": [],\n      \"title\": \"plan 초안 선택 관찰\",\n      \"owner\": \"plan\",\n      \"priority\": 40,\n      \"state\": \"DRAFT\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P904.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [\n    {\n      \"path\": \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\",\n      \"task\": \"P901\",\n      \"scope\": \"tasks\",\n      \"tasks\": [\n        \"P901\"\n      ],\n      \"reason\": \"Only P901 marker retention is questioned; P903 depends on P901; completed independent P902 is unaffected.\"\n    }\n  ],\n  \"paused_sessions\": [\n    {\n      \"role\": \"plan\",\n      \"state\": \"PAUSED\",\n      \"scope\": \"all\",\n      \"request\": \"Actual direct human request in session-plan, observed 2026-10-30T12:19:38+09:00, fixture only: P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘. dev의 기존 중지는 유지하고, 재개하지 마.\",\n      \"resume\": \"-\",\n      \"path\": \"docs/progress/sessions/plan.md\"\n    },\n    {\n      \"role\": \"dev\",\n      \"state\": \"PAUSED\",\n      \"scope\": \"all\",\n      \"request\": \"Actual human reply in session-dev, observed 2026-10-30T12:08:02+09:00, fixture only: P002-20261029-A 시험의 plan과 dev를 지금 모두 중지해줘\",\n      \"resume\": \"-\",\n      \"path\": \"docs/progress/sessions/dev.md\"\n    }\n  ],\n  \"handoffs\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:39+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "show",
+      "dev:docs/progress/sessions/dev.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# Session checkpoint\n\n> 역할: dev\n> 상태: PAUSED\n> 범위: all\n> 사용자 요청: Actual human reply in session-dev, observed 2026-10-30T12:08:02+09:00, fixture only: P002-20261029-A 시험의 plan과 dev를 지금 모두 중지해줘\n> 재개 요청: -\n\n- 2026-10-30T03:08:02.782463+00:00 | PAUSE | Actual human reply in session-dev, observed 2026-10-30T12:08:02+09:00, fixture only: P002-20261029-A 시험의 plan과 dev를 지금 모두 중지해줘\n\n## S3 step 2 actual human all-role pause\n\nRun P002-20261029-A, fixture only. Actual human request observed 2026-10-30T12:08:02+09:00.\nBoth roles stop work under this default scope=all dev checkpoint. No task output\nor other fixture work continues. No running fixture process was present; this is\nnot evidence of process termination. Permitted activity is checkpoint/evidence\npreservation and human-requested state observation only.\n\nCompleted: S0, S1 and S2. S3 step 1 exact decision adoption c24af9db2772a73636ca4ebe003a92c708074c1d\nat d1d7b2a58639fb8d9c21ee64ab365577e80d49c3. Second question docs/feedback/dev/P901-decision-6ef38fbcb8c8.md remains OPEN.\nObserved plan commit: c24af9db2772a73636ca4ebe003a92c708074c1d. P901/P903 outputs have not been executed.\nRemaining: S3 independent plan checkpoint, separate role resumptions, separate\ndev role pause and resolution-only exception, final resume, S4 and S5. These\nrequire their own actual human inputs at the corresponding stages. Do not infer\nthem from this pause, time passing or a plan review. Preserve previous evidence.\nNext permitted action: commit this checkpoint/evidence and have actual plan read\nthe committed state under the user's request; both next selections must be null.\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:39+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "show",
+      "dev:docs/feedback/dev/P901-decision-6ef38fbcb8c8.md"
+    ],
+    "exit_code": 0,
+    "stdout": "# Decision request\n\n> 유형: PLAN_DECISION\n> 상태: OPEN\n> 작업: P901\n> 결정 plan: -\n\nRun P002-20261029-A, S3 second harmless fixture question for P901.\nAfter the prescribed S3 pause/resume independence checks, may P901 retain the\nalready decided VERIFIED-P002-20261029-A marker for execution only at S5?\nPlease review scope tasks=[P901], with dependent P903 affected and P902 independent,\nand commit the answer/review under the existing P002 contract. No new product\nchoice or change of marker, card acceptance, runtime or execution stage is proposed.\nDev must adopt the exact reviewed commit but keep this question OPEN throughout\nS3 steps 2–5. Resolution occurs only at S3 step 6 after a separate actual human\nrequest while dev remains role-paused. Answer/adoption alone does not resolve it.\n\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:39+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "worktree"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:39+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "add",
+      "docs/progress/sessions/plan.md",
+      "docs/verification/P002-20261029-A/S3-plan-pause-all.md",
+      "docs/verification/P002-20261029-A/S3-plan-pause-all-commands.json"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:39+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-30T12:19:39+09:00",
+    "cwd": "<fixture-plan>",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\n",
+    "stderr": ""
+  }
+]

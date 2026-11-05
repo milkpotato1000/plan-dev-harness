@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "DECISION_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "d75956ddf71554e6c4bdb84eed2bd3a2853995dd",
+  "document": "docs/planning/reviews/user-reviews/P002-C3-reconstruction-20261105-v1.md",
+  "summary": "Approve P002 historical-source continuation and explicit single-field resolved SHA mapping",
+  "next_action": "Adopt exact reviewed method; bootstrap previewed isolated fixture and deliver concrete plan writer import action",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:10:24.445326+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:10:50.752669+00:00",
+      "evidence": "2026-11-05 actual send_message_to_thread success to verified same-project dev, exact9f32f207e925c4a52a01bb0257991e4fe404929b and reviewed reconstruction method delivered; no adoption/bootstrap completion inferred."
+    }
+  ]
+}

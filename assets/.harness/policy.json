@@ -17,7 +17,11 @@
     "CLAUDE.md",
     "scripts/plan_intake.py",
     "docs/planning/request-decisions",
-    ".harness/installation.json"
+    ".harness/installation.json",
+    "scripts/workflow_control.py",
+    "docs/planning/decision-scopes",
+    "docs/progress/sessions/plan.md",
+    "docs/progress/handoffs/plan"
   ],
   "baseline_file": ".harness/adopted-plan.json",
   "p_card_execution": true

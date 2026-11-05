@@ -1,0 +1,14 @@
+{
+  "fixture_plan_sha": "11706bf5ea2b4091be46784911ad38a4f2e507e0",
+  "fixture_dev_adoption_sha": "632cc4b4ab5c57546c6fd505cb558e17ed19bbb1",
+  "exported_from_exact_plan_sha": {
+    "docs/planning/reviews/P002-S0-readiness.md": "69f68ddfd965c92246b3017e8d90968e72b68fd3a853d72b7ee54a14f02b4471",
+    "docs/verification/P002-20261029-A/S0-plan-participation.md": "fc5cd95bdd726b754474621249c0ca38358c2b4db9219ee82f8314be64abeeed",
+    "docs/verification/P002-20261029-A/S0-plan-commands.json": "50beb1093ed2156515b4a40ec729d672446578e5d22eb4ba66cad0a925ef8e48",
+    "docs/planning/plans/P901.md": "47e46bce4cbdbcae26f80a2960b6c431786558930b28921343db17b2eaf5df4e",
+    "docs/planning/plans/P902.md": "3801ae9e6f3747f35d0aa712f164a223a0becc5df63bd19239b3dbd5157ea14f",
+    "docs/planning/plans/P903.md": "c0bd39f5f3d3782500aa807d836681dceab7a75fa644766facaecb77049e3b74",
+    "docs/planning/plans/P904.md": "c62d0bebd3d047d6af35752f975f333eb33215f4e1dadbee22ab5d996b3daeb6"
+  },
+  "patch_sha256": "35dc2865d5bbb4efdda668b9faabd268a1d801498bfb57441573ffbe8229ff62"
+}

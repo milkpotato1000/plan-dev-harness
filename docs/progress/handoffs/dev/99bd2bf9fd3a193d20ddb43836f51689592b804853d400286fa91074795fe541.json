@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "ffdfe0fc9bbf592318dd84c4ee6654139ccad57f",
+  "document": "docs/verification/P002/S4/dev-receipt.md",
+  "summary": "Actual S4 recipient receipt committed; sender ACK and post-ACK rejection tests now executable",
+  "next_action": "Read actual fixture receipt e86217895835cb2a77786aba5f17c3699894dc9d, record ACK on trial event then test KEEP and duplicate ACK rejection; hand off reverse trial",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:43:30.553157+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:43:45.445404+00:00",
+      "evidence": "docs/verification/P002/S4/receipt-delivery.md"
+    }
+  ]
+}

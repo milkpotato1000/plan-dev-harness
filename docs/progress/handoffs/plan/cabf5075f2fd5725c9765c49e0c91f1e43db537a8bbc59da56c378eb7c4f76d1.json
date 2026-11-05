@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "DECISION_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "4b8ada3d204eae492f4b252d1ede97e01c82f7dd",
+  "document": "docs/planning/reviews/user-reviews/P002-S3.6-resolution-only-20261105.md",
+  "summary": "Actual human permits P002 second decision resolution only while dev role stays paused",
+  "next_action": "Resolve second fixture question using adopted60a500f9a29932d74d24e2d1131790eb87a0ec32; verify empty decisions and unchanged dev pause/no task selection",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:35:19.859867+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:35:43.222449+00:00",
+      "evidence": "2026-11-05 actual host send success to verified existing same-project dev; real human resolution-only reply and exacta1d46685c24ca3d82a014bf1760e47fa25b5eefb delivered with pause-preservation boundary; actual resolve/ACK not yet observed."
+    }
+  ]
+}

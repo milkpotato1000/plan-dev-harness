@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "722292f5190f970994ecc4e699df3f7acb78dca5",
+  "document": "docs/planning/reviews/P005-target-integration.md",
+  "summary": "P005 three legacy plan maintenance baselines reviewed and applied with original work preserved",
+  "next_action": "Adopt exact approved target commits; verify post-application preservation and push existing plan/dev remotes; complete P005 evidence",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-04T03:00:06.167139+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-04T03:00:18.276639+00:00",
+      "evidence": "2026-11-04 host send succeeded to verified same-project dev with three reviewed exact target SHAs and central722292f baseline"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-04T03:01:36.694677+00:00",
+      "evidence": "2026-11-04 observed actual dev committed5fa7c6a adoption of722292f5190f970994ecc4e699df3f7acb78dca5 with P005 target integration review and started exact target adoption"
+    }
+  ]
+}

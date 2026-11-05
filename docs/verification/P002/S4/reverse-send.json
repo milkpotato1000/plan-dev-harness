@@ -1,0 +1,9 @@
+{
+  "fixture_sent_commit": "cd4f8f4436760a9f8b76b90f059452b79de030cc",
+  "actual_host_result": {
+    "isError": false,
+    "recipient": "verified session-plan"
+  },
+  "authority": "actual human remaining S1\u2013S5 same-project two-role delivery grant",
+  "status": "SENT; no recipient/completion polling or inferred ACK"
+}

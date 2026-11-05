@@ -1,0 +1,14 @@
+[
+  {
+    "commit": "ee7dd573f8ea255a6c50d28178a2831aadcbe0ec",
+    "path": "docs/verification/P002-20261029-A/S3-plan-observe-dev-pause-commands.json",
+    "export": "docs/verification/P002/S3/plan-observe-pause-exports/docs/verification/P002-20261029-A/S3-plan-observe-dev-pause-commands.json",
+    "sha256": "14d7c4877d47ce4a158e9ed18360121a3e40d367f92139f034af67a3a321b253"
+  },
+  {
+    "commit": "ee7dd573f8ea255a6c50d28178a2831aadcbe0ec",
+    "path": "docs/verification/P002-20261029-A/S3-plan-observe-dev-pause.md",
+    "export": "docs/verification/P002/S3/plan-observe-pause-exports/docs/verification/P002-20261029-A/S3-plan-observe-dev-pause.md",
+    "sha256": "1cc1935be41c6b787bb1b4c56f362b8040e280ff964532b060532888a961ebd6"
+  }
+]

@@ -1,0 +1,150 @@
+[
+  {
+    "path": "SKILL.md",
+    "sha256": "ef68abc71303cec102228b61b0fb60190131d5ce066e1955812d2ce68c48c177",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "agents/openai.yaml",
+    "sha256": "2d9b89a0bd6dd3f7d5ebad552a38aa86471c95f0c471090579271505dcbdca7c",
+    "historical_match": [
+      "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09"
+    ],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/.githooks/pre-commit",
+    "sha256": "a90663e546e9737837e900abad5fa1986fc010860c87d570f8562c68b581b050",
+    "historical_match": [
+      "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09"
+    ],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/.githooks/pre-push",
+    "sha256": "a1369e815241d85b9b96795eca8cd234d7e2fc7639cef862e9ceb45092cacf29",
+    "historical_match": [
+      "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09"
+    ],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/.harness/policy.json",
+    "sha256": "d3ca249b11393e93b6776027ba3e292fb867f31cec55b400fa81a4eb4be7c783",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/docs/planning/plans/_TEMPLATE.md",
+    "sha256": "7ac1e72d1f8eba89899a3b7d290c6fd087e65011bc584d106dd18a7d10abfae8",
+    "historical_match": [
+      "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09"
+    ],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/docs/process/work-queue.md",
+    "sha256": "30d49ebc2567ed1b1107c3b9e81eb73c2f6b869fd29c783e9d0c8d98f9953d80",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/scripts/contract_guard.py",
+    "sha256": "ff9cde6958c56d12c31a04431d76967deb2e12d8e9a72e401a7a9a3d6821ffe1",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/scripts/plan_cards.py",
+    "sha256": "287caeea6e11916f0b43919c68805961e9c94329ad26e3037db10850d9f3657d",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/scripts/work_queue.py",
+    "sha256": "9dd09cd048a2451e8d62dc8f4b3cc5b7165388405a2a91f399b8b796e1bc8778",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/workspace/AGENTS.md.template",
+    "sha256": "c954959619090a0a145c8e01165ca22c45a5f37242ffa60991f1a048da85c2f6",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/workspace/dev-chat.md.template",
+    "sha256": "2eb2cf525120aac8e0ec37f968bef1e9b5a51500423e98ea78ef5348faeb26d1",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "assets/workspace/plan-chat.md.template",
+    "sha256": "4902df8938c91a2209796a6acd3433f5dab7bbe7b4ac95dc236ad58696bddc83",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "references/project-instructions.md",
+    "sha256": "7116fa1a43f655ba00518944f3d7f2cf7d5fdcdbb8d98ea89e0801403d88eb56",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "references/role-chats.md",
+    "sha256": "d978ff3f3488d96262e3db20efd58fd0b2d2dd34d044a1144f0b026975d41ea9",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "references/workspace-layout.md",
+    "sha256": "fb2ad001e6f561f4f26205ae2532163dfeb4dd48914bb3e399c7e6ec88b90768",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "scripts/install_harness.py",
+    "sha256": "746c0119836095e0c4ef232a05bbd70249ab4a77a8f12a4b80d59e7900286253",
+    "historical_match": [],
+    "in_new_payload": true
+  },
+  {
+    "path": "scripts/nest_worktrees.py",
+    "sha256": "b64e136f0dc4d394ab86e0e1edfbfe2f9b63f347b8d288cb74049550d9788129",
+    "historical_match": [
+      "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09"
+    ],
+    "in_new_payload": true
+  },
+  {
+    "path": "tests/test_contract_guard.py",
+    "sha256": "583fe864ac1b51cb5138560cbb33cf1c9156ebd2bccb1f6e1fd5ad8e8a97a577",
+    "historical_match": [],
+    "in_new_payload": false
+  },
+  {
+    "path": "tests/test_installer.py",
+    "sha256": "82d664155baee2537a6408912f187468cc95270613dd88bdd7e1fddca4073b59",
+    "historical_match": [
+      "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09"
+    ],
+    "in_new_payload": false
+  },
+  {
+    "path": "tests/test_numbered_queue.py",
+    "sha256": "5e50b468e2ba9b09c1cc3bd6e0ebd6721d1b166aa660000a8b6bd6db65a295c7",
+    "historical_match": [
+      "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09"
+    ],
+    "in_new_payload": false
+  },
+  {
+    "path": "tests/test_workspace_layout.py",
+    "sha256": "69a299ab6abb0dd98344383e13f6f0e9e6a979fc0cd50fd1788fc47ba5234684",
+    "historical_match": [
+      "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09"
+    ],
+    "in_new_payload": false
+  }
+]

@@ -1,0 +1,125 @@
+{
+  "at": "2026-11-04T12:18:25.437665+09:00",
+  "result": "PASS",
+  "targets": [
+    {
+      "target": "legacy-1",
+      "version": "0.2.1",
+      "method": "reviewed manual integration",
+      "maintenance_sha": "e019a35a2ad9c671167d2adad54c4890a8c02f99",
+      "baseline_parent": "e065560e3a48a6a4a1d41c26a721ee2a99521dce",
+      "reviewed_plan_integration": "908075f798c0caa5c358b68097fc6e4da28b0777",
+      "dev_adoption_sha": "35427012a324905dc9b9f3f0323320bccff2d6c7",
+      "dev_evidence_sha": "d64155863f80b27ba041c919fdb15e60e9bc851e",
+      "guards": "plan/dev worktree,index,HEAD PASS; final dev evidence index/HEAD PASS",
+      "queue_task_control_next_parity": "PASS at completed maintenance validation boundary",
+      "dirty_preservation": "original dirty bytes still preserved",
+      "protected_refs_hooks_remotes": "preserved",
+      "runtime": "68 latest passing case results (67 suite + 1 repaired-fixture focused pass); failure history retained",
+      "custom_regression_tests": 0,
+      "remote_delivery": {
+        "result": "PASS",
+        "at": "2026-11-04T12:06:09.462939+09:00",
+        "refs": {
+          "plan": "908075f798c0caa5c358b68097fc6e4da28b0777",
+          "dev": "d64155863f80b27ba041c919fdb15e60e9bc851e"
+        },
+        "remotes": {
+          "personal": {
+            "dev": "d64155863f80b27ba041c919fdb15e60e9bc851e",
+            "plan": "c8c3843577aa84980d0d695afc9a48b0e22fc7c6"
+          }
+        },
+        "verification": "Expected upgrade refs equal or are ancestors of observed remote refs",
+        "concurrent_product_work": "Plan advanced after upgrade verification; live worktrees not mutated for delivery; only exact verified dev maintenance/evidence commit pushed from isolated clone. Newer product plan not adopted by this task."
+      },
+      "private_verification_sha256": "215c159bcb8916e8850b01de4adb3711a9bea63e718414825a6bfe14fb64f303",
+      "concurrent_writer": "Independent product work advanced plan/dev after maintenance validation; no further live writes by this upgrade. Exact verified dev upgrade pushed from isolated clone; remote newer plan contains reviewed integration."
+    },
+    {
+      "target": "legacy-2",
+      "version": "0.2.1",
+      "method": "reviewed manual integration",
+      "maintenance_sha": "65bd7b86e2a61cad770f79974f148513452e27f0",
+      "baseline_parent": "f1b93e082c1c7079d70cd0cbe80b764c4886597b",
+      "reviewed_plan_integration": "39d3e85b5b52993b3b4a36641c269275463f86c6",
+      "dev_adoption_sha": "2c9a8d3b6896be1ef263d507a0782eefe6ae8f97",
+      "dev_evidence_sha": "475ee56899861d1b8d3605058d61439604e9f0aa",
+      "guards": "plan/dev worktree,index,HEAD PASS; final dev evidence index/HEAD PASS",
+      "queue_task_control_next_parity": "PASS at completed maintenance validation boundary",
+      "dirty_preservation": "original dirty bytes still preserved",
+      "protected_refs_hooks_remotes": "preserved",
+      "runtime": "68 latest passing case results (67 suite + 1 repaired-fixture focused pass); failure history retained",
+      "custom_regression_tests": 0,
+      "remote_delivery": {
+        "result": "PASS",
+        "at": "2026-11-04T12:05:10.763835+09:00",
+        "refs": {
+          "plan": "39d3e85b5b52993b3b4a36641c269275463f86c6",
+          "dev": "475ee56899861d1b8d3605058d61439604e9f0aa"
+        },
+        "remotes": {
+          "personal": {
+            "dev": "475ee56899861d1b8d3605058d61439604e9f0aa",
+            "plan": "39d3e85b5b52993b3b4a36641c269275463f86c6"
+          }
+        }
+      },
+      "private_verification_sha256": "6d2515e9ce2684ff7ce71bdcc2ed146e14935df6e05d75199c59d5d48bbe9957"
+    },
+    {
+      "target": "legacy-3",
+      "version": "0.2.1",
+      "method": "reviewed manual integration",
+      "maintenance_sha": "7da28684453a8f2609b127b7f60ac84045fb9fa5",
+      "baseline_parent": "bf02d22600ff14d646571c81ce760dcaae27a51b",
+      "reviewed_plan_integration": "4fab7227e48763bf7b0b11882be995319c811f56",
+      "dev_adoption_sha": "3f0c6eb6a3d18964ebce89bff2e4d982f4138889",
+      "dev_evidence_sha": "dcbc56207d6bd9d22e414e57d08243f716763e4b",
+      "guards": "plan/dev worktree,index,HEAD PASS; final dev evidence index/HEAD PASS",
+      "queue_task_control_next_parity": "PASS against already-adopted remote product state; not the earlier stale local task count",
+      "dirty_preservation": "original dirty bytes still preserved",
+      "protected_refs_hooks_remotes": "preserved",
+      "runtime": "68 latest passing case results (67 suite + 1 repaired-fixture focused pass); failure history retained",
+      "custom_regression_tests": 9,
+      "remote_delivery": {
+        "result": "PASS",
+        "at": "2026-11-04T12:17:48.717911+09:00",
+        "refs": {
+          "plan": "7e82a2792da5db39ff012bcf07aedd75c1f13578",
+          "dev": "dcbc56207d6bd9d22e414e57d08243f716763e4b"
+        },
+        "remotes": {
+          "origin": {
+            "dev": "dcbc56207d6bd9d22e414e57d08243f716763e4b",
+            "plan": "7e82a2792da5db39ff012bcf07aedd75c1f13578"
+          },
+          "mirror": {
+            "dev": "dcbc56207d6bd9d22e414e57d08243f716763e4b",
+            "plan": "7e82a2792da5db39ff012bcf07aedd75c1f13578"
+          },
+          "personal": {
+            "dev": "dcbc56207d6bd9d22e414e57d08243f716763e4b",
+            "plan": "7e82a2792da5db39ff012bcf07aedd75c1f13578"
+          }
+        }
+      },
+      "private_verification_sha256": "2b35b549220b7b428fd141ac279f4378b5e0b8abd5ba8e0b7fc6cd4e71026b0e",
+      "remote_history_composition": {
+        "exact_plan": "7e82a2792da5db39ff012bcf07aedd75c1f13578",
+        "local_parent_preserved": "62489f26de4cd34a06536e49be585a6e1d9d08c5",
+        "remote_parent_preserved": "c3891ecbaf76408eafdfbfcea14dc10e2d9558b3",
+        "head": "bf2c4cb8829c63945a36a0f20ae9e64430a7d3cd",
+        "final_head": "dcbc56207d6bd9d22e414e57d08243f716763e4b",
+        "conflicts_resolved": [
+          ".harness/adopted-plan.json"
+        ],
+        "remote_product_parity": true,
+        "hooks_remotes_protected_refs_preserved": true
+      },
+      "private_composition_sha256": "9700cbabc66bd42028a59142647e9743420c2c9909e7aba8afdf97955995cb66"
+    }
+  ],
+  "external_services_or_product_execution_by_upgrade": false,
+  "pause_resume_by_upgrade": false
+}

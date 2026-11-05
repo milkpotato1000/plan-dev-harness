@@ -1,0 +1,20 @@
+[
+  {
+    "commit": "86ba359b879fb69bb196484eb23966662381b8c4",
+    "path": "docs/progress/sessions/dev.md",
+    "export": "docs/verification/P002/S3/pause-all-exports/docs/progress/sessions/dev.md",
+    "sha256": "231f8d7ca42c2a37010c1aa5214fc69445971a56d73c6bfee3790dbdc4990cc8"
+  },
+  {
+    "commit": "86ba359b879fb69bb196484eb23966662381b8c4",
+    "path": "docs/verification/P002-20261029-A/S3-dev-pause-all-commands.json",
+    "export": "docs/verification/P002/S3/pause-all-exports/docs/verification/P002-20261029-A/S3-dev-pause-all-commands.json",
+    "sha256": "23ae0d8f1a67fb9a80a3de6dc9fad83840fc3653e4db6a1b829d66f34fb777a7"
+  },
+  {
+    "commit": "86ba359b879fb69bb196484eb23966662381b8c4",
+    "path": "docs/verification/P002-20261029-A/S3-dev-pause-all.md",
+    "export": "docs/verification/P002/S3/pause-all-exports/docs/verification/P002-20261029-A/S3-dev-pause-all.md",
+    "sha256": "b4cef2a1d63a081375eb075456e38bd7eee7fadabc4a45fc5b9caf2617312561"
+  }
+]

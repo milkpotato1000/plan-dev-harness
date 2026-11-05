@@ -57,3 +57,48 @@ Use the installed `docs/process/plan-intake.md`: immutable dev request, committe
 plan decision, prepared card, exact adoption. Use `CLAUDE.md` with `@AGENTS.md` to
 load the same ownership instructions in Claude Code. These are Git-owned rules;
 no particular chat API or coding agent is required.
+
+## Decisions, explicit stops and durable handoffs
+
+Use installed docs/process/workflow-controls.md. Unclassified decisions stop dev;
+plan-owned classifications can limit the stop to affected cards and their dependents.
+User pauses are independent, persist across sessions, and need explicit resume records.
+Do not delete or rewrite stops or delivery history to unblock a queue. Send messages
+only under user authorization and record actual delivery/receipt evidence. Existing
+project-local skills may share this skill's name; merge their operating rules deliberately
+instead of replacing them with this setup skill. Preserve optional project adapters.
+
+## Fresh sessions and document delivery
+
+Use the shared [startup and delivery rules](../assets/instructions/agent-workflow.md#fresh-sessions-and-document-delivery).
+Read actual files/branch/adoption/queue/stops and check writers before material writes.
+Preserve an assigned role; unassigned changes use an existing suitable P card or a
+reviewed new one, then exact dev adoption and implementation. Plan does not implement
+product README/user guides; planning-only drafts may finish on plan, and read-only
+questions need no card. Record file/repository/target ref and verify actual delivery;
+plan push, dev adoption and default-branch visibility are separate outcomes.
+Only authorized, uncontested sessions perform both roles in separate worktrees.
+Bootstrap, absent messaging authority and scoped pauses retain their boundaries.
+
+## Asynchronous handoff and parallel planning
+
+Use the shared [asynchronous workflow](../assets/instructions/agent-workflow.md#asynchronous-handoff-and-parallel-planning).
+After authorized send success, record/commit/push SENT and end the plan response;
+do not wait or poll for ACK, adoption or dev completion. On a later natural
+planning/status request record ACK only from observed evidence. Busy dev preserves
+its current P and failures, then adopts the exact reviewed handoff at a safe
+completed/checkpointed commit boundary and follows readiness, priorities and
+dependencies. Keep pauses, OPEN decisions, roles and single writers. Separate
+sessions can overlap P stages; a one-chat fallback is sequential. No daemon,
+new goal, chat, monitor or messaging authority follows from this procedure.
+
+## User review gateway
+
+Use the [result review protocol](user-review.md): dev commits evidence, artifact
+version/hash, shared request key, question scope and existing human-answer sources.
+Plan owns read-only result review and necessary human questions, reuses valid
+pending/answered scopes across roles and records decisions for exact dev adoption.
+Dev does not ask routine completion confirmations. Optional review, required human
+criteria and critical OPEN remain distinct. User code questions in dev are allowed.
+Reverse delivery needs a real human project grant; no permission or pause bypass.
+Preserve asynchronous SENT-then-return and busy-role safe boundaries.

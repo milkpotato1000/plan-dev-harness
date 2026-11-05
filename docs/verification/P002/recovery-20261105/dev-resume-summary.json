@@ -1,0 +1,52 @@
+{
+  "fixture_dev_head": "67039ae447993276b7f73f3631cba0a8284899e0",
+  "fixture_plan_head": "101ffd07150b8edaca92388eeabf8a74158d4a2f",
+  "exact_adopted_fixture_decision": "60a500f9a29932d74d24e2d1131790eb87a0ec32",
+  "patch_sha256": "57540731c5325c60719d5ba7e9a132c150459d17b1a73e7f70e23c067cffd447",
+  "result": {
+    "before": "f30f613cac07dcf38dbd75531d556384859e214b",
+    "resume_commit": "83e0f06d0e1d6d2fb06e6b9b9547551ab5d69196",
+    "actual_human_request": "Actual human in existing session-plan on 2026-11-05, directly verified by session-dev; P002-resume-20261105 review: 그럼 P002 시험의 plan/dev 중지를 재개하고 남은 검증도 마무리해줘. Apply this single bilateral request to own dev record only after continuation baseline verification.",
+    "one_bilateral_request_not_two_separate_utterances": true,
+    "dev_checkpoint_before_sha256": "231f8d7ca42c2a37010c1aa5214fc69445971a56d73c6bfee3790dbdc4990cc8",
+    "dev_checkpoint_after_sha256": "ee5bc42ba40a42eda6caa576e664a8aa39f5413c00d7133eb837d7ef67520e81",
+    "plan_checkpoint_unchanged": true,
+    "second_question_unchanged_sha256": "40fc3d247b2d386f8d8f2761e5f81791a60ca5f4468f335522e61dc213d9f8c7",
+    "next": {
+      "plan": null,
+      "dev": null
+    },
+    "paused": [
+      [
+        "plan",
+        "all"
+      ]
+    ],
+    "pending_decisions": [
+      {
+        "path": "docs/feedback/dev/P901-decision-6ef38fbcb8c8.md",
+        "task": "P901",
+        "scope": "tasks",
+        "tasks": [
+          "P901"
+        ],
+        "reason": "Only P901 marker retention is questioned; P903 depends on P901; completed independent P902 is unaffected."
+      }
+    ],
+    "result": "PASS current S3.4 continuation intermediate invariant; C3 incomplete pending actual plan resume and future S3.6/7 inputs"
+  },
+  "exports_sha256": {
+    "archive-P901-decision-3dd251cf50c6.raw.json": "247319c27cbf89d1de55cdd0cef17aafa964256b8ef3f17cb8c71526b93eade4",
+    "archive-P901-decision-6ef38fbcb8c8.raw.json": "76fd471cebe02e974b164d51d2b4e3e1a5a32bc4a22c21936bea3a7bc9b8d12f",
+    "dev-resume-queue.json": "4b40a9c233972156abb73503b111834b042ca15d5117f28dd155c6e45f81e2bd",
+    "both-paused-queues.json": "6608460de6e90ce9b83209e7632ad30654449a6452a2c6c5cc0aec19bd977921",
+    "dev-restore-commands.json": "40018762d0ff8dcc0b0e25e3d1b7837135c17bbf5d580d6fa81c00aa25badbc8",
+    "dev-reconstruction.json": "3389a6c182409035c223abe7a4dad1aca1f166a8c7ef9d9e10db25e93eb65f10",
+    "dev-resume-commands.json": "a7867ee1eda700d42b6823d21852f54c251f6a9d3a2ca2999dee97990f35abd3",
+    "dev-resume-result.json": "6fe7832dbc7eafd1b8a04cdac8ab437ac88e978d4dae78b18efdd4117d3b7dd9",
+    "plan-import.json": "2d51a6a4088d8ceaaa7237cc18dce2caeef34c83642d4c99f8a06607f5a1dda1",
+    "P901-decision-3dd251cf50c6.raw.json": "42a4019690e4c8230c90a687ffd7e381d714649150457901f4fb401c164beee3",
+    "dev.raw.json": "cc3d6418d1d084fffd8b65d6dceaa6248ea12e40593d0ae88637282af5f64a38",
+    "P901-decision-6ef38fbcb8c8.raw.json": "d413cb83f6a82c51c9c6a2d8c15f36e0a8b71234a1f6836c70ab4103fd9405d7"
+  }
+}

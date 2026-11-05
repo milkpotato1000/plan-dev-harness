@@ -1,0 +1,101 @@
+{
+  "P002-plan": {
+    "git_available_at_start": false,
+    "remaining_files_unchanged": true,
+    "remaining_file_hashes": {},
+    "controls_not_recreated": true
+  },
+  "P002-dev": {
+    "git_available_at_start": false,
+    "remaining_files_unchanged": true,
+    "remaining_file_hashes": {},
+    "controls_not_recreated": true
+  },
+  "main_unchanged": true,
+  "hook_configuration_unchanged": true,
+  "source_and_installed_runtime_unchanged": true,
+  "P001_P002_P003_cards_unchanged": true,
+  "active_skill_hashes_match": true,
+  "backup_hashes_match": true,
+  "adopted_plan": {
+    "commit": "46e22e4de27db7074a62d8ccaeb721febdf1fb93",
+    "review_reference": "docs/planning/reviews/P004-readiness.md"
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "main"
+      ],
+      "cwd": "<distribution-dev>",
+      "exit_code": 0,
+      "stdout": "803d658a8c61dc6aa007645a98d4160b16746faa\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "--show-origin",
+        "--get-all",
+        "core.hooksPath"
+      ],
+      "cwd": "<distribution-dev>",
+      "exit_code": 0,
+      "stdout": "file:<home>/workspace/playground/plan-dev-harness/plan-dev-harness_main/.git/worktrees/plan-dev-harness-v020/config.worktree\t.githooks\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "<release-worktree>",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "worktree"
+      ],
+      "cwd": "<distribution-dev>",
+      "exit_code": 0,
+      "stdout": "PASS: contracts match adopted plan 46e22e4de27d\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "index"
+      ],
+      "cwd": "<distribution-dev>",
+      "exit_code": 0,
+      "stdout": "PASS: contracts match adopted plan 46e22e4de27d\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "HEAD"
+      ],
+      "cwd": "<distribution-dev>",
+      "exit_code": 0,
+      "stdout": "PASS: contracts match adopted plan 46e22e4de27d\n",
+      "stderr": ""
+    }
+  ],
+  "at": "2026-11-04T02:07:48.378833+00:00"
+}

@@ -40,3 +40,43 @@ Use `set_thread_title` if normalization removed the role label, then use the exa
 verified returned titles when identifying the chats. Emit one created-thread
 directive per new chat in the final answer. The creation request authorizes the
 initial prompt, not unrelated follow-up messages to old or new chats.
+
+## Later delivery to an existing chat
+
+After read-only bootstrap, a separately authorized handoff follows
+[direct handoff](direct-handoff.md). Verify the current project/role/child and the
+human instruction or scoped delegation; send the committed exact SHA and next
+action directly when supported. Commit/push actual SENT and finish the plan turn;
+do not wait for ACK, adoption or dev completion. Observe ACK only on a later natural
+planning/status request. Busy dev preserves current work and adopts reviewed exact
+handoffs at a safe completed/checkpointed commit boundary, then follows priorities,
+dependencies and stops. See the shared asynchronous handoff rules.
+Initial chat creation alone is not this authority. Receiving a handoff does not
+authorize reverse/chain messages or user resume; bootstrap itself remains read-only.
+
+인간이 해당 프로젝트의 plan→dev 전달·착수를 위임한 경우 plan은 검토된 READY 계획의 정확 SHA를
+확인된 기존 dev에 직접 전달하고, dev는 기존 작업·실패를 보존해 통합·정확 채택·커밋·guard/큐
+확인 후 승인 범위를 시작합니다. 설치 자체는 위임이 아니며 초기화는 읽기 전용 대기를 유지합니다.
+
+## Fresh sessions and document delivery
+
+Use the shared [startup and delivery rules](../assets/instructions/agent-workflow.md#fresh-sessions-and-document-delivery).
+Read actual files/branch/adoption/queue/stops and check writers before material writes.
+Preserve an assigned role; unassigned changes use an existing suitable P card or a
+reviewed new one, then exact dev adoption and implementation. Plan does not implement
+product README/user guides; planning-only drafts may finish on plan, and read-only
+questions need no card. Record file/repository/target ref and verify actual delivery;
+plan push, dev adoption and default-branch visibility are separate outcomes.
+Only authorized, uncontested sessions perform both roles in separate worktrees.
+Bootstrap, absent messaging authority and scoped pauses retain their boundaries.
+
+## User review gateway
+
+Use the [result review protocol](user-review.md): dev commits evidence, artifact
+version/hash, shared request key, question scope and existing human-answer sources.
+Plan owns read-only result review and necessary human questions, reuses valid
+pending/answered scopes across roles and records decisions for exact dev adoption.
+Dev does not ask routine completion confirmations. Optional review, required human
+criteria and critical OPEN remain distinct. User code questions in dev are allowed.
+Reverse delivery needs a real human project grant; no permission or pause bypass.
+Preserve asynchronous SENT-then-return and busy-role safe boundaries.

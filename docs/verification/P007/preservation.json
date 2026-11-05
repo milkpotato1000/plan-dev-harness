@@ -1,0 +1,20 @@
+{
+  "p002_p005_p006_files": 126,
+  "all_historical_hashes_unchanged": true,
+  "core_runtime_assets_and_installed_cli_unchanged": true,
+  "main": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "hook_config_unchanged": true,
+  "source_version": "0.2.3",
+  "active_codex_disk_version": "0.2.3",
+  "same_active_catalog_path": true,
+  "new_duplicate_active_copy": false,
+  "local_managed_version": "0.2.1",
+  "managed_hashes_match": 15,
+  "new_actual_review_template": "plan-reviewed document; managed marker/version unchanged",
+  "p006_original_backup_hashes_unchanged": true,
+  "active_preview_no_writes": true,
+  "adoption": {
+    "commit": "4217137e966ad9725581f1814830f62043e50cc0",
+    "review_reference": "docs/planning/reviews/P007-dev-handoff.md"
+  }
+}

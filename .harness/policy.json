@@ -1,0 +1,26 @@
+{
+  "planning_branch": "plan",
+  "development_branch": "dev",
+  "release_branch": "main",
+  "protected_paths": [
+    "docs/planning/plans",
+    "docs/planning/reviews",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/process",
+    ".harness/policy.json",
+    ".harness/installation.json",
+    "scripts/contract_guard.py",
+    "scripts/plan_cards.py",
+    "scripts/work_queue.py",
+    "scripts/plan_intake.py",
+    "docs/planning/request-decisions",
+    "docs/planning/decision-scopes",
+    "scripts/workflow_control.py",
+    "docs/progress/sessions/plan.md",
+    "docs/progress/handoffs/plan",
+    ".githooks"
+  ],
+  "baseline_file": ".harness/adopted-plan.json",
+  "p_card_execution": true
+}

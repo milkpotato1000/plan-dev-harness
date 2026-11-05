@@ -1,0 +1,65 @@
+[
+  {
+    "at": "2026-10-29T08:13:00.589048+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "stdout": "f5926d2aca89661a8e4f5b57a8f3ef507f0cef09\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:13:00.875504+00:00",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "worktree"
+    ],
+    "stdout": "PASS: contracts match adopted plan 283ddd331eb5\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:13:01.377135+00:00",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "stdout": "PASS: contracts match adopted plan 283ddd331eb5\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:13:01.883432+00:00",
+    "argv": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "HEAD"
+    ],
+    "stdout": "PASS: contracts match adopted plan 283ddd331eb5\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  {
+    "at": "2026-10-29T08:13:02.375207+00:00",
+    "argv": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--brief"
+    ],
+    "stdout": "dev는 채택한 plan 283ddd331eb5 기준. 이후 plan 초안은 자동 채택하지 않음.\nplan 다음 작업: 실행 가능한 승인 작업 없음\ndev 다음 작업: 실행 가능한 승인 작업 없음\nplan 새 요구 검토 대기: 0건 (구현 승인과 별개)\n조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+]

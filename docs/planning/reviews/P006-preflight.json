@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-05",
+  "plan_before": "be369c91a4e22512bed2baff6f0f164afdeb77a0",
+  "dev_before": "4aaf61cc0d08b5c6de8787beb23bbdf12f59948e",
+  "dev_adoption_before": {
+    "commit": "5030f3524b56e78192a989ec2e283e734d62905d",
+    "review_reference": "docs/planning/reviews/P005-target-integration.md"
+  },
+  "main_before": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "p002_tree_sha256": "6cb171cb900f7cbd848bbc6dd448b1751325a187b16ba1d1b27f5af362224628",
+  "p002_unchanged_from_completed_p005": true,
+  "managed_version_retained": "0.2.1",
+  "managed_hashes_match": 15,
+  "runtime_and_schema_changed": false,
+  "outer_reconstruction_matches": true,
+  "handoff_policy": "SENT then return; no ACK/completion wait"
+}

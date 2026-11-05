@@ -1,0 +1,6 @@
+{
+  "original_path": "docs/feedback/dev/P901-decision-6ef38fbcb8c8.md",
+  "commit": "aee7050a36867aceb40886cc919e3c021053b554",
+  "original_sha256": "40fc3d247b2d386f8d8f2761e5f81791a60ca5f4468f335522e61dc213d9f8c7",
+  "verbatim_content": "# Decision request\n\n> 유형: PLAN_DECISION\n> 상태: OPEN\n> 작업: P901\n> 결정 plan: -\n\nRun P002-20261029-A, S3 second harmless fixture question for P901.\nAfter the prescribed S3 pause/resume independence checks, may P901 retain the\nalready decided VERIFIED-P002-20261029-A marker for execution only at S5?\nPlease review scope tasks=[P901], with dependent P903 affected and P902 independent,\nand commit the answer/review under the existing P002 contract. No new product\nchoice or change of marker, card acceptance, runtime or execution stage is proposed.\nDev must adopt the exact reviewed commit but keep this question OPEN throughout\nS3 steps 2–5. Resolution occurs only at S3 step 6 after a separate actual human\nrequest while dev remains role-paused. Answer/adoption alone does not resolve it.\n\n"
+}

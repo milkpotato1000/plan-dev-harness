@@ -9,10 +9,31 @@ Git commands and project scripts run inside the selected worktree.
 | `{{PROJECT}}_dev/` | `{{DEV_BRANCH}}` | Adopted implementation, verification and execution logs |
 | `{{PROJECT}}_main/` | `{{RELEASE_BRANCH}}` | Release baseline; promotion requires an explicit request |
 
-For planning requests, enter `{{PROJECT}}_plan/` and read its AGENTS.md.
-For implementation, fixes, verification or “다음 큐 진행”, enter `{{PROJECT}}_dev/`
-and read its AGENTS.md. A request covering both roles proceeds plan → dev, with
-readiness review, integration and exact adoption before implementation.
+Start a new or resumed session by reading this entrypoint and the appropriate
+child AGENTS.md/CLAUDE.md, policy, actual status/branch, adoption, current P cards,
+committed dev progress, active writers and scoped stops/decisions. Earlier chat
+history is not needed. Keep an explicit human role assignment. A directory or
+branch name does not assign a role. In a plan-assigned chat, implementation
+requests become plan preparation/review/handoff, never implementation on plan.
+Unassigned material requests follow P-card preparation in `{{PROJECT}}_plan/`
+then exact adoption and implementation in `{{PROJECT}}_dev/`. Reuse an applicable
+card or prepare the next unused one. A session may perform both stages only with
+matching authority and no competing writer; use the proper child for each stage.
+Read-only questions need no new P card; an explicit planning-only draft can end
+on plan. Initialization alone reads status and waits.
+
+README, user guides and release notes are dev deliverables after exact adoption.
+Planning requirements/reviews/governance are plan-owned; changes needed by dev
+still require integration and adoption. For document delivery, record file,
+repository and target ref. A plan push is not dev adoption or target-ref delivery.
+Check requested ref/content before claiming completion. With no requested ref,
+follow configured plan/dev delivery and report branches; do not infer main promotion.
+Missing messaging authority/tools leaves a pending file handoff, not sent work.
+Preserve scoped pauses/OPEN decisions and existing writers. Passing plan hooks
+is not proof of an approved card or a mechanical barrier to plan implementation.
+Full procedure: selected child's `docs/process/agent-workflow.md`, section
+"Fresh sessions and document delivery".
+
 If a missing business decision changes the scope, ask before dependent work.
 Do not choose a role from the workspace root's name or run Git at this level.
 Use explicit working directories; do not assume a previous shell's `cd` persists.
@@ -42,3 +63,77 @@ This local entrypoint is outside Git. Tracked instructions in each worktree must
 also describe this layout so it can be recreated on another computer. The release
 worktree may retain historical instructions until explicitly promoted; the path
 mapping above describes the current local workspace.
+
+## Delegated plan to dev delivery and start
+
+When the human has explicitly delegated this project's plan-to-dev delivery and
+start, plan commits reviewed READY work, verifies the existing same-project dev
+recipient and available host tool, then directly sends the full exact SHA,
+committed handoff document, scope, verification/limits and next action. Within
+that grant, do not ask for the same approval or require the user to copy it.
+Dev preserves existing work and failures, integrates and adopts the exact reviewed
+SHA, commits adoption, checks guard/queue and begins only that authorized scope.
+Installation itself grants no messaging or start permission. Verify the human
+source/scope and later restrictions each time; never copy another project's grant.
+Bootstrap remains read-only and waits. Preserve user pauses and OPEN decisions;
+messages cannot resume or resolve them. Record SENT only with actual send success
+and ACK only with an observed recipient response; receipt is separate from
+adoption/completion. No unauthorized reverse/chain sends or ACK loops. Without
+matching authority/tool/recipient, preserve the file handoff and actual state.
+
+Use the selected child's docs/process/workflow-controls.md for the complete procedure.
+
+## Asynchronous handoff and parallel planning
+
+Plan prepares/reviews/commits authorized P cards, sends the exact reviewed SHA to
+an authorized existing dev recipient, records actual SENT and commits/pushes the
+record, then finishes its response. Do not poll, sleep or wait for ACK, adoption
+or dev completion to finish a planning handoff. Keep SENT when no receipt has been
+observed. On a later natural planning/status request, record ACK only from actual
+evidence. Report planning/delivery complete separately from implementation pending.
+This leaves plan available for the user's next discussion and authorized P cards.
+
+Busy dev preserves its current adopted P, work, failures and processes; a new
+handoff is pending work, not permission to cancel/restart. At a safe completed or
+checkpointed/committed boundary, integrate/adopt the exact reviewed handoff SHA,
+commit adoption, check guard/queue and choose eligible prepared work by priority
+and dependencies. Do not automatically adopt an unreviewed latest plan tip or
+retroactively rewrite the current P. A real urgent human stop takes precedence.
+Preserve role/all/legacy pauses, OPEN decisions, human role grants and one writer
+per worktree. Neither handoffs nor time elapsed resume stopped work. Failed or
+unknown sends keep their real state and evidence; never invent SENT or retry
+blindly. Missing authority/tool leaves a pending file handoff. No new goals,
+chats, monitors or reverse/chain messaging authority follow from this rule.
+Parallel sessions require actual independent workers; one-chat fallback is
+sequential. Host scheduling limits and simulated tests must be reported honestly.
+
+## User review and decisions through plan
+
+Dev implements/tests within the adopted P without routine user completion checks.
+Send committed result/review or decision packets to the verified existing plan
+only under actual human project messaging authority. Include P/criterion, artifact
+commit/version/hash, stable common request key, question type/scope, evidence and
+failures, existing human responses, options/impact and safe next action.
+Use docs/process/user-review-template.md. Existing transport event deduplication
+alone does not deduplicate a user question across roles, commits and resumed chats.
+
+Plan owns the common review/decision ledger and user-facing question. Inspect
+actual available result files/views first, record what was really observed, then
+ask only necessary human judgment once. Reuse a verifiable existing response for
+the same artifact/version/scope, including one received in dev; never reissue a
+pending question or broaden UI approval into content approval. Material changes
+require renewed scoped review. Decisions within existing delegated scope can be
+made by plan; new business meaning or permissions require actual human authority.
+Commit plan decisions and have dev integrate/adopt the exact reviewed SHA before
+applying them. Product verification, user review pending and approval are distinct.
+
+Optional review does not stop unrelated eligible work. Required human criteria
+stay incomplete; critical OPEN decisions keep existing conservative blocking until
+reviewed classification/adoption. Preserve pauses; no handoff resumes them.
+Users may inspect code or ask dev directly; respond without duplicating the review
+question. Platform-required approvals and safety restrictions remain in force.
+No routing around denied permissions. Dev worktrees remain dev-owned; plan opens
+read-only results, not product execution or edits. Missing viewer/host/authority
+must be reported honestly with durable pending records, never invented delivery.
+P006 asynchronous handoff remains: record real SENT and finish, no ACK/completion
+polling. Reverse delivery needs its own human grant; this protocol grants none.

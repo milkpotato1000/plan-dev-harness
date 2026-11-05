@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "RESUME",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "e8d7bd684edcaeab9a2db72ebbbc156ce39462fa",
+  "document": "docs/verification/P002/recovery-20261105/plan-resume-handoff.md",
+  "summary": "Dev resumed from actual bilateral human request; plan all-pause and OPEN still block both as expected",
+  "next_action": "Actual plan inspect committed reconstruction and resume own checkpoint from same verified human request, preserve OPEN, then coordinate required future S3.6 input",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:18:04.199971+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:18:43.175599+00:00",
+      "evidence": "docs/verification/P002/recovery-20261105/plan-resume-delivery.md"
+    }
+  ]
+}

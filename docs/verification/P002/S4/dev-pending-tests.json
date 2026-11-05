@@ -1,0 +1,297 @@
+{
+  "event_id": "191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a",
+  "event_path": "docs/progress/handoffs/dev/191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a.json",
+  "artifact": "fdf0e69c5462dc75c5193309c1fa0bb591a71e80",
+  "document": "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md",
+  "create_argv": [
+    "python3",
+    "scripts/workflow_control.py",
+    "handoff",
+    "--kind",
+    "DECISION_REQUEST",
+    "--target-role",
+    "plan",
+    "--commit",
+    "fdf0e69c5462dc75c5193309c1fa0bb591a71e80",
+    "--document",
+    "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md",
+    "--summary",
+    "P002 S4 actual dev-to-plan result delivery trial",
+    "--next-action",
+    "Actual plan reads exact artifact/event and commits receipt enabling final dev ACK and post-ACK tests; no task execution"
+  ],
+  "pending_event_sha256": "c0bd9ba3dedcf4c8ec5c2c72e0082ea13efe2f8ca0358fc599bd1a879a902b62",
+  "event_count": 1,
+  "results": [
+    {
+      "test": "identical KEEP",
+      "exit_code": 0,
+      "unchanged_bytes_history_count": true
+    },
+    {
+      "test": "changed summary",
+      "exit_code": 2,
+      "unchanged_bytes_history_count": true
+    },
+    {
+      "test": "changed next action",
+      "exit_code": 2,
+      "unchanged_bytes_history_count": true
+    },
+    {
+      "test": "PENDING directly to ACK",
+      "exit_code": 2,
+      "unchanged_bytes_history_count": true
+    },
+    {
+      "test": "empty SENT evidence",
+      "exit_code": 2,
+      "unchanged_bytes_history_count": true
+    }
+  ],
+  "commands": [
+    {
+      "at": "2026-11-05T08:45:38.662555+00:00",
+      "argv": [
+        "git",
+        "show",
+        "3c29422a3aeb14fe3f9869a2c0fa650d3b753e2a:docs/progress/handoffs/plan/72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"kind\": \"WORK_READY\",\n  \"target_role\": \"dev\",\n  \"source_role\": \"plan\",\n  \"commit\": \"77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30\",\n  \"document\": \"docs/planning/reviews/P002-S4-plan-to-dev.md\",\n  \"summary\": \"P002 S4 actual plan-to-dev artifact delivery trial\",\n  \"next_action\": \"Actual dev reads exact artifact/event and commits receipt for finite S4 ACK tests; no task execution until S5\",\n  \"status\": \"ACKNOWLEDGED\",\n  \"history\": [\n    {\n      \"status\": \"PENDING\",\n      \"at\": \"2026-11-05T08:41:55.241331+00:00\",\n      \"evidence\": \"Created locally; not sent\"\n    },\n    {\n      \"status\": \"SENT\",\n      \"at\": \"2026-11-05T08:42:26.726443+00:00\",\n      \"evidence\": \"2026-11-05 actual host send_message_to_thread success to verified existing session-dev; artifact77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30 and pending evidence15f5f566f10f8e8753bd91fed701c90de152061f delivered; no receipt yet inferred.\"\n    },\n    {\n      \"status\": \"ACKNOWLEDGED\",\n      \"at\": \"2026-11-05T08:43:53.482861+00:00\",\n      \"evidence\": \"Actual session-dev committed receipt e86217895835cb2a77786aba5f17c3699894dc9d, S4/dev-receipt.md; actual session-plan directly read it on 2026-11-05; exact artifact/event/content/next action independently confirmed.\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:38.674079+00:00",
+      "argv": [
+        "git",
+        "show",
+        "3c29422a3aeb14fe3f9869a2c0fa650d3b753e2a:docs/verification/P002-20261029-A-CONT-20261105/S4/plan-ack-tests.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"at\": \"2026-11-05T08:43:54.357934+00:00\",\n  \"receipt_commit\": \"e86217895835cb2a77786aba5f17c3699894dc9d\",\n  \"event\": \"72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed\",\n  \"ack_event_sha256\": \"cb4ced23ee470670480c897c756e97fd831a800ede41a58b3952a36b83b33ed5\",\n  \"post_ack_keep_and_repeated_ack_preserve_bytes_history_count\": true,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"git\",\n        \"show\",\n        \"e86217895835cb2a77786aba5f17c3699894dc9d:docs/verification/P002-20261029-A-CONT-20261105/S4/dev-receipt.md\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"# Actual session-dev receipt of S4 plan artifact\\n\\nAt 2026-11-05T08:43:04.075035+00:00, actual session-dev directly\\nread artifact 77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30, docs/planning/reviews/P002-S4-plan-to-dev.md,\\nevent 72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed from committed plan b41187a4abf639007b4ad2c472efe4274801a570.\\nObserved status SENT with PENDING→SENT history, target dev. Artifact SHA256\\n4e91785106c420ae93ac6810180f9e61cf38215031c2d71c82ce5a16f3a66c2a; event SHA256 e05c15a8c3bd4daaf5690854592827377c6a687f27286ea6d59ccf546e0120f9.\\n\\nActual received content: S3 completed with documented historical/continuation\\nlimits, S4 first direction ongoing, C4/C5 incomplete. P901/P903 execution remains\\nS5-only, P904 DRAFT. I directly read the sender's committed pre-delivery tests;\\nthis does not claim I authored or reran plan's tests. Both roles active, controls\\nempty, plan=P904/dev=P901. No task output was written.\\n\\nNext actual sender action: use this real committed receiver observation to record\\nACKNOWLEDGED on the same event, then identical original creation must KEEP and\\nrepeated ACK must exit2 without changing event bytes/history/count. Commit those\\nresults and deliver the next reverse-direction trial action to dev. This is the\\nfinite S4 receipt/test sequence, not a monitoring loop or a guessed receipt.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"python3\",\n        \"scripts/workflow_control.py\",\n        \"handoff-status\",\n        \"72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed\",\n        \"--status\",\n        \"ACKNOWLEDGED\",\n        \"--evidence\",\n        \"Actual session-dev committed receipt e86217895835cb2a77786aba5f17c3699894dc9d, S4/dev-receipt.md; actual session-plan directly read it on 2026-11-05; exact artifact/event/content/next action independently confirmed.\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"docs/progress/handoffs/plan/72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed.json: local record only; review and commit. No message or work was executed.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"python3\",\n        \"scripts/workflow_control.py\",\n        \"handoff\",\n        \"--kind\",\n        \"WORK_READY\",\n        \"--target-role\",\n        \"dev\",\n        \"--commit\",\n        \"77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30\",\n        \"--document\",\n        \"docs/planning/reviews/P002-S4-plan-to-dev.md\",\n        \"--summary\",\n        \"P002 S4 actual plan-to-dev artifact delivery trial\",\n        \"--next-action\",\n        \"Actual dev reads exact artifact/event and commits receipt for finite S4 ACK tests; no task execution until S5\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"KEEP docs/progress/handoffs/plan/72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed.json\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"python3\",\n        \"scripts/workflow_control.py\",\n        \"handoff-status\",\n        \"72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed\",\n        \"--status\",\n        \"ACKNOWLEDGED\",\n        \"--evidence\",\n        \"Repeated ACK negative test\"\n      ],\n      \"exit_code\": 2,\n      \"stdout\": \"\",\n      \"stderr\": \"CONTROL ERROR: Record the next delivery state only\\n\"\n    },\n    {\n      \"argv\": [\n        \"python3\",\n        \"scripts/contract_guard.py\",\n        \"check\",\n        \"--target\",\n        \"worktree\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"PASS: plan checkpoint and handoff history\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"python3\",\n        \"scripts/contract_guard.py\",\n        \"check\",\n        \"--target\",\n        \"index\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"PASS: plan checkpoint and handoff history\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"python3\",\n        \"scripts/contract_guard.py\",\n        \"check\",\n        \"--target\",\n        \"HEAD\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"PASS: plan checkpoint and handoff history\\n\",\n      \"stderr\": \"\"\n    }\n  ],\n  \"result\": \"PASS actual plan-to-dev direction; reverse direction and C4/C5 still pending\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:39.161102+00:00",
+      "argv": [
+        "python3",
+        "scripts/work_queue.py",
+        "--owner",
+        "all",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 60a500f9a299 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": \"P904\",\n    \"dev\": \"P901\"\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P901\",\n      \"depends_on\": [],\n      \"title\": \"결정된 완료 marker 기록\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P901.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P902\",\n      \"depends_on\": [],\n      \"title\": \"marker와 무관한 독립 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"DONE\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P902.md\",\n      \"checked\": 1,\n      \"total\": 1,\n      \"completed_checks\": [\n        \"C1\"\n      ],\n      \"acceptance\": {\n        \"C1\": \"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P903\",\n      \"depends_on\": [\n        \"P901\"\n      ],\n      \"title\": \"P901 완료 후 의존 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 30,\n      \"state\": \"WAITING\",\n      \"reason\": \"선행 작업: P901\",\n      \"work_order\": \"docs/planning/plans/P903.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P904\",\n      \"depends_on\": [],\n      \"title\": \"plan 초안 선택 관찰\",\n      \"owner\": \"plan\",\n      \"priority\": 40,\n      \"state\": \"DRAFT\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P904.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": [\n    {\n      \"schema_version\": 1,\n      \"kind\": \"WORK_READY\",\n      \"target_role\": \"dev\",\n      \"source_role\": \"plan\",\n      \"commit\": \"77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30\",\n      \"document\": \"docs/planning/reviews/P002-S4-plan-to-dev.md\",\n      \"summary\": \"P002 S4 actual plan-to-dev artifact delivery trial\",\n      \"next_action\": \"Actual dev reads exact artifact/event and commits receipt for finite S4 ACK tests; no task execution until S5\",\n      \"status\": \"ACKNOWLEDGED\",\n      \"history\": [\n        {\n          \"status\": \"PENDING\",\n          \"at\": \"2026-11-05T08:41:55.241331+00:00\",\n          \"evidence\": \"Created locally; not sent\"\n        },\n        {\n          \"status\": \"SENT\",\n          \"at\": \"2026-11-05T08:42:26.726443+00:00\",\n          \"evidence\": \"2026-11-05 actual host send_message_to_thread success to verified existing session-dev; artifact77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30 and pending evidence15f5f566f10f8e8753bd91fed701c90de152061f delivered; no receipt yet inferred.\"\n        },\n        {\n          \"status\": \"ACKNOWLEDGED\",\n          \"at\": \"2026-11-05T08:43:53.482861+00:00\",\n          \"evidence\": \"Actual session-dev committed receipt e86217895835cb2a77786aba5f17c3699894dc9d, S4/dev-receipt.md; actual session-plan directly read it on 2026-11-05; exact artifact/event/content/next action independently confirmed.\"\n        }\n      ],\n      \"id\": \"72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed\",\n      \"path\": \"docs/progress/handoffs/plan/72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed.json\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:39.173189+00:00",
+      "argv": [
+        "git",
+        "add",
+        "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:39.552941+00:00",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "Prepare actual reverse S4 result artifact for plan receiver"
+      ],
+      "exit_code": 0,
+      "stdout": "[dev fdf0e69] Prepare actual reverse S4 result artifact for plan receiver\n Committer: <fixture-author>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 1 file changed, 19 insertions(+)\n create mode 100644 docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md\n",
+      "stderr": "PASS: contracts match adopted plan 60a500f9a299\n"
+    },
+    {
+      "at": "2026-11-05T08:45:39.562890+00:00",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "fdf0e69c5462dc75c5193309c1fa0bb591a71e80\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:39.670218+00:00",
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff",
+        "--kind",
+        "DECISION_REQUEST",
+        "--target-role",
+        "plan",
+        "--commit",
+        "fdf0e69c5462dc75c5193309c1fa0bb591a71e80",
+        "--document",
+        "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md",
+        "--summary",
+        "P002 S4 actual dev-to-plan result delivery trial",
+        "--next-action",
+        "Actual plan reads exact artifact/event and commits receipt enabling final dev ACK and post-ACK tests; no task execution"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/progress/handoffs/dev/191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a.json: local record only; review and commit. No message or work was executed.\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:39.793662+00:00",
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff",
+        "--kind",
+        "DECISION_REQUEST",
+        "--target-role",
+        "plan",
+        "--commit",
+        "fdf0e69c5462dc75c5193309c1fa0bb591a71e80",
+        "--document",
+        "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md",
+        "--summary",
+        "P002 S4 actual dev-to-plan result delivery trial",
+        "--next-action",
+        "Actual plan reads exact artifact/event and commits receipt enabling final dev ACK and post-ACK tests; no task execution"
+      ],
+      "exit_code": 0,
+      "stdout": "KEEP docs/progress/handoffs/dev/191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a.json\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:39.910130+00:00",
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff",
+        "--kind",
+        "DECISION_REQUEST",
+        "--target-role",
+        "plan",
+        "--commit",
+        "fdf0e69c5462dc75c5193309c1fa0bb591a71e80",
+        "--document",
+        "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md",
+        "--summary",
+        "P002 S4 actual dev-to-plan result delivery trial CHANGED",
+        "--next-action",
+        "Actual plan reads exact artifact/event and commits receipt enabling final dev ACK and post-ACK tests; no task execution"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "CONTROL ERROR: Existing event differs; preserve it\n"
+    },
+    {
+      "at": "2026-11-05T08:45:40.027447+00:00",
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff",
+        "--kind",
+        "DECISION_REQUEST",
+        "--target-role",
+        "plan",
+        "--commit",
+        "fdf0e69c5462dc75c5193309c1fa0bb591a71e80",
+        "--document",
+        "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md",
+        "--summary",
+        "P002 S4 actual dev-to-plan result delivery trial",
+        "--next-action",
+        "Actual plan reads exact artifact/event and commits receipt enabling final dev ACK and post-ACK tests; no task execution CHANGED"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "CONTROL ERROR: Existing event differs; preserve it\n"
+    },
+    {
+      "at": "2026-11-05T08:45:40.123736+00:00",
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff-status",
+        "191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a",
+        "--status",
+        "ACKNOWLEDGED",
+        "--evidence",
+        "Negative premature ACK attempt"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "CONTROL ERROR: Record the next delivery state only\n"
+    },
+    {
+      "at": "2026-11-05T08:45:40.217278+00:00",
+      "argv": [
+        "python3",
+        "scripts/workflow_control.py",
+        "handoff-status",
+        "191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a",
+        "--status",
+        "SENT",
+        "--evidence",
+        ""
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "CONTROL ERROR: Nonempty receipt evidence required\n"
+    },
+    {
+      "at": "2026-11-05T08:45:40.737459+00:00",
+      "argv": [
+        "python3",
+        "scripts/work_queue.py",
+        "--owner",
+        "all",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 60a500f9a299 기준. 이후 plan 초안은 자동 채택하지 않음.\"\n  ],\n  \"next\": {\n    \"plan\": \"P904\",\n    \"dev\": \"P901\"\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P901\",\n      \"depends_on\": [],\n      \"title\": \"결정된 완료 marker 기록\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P901.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P902\",\n      \"depends_on\": [],\n      \"title\": \"marker와 무관한 독립 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"DONE\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P902.md\",\n      \"checked\": 1,\n      \"total\": 1,\n      \"completed_checks\": [\n        \"C1\"\n      ],\n      \"acceptance\": {\n        \"C1\": \"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P903\",\n      \"depends_on\": [\n        \"P901\"\n      ],\n      \"title\": \"P901 완료 후 의존 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 30,\n      \"state\": \"WAITING\",\n      \"reason\": \"선행 작업: P901\",\n      \"work_order\": \"docs/planning/plans/P903.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P904\",\n      \"depends_on\": [],\n      \"title\": \"plan 초안 선택 관찰\",\n      \"owner\": \"plan\",\n      \"priority\": 40,\n      \"state\": \"DRAFT\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P904.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [],\n  \"handoffs\": [\n    {\n      \"schema_version\": 1,\n      \"kind\": \"WORK_READY\",\n      \"target_role\": \"dev\",\n      \"source_role\": \"plan\",\n      \"commit\": \"77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30\",\n      \"document\": \"docs/planning/reviews/P002-S4-plan-to-dev.md\",\n      \"summary\": \"P002 S4 actual plan-to-dev artifact delivery trial\",\n      \"next_action\": \"Actual dev reads exact artifact/event and commits receipt for finite S4 ACK tests; no task execution until S5\",\n      \"status\": \"ACKNOWLEDGED\",\n      \"history\": [\n        {\n          \"status\": \"PENDING\",\n          \"at\": \"2026-11-05T08:41:55.241331+00:00\",\n          \"evidence\": \"Created locally; not sent\"\n        },\n        {\n          \"status\": \"SENT\",\n          \"at\": \"2026-11-05T08:42:26.726443+00:00\",\n          \"evidence\": \"2026-11-05 actual host send_message_to_thread success to verified existing session-dev; artifact77d47f0e3bdafdf44a7ff613c519a9e41f9d4a30 and pending evidence15f5f566f10f8e8753bd91fed701c90de152061f delivered; no receipt yet inferred.\"\n        },\n        {\n          \"status\": \"ACKNOWLEDGED\",\n          \"at\": \"2026-11-05T08:43:53.482861+00:00\",\n          \"evidence\": \"Actual session-dev committed receipt e86217895835cb2a77786aba5f17c3699894dc9d, S4/dev-receipt.md; actual session-plan directly read it on 2026-11-05; exact artifact/event/content/next action independently confirmed.\"\n        }\n      ],\n      \"id\": \"72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed\",\n      \"path\": \"docs/progress/handoffs/plan/72f842952277b996a9bc459626d63881529dd6919c59b3edb600eaf528c0ffed.json\"\n    },\n    {\n      \"schema_version\": 1,\n      \"kind\": \"DECISION_REQUEST\",\n      \"target_role\": \"plan\",\n      \"source_role\": \"dev\",\n      \"commit\": \"fdf0e69c5462dc75c5193309c1fa0bb591a71e80\",\n      \"document\": \"docs/verification/P002-20261029-A-CONT-20261105/S4/dev-to-plan-result.md\",\n      \"summary\": \"P002 S4 actual dev-to-plan result delivery trial\",\n      \"next_action\": \"Actual plan reads exact artifact/event and commits receipt enabling final dev ACK and post-ACK tests; no task execution\",\n      \"status\": \"PENDING\",\n      \"history\": [\n        {\n          \"status\": \"PENDING\",\n          \"at\": \"2026-11-05T08:45:39.644232+00:00\",\n          \"evidence\": \"Created locally; not sent\"\n        }\n      ],\n      \"id\": \"191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a\",\n      \"path\": \"docs/progress/handoffs/dev/191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a.json\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:40.751807+00:00",
+      "argv": [
+        "git",
+        "add",
+        "docs/progress/handoffs/dev/191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a.json",
+        "docs/verification/P002-20261029-A-CONT-20261105/S4/dev-pending-tests.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T08:45:41.167032+00:00",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "Record reverse S4 pending event and preserved negative tests"
+      ],
+      "exit_code": 0,
+      "stdout": "[dev 3cb4a88] Record reverse S4 pending event and preserved negative tests\n Committer: <fixture-author>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 2 files changed, 280 insertions(+)\n create mode 100644 docs/progress/handoffs/dev/191ac08374500963ee0fde0b96c2fd4dac8a64a95462652ecf5ab2c9e0bf574a.json\n create mode 100644 docs/verification/P002-20261029-A-CONT-20261105/S4/dev-pending-tests.json\n",
+      "stderr": "PASS: contracts match adopted plan 60a500f9a299\n"
+    },
+    {
+      "at": "2026-11-05T08:45:41.176567+00:00",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "3cb4a88bf7576de043d8270762fec91714d3f37c\n",
+      "stderr": ""
+    }
+  ],
+  "no_OPEN_created": true,
+  "result": "PASS pending dedup/rejection tests; real send and receipt still pending"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "commit": "acdaf30c88389c5209bee0055b51ace17f5cb85b",
+    "path": "docs/planning/decision-scopes/P901-decision-3dd251cf50c6.json",
+    "export": "docs/verification/P002/S1/exports/scope/docs/planning/decision-scopes/P901-decision-3dd251cf50c6.json",
+    "sha256": "5cfaac5ce3caf29873fcda870df48342ebbc4ab3e1e78b17da8750652af3808e"
+  },
+  {
+    "commit": "acdaf30c88389c5209bee0055b51ace17f5cb85b",
+    "path": "docs/planning/reviews/P002-S1-scope.md",
+    "export": "docs/verification/P002/S1/exports/scope/docs/planning/reviews/P002-S1-scope.md",
+    "sha256": "410aa6d27a7f5f849cdcb561bb8c42ee2302c5849dd9073f2b9d63a9e275fc2d"
+  },
+  {
+    "commit": "acdaf30c88389c5209bee0055b51ace17f5cb85b",
+    "path": "docs/verification/P002-20261029-A/S1-plan-scope-commands.json",
+    "export": "docs/verification/P002/S1/exports/scope/docs/verification/P002-20261029-A/S1-plan-scope-commands.json",
+    "sha256": "fc22f4c60606bd68e343dc96f4ef83fa2db2a4051d09cf40d7b2a6cc02989172"
+  },
+  {
+    "commit": "b08c60422d555a2ef4c55927d0ca8e35ec9d860f",
+    "path": "docs/planning/plans/P902.md",
+    "export": "docs/verification/P002/S1/exports/independent/docs/planning/plans/P902.md",
+    "sha256": "d41c32da91d23f2766d65d162bcb5ceb5eee5779ab306476922931885c49ea80"
+  },
+  {
+    "commit": "b08c60422d555a2ef4c55927d0ca8e35ec9d860f",
+    "path": "docs/verification/P002-20261029-A/P902-independent.txt",
+    "export": "docs/verification/P002/S1/exports/independent/docs/verification/P002-20261029-A/P902-independent.txt",
+    "sha256": "fc6f65326cbff3b76f1564b802b761bfa644f400f8b2c5637446362c2d0da794"
+  },
+  {
+    "commit": "b08c60422d555a2ef4c55927d0ca8e35ec9d860f",
+    "path": "docs/verification/P002-20261029-A/P902-result.md",
+    "export": "docs/verification/P002/S1/exports/independent/docs/verification/P002-20261029-A/P902-result.md",
+    "sha256": "256629422a0afa396f5370b5cf687868c3de40edbec1220fdf65c214cb21760f"
+  },
+  {
+    "commit": "b08c60422d555a2ef4c55927d0ca8e35ec9d860f",
+    "path": "docs/verification/P002-20261029-A/S1-dev-scope-commands.json",
+    "export": "docs/verification/P002/S1/exports/independent/docs/verification/P002-20261029-A/S1-dev-scope-commands.json",
+    "sha256": "3ee0c251d1461cedb8e15e4b1af4b2bd10eb5dbf5382f80afc456c71986e2da1"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "source": "single read of the completed actual plan turn during P006 verification",
+  "turnStatus": "completed",
+  "threadStatus": "idle",
+  "sendToolCompleted": true,
+  "followingVisibleActions": [
+    {
+      "type": "commandExecution",
+      "action": "record SENT and commit",
+      "exitCode": 0
+    },
+    {
+      "type": "commandExecution",
+      "action": "push plan",
+      "exitCode": 0
+    },
+    {
+      "type": "agentMessage",
+      "phase": "final_answer"
+    }
+  ],
+  "postSendReceiptReadOrWaitCalls": 0,
+  "postSendSleepCommands": 0,
+  "finalResponsePresent": true,
+  "limits": "One actual sender turn; not a live busy-dev scheduling or fresh-model compliance test.",
+  "actual_event": "docs/progress/handoffs/plan/b0a40f70809c24bd5f641b930202f739814d91ccbcc9dbc005e716a237f7e8b8.json",
+  "actual_event_status": "SENT",
+  "actual_history_states": [
+    "PENDING",
+    "SENT"
+  ],
+  "event_not_modified_by_dev": true
+}

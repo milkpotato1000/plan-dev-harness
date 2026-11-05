@@ -1,0 +1,299 @@
+{
+  "evidence_commit": "2ebdb04795abf4516618ddb1b5f5adaba3c381b9",
+  "stage": "S3.6 actual resolution-only exception",
+  "human_answer": "검증을 위해 기록된 답변으로 결정 해결만 처리하고 업무 선택은 계속 중지해줘.",
+  "human_source": "actual user reply in session-plan directly read by session-dev, common key P002-S3.6-resolution-only-20261105",
+  "resolution_commit": "6430a1d2e6766415a381d8d939a6f8afb25d1d48",
+  "adopted_fixture_decision": "60a500f9a29932d74d24e2d1131790eb87a0ec32",
+  "before_sha256": "40fc3d247b2d386f8d8f2761e5f81791a60ca5f4468f335522e61dc213d9f8c7",
+  "after_sha256": "18a2aae1c451eb5a08a48c1d91105a3002a54fde0721de9a6bc9ecff576c28c9",
+  "immutable_fingerprint_before": "ac4e246fa0d00d3e5bb2eb29f20de253d4492a5ace8f07bd96623f4a23c64410",
+  "immutable_fingerprint_after": "ac4e246fa0d00d3e5bb2eb29f20de253d4492a5ace8f07bd96623f4a23c64410",
+  "checkpoint_sha256_before": "c94d3f70cac3a4eda56e0e88070ff64beadf2a350a6443b7e9dae7459d61f71c",
+  "checkpoint_sha256_after": "c94d3f70cac3a4eda56e0e88070ff64beadf2a350a6443b7e9dae7459d61f71c",
+  "checkpoint_byte_identical": true,
+  "plan_checkpoint_unchanged": true,
+  "no_outputs": true,
+  "queue": {
+    "branch": "dev",
+    "owner": "all",
+    "notices": [
+      "dev는 채택한 plan 60a500f9a299 기준. 이후 plan 초안은 자동 채택하지 않음.",
+      "사용자 중지 기록이 적용됩니다. 명시적 재개 전에는 해당 역할을 선택하지 않습니다."
+    ],
+    "next": {
+      "plan": "P904",
+      "dev": null
+    },
+    "tasks": [
+      {
+        "id": "P901",
+        "depends_on": [],
+        "title": "결정된 완료 marker 기록",
+        "owner": "dev",
+        "priority": 10,
+        "state": "READY",
+        "reason": "",
+        "work_order": "docs/planning/plans/P901.md",
+        "checked": 0,
+        "total": 1,
+        "completed_checks": [],
+        "acceptance": {
+          "C1": "기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다."
+        },
+        "blocked_by_decisions": []
+      },
+      {
+        "id": "P902",
+        "depends_on": [],
+        "title": "marker와 무관한 독립 확인",
+        "owner": "dev",
+        "priority": 20,
+        "state": "DONE",
+        "reason": "",
+        "work_order": "docs/planning/plans/P902.md",
+        "checked": 1,
+        "total": 1,
+        "completed_checks": [
+          "C1"
+        ],
+        "acceptance": {
+          "C1": "P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다."
+        },
+        "blocked_by_decisions": []
+      },
+      {
+        "id": "P903",
+        "depends_on": [
+          "P901"
+        ],
+        "title": "P901 완료 후 의존 확인",
+        "owner": "dev",
+        "priority": 30,
+        "state": "WAITING",
+        "reason": "선행 작업: P901",
+        "work_order": "docs/planning/plans/P903.md",
+        "checked": 0,
+        "total": 1,
+        "completed_checks": [],
+        "acceptance": {
+          "C1": "P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다."
+        },
+        "blocked_by_decisions": []
+      },
+      {
+        "id": "P904",
+        "depends_on": [],
+        "title": "plan 초안 선택 관찰",
+        "owner": "plan",
+        "priority": 40,
+        "state": "DRAFT",
+        "reason": "",
+        "work_order": "docs/planning/plans/P904.md",
+        "checked": 0,
+        "total": 1,
+        "completed_checks": [],
+        "acceptance": {
+          "C1": "별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다."
+        },
+        "blocked_by_decisions": []
+      }
+    ],
+    "plan_requests": [],
+    "pending_decisions": [],
+    "paused_sessions": [
+      {
+        "role": "dev",
+        "state": "PAUSED",
+        "scope": "role",
+        "request": "Actual human answer in session-plan on 2026-11-05, directly read by session-dev; common key P002-S3.6-dev-role-pause-20261105: P002 시험의 dev 역할만 지금 중지해줘. Fixture continuation only; no resolution or future resume authorization.",
+        "resume": "-",
+        "path": "docs/progress/sessions/dev.md"
+      }
+    ],
+    "handoffs": []
+  },
+  "commands": [
+    {
+      "time": "2026-11-05T08:36:17.818576+00:00",
+      "command": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:18.340247+00:00",
+      "command": [
+        "python3",
+        "scripts/work_queue.py",
+        "--owner",
+        "all",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 60a500f9a299 기준. 이후 plan 초안은 자동 채택하지 않음.\",\n    \"사용자 중지 기록이 적용됩니다. 명시적 재개 전에는 해당 역할을 선택하지 않습니다.\",\n    \"기획 결정 대기: 분류된 작업 또는 dev 전체가 차단됩니다.\"\n  ],\n  \"next\": {\n    \"plan\": \"P904\",\n    \"dev\": null\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P901\",\n      \"depends_on\": [],\n      \"title\": \"결정된 완료 marker 기록\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P901.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": [\n        \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\"\n      ]\n    },\n    {\n      \"id\": \"P902\",\n      \"depends_on\": [],\n      \"title\": \"marker와 무관한 독립 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"DONE\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P902.md\",\n      \"checked\": 1,\n      \"total\": 1,\n      \"completed_checks\": [\n        \"C1\"\n      ],\n      \"acceptance\": {\n        \"C1\": \"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P903\",\n      \"depends_on\": [\n        \"P901\"\n      ],\n      \"title\": \"P901 완료 후 의존 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 30,\n      \"state\": \"WAITING\",\n      \"reason\": \"선행 작업: P901\",\n      \"work_order\": \"docs/planning/plans/P903.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": [\n        \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\"\n      ]\n    },\n    {\n      \"id\": \"P904\",\n      \"depends_on\": [],\n      \"title\": \"plan 초안 선택 관찰\",\n      \"owner\": \"plan\",\n      \"priority\": 40,\n      \"state\": \"DRAFT\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P904.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [\n    {\n      \"path\": \"docs/feedback/dev/P901-decision-6ef38fbcb8c8.md\",\n      \"task\": \"P901\",\n      \"scope\": \"tasks\",\n      \"tasks\": [\n        \"P901\"\n      ],\n      \"reason\": \"Only P901 marker retention is questioned; P903 depends on P901; completed independent P902 is unaffected.\"\n    }\n  ],\n  \"paused_sessions\": [\n    {\n      \"role\": \"dev\",\n      \"state\": \"PAUSED\",\n      \"scope\": \"role\",\n      \"request\": \"Actual human answer in session-plan on 2026-11-05, directly read by session-dev; common key P002-S3.6-dev-role-pause-20261105: P002 시험의 dev 역할만 지금 중지해줘. Fixture continuation only; no resolution or future resume authorization.\",\n      \"resume\": \"-\",\n      \"path\": \"docs/progress/sessions/dev.md\"\n    }\n  ],\n  \"handoffs\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:18.351608+00:00",
+      "command": [
+        "git",
+        "show",
+        "plan:docs/progress/sessions/plan.md"
+      ],
+      "exit_code": 0,
+      "stdout": "# Session checkpoint\n\n> 역할: plan\n> 상태: ACTIVE\n> 범위: all\n> 사용자 요청: Actual direct human request in session-plan, observed 2026-10-30T12:19:38+09:00, fixture only: P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘. dev의 기존 중지는 유지하고, 재개하지 마.\n> 재개 요청: Actual human in this existing session-plan on 2026-11-05: 그럼 P002 시험의 plan/dev 중지를 재개하고 남은 검증도 마무리해줘. P002-20261029-A-CONT-20261105 continuation, original fixture only; apply same bilateral request to own plan checkpoint after dev resume observed.\n\n- 2026-10-30T02:59:01.731429+00:00 | PAUSE | Actual human message in session-plan, observed 2026-10-30T11:59:01+09:00, P002-20261029-A fixture only: 002-20261029-A 시험의 plan 역할만 지금 중지해줘. 중지 기록을 작성하고, dev가 확인할 때까지 커밋은 기다려.\n\n## S2 checkpoint — uncommitted visibility observation pending\n\n- User request: actual direct human message in this plan chat, observed 2026-10-30T11:59:01+09:00.\n  Verbatim: 002-20261029-A 시험의 plan 역할만 지금 중지해줘. 중지 기록을 작성하고, dev가 확인할 때까지 커밋은 기다려.\n- Scope: this run's fixture plan role only. The omitted leading P in the user's\n  run text is resolved from the immediately preceding P002-20261029-A discussion;\n  the verbatim request is preserved above. No other project or dev role is paused.\n- Completed: S0 and S1; actual plan final observation at 9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd.\n- Current plan HEAD: 9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd; observed counterpart dev HEAD: 295237313c3e36025b67e1b65cd1ddfb05230424.\n  Dev's decision adoption remains e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee.\n- Remaining: S2 committed/uncommitted visibility, explicit human resume, S3-S5.\n- Activity: no fixture product/task work continues. No known plan background\n  process was running; this record is not evidence of forcibly stopping a process.\n- Storage: pause and evidence saved locally only, neither staged nor committed.\n  Keep HEAD fixed until actual dev precommit queue observation is received.\n- Next permitted action: preserve/check status evidence; after dev observation,\n  commit checkpoint/evidence only. Remain PAUSED until a later actual human resume.\n\n## S2 preservation after actual dev precommit observation\n\nAt 2026-10-30T12:00:02+09:00, session-plan directly inspected distribution dev commit\n2ab1d482f59979b480132a995a5932035cb02dc7, docs/verification/P002/S2/observation.md,\nbefore-commit-dev-queue.json and before-commit-dev-commands.json.\nActual session-dev observed at 2026-10-30T11:59:32+09:00: no pause visible,\nnext.plan=P904, next.dev=P901; the observed plan HEAD was still\n9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd. This satisfies the user's condition\nfor committing the already prepared pause/checkpoint/evidence. Preserve the\nprevious local-only snapshot and its recorded hash as historical evidence.\nCommit only status/evidence now; remain PAUSED. No actual human resume received.\nDev's postcommit visibility observation remains pending.\n\n- 2026-10-30T03:01:15.159077+00:00 | RESUME | Actual direct human request in session-plan, observed 2026-10-30T12:01:15+09:00: P002-20261029-A 시험의 plan 역할을 이제 재개해줘.\n\n## S2 explicit human resumption\n\nActual direct human request observed at 2026-10-30T12:01:15+09:00: P002-20261029-A 시험의 plan 역할을 이제 재개해줘.\nResumed this fixture plan role only after the separate human request. Previous\nPAUSE event and evidence are preserved. The stopped baseline is 3bab8892fa6fa503b94a54f1ce109d07bcd4427c.\nBefore resumption, distribution dev fb27c78 recorded actual postcommit visibility\nof the role pause at docs/verification/P002/S2/observation.md. This was inspected\nread-only by session-plan. No future S3 pause/resume is preauthorized by this input.\nNext: dev independently observes this committed resume; proceed with the existing\nS3 decision review sequence when its committed question is available.\n\n- 2026-10-30T03:19:39.086433+00:00 | PAUSE | Actual direct human request in session-plan, observed 2026-10-30T12:19:38+09:00, fixture only: P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘. dev의 기존 중지는 유지하고, 재개하지 마.\n\n## S3 step 3 independent plan all-role pause\n\nActual direct human request observed 2026-10-30T12:19:38+09:00: P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘. dev의 기존 중지는 유지하고, 재개하지 마.\nOwn starting HEAD ee7dd573f8ea255a6c50d28178a2831aadcbe0ec; observed dev HEAD 86ba359b879fb69bb196484eb23966662381b8c4.\nRecorded a separate plan scope=all PAUSED checkpoint under this new human input.\nDev's existing all-role pause is unchanged. Both roles remain stopped, and the\nsecond P901 question remains OPEN. Previous plan pause/resume history is preserved.\nOnly requested control recording and evidence preservation performed; no task,\nresolution or resumption. No known plan background task was running.\nRemaining: separately authorized role resumptions, dev role pause and explicit\nresolution-only exception, S4/S5. Future human inputs are still required; this\npause does not authorize them. Keep both stops until their own human resumptions.\n\n- 2026-11-05T08:18:59.419715+00:00 | RESUME | Actual human in this existing session-plan on 2026-11-05: 그럼 P002 시험의 plan/dev 중지를 재개하고 남은 검증도 마무리해줘. P002-20261029-A-CONT-20261105 continuation, original fixture only; apply same bilateral request to own plan checkpoint after dev resume observed.\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:18.451917+00:00",
+      "command": [
+        "python3",
+        "scripts/workflow_control.py",
+        "resolve",
+        "docs/feedback/dev/P901-decision-6ef38fbcb8c8.md",
+        "--plan-commit",
+        "60a500f9a29932d74d24e2d1131790eb87a0ec32"
+      ],
+      "exit_code": 0,
+      "stdout": "docs/feedback/dev/P901-decision-6ef38fbcb8c8.md: local record only; review and commit. No message or work was executed.\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:18.464536+00:00",
+      "command": [
+        "git",
+        "add",
+        "docs/feedback/dev/P901-decision-6ef38fbcb8c8.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:18.842780+00:00",
+      "command": [
+        "git",
+        "commit",
+        "-m",
+        "Resolve second fixture decision only under actual human exception; keep dev paused"
+      ],
+      "exit_code": 0,
+      "stdout": "[dev 6430a1d] Resolve second fixture decision only under actual human exception; keep dev paused\n Committer: <fixture-author>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 1 file changed, 2 insertions(+), 2 deletions(-)\n",
+      "stderr": "PASS: contracts match adopted plan 60a500f9a299\n"
+    },
+    {
+      "time": "2026-11-05T08:36:18.852501+00:00",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "6430a1d2e6766415a381d8d939a6f8afb25d1d48\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:19.309957+00:00",
+      "command": [
+        "python3",
+        "scripts/work_queue.py",
+        "--owner",
+        "all",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"branch\": \"dev\",\n  \"owner\": \"all\",\n  \"notices\": [\n    \"dev는 채택한 plan 60a500f9a299 기준. 이후 plan 초안은 자동 채택하지 않음.\",\n    \"사용자 중지 기록이 적용됩니다. 명시적 재개 전에는 해당 역할을 선택하지 않습니다.\"\n  ],\n  \"next\": {\n    \"plan\": \"P904\",\n    \"dev\": null\n  },\n  \"tasks\": [\n    {\n      \"id\": \"P901\",\n      \"depends_on\": [],\n      \"title\": \"결정된 완료 marker 기록\",\n      \"owner\": \"dev\",\n      \"priority\": 10,\n      \"state\": \"READY\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P901.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"기록 값이 채택된 plan 판단의 marker와 정확히 일치하고, OPEN 결정·사용자 중지가 없는 상태의 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P902\",\n      \"depends_on\": [],\n      \"title\": \"marker와 무관한 독립 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 20,\n      \"state\": \"DONE\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P902.md\",\n      \"checked\": 1,\n      \"total\": 1,\n      \"completed_checks\": [\n        \"C1\"\n      ],\n      \"acceptance\": {\n        \"C1\": \"P901 결정이 OPEN인 동안 P902가 차단되지 않아 선택되었고, 독립 확인 파일 내용과 실제 실행 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P903\",\n      \"depends_on\": [\n        \"P901\"\n      ],\n      \"title\": \"P901 완료 후 의존 확인\",\n      \"owner\": \"dev\",\n      \"priority\": 30,\n      \"state\": \"WAITING\",\n      \"reason\": \"선행 작업: P901\",\n      \"work_order\": \"docs/planning/plans/P903.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"P901 미완료 중 대기하고 완료 뒤 선택 가능한 상태에서 의존 확인 파일을 기록한 근거를 커밋했다.\"\n      },\n      \"blocked_by_decisions\": []\n    },\n    {\n      \"id\": \"P904\",\n      \"depends_on\": [],\n      \"title\": \"plan 초안 선택 관찰\",\n      \"owner\": \"plan\",\n      \"priority\": 40,\n      \"state\": \"DRAFT\",\n      \"reason\": \"\",\n      \"work_order\": \"docs/planning/plans/P904.md\",\n      \"checked\": 0,\n      \"total\": 1,\n      \"completed_checks\": [],\n      \"acceptance\": {\n        \"C1\": \"별도 미래 계획·준비 검토 없이는 실행하지 않는다. 이번 P002 종료 시에도 초안·미착수·미체크 상태를 유지한다.\"\n      },\n      \"blocked_by_decisions\": []\n    }\n  ],\n  \"plan_requests\": [],\n  \"pending_decisions\": [],\n  \"paused_sessions\": [\n    {\n      \"role\": \"dev\",\n      \"state\": \"PAUSED\",\n      \"scope\": \"role\",\n      \"request\": \"Actual human answer in session-plan on 2026-11-05, directly read by session-dev; common key P002-S3.6-dev-role-pause-20261105: P002 시험의 dev 역할만 지금 중지해줘. Fixture continuation only; no resolution or future resume authorization.\",\n      \"resume\": \"-\",\n      \"path\": \"docs/progress/sessions/dev.md\"\n    }\n  ],\n  \"handoffs\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:19.320878+00:00",
+      "command": [
+        "git",
+        "show",
+        "plan:docs/progress/sessions/plan.md"
+      ],
+      "exit_code": 0,
+      "stdout": "# Session checkpoint\n\n> 역할: plan\n> 상태: ACTIVE\n> 범위: all\n> 사용자 요청: Actual direct human request in session-plan, observed 2026-10-30T12:19:38+09:00, fixture only: P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘. dev의 기존 중지는 유지하고, 재개하지 마.\n> 재개 요청: Actual human in this existing session-plan on 2026-11-05: 그럼 P002 시험의 plan/dev 중지를 재개하고 남은 검증도 마무리해줘. P002-20261029-A-CONT-20261105 continuation, original fixture only; apply same bilateral request to own plan checkpoint after dev resume observed.\n\n- 2026-10-30T02:59:01.731429+00:00 | PAUSE | Actual human message in session-plan, observed 2026-10-30T11:59:01+09:00, P002-20261029-A fixture only: 002-20261029-A 시험의 plan 역할만 지금 중지해줘. 중지 기록을 작성하고, dev가 확인할 때까지 커밋은 기다려.\n\n## S2 checkpoint — uncommitted visibility observation pending\n\n- User request: actual direct human message in this plan chat, observed 2026-10-30T11:59:01+09:00.\n  Verbatim: 002-20261029-A 시험의 plan 역할만 지금 중지해줘. 중지 기록을 작성하고, dev가 확인할 때까지 커밋은 기다려.\n- Scope: this run's fixture plan role only. The omitted leading P in the user's\n  run text is resolved from the immediately preceding P002-20261029-A discussion;\n  the verbatim request is preserved above. No other project or dev role is paused.\n- Completed: S0 and S1; actual plan final observation at 9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd.\n- Current plan HEAD: 9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd; observed counterpart dev HEAD: 295237313c3e36025b67e1b65cd1ddfb05230424.\n  Dev's decision adoption remains e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee.\n- Remaining: S2 committed/uncommitted visibility, explicit human resume, S3-S5.\n- Activity: no fixture product/task work continues. No known plan background\n  process was running; this record is not evidence of forcibly stopping a process.\n- Storage: pause and evidence saved locally only, neither staged nor committed.\n  Keep HEAD fixed until actual dev precommit queue observation is received.\n- Next permitted action: preserve/check status evidence; after dev observation,\n  commit checkpoint/evidence only. Remain PAUSED until a later actual human resume.\n\n## S2 preservation after actual dev precommit observation\n\nAt 2026-10-30T12:00:02+09:00, session-plan directly inspected distribution dev commit\n2ab1d482f59979b480132a995a5932035cb02dc7, docs/verification/P002/S2/observation.md,\nbefore-commit-dev-queue.json and before-commit-dev-commands.json.\nActual session-dev observed at 2026-10-30T11:59:32+09:00: no pause visible,\nnext.plan=P904, next.dev=P901; the observed plan HEAD was still\n9f1def2c98ae20fb98e8a6594cb09da14ecd1ffd. This satisfies the user's condition\nfor committing the already prepared pause/checkpoint/evidence. Preserve the\nprevious local-only snapshot and its recorded hash as historical evidence.\nCommit only status/evidence now; remain PAUSED. No actual human resume received.\nDev's postcommit visibility observation remains pending.\n\n- 2026-10-30T03:01:15.159077+00:00 | RESUME | Actual direct human request in session-plan, observed 2026-10-30T12:01:15+09:00: P002-20261029-A 시험의 plan 역할을 이제 재개해줘.\n\n## S2 explicit human resumption\n\nActual direct human request observed at 2026-10-30T12:01:15+09:00: P002-20261029-A 시험의 plan 역할을 이제 재개해줘.\nResumed this fixture plan role only after the separate human request. Previous\nPAUSE event and evidence are preserved. The stopped baseline is 3bab8892fa6fa503b94a54f1ce109d07bcd4427c.\nBefore resumption, distribution dev fb27c78 recorded actual postcommit visibility\nof the role pause at docs/verification/P002/S2/observation.md. This was inspected\nread-only by session-plan. No future S3 pause/resume is preauthorized by this input.\nNext: dev independently observes this committed resume; proceed with the existing\nS3 decision review sequence when its committed question is available.\n\n- 2026-10-30T03:19:39.086433+00:00 | PAUSE | Actual direct human request in session-plan, observed 2026-10-30T12:19:38+09:00, fixture only: P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘. dev의 기존 중지는 유지하고, 재개하지 마.\n\n## S3 step 3 independent plan all-role pause\n\nActual direct human request observed 2026-10-30T12:19:38+09:00: P002-20261029-A 시험에서 plan 쪽에도 양쪽 중지 기록을 별도로 남겨줘. dev의 기존 중지는 유지하고, 재개하지 마.\nOwn starting HEAD ee7dd573f8ea255a6c50d28178a2831aadcbe0ec; observed dev HEAD 86ba359b879fb69bb196484eb23966662381b8c4.\nRecorded a separate plan scope=all PAUSED checkpoint under this new human input.\nDev's existing all-role pause is unchanged. Both roles remain stopped, and the\nsecond P901 question remains OPEN. Previous plan pause/resume history is preserved.\nOnly requested control recording and evidence preservation performed; no task,\nresolution or resumption. No known plan background task was running.\nRemaining: separately authorized role resumptions, dev role pause and explicit\nresolution-only exception, S4/S5. Future human inputs are still required; this\npause does not authorize them. Keep both stops until their own human resumptions.\n\n- 2026-11-05T08:18:59.419715+00:00 | RESUME | Actual human in this existing session-plan on 2026-11-05: 그럼 P002 시험의 plan/dev 중지를 재개하고 남은 검증도 마무리해줘. P002-20261029-A-CONT-20261105 continuation, original fixture only; apply same bilateral request to own plan checkpoint after dev resume observed.\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:19.611242+00:00",
+      "command": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "worktree"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: contracts match adopted plan 60a500f9a299\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:20.194481+00:00",
+      "command": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "index"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: contracts match adopted plan 60a500f9a299\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:20.791164+00:00",
+      "command": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check",
+        "--target",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: contracts match adopted plan 60a500f9a299\n",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:20.804082+00:00",
+      "command": [
+        "git",
+        "add",
+        "docs/verification/P002-20261029-A-CONT-20261105/resolution-only.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "time": "2026-11-05T08:36:21.176238+00:00",
+      "command": [
+        "git",
+        "commit",
+        "-m",
+        "Preserve resolution-only result while role pause remains effective"
+      ],
+      "exit_code": 0,
+      "stdout": "[dev 2ebdb04] Preserve resolution-only result while role pause remains effective\n Committer: <fixture-author>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 1 file changed, 264 insertions(+)\n create mode 100644 docs/verification/P002-20261029-A-CONT-20261105/resolution-only.json\n",
+      "stderr": "PASS: contracts match adopted plan 60a500f9a299\n"
+    },
+    {
+      "time": "2026-11-05T08:36:21.186263+00:00",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "2ebdb04795abf4516618ddb1b5f5adaba3c381b9\n",
+      "stderr": ""
+    }
+  ],
+  "result": "PASS decisions cleared independently of persistent dev role pause; C3 incomplete until actual later S3.7 human resume"
+}

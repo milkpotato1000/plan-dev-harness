@@ -1,0 +1,43 @@
+[
+  {
+    "commit": "e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee",
+    "original_path": "docs/planning/reviews/P002-S1-marker-decision.md",
+    "export": "docs/verification/P002/S1/exports/decision/docs/planning/reviews/P002-S1-marker-decision.md",
+    "original_sha256": "62d0b61d18ad1b4f96c20640255566c2bff2d0377f76c599460f903a59205c5d",
+    "export_sha256": "62d0b61d18ad1b4f96c20640255566c2bff2d0377f76c599460f903a59205c5d"
+  },
+  {
+    "commit": "e6dc181e0a330c7f050fcf70638c5fad2fd8f8ee",
+    "original_path": "docs/verification/P002-20261029-A/S1-plan-marker-commands.json",
+    "export": "docs/verification/P002/S1/exports/decision/docs/verification/P002-20261029-A/S1-plan-marker-commands.json",
+    "original_sha256": "01035f5f4392c79770f993f7c3432bc7122259d02839b0ad126c9a00a396d771",
+    "export_sha256": "01035f5f4392c79770f993f7c3432bc7122259d02839b0ad126c9a00a396d771"
+  },
+  {
+    "commit": "295237313c3e36025b67e1b65cd1ddfb05230424",
+    "original_path": "docs/feedback/dev/P901-decision-3dd251cf50c6.md",
+    "export": "docs/verification/P002/S1/exports/resolution/docs/feedback/dev/P901-decision-3dd251cf50c6.raw.json",
+    "original_sha256": "ee1737dfb7134d243da7076362b176c03eb14b4ac2ff27bd6494650ee2350b09",
+    "export_sha256": "247319c27cbf89d1de55cdd0cef17aafa964256b8ef3f17cb8c71526b93eade4"
+  },
+  {
+    "commit": "295237313c3e36025b67e1b65cd1ddfb05230424",
+    "original_path": "docs/verification/P002-20261029-A/S1-dev-resolution-commands.json",
+    "export": "docs/verification/P002/S1/exports/resolution/docs/verification/P002-20261029-A/S1-dev-resolution-commands.json",
+    "original_sha256": "e7802d9ffd60af2cdc6e7ed24a90ad8f68c3bff8f82964c48eaeffe55be9dc42",
+    "export_sha256": "e7802d9ffd60af2cdc6e7ed24a90ad8f68c3bff8f82964c48eaeffe55be9dc42"
+  },
+  {
+    "commit": "295237313c3e36025b67e1b65cd1ddfb05230424",
+    "original_path": "docs/verification/P002-20261029-A/S1-dev-result.md",
+    "export": "docs/verification/P002/S1/exports/resolution/docs/verification/P002-20261029-A/S1-dev-result.md",
+    "original_sha256": "0558db62df6207817b7247b5f361ee50e4ecebd1cda349c66ff01a2ec413a191",
+    "export_sha256": "0558db62df6207817b7247b5f361ee50e4ecebd1cda349c66ff01a2ec413a191"
+  },
+  {
+    "base": "632cc4b4ab5c57546c6fd505cb558e17ed19bbb1",
+    "end": "295237313c3e36025b67e1b65cd1ddfb05230424",
+    "export": "docs/verification/P002/S1/fixture-S1.patch",
+    "sha256": "5c2299ef55f399e613db49f70d4fb486ba38e6bcebfbc51b353ec489a8cf3d37"
+  }
+]

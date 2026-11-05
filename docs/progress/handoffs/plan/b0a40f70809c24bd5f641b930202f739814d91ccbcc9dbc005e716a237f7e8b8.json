@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "26c17fcacf233b1ce912ed4bae418dc8ae329bae",
+  "document": "docs/planning/reviews/P006-dev-handoff.md",
+  "summary": "P006 READY: nonblocking plan handoff and busy-dev safe-boundary adoption; package0.2.2 and loaded Codex update",
+  "next_action": "Preserve existing work/pauses; integrate/adopt exact P006 plan; implement source/installable rules and verify; plan sender returns after SENT",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T07:18:37.130217+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T07:19:20.336670+00:00",
+      "evidence": "2026-11-05 host send_message_to_thread returned success for verified existing same-project dev; exact baseline b3bc7d8b0dd87f48d1fce62958918c0fb68780ac; sender returns without ACK/adoption/completion wait"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-05T07:35:45.855446+00:00",
+      "evidence": "2026-11-05 natural next planning turn observed committed dev3c727af exact adoption ofb3bc7d8 and b932fc8 completed P006; no receipt/completion polling was used"
+    }
+  ]
+}

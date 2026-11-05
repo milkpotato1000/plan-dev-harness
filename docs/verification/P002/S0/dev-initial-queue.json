@@ -1,0 +1,16 @@
+{
+  "branch": "dev",
+  "owner": "all",
+  "notices": [
+    "dev는 채택한 plan 13cca35f6398 기준. 이후 plan 초안은 자동 채택하지 않음."
+  ],
+  "next": {
+    "plan": null,
+    "dev": null
+  },
+  "tasks": [],
+  "plan_requests": [],
+  "pending_decisions": [],
+  "paused_sessions": [],
+  "handoffs": []
+}
