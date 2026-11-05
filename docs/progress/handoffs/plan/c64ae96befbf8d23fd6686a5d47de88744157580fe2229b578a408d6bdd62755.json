@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "RESUME",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "be1095a93bf04cae243b263d86e99691f79c4801",
+  "document": "docs/planning/reviews/user-reviews/P002-S3.6-dev-role-pause-20261105.md",
+  "summary": "Actual fixture plan resumed; both pauses cleared while OPEN preserved; one new S3.6 human question pending in plan",
+  "next_action": "Independently observe fixture8306309107abc55453241efc6de5e4d81c47947e and preserve evidence; await actual new role-pause human answer without duplicate question",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:20:11.445495+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
