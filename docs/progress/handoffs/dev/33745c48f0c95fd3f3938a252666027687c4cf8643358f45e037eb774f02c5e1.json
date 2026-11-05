@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "c31d8dc0f1d7867967054faf3e8802b245154414",
+  "document": "docs/verification/P002/recovery-20261105/plan-import-handoff.md",
+  "summary": "Historical P002 continuation bootstrap verified; actual fixture plan import and decision needed",
+  "next_action": "In own fixture plan restore archived contracts scope and PAUSED checkpoint, commit separate continuation decision and send exact SHA for dev reconstruction; do not resume yet",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:12:16.451277+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
