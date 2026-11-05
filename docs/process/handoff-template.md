@@ -23,3 +23,7 @@
 Plan은 실제 SENT를 커밋·push한 뒤 ACK/채택/완료 대기 없이 응답을 종료한다.
 미관찰 ACK는 다음 자연스러운 조회까지 SENT로 유지한다. busy dev는 현재 P를 보존하고
 안전한 경계 뒤 정확 채택한다. 이 문서는 구현 완료나 중지 재개를 의미하지 않는다.
+
+사용자 검토/결정 인계는 공통 request key·P/criterion·질문 종류/범위·artifact commit/version/hash·
+기존 실제 사용자 답변 출처를 포함한다. Plan은 같은 대기/답변 질문을 재발행하지 않고 실제
+파일/뷰를 검토한다. user-review-template.md 참조. 역방향 발송은 별도 인간 위임이 필요하다.

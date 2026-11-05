@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-05",
+  "plan_before": "a75ea6d5063832f75e379c21d7d5d3ba2156f58e",
+  "dev_before": "b932fc81de18b7780c8b7858f9de7e3ecbd27965",
+  "dev_adoption_before": {
+    "commit": "b3bc7d8b0dd87f48d1fce62958918c0fb68780ac",
+    "review_reference": "docs/planning/reviews/P006-dev-handoff.md"
+  },
+  "main_before": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "predecessor": "P006",
+  "predecessor_active_work_preserved": true,
+  "reported_issue": "Human reported duplicate user confirmation in two role chats; recent records show both consumed UI confirmation; full question reproduction not claimed",
+  "runtime_schema_changed": false,
+  "local_managed_version": "0.2.1",
+  "target_distribution_and_loaded_codex_version": "0.2.3",
+  "target_messaging_grant": "Same-project existing dev to plan for committed review/decision only; current human instruction; no cross-project authority"
+}

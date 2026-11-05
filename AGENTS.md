@@ -89,3 +89,15 @@ dev execution. Product README/user-guide changes are dev deliverables, not plan
 implementation. Planning/governance documents remain plan-owned, with adoption
 when needed by dev. A plan-only push is not cross-branch or GitHub default-branch
 completion. Record the actual authorized target and verify delivery separately.
+
+## Plan owns user review and decisions
+
+Read docs/process/agent-workflow.md section User review and decisions through plan
+and docs/process/user-review-template.md. Dev normally implements/verifies without
+asking routine completion questions. Plan opens/inspects results and owns necessary
+human questions and the shared review ledger. Same artifact/version/question scope
+uses one common key and reuses verifiable existing human answers. Preserve exact
+decision adoption, user pauses and P006 asynchronous delivery. The actual human's
+2026-11-05 narrow dev→plan review/decision grant is recorded separately in
+docs/planning/reviews/dev-to-plan-review-delegation.md; it does not authorize
+cross-project sends, ACK loops, new chats, services, permission bypass or resumes.
