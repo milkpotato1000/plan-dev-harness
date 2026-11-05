@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-05T08:13:17.661496+00:00",
+  "role": "actual session-plan; sole fixture plan writer",
+  "distribution_source_commit": "c31d8dc0f1d7867967054faf3e8802b245154414",
+  "approved_method_plan": "9f32f207e925c4a52a01bb0257991e4fe404929b",
+  "initial_fixture_head": "eb61fd88e1728570cb22d4e9223dc78c6736c47f",
+  "historical_final_plan": "6d04038121ae96bb9ca6ab8ac4ad0761e94dfbc3",
+  "records": [
+    {
+      "source": "docs/verification/P002/S0/fixture-plan/docs/planning/plans/P901.md",
+      "target": "docs/planning/plans/P901.md",
+      "sha256": "47e46bce4cbdbcae26f80a2960b6c431786558930b28921343db17b2eaf5df4e",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S0/fixture-plan/docs/planning/plans/P902.md",
+      "target": "docs/planning/plans/P902.md",
+      "sha256": "3801ae9e6f3747f35d0aa712f164a223a0becc5df63bd19239b3dbd5157ea14f",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S0/fixture-plan/docs/planning/plans/P903.md",
+      "target": "docs/planning/plans/P903.md",
+      "sha256": "c0bd39f5f3d3782500aa807d836681dceab7a75fa644766facaecb77049e3b74",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S0/fixture-plan/docs/planning/plans/P904.md",
+      "target": "docs/planning/plans/P904.md",
+      "sha256": "c62d0bebd3d047d6af35752f975f333eb33215f4e1dadbee22ab5d996b3daeb6",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S0/fixture-plan/docs/planning/reviews/P002-S0-readiness.md",
+      "target": "docs/planning/reviews/P002-S0-readiness.md",
+      "sha256": "69f68ddfd965c92246b3017e8d90968e72b68fd3a853d72b7ee54a14f02b4471",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S1/exports/scope/docs/planning/reviews/P002-S1-scope.md",
+      "target": "docs/planning/reviews/P002-S1-scope.md",
+      "sha256": "410aa6d27a7f5f849cdcb561bb8c42ee2302c5849dd9073f2b9d63a9e275fc2d",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S1/exports/scope/docs/planning/decision-scopes/P901-decision-3dd251cf50c6.json",
+      "target": "docs/planning/decision-scopes/P901-decision-3dd251cf50c6.json",
+      "sha256": "5cfaac5ce3caf29873fcda870df48342ebbc4ab3e1e78b17da8750652af3808e",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S1/exports/decision/docs/planning/reviews/P002-S1-marker-decision.md",
+      "target": "docs/planning/reviews/P002-S1-marker-decision.md",
+      "sha256": "62d0b61d18ad1b4f96c20640255566c2bff2d0377f76c599460f903a59205c5d",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S3/review-exports/docs/planning/reviews/P002-S3-marker-retention.md",
+      "target": "docs/planning/reviews/P002-S3-marker-retention.md",
+      "sha256": "2bd9ead1ae2f82c8ca1467c6d93bf26deab555341e813927e81cdaf4fad2d1ba",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S3/review-exports/docs/planning/decision-scopes/P901-decision-6ef38fbcb8c8.json",
+      "target": "docs/planning/decision-scopes/P901-decision-6ef38fbcb8c8.json",
+      "sha256": "1ec6892e815b94c458737cd4d41822ae6f05024bfe5fe4630c1dfd75e92236d1",
+      "exact_bytes": true
+    },
+    {
+      "source": "docs/verification/P002/S3/plan-pause-all-exports/docs/progress/sessions/plan.md",
+      "target": "docs/progress/sessions/plan.md",
+      "sha256": "170c85d13fa7ec7293a93ce60c30b6f5390f1b3a005c439c7f9373a8eb8b80e4",
+      "exact_bytes": true
+    }
+  ],
+  "classification": "snapshot reconstruction, not original Git graph or fresh test PASS; no dev records written; resume not executed"
+}
