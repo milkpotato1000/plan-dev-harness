@@ -1,0 +1,37 @@
+{
+  "observed_at": "2026-11-05T08:50:11.873978+00:00",
+  "historical_P002_exports_before_final_report": {
+    "count": 106,
+    "all_unchanged": true
+  },
+  "source_assets_scripts_tests_version_readme_changelog_hooks_unchanged_since_P007": true,
+  "prior_cards_evidence_unchanged": {
+    "docs/verification/P005": true,
+    "docs/verification/P006": true,
+    "docs/verification/P007": true,
+    "docs/verification-v0.2.0.md": true,
+    "docs/planning/plans/P005.md": true,
+    "docs/planning/plans/P006.md": true,
+    "docs/planning/plans/P007.md": true
+  },
+  "main_unchanged": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "worktree_hook_topology": {
+    "plan": {
+      "exit_code": 0,
+      "value": ".githooks"
+    },
+    "dev": {
+      "exit_code": 0,
+      "value": ".githooks"
+    },
+    "main": {
+      "exit_code": 1,
+      "value": ""
+    }
+  },
+  "source_version": "0.2.3",
+  "fixture_runtime_version": "0.2.0",
+  "distribution_local_manifest_version": "0.2.1",
+  "external_projects_or_personal_installations_modified": false,
+  "old_fixture_files_count": 0
+}
