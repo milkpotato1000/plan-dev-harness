@@ -100,3 +100,14 @@ this source reference. Personal skill packages contain this reference plus asset
 and scripts. Updating a package does not update installed projects or activate a
 personal skill. Confirm the actual loaded path and reread the selected skill after
 an authorized transition.
+
+## User review gateway
+
+Use the [result review protocol](user-review.md): dev commits evidence, artifact
+version/hash, shared request key, question scope and existing human-answer sources.
+Plan owns read-only result review and necessary human questions, reuses valid
+pending/answered scopes across roles and records decisions for exact dev adoption.
+Dev does not ask routine completion confirmations. Optional review, required human
+criteria and critical OPEN remain distinct. User code questions in dev are allowed.
+Reverse delivery needs a real human project grant; no permission or pause bypass.
+Preserve asynchronous SENT-then-return and busy-role safe boundaries.

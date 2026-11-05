@@ -117,7 +117,7 @@ class DistributionTests(unittest.TestCase):
             self.script('install_skill.py','--agent',agent,'--skills-dir',str(parent),'--apply')
             skill=parent/'plan-dev-harness'
             self.assert_local_links(skill, ['SKILL.md','references/direct-handoff.md',
-                'references/usage.md','references/role-chats.md'])
+                'references/usage.md','references/role-chats.md','references/user-review.md'])
             project=self.root/('project-'+agent)
             self.cmd('git','init','-b','plan',str(project))
             options=['--repo',str(project),'--protect','specs','--agent','both']
@@ -125,7 +125,7 @@ class DistributionTests(unittest.TestCase):
             before=self.snapshot(project)
             self.cmd(*installer);self.assertEqual(self.snapshot(project),before)
             self.cmd(*installer,'--apply')
-            for name in ('workflow-controls.md','optional-adapters.md','handoff-template.md'):
+            for name in ('workflow-controls.md','optional-adapters.md','handoff-template.md','user-review-template.md'):
                 actual=project/'docs/process'/name
                 # Installed local governance can intentionally remain an older
                 # managed version. Compare the delivered package's own assets.
@@ -168,6 +168,8 @@ class DistributionTests(unittest.TestCase):
                 self.assertEqual((child/'docs/process/agent-workflow.md').read_bytes(),
                                  (project/'docs/process/agent-workflow.md').read_bytes())
                 self.assertEqual((child/'docs/process/workspace-AGENTS.md').read_text(),expected)
+                self.assertEqual((child/'docs/process/user-review-template.md').read_bytes(),
+                                 (project/'docs/process/user-review-template.md').read_bytes())
             for role in ('plan','dev'):
                 prompt=skill/('assets/workspace/'+role+'-chat.md.template')
                 self.assertEqual(prompt.read_bytes(),(BASE/prompt.relative_to(skill)).read_bytes())

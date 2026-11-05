@@ -33,3 +33,12 @@ SENT 기록·커밋·push→plan 응답 종료를 따른다. ACK는 이후 자�
 
 Busy dev는 현재 P·작업·실패를 보존하며 안전한 완료/checkpoint·commit 경계에서 정확 채택한다.
 호스트 메시지 주입은 현재 작업 선점 권한이 아니며 단일 채팅 fallback은 순차다. 새 자동 감시는 만들지 않는다.
+
+## 사용자 검토·결정 gateway
+
+Dev 결과 검토는 WORK_READY(target plan), critical은 DECISION_REQUEST로 공통 request key와
+정확 artifact commit/version/hash·범위·기존 인간 답변을 연결한다. Plan 원장과 기존 질문/답변을
+확인해 동일 확인을 중복 발행하지 않는다. 실제 파일/뷰 관찰과 인간 확인은 구별한다.
+새 transport commit/event는 새 의미의 질문이 아니다. 상세는 user-review-template.md와
+agent-workflow.md의 User review and decisions through plan을 따른다. 이 문서규약은 새 runtime
+schema나 host 전체 질문 차단기가 아니다. 실제 reverse 전달은 별도 인간 위임이 필요하다.

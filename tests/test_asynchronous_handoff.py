@@ -234,7 +234,8 @@ class AsyncUpgradeTests(unittest.TestCase):
             old_version = (repo/'.harness/installation.json').read_bytes()
             cmd(*installer); self.assertEqual((repo/'.harness/installation.json').read_bytes(), old_version)
             cmd(*installer, '--apply')
-            self.assertEqual(json.loads((repo/'.harness/installation.json').read_text())['version'], '0.2.2')
+            self.assertEqual(json.loads((repo/'.harness/installation.json').read_text())['version'],
+                             (BASE/'VERSION').read_text().strip())
             for f, raw in before.items(): self.assertEqual((repo/'scripts'/f).read_bytes(), raw)
             self.assertEqual(extension.read_text(), 'Retain user extension.\n')
             self.assertEqual((repo/'docs/process/agent-workflow.md').read_bytes(), (BASE/'assets/instructions/agent-workflow.md').read_bytes())

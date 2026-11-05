@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.3 — Unreleased
+
+- Route result review and necessary human questions through plan using a shared scoped request key.
+- Preserve pending questions and verifiable human answers across roles, artifact versions and resumed sessions.
+- Add the review packet/ledger template to standalone installs, upgrades and bootstrap output.
+- Keep optional review, required human criteria and critical OPEN decisions distinct; preserve asynchronous delivery.
+
 ## 0.2.2 — Unreleased
 
 - Finish plan handoffs after actual SENT is committed/pushed; observe ACK on a later natural request.

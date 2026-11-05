@@ -69,3 +69,14 @@ questions need no card. Record file/repository/target ref and verify actual deli
 plan push, dev adoption and default-branch visibility are separate outcomes.
 Only authorized, uncontested sessions perform both roles in separate worktrees.
 Bootstrap, absent messaging authority and scoped pauses retain their boundaries.
+
+## User review gateway
+
+Use the [result review protocol](user-review.md): dev commits evidence, artifact
+version/hash, shared request key, question scope and existing human-answer sources.
+Plan owns read-only result review and necessary human questions, reuses valid
+pending/answered scopes across roles and records decisions for exact dev adoption.
+Dev does not ask routine completion confirmations. Optional review, required human
+criteria and critical OPEN remain distinct. User code questions in dev are allowed.
+Reverse delivery needs a real human project grant; no permission or pause bypass.
+Preserve asynchronous SENT-then-return and busy-role safe boundaries.

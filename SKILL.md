@@ -72,6 +72,14 @@ handoff only at a safe completed/checkpointed commit boundary. Choose the next P
 by readiness, priority, dependencies and existing stops/decisions. See the shared
 [parallel planning rules](assets/instructions/agent-workflow.md#asynchronous-handoff-and-parallel-planning).
 This procedure grants no messaging authority by itself.
+For dev results and needed decisions, use the [plan review gateway](references/user-review.md).
+Commit a packet with a stable shared key, exact artifact version/hash, scope and
+existing human-answer sources. Plan opens read-only results, reuses valid answers
+and asks necessary human judgment once; dev does not issue routine completion
+questions. Optional review does not block independent work, required human criteria
+remain incomplete, and critical OPEN/pauses keep their existing rules. Decisions
+reach dev through exact reviewed adoption. Reverse delivery needs its own actual
+human grant; installation alone grants none.
 External integrations follow [adapter boundaries](assets/docs/process/optional-adapters.md).
 
 인간이 해당 프로젝트의 plan→dev 전달·착수를 위임한 경우 plan은 검토된 READY 계획의 정확 SHA를

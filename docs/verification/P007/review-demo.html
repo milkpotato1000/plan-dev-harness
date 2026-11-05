@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P007 — 결과 검토와 질문의 plan 창구</title>
+<style>body{font:16px/1.65 system-ui,sans-serif;max-width:980px;margin:48px auto;padding:0 24px;color:#172333;background:#f4f7fb}h1{line-height:1.25}section{background:white;border:1px solid #dbe3ed;border-radius:12px;padding:22px;margin:20px 0}table{border-collapse:collapse;width:100%}th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid #dbe3ed}code{background:#eaf0f8;padding:2px 5px;border-radius:4px}.note{color:#4b6075}strong{color:#164b8b}</style>
+<h1>결과는 plan에서 검토하고,<br>같은 확인은 한 번만 묻습니다.</h1>
+<p>하네스 0.2.3 · P007 검토용 요약 · material version <code>review-gateway-v1</code></p>
+<section><h2>역할과 기록</h2><p><strong>Dev</strong>는 정확히 채택한 P를 구현·검증하고 결과/실패와 artifact 버전·hash, 질문 범위, 공통 request key를 커밋합니다. <strong>Plan</strong>은 원장과 기존 답변을 확인하고 read-only 파일·뷰를 먼저 검토합니다. 기존 합의 내 판단은 확정하고 실제 사람 판단만 한 번 질문합니다.</p></section>
+<section><h2>검증한 시나리오</h2><table><thead><tr><th>상황</th><th>기대 결과</th><th>증거 종류</th></tr></thead><tbody>
+<tr><td>같은 review의 새 전송·재접속</td><td>동일 key/원장의 질문을 다시 발행하지 않음</td><td>지속 파일을 읽는 stateful reference actor</td></tr>
+<tr><td>Dev에서 이미 받은 실제 답변</td><td>출처·hash·범위가 맞으면 재사용; agent 주장만으로 승인하지 않음</td><td>Fixture 답변의 출처/범위 검사</td></tr>
+<tr><td>UI 확인과 내용 확인</td><td>별도 범위. 실질 변경은 새 검토; timestamp 등만 달라졌으면 동등성 근거 필요</td><td>Stateful key·raw/material hash 사례</td></tr>
+<tr><td>선택적 review / 필수 사람 기준 / critical OPEN</td><td>독립 큐 유지 / criterion 미완료 / 기존 보수적 차단</td><td>실제 임시 Git worktree·CLI·큐</td></tr>
+<tr><td>Viewer·권한·host 부재</td><td>미관찰·pending을 보존하고 승인이나 전달 성공을 꾸미지 않음</td><td>Reference actor 실패/권한 사례</td></tr>
+<tr><td>Plan 결정</td><td>결정 commit을 dev가 정확 채택한 뒤 반영</td><td>실제 임시 Git merge/adopt</td></tr>
+</tbody></table></section>
+<section><h2>관찰 범위</h2><p>이 페이지는 검토 규약과 검증 분류를 설명하는 <strong>정적 artifact</strong>입니다. 표의 답변·질문 수는 가상 fixture이며 실제 사용자 승인 기록이 아닙니다. 파일 내용 읽기, 링크 제공, 실제 시각 확인과 사람 확인은 구별합니다. Plan의 실제 viewer 관찰 여부는 plan 원장에 별도로 기록합니다.</p><p class="note">새 runtime schema·자동 질문 차단기·sender·monitor는 추가하지 않았습니다. 기존 transport event는 의미적 질문 중복까지 자동 해결하지 않습니다. 실제 역방향 전달은 해당 프로젝트의 인간 위임이 필요합니다.</p></section>
+<section><h2>검토 다음 행동</h2><p>기존 P007 계약과 <code>references/user-review.md</code>, <code>assets/docs/process/user-review-template.md</code>, <code>docs/verification/P007/policy-review.md</code>를 함께 검토합니다. 범위 내 검토는 plan에서 기록하며 이 artifact 자체에 새 사람 승인 기준은 없습니다. 선택적 검토가 독립 승인 작업을 막지 않도록 합니다.</p></section>
+</html>

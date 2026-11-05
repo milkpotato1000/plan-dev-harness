@@ -97,3 +97,9 @@ Plan의 인계 완료 기준은 실제 전송 성공의 SENT 기록이며 ACK/�
 Dev는 현재 승인 P를 보존하고 안전한 경계 뒤 전달된 정확 계획을 채택한 후 준비·우선순위·
 의존성·중지/결정 조건으로 다음 P를 고른다. 큐 조회는 계속 읽기 전용이다.
 상세: agent-workflow.md의 Asynchronous handoff and parallel planning.
+
+## 사용자 확인 대기
+
+사용자 확인/결정은 plan 원장과 공통 request key로 모으고 dev에서 중복 질문하지 않는다.
+선택적 결과 검토는 독립 승인 작업을 막지 않는다. 필수 사람 criterion은 미완료로 유지하고
+critical OPEN/legacy와 사용자 중지는 기존 범위·채택 규칙을 따른다. UI 확인은 내용 승인이 아니다.
