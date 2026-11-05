@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "a3539b7a6f44703bf859f4231107d8b44f7eb0f9",
+  "document": "docs/planning/reviews/P002-S4-plan/plan-reverse-receipt.md",
+  "summary": "Actual plan reverse receipt committed; dev final ACK tests then authorized S5",
+  "next_action": "Read fixture05c18fe35e48ab5b7a12da3a5f06fdae742fa9d0 receipt, record reverse ACK and negative checks, complete C4 then S5",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:47:01.357868+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
