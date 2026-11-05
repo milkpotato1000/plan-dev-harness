@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "RESUME",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "70e7f6b385e0094f5f3590f0cd20bef84f27558c",
+  "document": "docs/planning/reviews/user-reviews/P002-S3.7-dev-resume-20261105.md",
+  "summary": "Actual later human resumes P002 fixture dev role after resolution-only verification",
+  "next_action": "Resume own fixture checkpoint, verify S3.7 selection and preserved history, then perform authorized S4/S5 with actual plan role participation",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:38:39.172877+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
