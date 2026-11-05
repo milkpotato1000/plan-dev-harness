@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P002-S4-plan/plan-reverse-receipt.md",
   "summary": "Actual plan reverse receipt committed; dev final ACK tests then authorized S5",
   "next_action": "Read fixture05c18fe35e48ab5b7a12da3a5f06fdae742fa9d0 receipt, record reverse ACK and negative checks, complete C4 then S5",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-05T08:47:01.357868+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:47:27.569190+00:00",
+      "evidence": "2026-11-05 actual host send success to verified same-project dev; actual fixture reverse receipt05c18fe35e48ab5b7a12da3a5f06fdae742fa9d0 and finite final ACK/S5 actions delivered with distributione7658f70df1c5bab3157d3b8f569d9f2fc2dde30."
     }
   ]
 }
