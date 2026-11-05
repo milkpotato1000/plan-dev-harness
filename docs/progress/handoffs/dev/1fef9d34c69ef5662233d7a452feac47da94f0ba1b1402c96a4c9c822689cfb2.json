@@ -7,12 +7,17 @@
   "document": "docs/verification/P002/S4/plan-start-handoff.md",
   "summary": "C3 actual control validation PASS; begin fixture plan first-direction S4 delivery trial",
   "next_action": "Actual plan commit harmless artifact and PENDING event, verify specified rejection and dedup tests, send fixture artifact/event to dev and record actual SENT",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-05T08:41:05.909016+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:41:21.834481+00:00",
+      "evidence": "docs/verification/P002/S4/plan-start-delivery.md"
     }
   ]
 }
