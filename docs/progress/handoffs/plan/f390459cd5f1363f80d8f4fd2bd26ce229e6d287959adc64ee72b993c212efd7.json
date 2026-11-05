@@ -7,12 +7,22 @@
   "document": "docs/planning/reviews/P007-dev-handoff.md",
   "summary": "P007 READY after P006: plan-only user review and decision gateway with durable question deduplication",
   "next_action": "Preserve current P006 and existing pauses; finish predecessor then adopt exact P007; implement source/installable0.2.3 and test common-review protocol",
-  "status": "PENDING",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-05T07:34:51.870889+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T07:35:55.561168+00:00",
+      "evidence": "2026-11-05 host send success to verified existing same-project dev; exact P0074217137e966ad9725581f1814830f62043e50cc0; predecessor preserved; sender returns without ACK/completion wait"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-05T07:58:22.502023+00:00",
+      "evidence": "Natural P007 result-review receipt on 2026-11-05; committed dev adoption 4217137e966ad9725581f1814830f62043e50cc0 and P007 5/5 observed at a4475975d70fe158019c88ef5f2ac32d463aa3a0; see docs/planning/reviews/user-reviews/P007-C1-content-v1-66b1e5965589.md. No ACK/completion polling."
     }
   ]
 }
