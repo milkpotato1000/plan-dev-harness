@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P002-completion-20261105.md",
   "summary": "P002 completed 5/5 with actual two-role evidence and latest83 source tests PASS",
   "next_action": "Read committed final report and completed queue evidence, record optional existing-scope result review using shared key; no routine human confirmation or new fixture work",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-05T08:54:11.061513+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:54:28.277053+00:00",
+      "evidence": "docs/verification/P002/S5/result-review-delivery.md"
     }
   ]
 }
