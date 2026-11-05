@@ -75,8 +75,9 @@ This applies when plan finishes preparing work within a human-authorized project
 objective, not to drafts or newly invented scope. It does not grant cross-project
 messaging, reverse/chain messages, new chats, personal skill updates, releases or
 resuming a user stop. Queue/CLI reads do not send messages. Use the existing host
-send tool, then read/wait for actual receipt; preserve SENT versus ACK versus
-adoption/completion. If the host cannot send, leave the committed file handoff.
+send tool, then record actual SENT and finish the plan turn without waiting for
+ACK, adoption or implementation completion. Observe receipt on a later natural
+status/planning turn; preserve SENT versus ACK versus adoption/completion. If the host cannot send, leave the committed file handoff.
 See `docs/planning/reviews/plan-dev-delivery-delegation.md` for scope and evidence.
 
 ## New sessions and documentation work
