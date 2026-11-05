@@ -1,8 +1,9 @@
 # P007 — result review and necessary decisions through plan, 0.2.3
 
-Implementation/package verification is complete; the optional committed result
-packet and actual delivery outcome are recorded separately after this artifact
-commit. Final completion/guard/remote evidence is added at that boundary.
+Status: **COMPLETE (5/5)**. The committed optional result packet was actually
+sent to the verified existing plan (SENT); see [delivery evidence](delivery.json).
+No ACK, plan viewer observation or decision was inferred or awaited. Final guard
+and ordinary origin/dev delivery are verified after the completion commit.
 
 Dev now commits a scoped result/decision packet rather than asking routine
 completion questions. Plan reads its common ledger, opens available read-only
