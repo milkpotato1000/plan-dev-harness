@@ -1,0 +1,25 @@
+{
+  "reason": "Automatically printed Git committer identity replaced by fixture-author alias; commands/results unchanged. Previous hashes describe private raw original bytes, not these redacted public copies. Original historical106 exports unchanged. The public patch envelope is now identity-redacted and no longer a byte-exact patch; original raw patch and complete Git bundles are preserved privately.",
+  "files": [
+    {
+      "path": "docs/verification/P002/recovery-20261105/dev-observe-plan-resume.json",
+      "original_sha256": "6e79b5ad601be0b1191de54c07e3598803ee93a8535981bdd034e0707b45156b",
+      "public_sha256": "c0c617b4ff87b7393d2be8360ff4fe099ae6ba615af2477c83bdcfb33dbe0f82"
+    },
+    {
+      "path": "docs/verification/P002/recovery-20261105/continuation-through-dev-resume.patch.raw.json",
+      "original_sha256": "e470c4fa9095b7299d75ec98b988481a3e36392fa782bd413d43dfa65893e920",
+      "public_sha256": "e37ec5a50db357a72e7570e2ad2bc1a0e94ff46d8a1c058170f74c568e86bfb0"
+    },
+    {
+      "path": "docs/verification/P002/recovery-20261105/dev-continuation/dev-restore-commands.json",
+      "original_sha256": "40018762d0ff8dcc0b0e25e3d1b7837135c17bbf5d580d6fa81c00aa25badbc8",
+      "public_sha256": "d6520dd9c417b7cc7eaf61863d7a9feffc2a6d3e149bae443dcaea6efc731076"
+    },
+    {
+      "path": "docs/verification/P002/recovery-20261105/dev-continuation/dev-resume-commands.json",
+      "original_sha256": "a7867ee1eda700d42b6823d21852f54c251f6a9d3a2ca2999dee97990f35abd3",
+      "public_sha256": "14502556883aefa5c7af7ce078bb213208beaf8387a047eea480a26137a08ab4"
+    }
+  ]
+}

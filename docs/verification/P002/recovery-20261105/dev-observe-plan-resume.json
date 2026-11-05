@@ -591,7 +591,7 @@
         "-m",
         "Observe actual plan resumption independently with OPEN preserved"
       ],
-      "stdout": "[dev c2a27f4] Observe actual plan resumption independently with OPEN preserved\n Committer: Seungwoo Cheon <milkpotato@Seungwoos-MacBook-Pro.local>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 1 file changed, 577 insertions(+)\n create mode 100644 docs/verification/P002-20261029-A-CONT-20261105/dev-observe-plan-resume.json\n",
+      "stdout": "[dev c2a27f4] Observe actual plan resumption independently with OPEN preserved\n Committer: <fixture-author>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 1 file changed, 577 insertions(+)\n create mode 100644 docs/verification/P002-20261029-A-CONT-20261105/dev-observe-plan-resume.json\n",
       "stderr": "PASS: contracts match adopted plan 60a500f9a299\n",
       "exit_code": 0
     },

@@ -54,7 +54,7 @@
       "Resume own fixture dev from verified actual bilateral human request"
     ],
     "exit_code": 0,
-    "stdout": "[dev 83e0f06] Resume own fixture dev from verified actual bilateral human request\n Committer: Seungwoo Cheon <milkpotato@Seungwoos-MacBook-Pro.local>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 1 file changed, 4 insertions(+), 2 deletions(-)\n",
+    "stdout": "[dev 83e0f06] Resume own fixture dev from verified actual bilateral human request\n Committer: <fixture-author>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 1 file changed, 4 insertions(+), 2 deletions(-)\n",
     "stderr": "PASS: contracts match adopted plan 60a500f9a299\n"
   },
   {

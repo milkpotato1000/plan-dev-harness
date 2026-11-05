@@ -27,3 +27,14 @@ continuation history in addition to exports. Original runtime, main, personal
 installations and unrelated projects remain unchanged. Current source regression
 and S4/S5 tests will be performed at their appropriate stage; these observations
 are not a claim of C3–C5 completion or a new full regression run.
+
+## Later S3.6 role-pause checkpoint
+
+Actual human answered the pending plan question: “P002 시험의 dev 역할만 지금 중지해줘.”
+Dev directly read the user reply and immediately recorded its own role pause at
+f546efcbe8baacb273b052f05585229cd63d683f. Current plan ACTIVE/dev PAUSED(role),
+next.plan=P904/next.dev=null, second OPEN unchanged. See dev-role-pause.json.
+Next input is a separate resolution-only instruction requested once by plan;
+no resolution or future resume has been authorized. Previous sections are history.
+Public new continuation command logs now alias automatically printed Git identity;
+identity-redactions.json distinguishes public hashes from preserved private raw logs.
