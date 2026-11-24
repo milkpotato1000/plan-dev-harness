@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P009-live-setup-v0.2.4.md",
   "summary": "P009 prepared fixture and0.2.4 source; key P009-live-setup-v0.2.4",
   "next_action": "Inspect preparation; dev continues approved live check. Preserve key for any specific required human input; no generic two-terminal setup reapproval.",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-24T08:24:56.960735+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-24T08:25:40.095168+00:00",
+      "evidence": "Actual existing session-plan send_message_to_thread success; P009-live-setup-v0.2.4 prepared artifact4c4b5a3 and hash120edabc. No ACK waiting."
     }
   ]
 }
