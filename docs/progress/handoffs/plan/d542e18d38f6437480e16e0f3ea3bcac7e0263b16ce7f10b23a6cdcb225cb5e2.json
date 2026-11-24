@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "eb4d66fc493697bda8ec74d69153e2cba60d490e",
+  "document": "docs/planning/reviews/P009-dev-handoff.md",
+  "summary": "P009 READY after P008: independent dev worker, plan-only execution approval, Claude two-terminal adapter and real overlap test",
+  "next_action": "Finish P008 unchanged; adopt exact P009 at safe boundary; implement 0.2.4 and prepare isolated two-terminal fixture packet for plan before human live validation",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-24T08:16:08.846925+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
