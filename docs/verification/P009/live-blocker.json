@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-11-24T08:26:03.464462+00:00",
+  "phase": "official claude --bg start in fixture dev",
+  "exit_code": 1,
+  "result": "Workspace not trusted; interactive human trust acceptance required",
+  "worker_started": false,
+  "native_send_attempted": false,
+  "existing_plan_preserved": true,
+  "permissions_or_trust_changed": false,
+  "live_M1_M2_M3": "NOT_RUN",
+  "criterion_C3": "INCOMPLETE",
+  "required_action": "In fixture dev directory start interactive claude with the prepared role prompt; human reviews workspace trust. Do not bypass."
+}
