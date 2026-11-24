@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "9af1e5a904e7c22252348aebc5337108d5eaaf82",
+  "document": "docs/feedback/dev/reviews/P008-release-v0.2.3-3ede2e81.md",
+  "summary": "P008 v0.2.3 official release published; common review key P008-release-v0.2.3-3ede2e81",
+  "next_action": "Inspect committed release result and manifest, record one review, update outer main-baseline wording per P008 R4; no duplicate human approval or ACK loop.",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-24T08:15:55.849124+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
