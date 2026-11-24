@@ -63,6 +63,18 @@ non-force plan/dev push authorization to the existing configured remote.
 
 Setup/review reference: `docs/planning/reviews/local-harness-setup.md`.
 
+### Explicit v0.2.3 release exception — P008
+
+On 2026-11-24 the human explicitly requested main promotion and the official 0.2.3
+release. After exact P008 adoption, dev may promote the verified release candidate
+to main by fast-forward, normally push origin/main and annotated v0.2.3, and publish
+the non-draft, non-prerelease GitHub Release. The detailed gates and installation
+guide contract are in `docs/planning/P008-release-0.2.3.md`. After promotion main
+contains runtime; set its hooksPath worktree-locally as reviewed there. Preserve
+plan/dev hook settings and never run the shared-hook installer. The v0.1.0/no-runtime
+description above is the historical setup baseline, not a prohibition on this
+explicitly authorized P008 release. It grants no future releases or force updates.
+
 ## Project-specific plan to dev delivery delegation
 
 On 2026-10-29 the human requested: "plan이 자동으로 dev 로 계획 넘겨서 시작하게 해줘."
