@@ -1,5 +1,24 @@
 # Shared workflow for Codex and Claude Code
 
+## Independent plan and dev execution (P009 local policy)
+
+Plan execution approval and dev exact-commit application are separate concepts.
+Record the actual human approval/delegated scope in the plan card and review, mark
+it READY, commit and deliver to the verified independent dev worker. Dev performs
+internal integration/adoption itself without a duplicate human adoption prompt.
+Plan remains the decision/review channel and finishes after real delivery recording;
+it does not implement in either worktree or wait for the worker to finish.
+
+Use distinct verified sessions and a single writer for each worktree. With missing
+transport, ambiguous/identical recipients, held messages or missing authority, keep
+honest pending/uncertain evidence and return to planning. Never silently fall back
+to sequential implementation in the plan session. Sequential dual-role mode is
+only available if the human explicitly chooses that mode and writer ownership is
+clear; a general end-to-end change request is insufficient. This narrows any older
+sequential fallback below. Existing bootstrap-only waits, pauses, OPEN decisions,
+exact adoption and host permission boundaries remain. P008 finishes before P009
+is adopted; the source/installable adapter is delivered under P009 separately.
+
 Read AGENTS.md, current branch/status, `.harness/policy.json`, adopted plan, relevant
 P cards and feedback. The tool does not determine role. A user-assigned role persists.
 Use one writing session per worktree. Preserve changes and failed evidence.

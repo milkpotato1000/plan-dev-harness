@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P008-dev-handoff.md",
   "summary": "P008 READY: human-authorized main promotion, official v0.2.3 release and company Claude Code install guide",
   "next_action": "Adopt exact reviewed P008, validate isolated install and release candidate, fast-forward and push main, publish v0.2.3, verify public install, return committed results to plan",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-24T08:06:12.235107+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-24T08:07:14.802048+00:00",
+      "evidence": "2026-11-24 actual send_message_to_thread success to verified existing same-project dev; exact 65a12e3af61dd5b82b52994d185032f9aeb61a57 delivered with explicit human main/tag/release authority and internal adoption without duplicate human input. ACK/adoption/publication not yet observed."
     }
   ]
 }

@@ -1,5 +1,18 @@
 # plan-dev-harness distribution development
 
+## Independent worker default — P009
+
+The human requested independent plan and dev execution on 2026-11-24. Plan records
+execution approval, prepares and sends the exact reviewed commit, then returns to
+planning. Dev internally receives/integrates/adopts that commit and executes the
+eligible queue without asking the human to type another adoption request. Plan
+must not implement products, write in the dev worktree or wait for dev completion.
+Use the existing independent dev session; do not spawn a competing writer. Missing
+transport/worker means pending delivery, never plan doing dev work. Sequential
+dual-role operation requires an explicit human choice of that mode, not a general
+request to finish a feature. Preserve pauses, OPEN decisions and current work.
+See `docs/planning/P009-independent-dev-worker.md`; finish P008 before adopting P009.
+
 This is the reusable distribution, not a target product installation. Edit the
 installer under scripts/ and generated project machinery under assets/. Keep private
 project requirements, data, paths and credentials out of this repository. Preserve
