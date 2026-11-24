@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P009-dev-handoff.md",
   "summary": "P009 READY after P008: independent dev worker, plan-only execution approval, Claude two-terminal adapter and real overlap test",
   "next_action": "Finish P008 unchanged; adopt exact P009 at safe boundary; implement 0.2.4 and prepare isolated two-terminal fixture packet for plan before human live validation",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-24T08:16:08.846925+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-24T08:18:59.157427+00:00",
+      "evidence": "2026-11-24 actual send_message_to_thread success to verified existing same-project dev. Delivered exact dede131be57a3cf07a7ced368f05cb74e2447020 containing reviewed P009 and later actual human harness-test setup/test authorization. Finish P008 first; no ACK/adoption/install/live-test completion inferred."
     }
   ]
 }
