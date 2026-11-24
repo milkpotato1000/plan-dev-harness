@@ -1,0 +1,73 @@
+{
+  "observed_at": "2026-11-24T08:14:47.382961+00:00",
+  "candidate": "3ede2e81f53be8252b585a57064f225fb711ccea",
+  "remote_refs": "332e8930f7a837144edbf56d8683c588354ceb06\trefs/heads/dev\n3ede2e81f53be8252b585a57064f225fb711ccea\trefs/heads/main\n8a603187330c2a7c61636badf8401be68881a206\trefs/tags/v0.2.3\n3ede2e81f53be8252b585a57064f225fb711ccea\trefs/tags/v0.2.3^{}",
+  "remote_files": {
+    "main": {
+      "VERSION": {
+        "sha256": "3ab94c04d24986f3af288ba1cda2c0bbddbc5a89dff097182805f54578e1ea75",
+        "url": "https://github.com/milkpotato1000/plan-dev-harness/blob/main/VERSION",
+        "matches_candidate": true
+      },
+      "README.md": {
+        "sha256": "12c3797c6c77dd5bf3c4798995821960dab6e45b15b843e5738e4b35dcb32a36",
+        "url": "https://github.com/milkpotato1000/plan-dev-harness/blob/main/README.md",
+        "matches_candidate": true
+      },
+      "docs/claude-code-install.md": {
+        "sha256": "e164d71229c1a59107f46e12e9048e662879f8e2bd06b8c2a74cd9aed30a7c68",
+        "url": "https://github.com/milkpotato1000/plan-dev-harness/blob/main/docs/claude-code-install.md",
+        "matches_candidate": true
+      },
+      "docs/releases/v0.2.3.md": {
+        "sha256": "f97d8161ac445728ba51e25d257dd044727cc54892afe5186f06800ee5514012",
+        "url": "https://github.com/milkpotato1000/plan-dev-harness/blob/main/docs/releases/v0.2.3.md",
+        "matches_candidate": true
+      }
+    },
+    "v0.2.3": {
+      "VERSION": {
+        "sha256": "3ab94c04d24986f3af288ba1cda2c0bbddbc5a89dff097182805f54578e1ea75",
+        "url": "https://github.com/milkpotato1000/plan-dev-harness/blob/v0.2.3/VERSION",
+        "matches_candidate": true
+      },
+      "README.md": {
+        "sha256": "12c3797c6c77dd5bf3c4798995821960dab6e45b15b843e5738e4b35dcb32a36",
+        "url": "https://github.com/milkpotato1000/plan-dev-harness/blob/v0.2.3/README.md",
+        "matches_candidate": true
+      },
+      "docs/claude-code-install.md": {
+        "sha256": "e164d71229c1a59107f46e12e9048e662879f8e2bd06b8c2a74cd9aed30a7c68",
+        "url": "https://github.com/milkpotato1000/plan-dev-harness/blob/v0.2.3/docs/claude-code-install.md",
+        "matches_candidate": true
+      },
+      "docs/releases/v0.2.3.md": {
+        "sha256": "f97d8161ac445728ba51e25d257dd044727cc54892afe5186f06800ee5514012",
+        "url": "https://github.com/milkpotato1000/plan-dev-harness/blob/v0.2.3/docs/releases/v0.2.3.md",
+        "matches_candidate": true
+      }
+    }
+  },
+  "release": {
+    "html_url": "https://github.com/milkpotato1000/plan-dev-harness/releases/tag/v0.2.3",
+    "tag_name": "v0.2.3",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-11-24T08:14:13Z"
+  },
+  "pr": {
+    "number": 1,
+    "html_url": "https://github.com/milkpotato1000/plan-dev-harness/pull/1",
+    "state": "closed",
+    "merged": true,
+    "merge_commit_sha": "fb9a2360ca1a5234cde9f66fabd4d0d35fcf4d64"
+  },
+  "pr_head": "332e8930f7a837144edbf56d8683c588354ceb06",
+  "pr_head_is_candidate_ancestor": true,
+  "pr_explicitly_modified": false,
+  "hooks": {
+    "plan": ".githooks",
+    "dev": ".githooks",
+    "main": ".githooks"
+  }
+}

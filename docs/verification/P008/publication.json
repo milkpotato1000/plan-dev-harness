@@ -1,0 +1,49 @@
+{
+  "candidate": "3ede2e81f53be8252b585a57064f225fb711ccea",
+  "before_remote": "332e8930f7a837144edbf56d8683c588354ceb06\trefs/heads/dev\n803d658a8c61dc6aa007645a98d4160b16746faa\trefs/heads/main",
+  "gate": "PASS: contracts match adopted plan 65a12e3af61d\n",
+  "steps": [
+    {
+      "step": "main fast-forward",
+      "observed_at": "2026-11-24T08:14:07.700244+00:00",
+      "output": "Fast-forward from 803d658a8c61dc6aa007645a98d4160b16746faa to 3ede2e81f53be8252b585a57064f225fb711ccea; full command output retained privately."
+    },
+    {
+      "step": "main worktree hook",
+      "observed_at": "2026-11-24T08:14:07.712953+00:00",
+      "output": ""
+    },
+    {
+      "step": "push origin main",
+      "observed_at": "2026-11-24T08:14:10.139670+00:00",
+      "output": "To https://github.com/milkpotato1000/plan-dev-harness.git\n   803d658..3ede2e8  main -> main\n"
+    },
+    {
+      "step": "annotated tag",
+      "observed_at": "2026-11-24T08:14:10.655849+00:00",
+      "output": ""
+    },
+    {
+      "step": "push origin tag",
+      "observed_at": "2026-11-24T08:14:12.649941+00:00",
+      "output": "To https://github.com/milkpotato1000/plan-dev-harness.git\n * [new tag]         v0.2.3 -> v0.2.3\n"
+    },
+    {
+      "step": "publish GitHub Release",
+      "observed_at": "2026-11-24T08:14:14.356700+00:00",
+      "output": "https://github.com/milkpotato1000/plan-dev-harness/releases/tag/v0.2.3\n"
+    }
+  ],
+  "release": {
+    "id": 456467775,
+    "html_url": "https://github.com/milkpotato1000/plan-dev-harness/releases/tag/v0.2.3",
+    "tag_name": "v0.2.3",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-11-24T08:14:13Z",
+    "target_commitish": "main"
+  },
+  "remote_refs": "332e8930f7a837144edbf56d8683c588354ceb06\trefs/heads/dev\n3ede2e81f53be8252b585a57064f225fb711ccea\trefs/heads/main\n8a603187330c2a7c61636badf8401be68881a206\trefs/tags/v0.2.3\n3ede2e81f53be8252b585a57064f225fb711ccea\trefs/tags/v0.2.3^{}",
+  "tag_object": "8a603187330c2a7c61636badf8401be68881a206",
+  "tag_type": "tag"
+}

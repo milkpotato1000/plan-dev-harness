@@ -1,0 +1,51 @@
+{
+  "observed_at": "2026-11-24T08:15:39.568698+00:00",
+  "historical": {
+    "P002": {
+      "file_count": 178,
+      "all_bytes_unchanged": true
+    },
+    "P005": {
+      "file_count": 7,
+      "all_bytes_unchanged": true
+    },
+    "P006": {
+      "file_count": 10,
+      "all_bytes_unchanged": true
+    },
+    "P007": {
+      "file_count": 11,
+      "all_bytes_unchanged": true
+    }
+  },
+  "personal_skills": {
+    "codex_skill": {
+      "unchanged": true,
+      "existed_before": true
+    },
+    "claude_skill": {
+      "unchanged": true,
+      "existed_before": false
+    }
+  },
+  "distribution_runtime_assets_tests_version_unchanged_from": "332e8930f7a837144edbf56d8683c588354ceb06",
+  "hooks_before": {
+    "main": {
+      "exit_code": 1,
+      "value": ""
+    },
+    "plan": {
+      "exit_code": 0,
+      "value": ".githooks"
+    },
+    "dev": {
+      "exit_code": 0,
+      "value": ".githooks"
+    }
+  },
+  "hooks_after": {
+    "plan": ".githooks",
+    "dev": ".githooks",
+    "main": ".githooks"
+  }
+}

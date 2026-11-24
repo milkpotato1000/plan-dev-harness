@@ -1,0 +1,17 @@
+{
+  "candidate": "3ede2e81f53be8252b585a57064f225fb711ccea",
+  "review_key": "P008-release-v0.2.3-3ede2e81",
+  "files": {
+    "README.md": "466edb5b5b6e3ccd13a1d1b6a46807e6fc4da34a94afb304e4ca99c8479c4281",
+    "full-suite.log": "f1b17b64229492736428451aace12b8a93c0e0945730362cdcf8650af29a4928",
+    "guards.json": "003c71500963efc327d1b1702f0a6fdb5111f2b35e4481cdb2ec5638d242a392",
+    "install-smoke.json": "d4b7d9327d0c63b23623516e7de38c73feacb0e024f5b04ad4b9070201d0d7d5",
+    "preservation.json": "01742242d6b1a05ba7da7e0b7370d12c16c91a4ca2d350045c6635edde86bce0",
+    "public-tag-install.json": "99e7108f35cf5b68a85af2e1da292e762f7942e9b25e4b6a31d8fcfa7d8d4e4b",
+    "publication.json": "ae352fb0e6d4764d12a30eda3cae4404775e43065681762bfffa312905991556",
+    "remote-preflight.json": "4cc6c8effc5649cfbdd46e551d19ed51ddc7907eb3d6cf971d20844436ca48c7",
+    "remote-verification.json": "537227acf1d9657a1d0d0809d06e692864a47d1c4c99fa4292f06103e56013ac",
+    "report.md": "f525547fd6af706be2367185967abecd0cf46bbebdfbc9daff66d2338f30b667",
+    "suite-result.json": "c085771506deb37a7b866c4f4a32e89fc2b62c526ce2e3642832fead78f379f8"
+  }
+}

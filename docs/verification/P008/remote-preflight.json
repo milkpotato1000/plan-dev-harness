@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-11-24T08:13:37.647847+00:00",
+  "account": "milkpotato1000",
+  "remote_refs": "332e8930f7a837144edbf56d8683c588354ceb06\trefs/heads/dev\n803d658a8c61dc6aa007645a98d4160b16746faa\trefs/heads/main",
+  "release": null,
+  "default_branch": "main",
+  "private": false,
+  "pr": {
+    "number": 1,
+    "html_url": "https://github.com/milkpotato1000/plan-dev-harness/pull/1",
+    "state": "open",
+    "merged": false,
+    "merge_commit_sha": "33b74f2df072dc2b04469a9c39e7a6802f0034a5"
+  },
+  "pr_head": "332e8930f7a837144edbf56d8683c588354ceb06",
+  "worktrees": {
+    "plan": {
+      "head": "d8f10dd472fed1c0e9800eca1b3189d50d4a3c53",
+      "status": ""
+    },
+    "dev": {
+      "head": "3ede2e81f53be8252b585a57064f225fb711ccea",
+      "status": ""
+    },
+    "main": {
+      "head": "803d658a8c61dc6aa007645a98d4160b16746faa",
+      "status": ""
+    }
+  }
+}
