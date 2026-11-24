@@ -1,0 +1,136 @@
+{
+  "observed_at": "2026-11-24T23:45:59.621373+00:00",
+  "redactions": "Fixture root, local peer names/addresses and UUID identities; originals retained privately. No semantic edits.",
+  "roles": {
+    "plan": {
+      "commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e",
+      "clean": true
+    },
+    "dev": {
+      "commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152",
+      "clean": true
+    }
+  },
+  "files": {
+    "exports/plan/docs/planning/plans/P901.md": {
+      "source_sha256": "4b3f2b713eda36de0b5bed10b2beaaab4babda0ed3cd6b524376ca1611831c9f",
+      "export_sha256": "4b3f2b713eda36de0b5bed10b2beaaab4babda0ed3cd6b524376ca1611831c9f",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/planning/plans/P902.md": {
+      "source_sha256": "42f8433cd0e110f8a8d3048fbad4b7bbb3ae5b67ea8164112fba361d218f657a",
+      "export_sha256": "42f8433cd0e110f8a8d3048fbad4b7bbb3ae5b67ea8164112fba361d218f657a",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/planning/reviews/P901-handoff.md": {
+      "source_sha256": "6dc0b7e9142ddffb0265963f837a65fc6385330c7f1ffce4c551b022c708cf07",
+      "export_sha256": "6dc0b7e9142ddffb0265963f837a65fc6385330c7f1ffce4c551b022c708cf07",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/planning/reviews/P901-review.md": {
+      "source_sha256": "46d0f0678c525ca29d04679df8848d7b052353edd6a6ea572e25ebcac0084646",
+      "export_sha256": "46d0f0678c525ca29d04679df8848d7b052353edd6a6ea572e25ebcac0084646",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/planning/reviews/P902-handoff.md": {
+      "source_sha256": "c91a0f0b5a340ad4ce845bbf91d25623259cf94bda7b5c42397ab56d1d800227",
+      "export_sha256": "c91a0f0b5a340ad4ce845bbf91d25623259cf94bda7b5c42397ab56d1d800227",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/planning/reviews/P902-review.md": {
+      "source_sha256": "fff41a29c0c7646a44068598237c7180cfbff8037b93c974854491ee1b184cab",
+      "export_sha256": "fff41a29c0c7646a44068598237c7180cfbff8037b93c974854491ee1b184cab",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/progress/handoffs/plan/2a06b0e81b0662dff884e445da70ecec92b255e5ada0f69a1eb0ff3ad1b8b3a0.json": {
+      "source_sha256": "23fbcc553e73b44ed641526ae2a9f799b9de67870baea330d6105cde588280b0",
+      "export_sha256": "23fbcc553e73b44ed641526ae2a9f799b9de67870baea330d6105cde588280b0",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/progress/handoffs/plan/80ee52cd8e46db17a41f4312d0c7a1e1e630a1d25573f2bd2d27abd1ff25fd63.json": {
+      "source_sha256": "ddea6f0b4c378bce916033bc095f79050f6cec038a381447a420f3c52e207b99",
+      "export_sha256": "ddea6f0b4c378bce916033bc095f79050f6cec038a381447a420f3c52e207b99",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/verification/P009-live/P009-live-results-review.md": {
+      "source_sha256": "4d6c5357a54574f3fcc908bd6374cd7d6c6309d45a16d1f7e9993b8a97709586",
+      "export_sha256": "4d6c5357a54574f3fcc908bd6374cd7d6c6309d45a16d1f7e9993b8a97709586",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/plan/docs/verification/P009-live/plan-timeline.md": {
+      "source_sha256": "329a13d84c6ffa21bf6c2799c5e249a21d97d05f6dd7c6a23366edd77f9c070d",
+      "export_sha256": "a462973a8d3f315f3f33aa249e9dd09903cf515a311e2bf7113e80f98cbdbb98",
+      "source_commit": "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e"
+    },
+    "exports/dev/.harness/adopted-plan.json": {
+      "source_sha256": "1daad22c29574cad18f39f1b5ec15db8e2e9541e5e55455f4c0171db44a7ae0b",
+      "export_sha256": "1daad22c29574cad18f39f1b5ec15db8e2e9541e5e55455f4c0171db44a7ae0b",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/planning/plans/P901.md": {
+      "source_sha256": "33caf967bd850ef21714b561d3d8526290dce2bb251c9e874b7d8a6b2a91d4b7",
+      "export_sha256": "33caf967bd850ef21714b561d3d8526290dce2bb251c9e874b7d8a6b2a91d4b7",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/planning/plans/P902.md": {
+      "source_sha256": "bc773da439950df402ccf8a700751e575871a7ac977068915151f4bcdcb02912",
+      "export_sha256": "bc773da439950df402ccf8a700751e575871a7ac977068915151f4bcdcb02912",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/planning/reviews/P901-handoff.md": {
+      "source_sha256": "6dc0b7e9142ddffb0265963f837a65fc6385330c7f1ffce4c551b022c708cf07",
+      "export_sha256": "6dc0b7e9142ddffb0265963f837a65fc6385330c7f1ffce4c551b022c708cf07",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/planning/reviews/P901-review.md": {
+      "source_sha256": "46d0f0678c525ca29d04679df8848d7b052353edd6a6ea572e25ebcac0084646",
+      "export_sha256": "46d0f0678c525ca29d04679df8848d7b052353edd6a6ea572e25ebcac0084646",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/planning/reviews/P902-handoff.md": {
+      "source_sha256": "c91a0f0b5a340ad4ce845bbf91d25623259cf94bda7b5c42397ab56d1d800227",
+      "export_sha256": "c91a0f0b5a340ad4ce845bbf91d25623259cf94bda7b5c42397ab56d1d800227",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/planning/reviews/P902-review.md": {
+      "source_sha256": "fff41a29c0c7646a44068598237c7180cfbff8037b93c974854491ee1b184cab",
+      "export_sha256": "fff41a29c0c7646a44068598237c7180cfbff8037b93c974854491ee1b184cab",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/progress/handoffs/plan/80ee52cd8e46db17a41f4312d0c7a1e1e630a1d25573f2bd2d27abd1ff25fd63.json": {
+      "source_sha256": "ddea6f0b4c378bce916033bc095f79050f6cec038a381447a420f3c52e207b99",
+      "export_sha256": "ddea6f0b4c378bce916033bc095f79050f6cec038a381447a420f3c52e207b99",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/verification/P009-live/P901-tests.md": {
+      "source_sha256": "9d3c7e8ef140b3334159a9ef63e35bdcce2dbad57a4ff00fad83d743bcb2b1bf",
+      "export_sha256": "9d3c7e8ef140b3334159a9ef63e35bdcce2dbad57a4ff00fad83d743bcb2b1bf",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/verification/P009-live/P902-tests.md": {
+      "source_sha256": "88a9eda3947ad2ae9de91f057cc93f787abec7097331690725c642eec4decdb0",
+      "export_sha256": "88a9eda3947ad2ae9de91f057cc93f787abec7097331690725c642eec4decdb0",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/verification/P009-live/dev-timeline.md": {
+      "source_sha256": "038de78c96c9b4f608c4b95fb6b3bcf66419b7ed13bd39ea4adbf6e750e1e802",
+      "export_sha256": "6121cd5a71e69680a51fb871659c3be9cb2fe3181c0abeaa67155c660bb9e173",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/docs/verification/P009-live/plan-timeline.md": {
+      "source_sha256": "46ecc79f3768e1017cc9ad2a46eb924e5075ef7356827ec58fda7181ac4f6bae",
+      "export_sha256": "e54a3b6c48de458dbb5df29e32cd60cad5a23e57ba513165acd3f23cc17bd64b",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/fixture_format.py": {
+      "source_sha256": "2cc29c209d3a5c8d468c4f7b054dfec610ff7c3fcbc7ba2b2ee73a39f835ff25",
+      "export_sha256": "2cc29c209d3a5c8d468c4f7b054dfec610ff7c3fcbc7ba2b2ee73a39f835ff25",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    },
+    "exports/dev/test_fixture_format.py": {
+      "source_sha256": "010c3f7ef8da8bcd9257a99d04e72778ea5669af563095e4dfd7d057a901229c",
+      "export_sha256": "010c3f7ef8da8bcd9257a99d04e72778ea5669af563095e4dfd7d057a901229c",
+      "source_commit": "c387f9d536d7d500b4c18a99ca9422d12f90d152"
+    }
+  }
+}

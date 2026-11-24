@@ -1,0 +1,127 @@
+{
+  "client_date": "2026-11-25",
+  "timezone": "Asia/Seoul",
+  "timestamp_basis": "UTC raw native metadata and Git commit times; UTC+09 for user-facing time",
+  "host_version": "2.1.331 (Claude Code)",
+  "identity": {
+    "distinct_sessions": true,
+    "distinct_processes": true,
+    "same_fixture_container_and_git_common_dir": true,
+    "roles_explicit": true,
+    "final_status": [
+      "plan idle",
+      "dev idle"
+    ],
+    "local_ids_omitted": true
+  },
+  "events": [
+    {
+      "at": "2026-11-24T23:43:06.334Z",
+      "role": "plan",
+      "observation": "P901 native SendMessage exact63da7b6b8a569623b0d410e1f1f8e79b6abdb358"
+    },
+    {
+      "at": "2026-11-24T23:43:06.628Z",
+      "role": "plan",
+      "observation": "Native send result success, inbox delivery distinct from read"
+    },
+    {
+      "at": "2026-11-24T23:43:18Z",
+      "role": "dev",
+      "observation": "Exact P901 adoption commit58bad43f1ea5cdf5625464876520b9e08d364527"
+    },
+    {
+      "at": "2026-11-24T23:43:23.254Z",
+      "role": "dev",
+      "observation": "One bounded STARTED native message"
+    },
+    {
+      "at": "2026-11-24T23:43:23.910Z",
+      "role": "plan",
+      "observation": "P901 sender turn final response; no wait for completion"
+    },
+    {
+      "at": "2026-11-24T23:43:23.951Z",
+      "role": "plan",
+      "observation": "Peer STARTED arrived as meta cross-session input, not human input"
+    },
+    {
+      "at": "2026-11-24T23:43:38.266Z",
+      "role": "dev",
+      "observation": "Write fixture_format.py for P901"
+    },
+    {
+      "at": "2026-11-24T23:43:43.502Z",
+      "role": "dev",
+      "observation": "Write P901 test file"
+    },
+    {
+      "at": "2026-11-24T23:43:47.211Z",
+      "role": "plan",
+      "observation": "Bash writes P902 card and review in plan; observed action plus returned queue (P901 in progress/P902 waiting)"
+    },
+    {
+      "at": "2026-11-24T23:43:49Z",
+      "role": "dev",
+      "observation": "P901 implementation commit126016f6d6be2a56f2dc7fc20e60e6c1da93ca9a"
+    },
+    {
+      "at": "2026-11-24T23:44:00Z",
+      "role": "dev",
+      "observation": "P901 completion commitd6b7363128f4b686368f196b1b5e5b82f8a25dda"
+    },
+    {
+      "at": "2026-11-24T23:44:02Z",
+      "role": "plan",
+      "observation": "P902 reviewed card and delivery commitsaf961b0/f69f30a"
+    },
+    {
+      "at": "2026-11-24T23:44:09.438Z",
+      "role": "dev",
+      "observation": "P901 done final response; P902 not yet arrived, worker returns"
+    },
+    {
+      "at": "2026-11-24T23:44:11.562Z",
+      "role": "plan",
+      "observation": "Native P902 send: after P901 done"
+    },
+    {
+      "at": "2026-11-24T23:44:11.766Z",
+      "role": "dev",
+      "observation": "Native P902 peer input: after P901 done, not busy reception"
+    },
+    {
+      "at": "2026-11-24T23:44:20Z",
+      "role": "dev",
+      "observation": "Exact P902 adoption bffaad7522e7e68ef439e109b28bc25b0dea1664"
+    },
+    {
+      "at": "2026-11-24T23:44:28Z",
+      "role": "dev",
+      "observation": "P902 implementation start; P901 preserved"
+    },
+    {
+      "at": "2026-11-24T23:44:51Z",
+      "role": "dev",
+      "observation": "P902 implementation5810133 and completion29872f3,16tests PASS"
+    },
+    {
+      "at": "2026-11-24T23:45:02.585Z",
+      "role": "dev",
+      "observation": "One results native message to fixture plan, common fixture result key"
+    },
+    {
+      "at": "2026-11-24T23:45:34Z",
+      "role": "plan",
+      "observation": "Committed read-only result review acknowledges missing busy delivery criterion"
+    }
+  ],
+  "verdict": {
+    "M1": "PASS: native delivery, exact internal application, no human adoption input",
+    "M2": "PARTIAL: separate planning write overlaps P901; no new human planning conversation and reviewed commit/send happened later",
+    "M3": "NOT_EXERCISED: P902 arrived after P901 completion; safe sequential application observed",
+    "C3": "INCOMPLETE"
+  },
+  "source_limit": "Bounded native-call/work-action metadata inspected only for these two fixture sessions; no full transcript published or credential collection.",
+  "private_bounded_native_selection_sha256": "42ff8dc68002f49501156cba56c8b888026c103ac3391fd376c987e3bdcda423"
+}

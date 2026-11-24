@@ -1,0 +1,56 @@
+[
+  {
+    "role": "plan",
+    "command": [
+      "python3",
+      "-B",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--brief"
+    ],
+    "exit_code": 0,
+    "stdout": "plan\uc740 \uc791\uc5c5 \ud2b8\ub9ac\uc758 \uae30\ud68d + dev \ucee4\ubc0b\uc758 \uc9c4\ucc99\uc744 \ud45c\uc2dc. dev \ubbf8\ucee4\ubc0b \uae30\ub85d\uc740 \ud45c\uc2dc\ud558\uc9c0 \uc54a\uc74c.\nplan \ub2e4\uc74c \uc791\uc5c5: \uc2e4\ud589 \uac00\ub2a5\ud55c \uc2b9\uc778 \uc791\uc5c5 \uc5c6\uc74c\ndev \ub2e4\uc74c \uc791\uc5c5: \uc2e4\ud589 \uac00\ub2a5\ud55c \uc2b9\uc778 \uc791\uc5c5 \uc5c6\uc74c\nplan \uc0c8 \uc694\uad6c \uac80\ud1a0 \ub300\uae30: 0\uac74 (\uad6c\ud604 \uc2b9\uc778\uacfc \ubcc4\uac1c)\n\uc870\ud68c \uc804\uc6a9 \u00b7 \uc790\ub3d9 \uc2e4\ud589/\uc2b9\uc778/\ubcd1\ud569/\ub124\ud2b8\uc6cc\ud06c \uc811\uadfc \uc5c6\uc74c\n",
+    "stderr": ""
+  },
+  {
+    "role": "dev",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_fixture_format"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_empty_input_returns_empty_string (test_fixture_format.FormatLinesTest) ... ok\ntest_existing_trailing_newline_not_doubled (test_fixture_format.FormatLinesTest) ... ok\ntest_generator_and_tuple_input (test_fixture_format.FormatLinesTest) ... ok\ntest_inner_whitespace_preserved (test_fixture_format.FormatLinesTest) ... ok\ntest_input_not_mutated (test_fixture_format.FormatLinesTest) ... ok\ntest_only_blank_values_returns_empty_string (test_fixture_format.FormatLinesTest) ... ok\ntest_order_preserved (test_fixture_format.FormatLinesTest) ... ok\ntest_single_value_gets_one_trailing_newline (test_fixture_format.FormatLinesTest) ... ok\ntest_strips_and_drops_blank_lines (test_fixture_format.FormatLinesTest) ... ok\ntest_tabs_and_crlf_stripped_at_edges (test_fixture_format.FormatLinesTest) ... ok\ntest_consistent_with_format_lines (test_fixture_format.SummarizeLinesTest) ... ok\ntest_empty_and_blank_input (test_fixture_format.SummarizeLinesTest) ... ok\ntest_generator_input_and_no_mutation (test_fixture_format.SummarizeLinesTest) ... ok\ntest_inner_whitespace_counts (test_fixture_format.SummarizeLinesTest) ... ok\ntest_strips_and_drops_blank (test_fixture_format.SummarizeLinesTest) ... ok\ntest_unicode_characters_and_crlf (test_fixture_format.SummarizeLinesTest) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "role": "dev",
+    "command": [
+      "python3",
+      "-B",
+      "scripts/contract_guard.py",
+      "check"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan f69f30ae9763\n",
+    "stderr": ""
+  },
+  {
+    "role": "dev",
+    "command": [
+      "python3",
+      "-B",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--brief"
+    ],
+    "exit_code": 0,
+    "stdout": "dev\ub294 \ucc44\ud0dd\ud55c plan f69f30ae9763 \uae30\uc900. \uc774\ud6c4 plan \ucd08\uc548\uc740 \uc790\ub3d9 \ucc44\ud0dd\ud558\uc9c0 \uc54a\uc74c.\nplan \ub2e4\uc74c \uc791\uc5c5: \uc2e4\ud589 \uac00\ub2a5\ud55c \uc2b9\uc778 \uc791\uc5c5 \uc5c6\uc74c\ndev \ub2e4\uc74c \uc791\uc5c5: \uc2e4\ud589 \uac00\ub2a5\ud55c \uc2b9\uc778 \uc791\uc5c5 \uc5c6\uc74c\nplan \uc0c8 \uc694\uad6c \uac80\ud1a0 \ub300\uae30: 0\uac74 (\uad6c\ud604 \uc2b9\uc778\uacfc \ubcc4\uac1c)\n\uc870\ud68c \uc804\uc6a9 \u00b7 \uc790\ub3d9 \uc2e4\ud589/\uc2b9\uc778/\ubcd1\ud569/\ub124\ud2b8\uc6cc\ud06c \uc811\uadfc \uc5c6\uc74c\n",
+    "stderr": ""
+  }
+]

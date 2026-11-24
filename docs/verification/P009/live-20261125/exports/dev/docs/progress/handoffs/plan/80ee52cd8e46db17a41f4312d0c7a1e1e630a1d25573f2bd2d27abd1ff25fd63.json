@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "63da7b6b8a569623b0d410e1f1f8e79b6abdb358",
+  "document": "docs/planning/reviews/P901-handoff.md",
+  "summary": "P901 format_lines 준비 완료 검토 커밋(d553cfe + 인계 문서)",
+  "next_action": "정확 SHA 채택 후 STARTED 1회 발송, P901 구현·테스트",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-24T23:42:48.546574+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-24T23:43:12.198987+00:00",
+      "evidence": "native SendMessage success 2026-11-25 08:43 +0900 to verified fixture-dev; delivered to inbox, not yet read; msg ref in local evidence"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-24T23:43:47.521921+00:00",
+      "evidence": "fixture-dev STARTED packet received 2026-11-25 08:43 +0900 citing exact SHA 63da7b6b8a56...; dev adoption commit 58bad43 observed read-only (.harness/adopted-plan.json commit=63da7b6...)"
+    }
+  ]
+}
