@@ -28,3 +28,19 @@ Fixture 규칙은 실제 사용자 지정 시험 범위와 역할을 명시하�
 기존 승인 범위에서 독립 fixture dev를 구성/재사용하고 실제 전달·병렬 검증을 계속할 수 있다.
 실제 UI/login/필수 human action이 생길 때만 구체적 단일 질문을 parent plan으로 전달한다.
 현재 사용자에게 터미널 재개설이나 ID 복사를 요구할 필요는 없다. 단순 ACK 전송 없음.
+
+## 후속 실제 플랫폼 전제 조건 — fixture dev workspace trust
+
+위 준비 시점 이후 공식 Claude --bg가 exit 1 / Workspace not trusted로 거절됐다.
+새 worker 미시작, native send 미시도, 기존 plan/권한 변경 없음. 실제 artifact commit
+d6ff8bef29570a9849bafc7805bce81348b72d60의 live-blocker.json 및 검토 packet을 읽고
+SHA256 a49faf308c6fc81234876a50ed62c351177bf24c6f1632555cfadf831f00efb6를 재검산했다.
+실제 로컬 P009-DEV-START.md의 bounded 역할·동일 fixture 인계 지시도 확인했다.
+
+동일 preparation key의 질문 범위를 fixture dev 폴더에 대한 Claude 최초 trust 확인으로
+한정한다. 상태: HUMAN_ACTION_PENDING. 이는 P009 실행 승인/채택 재요청이 아니며 새로운
+업무 OPEN 결정을 만들지 않는다. 기존 plan 터미널은 유지하고 사용자에게 별도 dev 터미널에서
+준비된 역할 prompt를 포함한 Claude 명령을 실행해 플랫폼 신뢰 내용을 확인하도록 한 번 안내한다.
+인간의 확인을 에이전트가 대신하거나 권한 설정으로 우회하지 않는다. 별도 worker 추가 생성 금지.
+C3/M1~M3은 여전히 미실행이며 독립적인 회귀·설치 검증은 계속 가능하다. 응답이 오면 이 범위에
+기록하고 같은 질문을 dev에서 반복하지 않는다. 실제 확인 전에 resolved/완료로 기록하지 않는다.
