@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P009-source-v0.2.4-4c4b5a3.md",
   "summary": "P0090.2.4 source verified89tests; liveC3 incomplete trust gate; key P009-source-v0.2.4-4c4b5a3",
   "next_action": "Inspect result and manifest; preserve existing P009-live-setup-v0.2.4 human prerequisite without duplicate question. Continue actual live check after human trust; no completion or0.2.4 release claim.",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-24T08:29:45.887941+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-24T08:30:28.203694+00:00",
+      "evidence": "Actual send_message_to_thread succeeded to verified session-plan; key P009-source-v0.2.4-4c4b5a3, artifact5bfc20a manifest4d56fb2a. LiveC3 incomplete; existing human trust prerequisite reused. No ACK polling."
     }
   ]
 }
