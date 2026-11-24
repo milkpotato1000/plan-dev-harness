@@ -44,3 +44,21 @@ SHA256 a49faf308c6fc81234876a50ed62c351177bf24c6f1632555cfadf831f00efb6를 재�
 인간의 확인을 에이전트가 대신하거나 권한 설정으로 우회하지 않는다. 별도 worker 추가 생성 금지.
 C3/M1~M3은 여전히 미실행이며 독립적인 회귀·설치 검증은 계속 가능하다. 응답이 오면 이 범위에
 기록하고 같은 질문을 dev에서 반복하지 않는다. 실제 확인 전에 resolved/완료로 기록하지 않는다.
+
+## 2026-11-25 실제 사용자 실행 보고 및 세션 확인
+
+실제 사용자가 준비된 dev 실행 안내에 “dev 실행했어”라고 답했다. 공식 host의
+`claude agents --json`을 읽어 기존 fixture root의 interactive/idle plan과 별도 fixture dev
+worktree의 interactive/busy dev가 함께 존재함을 확인했다. 서로 다른 process와 cwd이며
+정확한 private identity는 현재 로컬 인계에만 전달한다. 같은 질문을 다시 요구하지 않는다.
+
+이 기록은 앞선 HUMAN_ACTION_PENDING을 DEV_START_OBSERVED로 갱신한다. 실제 trust dialog의
+클릭을 관찰했다고 주장하지 않으며 모든 권한·native 수신이 허용됐다고 확대하지 않는다.
+확인한 것은 사용자의 실행 보고와 dev 세션의 실제 가동이다. 앞선 start 실패를 역사로 보존한다.
+기존 dev를 재사용하고 현재 작업을 중단하지 않는다. 새 worker 생성/재시작은 불필요하다.
+
+P009의 기존 승인 범위에서 fresh native identity·tool/transport·현재 fixture 상태를 확인하고
+C3 M1~M3 증거 수집을 계속한다. 관찰/검증 담당은 fixture plan/dev의 작업을 대신하지 않는다.
+단순 두 process 존재를 실제 P901/P902 전달·적용·기획 중첩 통과로 처리하지 않는다. 새로운
+구체적 platform 입력이 필요하면 같은 원장의 해당 범위로 한 번 인계한다. 기존 scoped stops/
+OPEN, P009 기준, main/tag 및 개인 설치를 보존하며 이번 보고는 pause resume 지시가 아니다.
