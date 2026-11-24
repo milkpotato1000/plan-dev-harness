@@ -1,20 +1,33 @@
 # Changelog
 
-## 0.2.3 — Unreleased
+## 0.2.3 — 2026-11-24
+
+Cumulative formal release since v0.1.0. The 0.2.0, 0.2.1 and 0.2.2 development
+milestones below were not separate formal GitHub Releases. Date uses Asia/Seoul;
+GitHub records its own actual publication timestamp.
+
+### Result review (0.2.3)
 
 - Route result review and necessary human questions through plan using a shared scoped request key.
 - Preserve pending questions and verifiable human answers across roles, artifact versions and resumed sessions.
 - Add the review packet/ledger template to standalone installs, upgrades and bootstrap output.
-- Keep optional review, required human criteria and critical OPEN decisions distinct; preserve asynchronous delivery.
+- Keep optional review, required human criteria and critical OPEN decisions distinct.
 
-## 0.2.2 — Unreleased
+### Asynchronous handoff (0.2.2)
 
 - Finish plan handoffs after actual SENT is committed/pushed; observe ACK on a later natural request.
 - Preserve busy dev work and adopt reviewed exact handoffs at safe commit boundaries.
-- Carry asynchronous planning rules through both host packages, prompts, bootstrap and upgrade output.
-- Retain existing runtime/schema, pauses, decisions, permissions and single-writer boundaries.
+- Carry asynchronous rules through both host packages, prompts, bootstrap and upgrade output.
+- Retain runtime/schema, pauses, decisions, permissions and single-writer boundaries.
 
-## 0.2.0 — Unreleased
+### Fresh sessions and document delivery (0.2.1)
+
+- Reconstruct assigned roles, adoption, progress and scoped stops from project files.
+- Route material work through prepared P cards and exact dev adoption; keep product documentation on dev.
+- Distinguish plan push, dev adoption/push and visibility on the default branch.
+- Preserve existing project extensions and separate source, installed runtime and personal skill versions.
+
+### Decisions and explicit stops (0.2.0)
 
 - Add plan-owned decision impact classification and dependency-aware queue blocking.
 - Preserve legacy OPEN/RESOLVED and PAUSED/ACTIVE records; unresolved scope fails closed.
@@ -23,7 +36,14 @@
 - Keep generic intake independent of workflow stops; expose additive queue JSON fields.
 - Fix default queue owner selection to retain the actual configured worktree role.
 - Upgrade an unmodified v0.1.0 installation while retaining custom post hooks and records.
-- Document optional adapter boundaries without adding external service side effects.
+- Document optional adapter boundaries without external service side effects.
+
+### Distribution and verification
+
+- Publish a fixed v0.2.3 tag, main payload and formal release with a company Claude Code installation guide.
+- Document personal/project SKILL + CLI installation, preview/apply/KEEP and conflict preservation.
+- Preserve P002 actual two-session evidence and its explicit historical-fixture reconstruction limits.
+- No marketplace plugin, automatic message transport, company account access or existing-install auto-update is added.
 
 ## 0.1.0 — 2026-10-29
 

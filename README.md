@@ -5,7 +5,9 @@ Git worktree로 plan/dev를 분리하고, 준비된 P카드와 정확한 계획 
 새 요구 접수부터 검증 증거·완료 처리까지 파일로 남겨 도구를 바꿔도 같은 작업을 이어갈 수 있습니다.
 
 Python 표준 라이브러리 + Git만 사용합니다. 계정 토큰, API 키, MCP 서버, 유료 모델 호출이 설치에 필요하지 않습니다.
-이 브랜치의 구현 버전: **0.2.3 / MIT**. 릴리스 상태는 GitHub Releases를 확인하세요. Python **3.9 이상**, Git **2.31 이상**, POSIX shell 환경을 대상으로 합니다.
+배포 버전: **0.2.3 / MIT**, 배포일 **2026-11-24 (Asia/Seoul)**.
+[정식 릴리스 v0.2.3](https://github.com/milkpotato1000/plan-dev-harness/releases/tag/v0.2.3)과
+[회사 Claude Code 설치 안내](docs/claude-code-install.md)를 제공합니다. Python **3.9 이상**, Git **2.31 이상**, POSIX shell 환경을 대상으로 합니다.
 macOS에서 실제 검증했습니다. Linux/WSL 사용 절차는 같지만 이 릴리스에서 직접 검증하지 않았고,
 네이티브 Windows 지원은 확인하지 않았습니다. 모델이 모든 규칙을 준수한다고 보장하는 도구는 아닙니다.
 
@@ -68,13 +70,37 @@ dev에 푸시한 상태, GitHub 기본 브랜치에 보이는 상태를 각각 �
 확장 보존, 정확한 채택을 수행하고, Git 밖의 outer AGENTS.md도 검토해 반영하세요.
 개인 스킬은 실제 로드 경로를 확인해 백업 후 검증한 새 사본으로 전환합니다.
 같은 세션이 이미 읽은 지침까지 자동 교체됐다고 가정하지 말고 새 세션에서 재확인하세요.
-이 버전 표시는 dev 소스 기준이며 main·태그·릴리스 발행을 뜻하지 않습니다.
+위 0.2.1·0.2.2 변경은 이번 v0.2.3에 함께 배포됩니다. 중간 버전별 GitHub Release를 발행했다는 뜻은 아닙니다.
+
+## 회사 Claude Code에 v0.2.3 설치
+
+이 배포는 **SKILL.md + Python CLI**입니다. marketplace의 `/plugin install`로 설치하지 않습니다.
+공개 소스를 고정 태그로 내려받아 개인 스킬 위치에 설치합니다. 아래 clone 목적지는 없어야 합니다.
+
+```sh
+mkdir -p "$HOME/tools"
+git clone --branch v0.2.3 --single-branch \
+  https://github.com/milkpotato1000/plan-dev-harness.git \
+  "$HOME/tools/plan-dev-harness-v0.2.3"
+cd "$HOME/tools/plan-dev-harness-v0.2.3"
+python3 scripts/install_skill.py --agent claude
+# 미리보기의 목적지를 확인한 뒤 적용
+python3 scripts/install_skill.py --agent claude --apply
+cat "$HOME/.claude/skills/plan-dev-harness/VERSION"
+```
+
+`0.2.3`을 확인한 뒤 새 Claude Code 세션에서 `/plan-dev-harness`를 사용합니다.
+기존 설치와 같으면 `KEEP`, 다르면 기존 파일을 보존하고 거절합니다. `install_skill.py`에는
+`--upgrade`가 없습니다. [프로젝트 범위 설치·충돌 처리·확인 방법](docs/claude-code-install.md)을 따르세요.
+공개 소스 다운로드와 이 설치에는 별도 GitHub 토큰이나 MCP 연결이 필요하지 않습니다.
+Claude Code 계정·회사 네트워크 및 조직의 스킬 허용 정책은 별개이며 실제 회사 로그인은 검증하지 않았습니다.
 
 ## 빠른 시작: 새 프로젝트
 
 ```sh
-git clone https://github.com/milkpotato1000/plan-dev-harness.git
-cd plan-dev-harness
+git clone --branch v0.2.3 --single-branch https://github.com/milkpotato1000/plan-dev-harness.git plan-dev-harness-v0.2.3
+cd plan-dev-harness-v0.2.3
+mkdir -p "$HOME/projects"
 python3 scripts/bootstrap_workspace.py --parent "$HOME/projects" --name demo
 # 출력 경로를 확인한 뒤 적용 (parent는 먼저 존재해야 합니다)
 python3 scripts/bootstrap_workspace.py --parent "$HOME/projects" --name demo --apply
@@ -112,8 +138,8 @@ python3 scripts/install_skill.py --agent claude
 | Codex | `~/.agents/skills/plan-dev-harness/` | `AGENTS.md` |
 | Claude Code | `~/.claude/skills/plan-dev-harness/` | `CLAUDE.md`에서 `@AGENTS.md` |
 
-프로젝트 한정 설치는 `--skills-dir /absolute/project/.agents/skills` 또는
-`--skills-dir /absolute/project/.claude/skills`로 지정합니다. 스크립트·템플릿까지 독립 복사하므로
+프로젝트 한정 설치는 `--skills-dir "/absolute/project/.agents/skills"` 또는
+`--skills-dir "/absolute/project/.claude/skills"`로 지정합니다. 스크립트·템플릿까지 독립 복사하므로
 원본 배포 저장소를 옮겨도 설치된 스킬은 실행할 수 있습니다. 기존의 다른 버전/수정된 스킬은 보존하고 중단합니다.
 이 릴리스는 **Git에서 설치하는 공통 스킬 + CLI**이며 각 앱의 마켓플레이스 플러그인 등록은 포함하지 않습니다.
 
