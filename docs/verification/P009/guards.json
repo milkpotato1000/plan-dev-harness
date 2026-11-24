@@ -1,0 +1,50 @@
+[
+  {
+    "command": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan dede131be57a\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--target",
+      "index"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan dede131be57a\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/contract_guard.py",
+      "check",
+      "--branch",
+      "dev",
+      "--target",
+      "4c4b5a3f2ef63deeffa425f49c2bc0161cf48d66"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: contracts match adopted plan dede131be57a\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--brief"
+    ],
+    "exit_code": 0,
+    "stdout": "dev\ub294 \ucc44\ud0dd\ud55c plan dede131be57a \uae30\uc900. \uc774\ud6c4 plan \ucd08\uc548\uc740 \uc790\ub3d9 \ucc44\ud0dd\ud558\uc9c0 \uc54a\uc74c.\nplan \ub2e4\uc74c \uc791\uc5c5: \uc2e4\ud589 \uac00\ub2a5\ud55c \uc2b9\uc778 \uc791\uc5c5 \uc5c6\uc74c\ndev \ub2e4\uc74c \uc791\uc5c5: P009\nplan \uc0c8 \uc694\uad6c \uac80\ud1a0 \ub300\uae30: 0\uac74 (\uad6c\ud604 \uc2b9\uc778\uacfc \ubcc4\uac1c)\n\uc870\ud68c \uc804\uc6a9 \u00b7 \uc790\ub3d9 \uc2e4\ud589/\uc2b9\uc778/\ubcd1\ud569/\ub124\ud2b8\uc6cc\ud06c \uc811\uadfc \uc5c6\uc74c\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "source_commit": "4c4b5a3f2ef63deeffa425f49c2bc0161cf48d66",
+  "version": "0.2.4",
+  "result_key": "P009-source-v0.2.4-4c4b5a3",
+  "files": {
+    "fixture-setup.json": "38214b4f1fb1bf0352b5dadb2ed2f88f0c78fb804eb42d154b99fb513f406174",
+    "focused.log": "0fb7639040b1991f2224a7ed107fb4a46bea9ce7357271839aa2745c34c685b4",
+    "full-suite.log": "d07ccb1abd87f64e5825946752cdeacd63c5812a718f6dd32274e486dd11b4ab",
+    "guards.json": "e743e495da7aaddae567292e2e1d4bfeae06bfb20d3ab4a3a775815633539c76",
+    "install-smoke.json": "5a3224a3ebaec848a8ae6c7d279694ba841bb03e6029285a596968524112e08a",
+    "live-blocker.json": "a49faf308c6fc81234876a50ed62c351177bf24c6f1632555cfadf831f00efb6",
+    "preparation.md": "120edabc53cd864a45a73d5d765e0fb64bf034267a679085e122b00d13a3a270",
+    "preservation.json": "432084b3a908b3c90dd58f9d4c3d9333b480649b18447c1d3c7e417967e78296",
+    "report.md": "7171d0c49aeefcdaa2c97a3a4844c9758f4b133f0006046ec8bc55452d1dc6c6",
+    "suite-result.json": "e1a762444ed1efcb9f6745dfe2c4a4aa5c2ab7851a833ee1de5d2fb4446f94e8",
+    "trust-request-delivery.md": "7c4b198e25ed493dc6b3bb30acf48e178421068986d3586296ad61df2575dc27",
+    "upgrade.json": "45e232679c0de88340f7526776b89600ec008613ec16132f69fbb93239300adc"
+  }
+}

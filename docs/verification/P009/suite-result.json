@@ -1,0 +1,10 @@
+{
+  "source_commit": "4c4b5a3f2ef63deeffa425f49c2bc0161cf48d66",
+  "started_at": "2026-11-24T08:25:07.900553+00:00",
+  "finished_at": "2026-11-24T08:27:49.338547+00:00",
+  "seconds": 161.44,
+  "exit_code": 0,
+  "python": "Python 3.9.6",
+  "platform": "macOS",
+  "isolated_clone": true
+}

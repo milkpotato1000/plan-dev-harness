@@ -1,0 +1,177 @@
+{
+  "candidate": "4c4b5a3f2ef63deeffa425f49c2bc0161cf48d66",
+  "client_release_date": "2026-11-24",
+  "observed_at": "2026-11-24T08:27:01.507278+00:00",
+  "preview_no_writes": true,
+  "apply_version": "0.2.4",
+  "identical_KEEP": true,
+  "standalone_cli_and_bootstrap_preview": true,
+  "conflict_preview_and_apply_rejected_without_change": true,
+  "payload_files": 44,
+  "payload_hashes": {
+    "LICENSE": "1d9cf665c1a1c3752587df7f04a6cce84b1ffa3f268ebf6539c7c43ae8a14af3",
+    "VERSION": "1725bfa6524c5265e7c171cf06568417d39b947fff49c242f03859479c82334b",
+    "SKILL.md": "6aa2d71764de42f9210097c90b990b57dec21a58940eed6529dd7578d06987f1",
+    "references/user-review.md": "456bd761b5b00383ee698ab1d66ee5e64c44607a65e51840c139d936db0edf98",
+    "references/usage.md": "ec759b2b6f43ac30bc5bc5d7308e9d7e7ba49b497bcc4a816ec686329b9061cf",
+    "references/role-chats.md": "121795ce3c1a79a790315ff7d9592efc704e170879c053dcae1c5a1be4d5034b",
+    "references/workspace-layout.md": "58a74281da4983b4515d83f8f487aa4c70a0c73998980a25a8195569d9e2178e",
+    "references/project-instructions.md": "009b65d6b562fac4519b2c30485aad2772b363e4e54d098801c5bdcb8d52e06a",
+    "references/direct-handoff.md": "dd68133615cc37029029fbcedb7af2916bf1b63cf9cca5b6d33b1559c6f0a9c3",
+    "references/claude-workers.md": "0702e62a892df3864b3fae37038631534350efdbc23a636f707643353524feef",
+    "agents/openai.yaml": "2d9b89a0bd6dd3f7d5ebad552a38aa86471c95f0c471090579271505dcbdca7c",
+    "scripts/install_skill.py": "c07c6c30a2cd44cf31e35608d0b11bfb7260ee4636360b85b2f80e2050e87933",
+    "scripts/plan_cards.py": "c79afa41e72cc36842d4e59e909af71a1a93edee73061b822586959142913196",
+    "scripts/nest_worktrees.py": "b64e136f0dc4d394ab86e0e1edfbfe2f9b63f347b8d288cb74049550d9788129",
+    "scripts/worker_doctor.py": "fbe34ce071d0227b8ee7778f97419c265b4c7aa3c03b984d484dc95e9641a788",
+    "scripts/plan_intake.py": "c49bbb3d9a58c3a1b7b3967cc302effd40c2b82621ebc6cff15a77509fcdd4f8",
+    "scripts/bootstrap_workspace.py": "826a8ec2c592a2f3a3fe9a52404ae06b01e32c086b8d23e9558e63578ef72b98",
+    "scripts/workflow_control.py": "c7e195a7e295d25f9d014f0370b446bba2369782a87476c3478df927486837c0",
+    "scripts/work_queue.py": "d0329fe031d1611bc857a6afe24ef34fbfa257d5b27189e73768384368300627",
+    "scripts/contract_guard.py": "c1c693adf831f6f87bdb85985e03e5f73507f0066648fe6d2f54f7e757e9850f",
+    "scripts/install_harness.py": "a76e40e1f90edc07e941f77245c5d2953917b7c1052e8ef872498925873317bc",
+    "assets/instructions/AGENTS.md": "704cb7354e898943281a219a108c1db51a4b6664e1a38010141e0af4d4c305f8",
+    "assets/instructions/agent-workflow.md": "f019254f42e457bfa7db5771e250eebc8421107b736d3c2cb14ed7c9125c4c36",
+    "assets/.githooks/pre-push": "a1369e815241d85b9b96795eca8cd234d7e2fc7639cef862e9ceb45092cacf29",
+    "assets/.githooks/pre-commit": "a90663e546e9737837e900abad5fa1986fc010860c87d570f8562c68b581b050",
+    "assets/workspace/AGENTS.md.template": "124f89fd8f0ea30c1d492119483694f4ac98ef71925fee4c508596d0d7cd8105",
+    "assets/workspace/plan-chat.md.template": "066b5d5640280840ed3fa15ba87fac1b996fbd1147e2f2480f607fc68010a533",
+    "assets/workspace/dev-chat.md.template": "2df423b2aad2232286360428e500bf04c775e35acec4686cb273b80c8001698f",
+    "assets/docs/planning/plans/_TEMPLATE.md": "7ac1e72d1f8eba89899a3b7d290c6fd087e65011bc584d106dd18a7d10abfae8",
+    "assets/docs/process/worker-adapters.md": "ad57dbf72cc94418e6aef5349e8943153b2aadd9f698c859e7287a19c98ac21c",
+    "assets/docs/process/handoff-template.md": "32231b448a73961a7c8209b02bb4840e907fdff30df6bfca291bee9042f0000c",
+    "assets/docs/process/checkpoint-template.md": "79fcd8e681239b085c7e46e05c3607234d63220e4397f997f544f7885471dcea",
+    "assets/docs/process/workflow-controls.md": "7d86f76d1c80515f9047e7201987a19bfec284c377cba2b9cfb2ababc973ddad",
+    "assets/docs/process/work-queue.md": "58ddac0b06ef74139248eaa0e211cdbee9bc288002887be70aa8e4d1f218a558",
+    "assets/docs/process/optional-adapters.md": "fcacf8aad32b0a730cd3b04d84b67210f5768e1d63db5303b5a96af4eb10dae4",
+    "assets/docs/process/user-review-template.md": "18522be9521b44f7b8064896935b0b1618d45068dad71e39eb02101bed1b866b",
+    "assets/docs/process/plan-intake.md": "c7991e05ca6ba568ff21b5776fe38299cbdc7ce89b69577d0883aead15d55f72",
+    "assets/.harness/policy.json": "260ba442cd7dadbb0e837a0a359cb5d286ed93f96750017391cfd055b9215206",
+    "assets/scripts/plan_cards.py": "c79afa41e72cc36842d4e59e909af71a1a93edee73061b822586959142913196",
+    "assets/scripts/worker_doctor.py": "fbe34ce071d0227b8ee7778f97419c265b4c7aa3c03b984d484dc95e9641a788",
+    "assets/scripts/plan_intake.py": "c49bbb3d9a58c3a1b7b3967cc302effd40c2b82621ebc6cff15a77509fcdd4f8",
+    "assets/scripts/workflow_control.py": "c7e195a7e295d25f9d014f0370b446bba2369782a87476c3478df927486837c0",
+    "assets/scripts/work_queue.py": "d0329fe031d1611bc857a6afe24ef34fbfa257d5b27189e73768384368300627",
+    "assets/scripts/contract_guard.py": "c1c693adf831f6f87bdb85985e03e5f73507f0066648fe6d2f54f7e757e9850f"
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "<validation-root>/install source/scripts/install_skill.py",
+        "--agent",
+        "claude",
+        "--skills-dir",
+        "<validation-root>/Claude skill with spaces"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <validation-root>/Claude skill with spaces/plan-dev-harness for claude (44 files)\nPreview only; repeat with --apply.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<validation-root>/install source/scripts/install_skill.py",
+        "--agent",
+        "claude",
+        "--skills-dir",
+        "<validation-root>/Claude skill with spaces",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <validation-root>/Claude skill with spaces/plan-dev-harness for claude (44 files)\nInstalled. Reopen the agent session if discovery has not refreshed.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<validation-root>/install source/scripts/install_skill.py",
+        "--agent",
+        "claude",
+        "--skills-dir",
+        "<validation-root>/Claude skill with spaces",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "stdout": "KEEP identical skill: <validation-root>/Claude skill with spaces/plan-dev-harness\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<validation-root>/Claude skill with spaces/plan-dev-harness/scripts/install_harness.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: install_harness.py [-h] --repo REPO [--plan-branch PLAN_BRANCH]\n                          [--dev-branch DEV_BRANCH]\n                          [--release-branch RELEASE_BRANCH] --protect PROTECT\n                          [--agent {none,codex,claude,both}] [--upgrade]\n                          [--apply]\n\nPreview/install local governance; upgrade only untouched managed files.\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --repo REPO\n  --plan-branch PLAN_BRANCH\n  --dev-branch DEV_BRANCH\n  --release-branch RELEASE_BRANCH\n  --protect PROTECT\n  --agent {none,codex,claude,both}\n  --upgrade\n  --apply\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<validation-root>/Claude skill with spaces/plan-dev-harness/scripts/bootstrap_workspace.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: bootstrap_workspace.py [-h] --parent PARENT --name NAME\n                              [--plan-branch PLAN_BRANCH]\n                              [--dev-branch DEV_BRANCH]\n                              [--release-branch RELEASE_BRANCH]\n                              [--author-name AUTHOR_NAME]\n                              [--author-email AUTHOR_EMAIL] [--apply]\n\nCreate a new local-only nested workspace; preview by default, never publish.\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --parent PARENT\n  --name NAME\n  --plan-branch PLAN_BRANCH\n  --dev-branch DEV_BRANCH\n  --release-branch RELEASE_BRANCH\n  --author-name AUTHOR_NAME\n  --author-email AUTHOR_EMAIL\n  --apply\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<validation-root>/Claude skill with spaces/plan-dev-harness/assets/scripts/workflow_control.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: workflow_control.py [-h]\n                           {decision,classify,resolve,pause,resume,handoff,handoff-status}\n                           ...\n\nDurable queue controls and handoffs. Never sends messages or starts work.\n\npositional arguments:\n  {decision,classify,resolve,pause,resume,handoff,handoff-status}\n\noptional arguments:\n  -h, --help            show this help message and exit\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<validation-root>/Claude skill with spaces/plan-dev-harness/scripts/bootstrap_workspace.py",
+        "--parent",
+        "<validation-root>/standalone bootstrap parent",
+        "--name",
+        "smoke",
+        "--author-name",
+        "Fixture",
+        "--author-email",
+        "fixture@example.invalid"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <validation-root>/standalone bootstrap parent/smoke/smoke_main\nCREATE <validation-root>/standalone bootstrap parent/smoke/smoke_plan\nCREATE <validation-root>/standalone bootstrap parent/smoke/smoke_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nPreview only; repeat with --apply.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<validation-root>/install source/scripts/install_skill.py",
+        "--agent",
+        "claude",
+        "--skills-dir",
+        "<validation-root>/existing skills"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "FAIL: Existing skill differs. Review/back it up and choose a fresh directory; never overwrite silently.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "<validation-root>/install source/scripts/install_skill.py",
+        "--agent",
+        "claude",
+        "--skills-dir",
+        "<validation-root>/existing skills",
+        "--apply"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "FAIL: Existing skill differs. Review/back it up and choose a fresh directory; never overwrite silently.\n"
+    }
+  ],
+  "real_personal_or_company_install_changed": false,
+  "company_login_or_model_session_tested": false,
+  "result": "PASS"
+}

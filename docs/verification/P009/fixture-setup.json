@@ -1,0 +1,110 @@
+{
+  "observed_at": "2026-11-24T08:28:35.982847+00:00",
+  "target": "human-selected harness-test fixture",
+  "version": "0.2.4",
+  "initial_empty_non_git": true,
+  "existing_plan_count": 1,
+  "bootstrap": "preview then apply; infrastructure only",
+  "skills_scope": "project local",
+  "keep_reinstall": true,
+  "installed_doctor": true,
+  "live_native_transport": "not_attempted_due_to_trust_gate",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "<source>/scripts/install_skill.py",
+        "--agent",
+        "claude",
+        "--skills-dir",
+        "<fixture-root>/.claude/skills"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <fixture-root>/.claude/skills/plan-dev-harness for claude (44 files)\nPreview only; repeat with --apply.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<source>/scripts/install_skill.py",
+        "--agent",
+        "claude",
+        "--skills-dir",
+        "<fixture-root>/.claude/skills",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <fixture-root>/.claude/skills/plan-dev-harness for claude (44 files)\nInstalled. Reopen the agent session if discovery has not refreshed.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<fixture-root>/.claude/skills/plan-dev-harness/scripts/bootstrap_workspace.py",
+        "--parent",
+        "<fixture-root>",
+        "--name",
+        "p009",
+        "--author-name",
+        "Harness fixture",
+        "--author-email",
+        "fixture@example.invalid"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <fixture-root>/p009/p009_main\nCREATE <fixture-root>/p009/p009_plan\nCREATE <fixture-root>/p009/p009_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nPreview only; repeat with --apply.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<fixture-root>/.claude/skills/plan-dev-harness/scripts/bootstrap_workspace.py",
+        "--parent",
+        "<fixture-root>",
+        "--name",
+        "p009",
+        "--author-name",
+        "Harness fixture",
+        "--author-email",
+        "fixture@example.invalid",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE <fixture-root>/p009/p009_main\nCREATE <fixture-root>/p009/p009_plan\nCREATE <fixture-root>/p009/p009_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nCreated <fixture-root>/p009 adopted plan 2d044a6040aa0a01d4ebae3377349e9ce3554092\nOpen the container in either agent; initialize plan/dev roles explicitly. Queue is empty.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/worker_doctor.py",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"repository\": {\n    \"root\": \"<fixture-root>/p009/p009_plan\",\n    \"common\": \"<fixture-root>/p009/p009_main/.git\",\n    \"branch\": \"plan\",\n    \"dirty\": false\n  },\n  \"mode\": \"unbound\",\n  \"binding_evidence\": \"none\",\n  \"dispatch\": \"pending\",\n  \"execution\": \"unknown\",\n  \"performs_actions\": false,\n  \"issues\": [\n    \"worker_binding_missing\"\n  ],\n  \"notes\": [],\n  \"pending_decisions\": 0,\n  \"paused_sessions\": 0,\n  \"next_dev\": null,\n  \"host_inventory\": \"not_requested\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/worker_doctor.py",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"repository\": {\n    \"root\": \"<fixture-root>/p009/p009_dev\",\n    \"common\": \"<fixture-root>/p009/p009_main/.git\",\n    \"branch\": \"dev\",\n    \"dirty\": false\n  },\n  \"mode\": \"unbound\",\n  \"binding_evidence\": \"none\",\n  \"dispatch\": \"pending\",\n  \"execution\": \"unknown\",\n  \"performs_actions\": false,\n  \"issues\": [\n    \"worker_binding_missing\"\n  ],\n  \"notes\": [],\n  \"pending_decisions\": 0,\n  \"paused_sessions\": 0,\n  \"next_dev\": null,\n  \"host_inventory\": \"not_requested\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "<source>/scripts/install_skill.py",
+        "--agent",
+        "claude",
+        "--skills-dir",
+        "<fixture-root>/.claude/skills",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "stdout": "KEEP identical skill: <fixture-root>/.claude/skills/plan-dev-harness\n",
+      "stderr": ""
+    }
+  ]
+}

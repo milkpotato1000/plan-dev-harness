@@ -1,0 +1,37 @@
+{
+  "observed_at": "2026-11-24T08:28:28.615404+00:00",
+  "historical": {
+    "P002": {
+      "unchanged": true,
+      "file_count": 178
+    },
+    "P005": {
+      "unchanged": true,
+      "file_count": 7
+    },
+    "P006": {
+      "unchanged": true,
+      "file_count": 10
+    },
+    "P007": {
+      "unchanged": true,
+      "file_count": 11
+    },
+    "P008": {
+      "unchanged": true,
+      "file_count": 13
+    }
+  },
+  "personal": {
+    "codex_skill": {
+      "unchanged": true,
+      "existed_before": true
+    },
+    "claude_skill": {
+      "unchanged": true,
+      "existed_before": false
+    }
+  },
+  "main": "3ede2e81f53be8252b585a57064f225fb711ccea",
+  "v0.2.3": "8a603187330c2a7c61636badf8401be68881a206"
+}

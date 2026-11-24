@@ -1,0 +1,101 @@
+{
+  "observed_at": "2026-11-24T08:28:04.480548+00:00",
+  "source_commit": "4c4b5a3f2ef63deeffa425f49c2bc0161cf48d66",
+  "from_tag": "v0.2.3",
+  "to_version": "0.2.4",
+  "preview_no_writes": true,
+  "new_doctor_and_adapter_installed": true,
+  "extensions_and_user_work_preserved": true,
+  "customized_managed_instruction_refused_without_change": true,
+  "commands": [
+    {
+      "args": [
+        "git",
+        "init",
+        "-b",
+        "plan",
+        "<validation-root>/upgrade project"
+      ],
+      "exit_code": 0,
+      "stdout": "Initialized empty Git repository in <validation-root>/upgrade project/.git/\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "<validation-root>/source023/scripts/install_harness.py",
+        "--repo",
+        "<validation-root>/upgrade project",
+        "--protect",
+        "specs",
+        "--agent",
+        "both",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE scripts/contract_guard.py\nCREATE scripts/work_queue.py\nCREATE scripts/plan_intake.py\nCREATE scripts/workflow_control.py\nCREATE .githooks/pre-commit\nCREATE .githooks/pre-push\nCREATE scripts/plan_cards.py\nCREATE docs/planning/plans/_TEMPLATE.md\nCREATE docs/process/work-queue.md\nCREATE docs/process/plan-intake.md\nCREATE docs/process/workflow-controls.md\nCREATE docs/process/optional-adapters.md\nCREATE docs/process/checkpoint-template.md\nCREATE docs/process/handoff-template.md\nCREATE docs/process/user-review-template.md\nCREATE .harness/policy.json\nCREATE AGENTS.md\nCREATE docs/process/agent-workflow.md\nCREATE CLAUDE.md\nCREATE .harness/installation.json\nApplied local files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "<source>/scripts/install_harness.py",
+        "--repo",
+        "<validation-root>/upgrade project",
+        "--protect",
+        "specs",
+        "--agent",
+        "both",
+        "--upgrade"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE scripts/worker_doctor.py\nKEEP scripts/contract_guard.py\nKEEP scripts/work_queue.py\nKEEP scripts/plan_intake.py\nKEEP scripts/workflow_control.py\nKEEP .githooks/pre-commit\nKEEP .githooks/pre-push\nCREATE docs/process/worker-adapters.md\nKEEP scripts/plan_cards.py\nKEEP docs/planning/plans/_TEMPLATE.md\nKEEP docs/process/work-queue.md\nKEEP docs/process/plan-intake.md\nKEEP docs/process/workflow-controls.md\nKEEP docs/process/optional-adapters.md\nKEEP docs/process/checkpoint-template.md\nKEEP docs/process/handoff-template.md\nKEEP docs/process/user-review-template.md\nUPDATE .harness/policy.json\nUPDATE AGENTS.md\nUPDATE docs/process/agent-workflow.md\nKEEP CLAUDE.md\nUPDATE .harness/installation.json\nPreview only; repeat with --apply to write files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "<source>/scripts/install_harness.py",
+        "--repo",
+        "<validation-root>/upgrade project",
+        "--protect",
+        "specs",
+        "--agent",
+        "both",
+        "--upgrade",
+        "--apply"
+      ],
+      "exit_code": 0,
+      "stdout": "CREATE scripts/worker_doctor.py\nKEEP scripts/contract_guard.py\nKEEP scripts/work_queue.py\nKEEP scripts/plan_intake.py\nKEEP scripts/workflow_control.py\nKEEP .githooks/pre-commit\nKEEP .githooks/pre-push\nCREATE docs/process/worker-adapters.md\nKEEP scripts/plan_cards.py\nKEEP docs/planning/plans/_TEMPLATE.md\nKEEP docs/process/work-queue.md\nKEEP docs/process/plan-intake.md\nKEEP docs/process/workflow-controls.md\nKEEP docs/process/optional-adapters.md\nKEEP docs/process/checkpoint-template.md\nKEEP docs/process/handoff-template.md\nKEEP docs/process/user-review-template.md\nUPDATE .harness/policy.json\nUPDATE AGENTS.md\nUPDATE docs/process/agent-workflow.md\nKEEP CLAUDE.md\nUPDATE .harness/installation.json\nApplied local files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "<validation-root>/upgrade project/scripts/worker_doctor.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: worker_doctor.py [-h] [--repo REPO] [--binding BINDING]\n                        [--claude-inventory] [--json]\n\nRead-only worker preflight. Never approves, sends, adopts, starts or retries\nwork.\n\noptional arguments:\n  -h, --help          show this help message and exit\n  --repo REPO\n  --binding BINDING   Private JSON observation; never commit identities\n  --claude-inventory  Read official claude agents --json; does not prove\n                      native tool access\n  --json\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "<source>/scripts/install_harness.py",
+        "--repo",
+        "<validation-root>/upgrade project",
+        "--protect",
+        "specs",
+        "--agent",
+        "both",
+        "--upgrade",
+        "--apply"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "FAIL: Existing file differs; review/integrate instead of overwriting: AGENTS.md\n"
+    }
+  ],
+  "result": "PASS"
+}
