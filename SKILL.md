@@ -85,3 +85,30 @@ External integrations follow [adapter boundaries](assets/docs/process/optional-a
 인간이 해당 프로젝트의 plan→dev 전달·착수를 위임한 경우 plan은 검토된 READY 계획의 정확 SHA를
 확인된 기존 dev에 직접 전달하고, dev는 기존 작업·실패를 보존해 통합·정확 채택·커밋·guard/큐
 확인 후 승인 범위를 시작합니다. 설치 자체는 위임이 아니며 초기화는 읽기 전용 대기를 유지합니다.
+
+## Independent worker execution
+
+Default to distinct plan and dev host sessions with one writer per worktree.
+Plan records the human execution approval/delegated scope, prepares reviewed READY
+work and sends the exact commit to the verified independent dev, records the actual
+outcome and returns to planning. Plan must not implement products in either tree,
+run dev adoption for the worker, or wait/poll for ACK, adoption or completion.
+Dev performs internal receive/integrate/adopt at a safe committed boundary without
+asking the human to type another adoption message. Keep the existing adopt CLI and
+record formats; a peer message is not new human authority. Preserve current work,
+failed evidence, priorities/dependencies, OPEN decisions and explicit pauses.
+
+Missing worker, native tools, matching human grant, distinct identity or unambiguous
+recipient means pending handoff with the exact missing condition. A held/refused or
+unknown send is not SENT; preserve attempt evidence without blind retries. Never
+replace a parallel request with plan doing dev work. Sequential dual-role mode is
+available only after a separate explicit human choice of that mode and exclusive
+writers; a general request to finish work is insufficient. Do not automatically
+create extra workers, enable teams, change permissions/inbound settings or start a daemon.
+Bootstrap-only requests remain read-only and wait. A subsequent authorized work
+handoff is distinct and can execute without a second human adoption prompt.
+Use the read-only worker doctor and native host procedure; diagnostics never
+approve, send, adopt or run work. Send results/needed decisions through the plan
+review gateway with one request key; no duplicate user completion questions.
+
+See [Claude workers](references/claude-workers.md) and `scripts/worker_doctor.py`.

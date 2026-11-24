@@ -87,7 +87,7 @@ A simulated policy review is not a live-host delivery test.
 
 Separate plan/dev sessions can overlap different P stages while preserving each
 P's plan -> review -> exact adoption -> implementation order and one writer per
-worktree. One-chat fallback remains sequential. Host message injection/scheduling
+worktree. There is no automatic one-chat fallback; sequential mode needs explicit human selection. Host message injection/scheduling
 does not guarantee immediate parallel execution. Do not create new goals, chats,
 daemons or monitors to achieve this handoff. Pauses and OPEN decisions still apply.
 
@@ -111,3 +111,30 @@ Dev does not ask routine completion confirmations. Optional review, required hum
 criteria and critical OPEN remain distinct. User code questions in dev are allowed.
 Reverse delivery needs a real human project grant; no permission or pause bypass.
 Preserve asynchronous SENT-then-return and busy-role safe boundaries.
+
+## Independent worker execution
+
+Default to distinct plan and dev host sessions with one writer per worktree.
+Plan records the human execution approval/delegated scope, prepares reviewed READY
+work and sends the exact commit to the verified independent dev, records the actual
+outcome and returns to planning. Plan must not implement products in either tree,
+run dev adoption for the worker, or wait/poll for ACK, adoption or completion.
+Dev performs internal receive/integrate/adopt at a safe committed boundary without
+asking the human to type another adoption message. Keep the existing adopt CLI and
+record formats; a peer message is not new human authority. Preserve current work,
+failed evidence, priorities/dependencies, OPEN decisions and explicit pauses.
+
+Missing worker, native tools, matching human grant, distinct identity or unambiguous
+recipient means pending handoff with the exact missing condition. A held/refused or
+unknown send is not SENT; preserve attempt evidence without blind retries. Never
+replace a parallel request with plan doing dev work. Sequential dual-role mode is
+available only after a separate explicit human choice of that mode and exclusive
+writers; a general request to finish work is insufficient. Do not automatically
+create extra workers, enable teams, change permissions/inbound settings or start a daemon.
+Bootstrap-only requests remain read-only and wait. A subsequent authorized work
+handoff is distinct and can execute without a second human adoption prompt.
+Use the read-only worker doctor and native host procedure; diagnostics never
+approve, send, adopt or run work. Send results/needed decisions through the plan
+review gateway with one request key; no duplicate user completion questions.
+
+See [Claude workers](claude-workers.md) and the installed worker-adapters procedure.

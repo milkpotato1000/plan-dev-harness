@@ -1,0 +1,11 @@
+test_cli_inventory_failure_is_unknown_and_codex_keeps_adapter (test_worker_doctor.WorkerDoctorTests) ... ok
+test_existing_pause_and_open_are_not_cleared (test_worker_doctor.WorkerDoctorTests) ... ok
+test_held_refused_unknown_and_busy_do_not_start_or_fallback (test_worker_doctor.WorkerDoctorTests) ... ok
+test_identity_project_branch_writer_and_capability_fail_closed (test_worker_doctor.WorkerDoctorTests) ... ok
+test_inventory_absence_ambiguity_and_reconnection (test_worker_doctor.WorkerDoctorTests) ... ok
+test_no_network_or_mutation_and_simulation_never_live (test_worker_doctor.WorkerDoctorTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 22.914s
+
+OK

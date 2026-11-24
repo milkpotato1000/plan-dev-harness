@@ -5,7 +5,7 @@ Git worktree로 plan/dev를 분리하고, 준비된 P카드와 정확한 계획 
 새 요구 접수부터 검증 증거·완료 처리까지 파일로 남겨 도구를 바꿔도 같은 작업을 이어갈 수 있습니다.
 
 Python 표준 라이브러리 + Git만 사용합니다. 계정 토큰, API 키, MCP 서버, 유료 모델 호출이 설치에 필요하지 않습니다.
-배포 버전: **0.2.3 / MIT**, 배포일 **2026-11-24 (Asia/Seoul)**.
+현재 소스: **0.2.4 개발 버전 / MIT**. 정식 배포: **0.2.3**, 배포일 **2026-11-24 (Asia/Seoul)**.
 [정식 릴리스 v0.2.3](https://github.com/milkpotato1000/plan-dev-harness/releases/tag/v0.2.3)과
 [회사 Claude Code 설치 안내](docs/claude-code-install.md)를 제공합니다. Python **3.9 이상**, Git **2.31 이상**, POSIX shell 환경을 대상으로 합니다.
 macOS에서 실제 검증했습니다. Linux/WSL 사용 절차는 같지만 이 릴리스에서 직접 검증하지 않았고,
@@ -47,7 +47,7 @@ Dev는 현재 P와 실패·작업을 보존하고 안전한 완료/checkpoint·c
 채택한 뒤 준비·우선순위·의존성·중지/결정 조건으로 다음 P를 선택합니다. 각 P의 검토·채택 순서는 유지됩니다.
 
 이 패치는 지침·배포 진입점을 갱신하며 자동 전송기·daemon·감시를 추가하지 않습니다.
-실제 병렬 진행은 별도 세션과 호스트 스케줄링에 달려 있고 단일 채팅 fallback은 순차입니다.
+실제 병렬 진행은 독립 세션에서 수행합니다. 연결이 없으면 인계 대기이며 plan이 구현을 대신하지 않습니다. 순차 모드는 사용자가 별도 명시 선택해야 합니다.
 중지·OPEN 결정은 인계나 버전 갱신으로 풀리지 않습니다. [비동기 운영 규칙](assets/instructions/agent-workflow.md#asynchronous-handoff-and-parallel-planning)을 따르세요.
 소스/개인 설치 스킬과 기존 프로젝트의 managed 설치 버전은 별개입니다. 기존 프로젝트는 검토된
 지침 통합 또는 같은 옵션의 preview/upgrade가 필요하며 패키지 갱신만으로 자동 업그레이드되지 않습니다.
@@ -265,3 +265,19 @@ install_skill.py에는 --upgrade가 없습니다. Codex 기본 ~/.agents/skills�
 인간이 해당 프로젝트의 plan→dev 전달·착수를 위임한 경우 plan은 검토된 READY 계획의 정확 SHA를
 확인된 기존 dev에 직접 전달하고, dev는 기존 작업·실패를 보존해 통합·정확 채택·커밋·guard/큐
 확인 후 승인 범위를 시작합니다. 설치 자체는 위임이 아니며 초기화는 읽기 전용 대기를 유지합니다.
+
+## 독립 plan/dev worker — 0.2.4 개발 버전
+
+공개 정식 릴리스와 기본 설치 명령은 **v0.2.3**에 고정되어 있습니다. 현재 dev 소스는
+0.2.4이며 아직 main/tag/Release로 발행하지 않았습니다.
+[독립 Claude worker 설정](references/claude-workers.md)을 읽고 프로젝트 로컬 preview 후 설치하세요.
+Plan은 실행 승인을 기록하고 독립 dev에 전달한 뒤 다음 기획으로 돌아갑니다. Dev는 정확 SHA를
+내부 수신·적용해 순차 실행하며 사용자에게 채택 문장을 다시 요구하지 않습니다. 연결이 없거나
+보류된 경우 plan이 구현을 대신하지 않습니다.
+
+```sh
+python3 scripts/worker_doctor.py --repo "/absolute/workspace/project_dev" --json
+```
+
+진단은 읽기 전용이며 unbound/unknown 결과가 정상일 수 있습니다. 실제 host 도구와 역할·writer·위임
+확인이 필요합니다. CLI 목록만으로 메시지 전달이나 병렬 성공을 주장하지 않습니다.

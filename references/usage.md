@@ -169,7 +169,7 @@ reviewed new one, then exact dev adoption and implementation. Plan does not impl
 product README/user guides; planning-only drafts may finish on plan, and read-only
 questions need no card. Record file/repository/target ref and verify actual delivery;
 plan push, dev adoption and default-branch visibility are separate outcomes.
-Only authorized, uncontested sessions perform both roles in separate worktrees.
+Only a separate explicit human selection of sequential mode permits one session to perform both roles.
 Bootstrap, absent messaging authority and scoped pauses retain their boundaries.
 
 ## Asynchronous handoff and parallel planning
@@ -181,7 +181,7 @@ planning/status request record ACK only from observed evidence. Busy dev preserv
 its current P and failures, then adopts the exact reviewed handoff at a safe
 completed/checkpointed commit boundary and follows readiness, priorities and
 dependencies. Keep pauses, OPEN decisions, roles and single writers. Separate
-sessions can overlap P stages; a one-chat fallback is sequential. No daemon,
+sessions can overlap P stages; there is no automatic one-chat fallback. Sequential mode requires explicit human selection. No daemon,
 new goal, chat, monitor or messaging authority follows from this procedure.
 
 ## User review gateway

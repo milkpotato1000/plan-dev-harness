@@ -102,8 +102,8 @@ For an unassigned session receiving a material change request, use the project's
 plan -> exact dev adoption -> dev execution workflow. First reuse an applicable
 P card or prepare the next unused P number with bounded review/acceptance. A
 plan-assigned session prepares and hands off; it does not implement in plan or
-silently become dev. A session authorized for both roles may perform the stages
-sequentially in their proper worktrees only when no other writer owns them.
+silently become dev. A session may perform both roles only after the human explicitly chooses sequential
+mode; it must have exclusive writers and must not call that parallel execution.
 Check existing writers before mutation; do not create chats or message anyone
 without the project's human authorization. Missing transport leaves an explicit
 pending file handoff, never an invented completed delivery.
@@ -152,8 +152,8 @@ per worktree. Neither handoffs nor time elapsed resume stopped work. Failed or
 unknown sends keep their real state and evidence; never invent SENT or retry
 blindly. Missing authority/tool leaves a pending file handoff. No new goals,
 chats, monitors or reverse/chain messaging authority follow from this rule.
-Parallel sessions require actual independent workers; one-chat fallback is
-sequential. Host scheduling limits and simulated tests must be reported honestly.
+Parallel sessions require actual independent workers; a missing worker is pending,
+not an automatic sequential fallback. Host scheduling limits and simulated tests must be reported honestly.
 
 ## User review and decisions through plan
 
@@ -185,3 +185,30 @@ read-only results, not product execution or edits. Missing viewer/host/authority
 must be reported honestly with durable pending records, never invented delivery.
 P006 asynchronous handoff remains: record real SENT and finish, no ACK/completion
 polling. Reverse delivery needs its own human grant; this protocol grants none.
+
+## Independent worker execution
+
+Default to distinct plan and dev host sessions with one writer per worktree.
+Plan records the human execution approval/delegated scope, prepares reviewed READY
+work and sends the exact commit to the verified independent dev, records the actual
+outcome and returns to planning. Plan must not implement products in either tree,
+run dev adoption for the worker, or wait/poll for ACK, adoption or completion.
+Dev performs internal receive/integrate/adopt at a safe committed boundary without
+asking the human to type another adoption message. Keep the existing adopt CLI and
+record formats; a peer message is not new human authority. Preserve current work,
+failed evidence, priorities/dependencies, OPEN decisions and explicit pauses.
+
+Missing worker, native tools, matching human grant, distinct identity or unambiguous
+recipient means pending handoff with the exact missing condition. A held/refused or
+unknown send is not SENT; preserve attempt evidence without blind retries. Never
+replace a parallel request with plan doing dev work. Sequential dual-role mode is
+available only after a separate explicit human choice of that mode and exclusive
+writers; a general request to finish work is insufficient. Do not automatically
+create extra workers, enable teams, change permissions/inbound settings or start a daemon.
+Bootstrap-only requests remain read-only and wait. A subsequent authorized work
+handoff is distinct and can execute without a second human adoption prompt.
+Use the read-only worker doctor and native host procedure; diagnostics never
+approve, send, adopt or run work. Send results/needed decisions through the plan
+review gateway with one request key; no duplicate user completion questions.
+
+See `docs/process/worker-adapters.md` and `python3 scripts/worker_doctor.py --json` in the selected child.

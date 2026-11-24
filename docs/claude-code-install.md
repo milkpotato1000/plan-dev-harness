@@ -116,3 +116,13 @@ Native Windows, 실제 회사 Claude Code 로그인·조직 정책·실제 모�
 회사 네트워크 차단이나 스킬 허용 여부를 설치 성공만으로 보장하지 않습니다.
 
 [릴리스 변경·한계](releases/v0.2.3.md) · [프로젝트 검증 기록](verification/P008/README.md).
+
+## 독립 worker 0.2.4 개발 소스 시험
+
+위 정식 설치는 v0.2.3입니다. 0.2.4는 아직 발행하지 않았으며, 검토된 **전체 dev commit SHA**를
+명시한 별도 clone에서만 시험합니다. 최신 dev tip을 승인된 계약처럼 자동 실행하지 않습니다.
+새 목적지에 clone한 뒤 검토된 SHA를 checkout하고 VERSION과 source를 확인합니다.
+프로젝트 로컬 `--skills-dir`에 preview/apply하며 개인 사본은 자동 갱신하지 않습니다.
+[두 세션 시작·binding·native 전달·진단](../references/claude-workers.md)을 따르세요.
+사용자가 plan에서 실행 승인하면 독립 dev는 내부 적용하며 다시 채택 입력을 받지 않습니다.
+독립 worker/전송 도구 부재나 hold/refuse는 대기이고, 설정/승인을 우회하지 않습니다.

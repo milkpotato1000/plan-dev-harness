@@ -77,7 +77,7 @@ reviewed new one, then exact dev adoption and implementation. Plan does not impl
 product README/user guides; planning-only drafts may finish on plan, and read-only
 questions need no card. Record file/repository/target ref and verify actual delivery;
 plan push, dev adoption and default-branch visibility are separate outcomes.
-Only authorized, uncontested sessions perform both roles in separate worktrees.
+Only an explicit human selection of sequential mode permits both roles in one session.
 Bootstrap, absent messaging authority and scoped pauses retain their boundaries.
 
 ## Asynchronous handoff and parallel planning
@@ -89,7 +89,7 @@ planning/status request record ACK only from observed evidence. Busy dev preserv
 its current P and failures, then adopts the exact reviewed handoff at a safe
 completed/checkpointed commit boundary and follows readiness, priorities and
 dependencies. Keep pauses, OPEN decisions, roles and single writers. Separate
-sessions can overlap P stages; a one-chat fallback is sequential. No daemon,
+sessions can overlap P stages; there is no automatic one-chat fallback. Sequential mode requires explicit human selection. No daemon,
 new goal, chat, monitor or messaging authority follows from this procedure.
 
 ## User review gateway
@@ -102,3 +102,30 @@ Dev does not ask routine completion confirmations. Optional review, required hum
 criteria and critical OPEN remain distinct. User code questions in dev are allowed.
 Reverse delivery needs a real human project grant; no permission or pause bypass.
 Preserve asynchronous SENT-then-return and busy-role safe boundaries.
+
+## Independent worker execution
+
+Default to distinct plan and dev host sessions with one writer per worktree.
+Plan records the human execution approval/delegated scope, prepares reviewed READY
+work and sends the exact commit to the verified independent dev, records the actual
+outcome and returns to planning. Plan must not implement products in either tree,
+run dev adoption for the worker, or wait/poll for ACK, adoption or completion.
+Dev performs internal receive/integrate/adopt at a safe committed boundary without
+asking the human to type another adoption message. Keep the existing adopt CLI and
+record formats; a peer message is not new human authority. Preserve current work,
+failed evidence, priorities/dependencies, OPEN decisions and explicit pauses.
+
+Missing worker, native tools, matching human grant, distinct identity or unambiguous
+recipient means pending handoff with the exact missing condition. A held/refused or
+unknown send is not SENT; preserve attempt evidence without blind retries. Never
+replace a parallel request with plan doing dev work. Sequential dual-role mode is
+available only after a separate explicit human choice of that mode and exclusive
+writers; a general request to finish work is insufficient. Do not automatically
+create extra workers, enable teams, change permissions/inbound settings or start a daemon.
+Bootstrap-only requests remain read-only and wait. A subsequent authorized work
+handoff is distinct and can execute without a second human adoption prompt.
+Use the read-only worker doctor and native host procedure; diagnostics never
+approve, send, adopt or run work. Send results/needed decisions through the plan
+review gateway with one request key; no duplicate user completion questions.
+
+See [Claude workers](claude-workers.md) and the installed worker-adapters procedure.

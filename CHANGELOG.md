@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.4 — Unreleased
+
+- Independent plan/dev sessions are the default; sequential mode needs an explicit human choice.
+- Plan execution approval is distinct from internal exact-SHA application by dev; no repeated adoption input.
+- Native Claude ListAgents/SendMessage procedure and read-only worker doctor distinguish missing, ambiguous, busy, held and unknown states.
+- Codex delivery, existing controls/adopt/event formats and plan review gateway remain compatible.
+- Live Claude evidence and limitations are recorded in docs/verification/P009; no new public release is implied.
+
+
 ## 0.2.3 — 2026-11-24
 
 Cumulative formal release since v0.1.0. The 0.2.0, 0.2.1 and 0.2.2 development
