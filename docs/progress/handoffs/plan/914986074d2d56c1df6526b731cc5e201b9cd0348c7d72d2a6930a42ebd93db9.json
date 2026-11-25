@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "a013181377340ccc25d55bbcb882f6af4ea12961",
+  "document": "docs/planning/reviews/user-reviews/P009-supplemental-stage-A.md",
+  "summary": "Actual human reports both stage B inputs; fixture P903 sent and exact applied, P904 follow-up processing observed",
+  "next_action": "Observe existing live workers and verify actual human planning overlap, busy P904 receipt and safe-boundary application; no repeated input request or competing worker",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-25T00:33:13.691405+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
