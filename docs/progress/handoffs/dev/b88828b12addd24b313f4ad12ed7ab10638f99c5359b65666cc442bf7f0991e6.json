@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P009-supplemental-stage-A.md",
   "summary": "P009 stageA relay ready, fixture planning not started; native parent-to-Claude send unavailable",
   "next_action": "Give one concrete preparation input to existing fixture plan under linked P009-live-setup-v0.2.4 key; inspect actual ready artifact before stageB two human inputs. No renewed trust/adoption or premature P903 dispatch.",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-25T00:18:21.666906+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-25T00:19:05.383254+00:00",
+      "evidence": "Actual existing parent-plan send_message_to_thread success; key P009-supplemental-stage-A; artifact952ca73/hash823a1031. Prepared one stageA relay input; actual fixture planning and stageB not started. No ACK wait."
     }
   ]
 }
