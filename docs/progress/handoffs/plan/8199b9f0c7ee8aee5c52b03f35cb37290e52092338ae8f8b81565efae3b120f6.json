@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/user-reviews/P009-live-setup-v0.2.4.md",
   "summary": "Actual human reports fixture dev started; host inventory confirms independent interactive busy dev alongside existing plan",
   "next_action": "Reuse existing fixture dev; preserve its current work and continue authorized P009 C3 native transport and overlap verification without repeating trust or adoption question",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-24T23:41:50.794668+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-24T23:42:29.264911+00:00",
+      "evidence": "2026-11-25 actual send_message_to_thread success to verified existing same-project dev. Exact a5a967de133512106eb65f8ecf48290b598c019e and actual human dev startup/independent host inventory delivered. Reuse busy fixture dev; no ACK/adoption/native transport/C3 completion inferred."
     }
   ]
 }

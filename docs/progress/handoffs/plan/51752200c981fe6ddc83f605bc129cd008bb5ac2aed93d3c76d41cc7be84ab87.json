@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "DECISION_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "173108e229ac4d635ef9cf5b0605ff6f59cb3236",
+  "document": "docs/planning/reviews/P009-supplemental-live.md",
+  "summary": "P009 live timing reviewed; prepare bounded P903/P904 supplement on existing workers without starting implementation before concrete human test inputs",
+  "next_action": "Adopt exact supplemental review; coordinate fixture plan-owned preparation only, preserve completed P901/P902, send ready packet to parent plan; no duplicate trust/adoption question",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-25T00:16:11.729367+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
