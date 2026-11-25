@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/user-reviews/P009-supplemental-stage-A.md",
   "summary": "Actual human reports both stage B inputs; fixture P903 sent and exact applied, P904 follow-up processing observed",
   "next_action": "Observe existing live workers and verify actual human planning overlap, busy P904 receipt and safe-boundary application; no repeated input request or competing worker",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-25T00:33:13.691405+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-25T00:33:50.753826+00:00",
+      "evidence": "2026-11-25 actual send_message_to_thread success to verified existing same-project dev. Exact92d38c96cbc49b83a5dd6d7f762285d04673b2ae and actual human stage B input report/P903 applied observation delivered. No overlap/busy receipt/completion inferred."
     }
   ]
 }
