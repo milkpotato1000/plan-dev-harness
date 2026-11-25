@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "b7560c5d3fd98573337016ef4a9e8b9ecb6b3c19",
+  "document": "docs/planning/reviews/user-reviews/P009-supplemental-stage-A.md",
+  "summary": "Supplemental fixture stage A verified at exact9f78cb9: P903 READY and P904 DRAFT; actual human stage B inputs will be guided through parent plan",
+  "next_action": "Preserve existing workers; observe bounded stage B native and Git evidence after real human inputs, never type the inputs or start a competing worker",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-25T00:23:48.587418+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
