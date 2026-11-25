@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P009-live-P901-P902-results.md",
   "summary": "Actual Claude P901/P902 complete; C3 busy-reception gap remains; key P009-live-P901-P902-results",
   "next_action": "Inspect native timeline and artifacts; prepare bounded supplemental live scenario without lowering C3 or repeating trust/adoption question; preserve existing workers/cards and failures.",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-24T23:47:44.250334+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-25T00:14:36.490948+00:00",
+      "evidence": "Actual send_message_to_thread success to existing session-plan; key P009-live-P901-P902-results; artifact20cc326 manifestde6afce0. C3 incomplete and supplemental scenario review explicit. No ACK polling."
     }
   ]
 }
