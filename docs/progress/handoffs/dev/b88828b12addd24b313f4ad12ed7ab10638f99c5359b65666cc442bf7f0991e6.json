@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "952ca73b0af9179c46629e597ceff341123a808d",
+  "document": "docs/feedback/dev/reviews/P009-supplemental-stage-A.md",
+  "summary": "P009 stageA relay ready, fixture planning not started; native parent-to-Claude send unavailable",
+  "next_action": "Give one concrete preparation input to existing fixture plan under linked P009-live-setup-v0.2.4 key; inspect actual ready artifact before stageB two human inputs. No renewed trust/adoption or premature P903 dispatch.",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-25T00:18:21.666906+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
