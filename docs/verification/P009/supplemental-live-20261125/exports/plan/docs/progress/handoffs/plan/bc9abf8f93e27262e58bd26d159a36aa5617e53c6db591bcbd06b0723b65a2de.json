@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "e5a3da0d913d7b253da3d1a2d24e52a4272b801e",
+  "document": "docs/planning/reviews/P904-handoff.md",
+  "summary": "P904 CSV 내보내기 READY 검토 커밋(50aa347 + 인계 문서), 선행 P903",
+  "next_action": "P903 완료/안전 checkpoint 커밋 후 정확 SHA 채택, P904 순차 구현·테스트",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-25T00:33:13.528898+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-25T00:33:27.803084+00:00",
+      "evidence": "native SendMessage success 2026-11-25 09:33:27 +0900 to verified fixture-dev while P903 active (dev checkpoint d8647ba 09:33:13 observed); inbox delivery, not yet read"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-25T00:35:45.334790+00:00",
+      "evidence": "fixture-dev results packet (key P009-C3-supplemental-P903-P904-results) observed 2026-11-25 09:35:45 +0900; dev afbcbee adopted-plan.json commit=e5a3da0d913d... verified read-only"
+    }
+  ]
+}

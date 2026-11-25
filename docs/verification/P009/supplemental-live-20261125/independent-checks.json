@@ -1,0 +1,112 @@
+[
+  {
+    "role": "plan",
+    "command": [
+      "python3",
+      "-B",
+      "scripts/contract_guard.py",
+      "check"
+    ],
+    "returncode": 0,
+    "stdout": "PASS: plan checkpoint and handoff history\n",
+    "stderr": ""
+  },
+  {
+    "role": "plan",
+    "command": [
+      "python3",
+      "-B",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--brief"
+    ],
+    "returncode": 0,
+    "stdout": "plan은 작업 트리의 기획 + dev 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.\nplan 다음 작업: 실행 가능한 승인 작업 없음\ndev 다음 작업: 실행 가능한 승인 작업 없음\nplan 새 요구 검토 대기: 0건 (구현 승인과 별개)\n조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음\n",
+    "stderr": ""
+  },
+  {
+    "role": "dev",
+    "command": [
+      "python3",
+      "-B",
+      "scripts/contract_guard.py",
+      "check"
+    ],
+    "returncode": 0,
+    "stdout": "PASS: contracts match adopted plan e5a3da0d913d\n",
+    "stderr": ""
+  },
+  {
+    "role": "dev",
+    "command": [
+      "python3",
+      "-B",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--brief"
+    ],
+    "returncode": 0,
+    "stdout": "dev는 채택한 plan e5a3da0d913d 기준. 이후 plan 초안은 자동 채택하지 않음.\nplan 다음 작업: 실행 가능한 승인 작업 없음\ndev 다음 작업: 실행 가능한 승인 작업 없음\nplan 새 요구 검토 대기: 0건 (구현 승인과 별개)\n조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음\n",
+    "stderr": ""
+  },
+  {
+    "stage": "P903",
+    "source_commit": "c3239716dfe8e1e0fbc29c4a694338224a3ae8b3",
+    "command": "python3 -B -m unittest -v test_fixture_format test_fixture_batch",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_empty_input_returns_empty_string (test_fixture_format.FormatLinesTest) ... ok\ntest_existing_trailing_newline_not_doubled (test_fixture_format.FormatLinesTest) ... ok\ntest_generator_and_tuple_input (test_fixture_format.FormatLinesTest) ... ok\ntest_inner_whitespace_preserved (test_fixture_format.FormatLinesTest) ... ok\ntest_input_not_mutated (test_fixture_format.FormatLinesTest) ... ok\ntest_only_blank_values_returns_empty_string (test_fixture_format.FormatLinesTest) ... ok\ntest_order_preserved (test_fixture_format.FormatLinesTest) ... ok\ntest_single_value_gets_one_trailing_newline (test_fixture_format.FormatLinesTest) ... ok\ntest_strips_and_drops_blank_lines (test_fixture_format.FormatLinesTest) ... ok\ntest_tabs_and_crlf_stripped_at_edges (test_fixture_format.FormatLinesTest) ... ok\ntest_consistent_with_format_lines (test_fixture_format.SummarizeLinesTest) ... ok\ntest_empty_and_blank_input (test_fixture_format.SummarizeLinesTest) ... ok\ntest_generator_input_and_no_mutation (test_fixture_format.SummarizeLinesTest) ... ok\ntest_inner_whitespace_counts (test_fixture_format.SummarizeLinesTest) ... ok\ntest_strips_and_drops_blank (test_fixture_format.SummarizeLinesTest) ... ok\ntest_unicode_characters_and_crlf (test_fixture_format.SummarizeLinesTest) ... ok\ntest_invalid_utf8_exit_1_no_stdout (test_fixture_batch.CliTest) ... ok\ntest_missing_file_exit_1_no_stdout (test_fixture_batch.CliTest) ... ok\ntest_record_errors_exit_2_still_prints_json (test_fixture_batch.CliTest) ... ok\ntest_subprocess_cli (test_fixture_batch.CliTest) ... ok\ntest_success_exit_0_with_json_output (test_fixture_batch.CliTest) ... ok\ntest_usage_error_uses_argparse_exit_2 (test_fixture_batch.CliTest) ... ok\ntest_empty_and_blank_only_input (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_empty_group_name_and_blank_lines_record (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_extra_keys_ignored (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_groups_sorted_duplicates_summed_and_unicode (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_invalid_type_variants (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_mixed_valid_invalid_keeps_processing_with_line_numbers (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_trailing_newline_and_crlf_do_not_change_result (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_unicode_counts_code_points (test_fixture_batch.SummarizeJsonlTest) ... ok\n\n----------------------------------------------------------------------\nRan 30 tests in 0.060s\n\nOK\n"
+  },
+  {
+    "stage": "P904",
+    "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+    "command": "python3 -B -m unittest -v test_fixture_format test_fixture_batch",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_empty_input_returns_empty_string (test_fixture_format.FormatLinesTest) ... ok\ntest_existing_trailing_newline_not_doubled (test_fixture_format.FormatLinesTest) ... ok\ntest_generator_and_tuple_input (test_fixture_format.FormatLinesTest) ... ok\ntest_inner_whitespace_preserved (test_fixture_format.FormatLinesTest) ... ok\ntest_input_not_mutated (test_fixture_format.FormatLinesTest) ... ok\ntest_only_blank_values_returns_empty_string (test_fixture_format.FormatLinesTest) ... ok\ntest_order_preserved (test_fixture_format.FormatLinesTest) ... ok\ntest_single_value_gets_one_trailing_newline (test_fixture_format.FormatLinesTest) ... ok\ntest_strips_and_drops_blank_lines (test_fixture_format.FormatLinesTest) ... ok\ntest_tabs_and_crlf_stripped_at_edges (test_fixture_format.FormatLinesTest) ... ok\ntest_consistent_with_format_lines (test_fixture_format.SummarizeLinesTest) ... ok\ntest_empty_and_blank_input (test_fixture_format.SummarizeLinesTest) ... ok\ntest_generator_input_and_no_mutation (test_fixture_format.SummarizeLinesTest) ... ok\ntest_inner_whitespace_counts (test_fixture_format.SummarizeLinesTest) ... ok\ntest_strips_and_drops_blank (test_fixture_format.SummarizeLinesTest) ... ok\ntest_unicode_characters_and_crlf (test_fixture_format.SummarizeLinesTest) ... ok\ntest_invalid_utf8_exit_1_no_stdout (test_fixture_batch.CliTest) ... ok\ntest_missing_file_exit_1_no_stdout (test_fixture_batch.CliTest) ... ok\ntest_record_errors_exit_2_still_prints_json (test_fixture_batch.CliTest) ... ok\ntest_subprocess_cli (test_fixture_batch.CliTest) ... ok\ntest_success_exit_0_with_json_output (test_fixture_batch.CliTest) ... ok\ntest_usage_error_uses_argparse_exit_2 (test_fixture_batch.CliTest) ... ok\ntest_bad_format_value_is_argparse_usage_error (test_fixture_batch.CsvFormatTest) ... ok\ntest_default_and_json_output_byte_identical_to_p903 (test_fixture_batch.CsvFormatTest) ... ok\ntest_empty_result_is_header_only (test_fixture_batch.CsvFormatTest) ... ok\ntest_io_and_decode_errors_exit_1_no_stdout (test_fixture_batch.CsvFormatTest) ... ok\ntest_quoted_group_row_matches_card_example (test_fixture_batch.CsvFormatTest) ... ok\ntest_record_errors_exit_2_csv_on_stdout_errors_on_stderr (test_fixture_batch.CsvFormatTest) ... ok\ntest_special_groups_round_trip_sorted_and_summed (test_fixture_batch.CsvFormatTest) ... ok\ntest_empty_and_blank_only_input (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_empty_group_name_and_blank_lines_record (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_extra_keys_ignored (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_groups_sorted_duplicates_summed_and_unicode (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_invalid_type_variants (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_mixed_valid_invalid_keeps_processing_with_line_numbers (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_trailing_newline_and_crlf_do_not_change_result (test_fixture_batch.SummarizeJsonlTest) ... ok\ntest_unicode_counts_code_points (test_fixture_batch.SummarizeJsonlTest) ... ok\n\n----------------------------------------------------------------------\nRan 37 tests in 0.409s\n\nOK\n"
+  },
+  {
+    "stage": "independent CLI",
+    "result": "PASS",
+    "cases": [
+      "Mixed valid/invalid JSONL with duplicate groups, Unicode code-point counts and blank result",
+      "P904 default JSON bytes equal exact P903 baseline",
+      "CSV exact CRLF/quoting, embedded newline and Unicode roundtrip, integer columns",
+      "Record errors stderr line 4 invalid_json and exit 2"
+    ],
+    "expected": {
+      "groups": [
+        {
+          "group": "a,\"한\"\n",
+          "records": 2,
+          "lines": 3,
+          "characters": 4
+        },
+        {
+          "group": "b",
+          "records": 1,
+          "lines": 0,
+          "characters": 0
+        }
+      ],
+      "errors": [
+        {
+          "line": 4,
+          "code": "invalid_json"
+        }
+      ]
+    },
+    "json_sha256": "4ff8f2d55efeea5b23a76df8fe9d11617d8d841a0ca03573da0de105c711f902",
+    "csv_sha256": "958496daf30bc47ad7ab8694450127eff2d9eab8cdf8570136867c87847a89f3"
+  },
+  {
+    "stage": "preservation",
+    "result": "PASS",
+    "scope": [
+      "Fixture P901/P902 code/tests/cards and dev-owned old evidence unchanged from prior final dev; old plan timeline/review match prior final plan bd8d5f9 inherited by exact adoption",
+      "Parent source unchanged from 4c4b5a3; existing 89 tests not repeated"
+    ]
+  }
+]

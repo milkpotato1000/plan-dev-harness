@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "6758949e87e8c5c797acd789f4a8deae40d050da",
+  "document": "docs/planning/reviews/P903-handoff.md",
+  "summary": "P903 JSONL 배치·CLI 준비 완료 검토 커밋(9f78cb9 + 인계 문서), P904는 초안",
+  "next_action": "정확 SHA 채택 후 STARTED 1회 발송, P903만 구현·테스트",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-25T00:32:21.257526+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-25T00:32:36.911568+00:00",
+      "evidence": "native SendMessage success 2026-11-25 09:32:36 +0900 to verified fixture-dev; inbox delivery, not yet read"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-25T00:33:12.739805+00:00",
+      "evidence": "fixture-dev P903 STARTED packet observed 2026-11-25 09:33:12 +0900 citing exact 6758949e87e8...; adoption commit 2ca41fe at 00:32:44Z"
+    }
+  ]
+}

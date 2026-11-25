@@ -1,0 +1,819 @@
+[
+  {
+    "at": "2026-11-25T00:31:26.108Z",
+    "role": "fixture-dev",
+    "type": "input_text",
+    "source_record_sha256": "67c661b9b3becf36ca7e2c7ff0d7f5539f708b2133a8a7903b6def234c328021",
+    "meta": false,
+    "topic": "P903 dispatch request",
+    "text_sha256": "4e5f625d039084600600b34d0dc920b1a29c931f9e751c0b9ac605bec49c13c3"
+  },
+  {
+    "at": "2026-11-25T00:31:30.497Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "f60e1759242106f198ecbe3f8473cb0d9f3ec939465ce9d77366b793823e27bd",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [],
+    "action_sha256": "50a29e4e2f74bd692cd6176caca67fc42a04ba4da23b85f281d3e2595e940398"
+  },
+  {
+    "at": "2026-11-25T00:31:36.182Z",
+    "role": "fixture-plan",
+    "type": "input_text",
+    "source_record_sha256": "86918538af7c6bb64fbbeaf08f08c33a36ffbbadc390785a9daf132c259fcc1e",
+    "meta": false,
+    "topic": "P904 request",
+    "text_sha256": "214e34cd05d5f45eff82c36d78ec4c99643cf7d5741c245ada9c4fa65ddfee2c"
+  },
+  {
+    "at": "2026-11-25T00:31:39.799Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "2caac762a3a149549b50ffa2f5789125c0f623bfbc4abc5298357e1c0dcbc0d4",
+    "text_sha256": "0dd50a6a66f67a328782bf0972cfecac4575d8c9f71067ee712e578a46bf40e6"
+  },
+  {
+    "at": "2026-11-25T00:31:42.845Z",
+    "role": "fixture-plan",
+    "type": "assistant_text",
+    "source_record_sha256": "ea83b8d4a387a033b502d2ceebea3ee3cf4217084b77e048dd43b562a65ff3de",
+    "text_sha256": "b1dbfefdcd06dff10ec2adcded11d03d39fbfbe328d8ff4960b660de2664ec0f"
+  },
+  {
+    "at": "2026-11-25T00:31:44.406Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "743cd81ab53dedc6c8322c49b724b01bd543f91ed3c25ab214fa4b41acb54095",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [],
+    "action_sha256": "074ab64c6fa2d6b9a48a0d2bdf0248817c4372a9fce22d1b2317818b6fa30897"
+  },
+  {
+    "at": "2026-11-25T00:31:55.503Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "36b3149c142cc2c14be5392445d1b757880a19ec6ccdd7c0317f5a4e5fad499f",
+    "tool": "AskUserQuestion",
+    "file": null,
+    "referenced_files": [],
+    "action_sha256": "f275046a57620774f7e19ea7bebbd972f88ebed1aae3b8f680bd931e1c5c61f1"
+  },
+  {
+    "at": "2026-11-25T00:31:57.171Z",
+    "role": "fixture-plan",
+    "type": "input_text",
+    "source_record_sha256": "6e5190b50de78cea0b5ee0b17ad21f97a2f15aa1b697f85677c8984673c771cf",
+    "meta": false,
+    "topic": "interrupted",
+    "text_sha256": "7c43783e9e0ece33ff98eb4956ec1db1f51850098d921627c439921679e46005"
+  },
+  {
+    "at": "2026-11-25T00:32:06.392Z",
+    "role": "fixture-plan",
+    "type": "input_text",
+    "source_record_sha256": "848ec765083fd06a406a9fb13dac9aa724b5bddadc65393c855494c4b46fee01",
+    "meta": false,
+    "topic": "P903 dispatch request",
+    "text_sha256": "4e5f625d039084600600b34d0dc920b1a29c931f9e751c0b9ac605bec49c13c3"
+  },
+  {
+    "at": "2026-11-25T00:32:08.931Z",
+    "role": "fixture-plan",
+    "type": "assistant_text",
+    "source_record_sha256": "1ee0d3051763c9caa67d87ddd4b697e11d9b2850b4e6c56e4127411a7623b226",
+    "text_sha256": "d6f679bd6c03930531240765adbbdfc76d663347b58360f271732fcbc039f9b0"
+  },
+  {
+    "at": "2026-11-25T00:32:14.343Z",
+    "role": "fixture-plan",
+    "type": "queued_input",
+    "source_record_sha256": "04ea7cdde30b00b4e66376da1c8eeb8317cb12a538ceae1a428ed1b5f46a279f",
+    "origin": "human",
+    "human_turn": true,
+    "meta": false,
+    "topic": "P904",
+    "prompt_sha256": "e18c6bedc3c713bafb66006caff16f234cfe87eefe0e4ae6d5755662c16bdb2b"
+  },
+  {
+    "at": "2026-11-25T00:32:14.454Z",
+    "role": "fixture-plan",
+    "type": "queue_enqueue",
+    "source_record_sha256": "484d40840195ab6a3b7da70ac1d7bec6a8687648a3c78489ecc48d8a1150fb52",
+    "topic": "P904",
+    "reason": null
+  },
+  {
+    "at": "2026-11-25T00:32:20.836Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "00eba088b8e49fa21013dcb5943fb7d6d299f0b2b50f108dfd1fa816706e76b9",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P903.md",
+      "docs/planning/reviews/P903-handoff.md",
+      "docs/planning/reviews/P903-review.md",
+      "docs/verification/P009-supplemental/plan-timeline.md"
+    ],
+    "action_sha256": "af7394095cd9306ec25ba0edee37b6d4b3d9138b45a1ab5342b78158e3a28664"
+  },
+  {
+    "at": "2026-11-25T00:32:21.620Z",
+    "role": "fixture-plan",
+    "type": "queue_remove",
+    "source_record_sha256": "08dc3ee9d62e28edc3e235bb416fba331180b43924ba236f593cf4401b9dfc63",
+    "topic": "P904",
+    "reason": "absorbed_mid_turn"
+  },
+  {
+    "at": "2026-11-25T00:32:24.078Z",
+    "role": "fixture-plan",
+    "type": "assistant_text",
+    "source_record_sha256": "0d47cf6562d0b3a93d5bc52a1fbb6594231b4d4e62b1c04d13e319db8ca7a868",
+    "text_sha256": "44d50ec79677ebcae55f92e094009cc18193b0c036499041c9e771c52cd6ff76"
+  },
+  {
+    "at": "2026-11-25T00:32:31.787Z",
+    "role": "fixture-plan",
+    "type": "native_call",
+    "source_record_sha256": "350a2c7b1618ce28d4748a8600d230ca2c8761513ada949a1701493ed732605c",
+    "tool": "SendMessage",
+    "topic": "P903 WORK_READY handoff to fixture-dev",
+    "exact_shas": [
+      "6758949e87e8c5c797acd789f4a8deae40d050da",
+      "9f78cb9ccd2fd23f8c82d73c2ffe573609696a75",
+      "98e88dbea1b560dee31017fb980ab78a6bd934b9"
+    ]
+  },
+  {
+    "at": "2026-11-25T00:32:31.908Z",
+    "role": "fixture-dev",
+    "type": "queue_enqueue",
+    "source_record_sha256": "39bcf70ba16600e72d28cdafbb760560c1266d31945c273eb395bee327a34aba",
+    "topic": "other",
+    "reason": null
+  },
+  {
+    "at": "2026-11-25T00:32:31.920Z",
+    "role": "fixture-dev",
+    "type": "queue_dequeue",
+    "source_record_sha256": "ea6770bcd6fc8c9671518892b2b4986343a6646e32d57381658ff4653c26e3d5",
+    "topic": "other",
+    "reason": null
+  },
+  {
+    "at": "2026-11-25T00:32:31.935Z",
+    "role": "fixture-dev",
+    "type": "input_text",
+    "source_record_sha256": "4f87babd2a82c389c4173dddfe486d92b06e004d8dc3740c68823387a4b2c389",
+    "meta": true,
+    "topic": "P903 WORK_READY",
+    "text_sha256": "770a5422d48555e60a05f2c30aecefddde380df40103f84d2d57b9c09f3b94bb"
+  },
+  {
+    "at": "2026-11-25T00:32:32.057Z",
+    "role": "fixture-plan",
+    "type": "native_result",
+    "source_record_sha256": "2814ce20ce92c4234cf69db93a6382002cd4f9c34f4541006fa8d313be7a3094",
+    "tool": "SendMessage",
+    "success": true,
+    "is_error": false,
+    "inbox_not_read": true
+  },
+  {
+    "at": "2026-11-25T00:32:35.797Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "106404064afd31473844a8c9fe3e513a91105e2715e7d12254be545b08880779",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P903.md"
+    ],
+    "action_sha256": "6591f3b04dd64c6d20e0f30c0d394ce5bdd7e8946591e2b60bf4a6623e81ba00"
+  },
+  {
+    "at": "2026-11-25T00:32:36.705Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "9b2b86b90b03d8a797065838da398413fd6646704ec00dec6a0d88bdfbcb39ca",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/plan-timeline.md"
+    ],
+    "action_sha256": "57e4ea7cb88bea61a0ac6fe8bfd015a39b0711f82d0fb905eaa47a18f32a1afb"
+  },
+  {
+    "at": "2026-11-25T00:32:38.251Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "992909bd95b07e7585df402b8d572e4ac46979a1d7a7e6cc2013ab2de732757e",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [],
+    "action_sha256": "c7df1865948cb8cc1c5ac38f5bbcedf276853a4ecc1e12586386c9fe0946087b"
+  },
+  {
+    "at": "2026-11-25T00:32:38.681Z",
+    "role": "fixture-plan",
+    "type": "assistant_text",
+    "source_record_sha256": "592720f65509ce491b9a966499cac07a8cc1e31b44912e00738ab6f0932bc667",
+    "text_sha256": "f237c458cc8c68e96ecb3977a280ba8db2e6fa76e755b4a865433d7b806d86d4"
+  },
+  {
+    "at": "2026-11-25T00:32:41.165Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "f7a5808e27d3d6dc40398b543e1af95a96d245b41952b573ebe39cf39d7a7818",
+    "text_sha256": "34979b8955df62f7b328247630cfaf08c9773342688db3db3d047535958d2b9b"
+  },
+  {
+    "at": "2026-11-25T00:32:44.021Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "04065f7f26f4abc2c78b8c233e4c02a688484588437d904812c834855b3bc3bd",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/reviews/P903-review.md"
+    ],
+    "action_sha256": "b548a4a414ca33edf307094da2f31fe05ecfd988ddbc0385def40b76c25dacf7"
+  },
+  {
+    "at": "2026-11-25T00:32:50.293Z",
+    "role": "fixture-dev",
+    "type": "native_call",
+    "source_record_sha256": "131d723991a04849fdcb19566f16fd6ab529d14429e9a519ca4106e3b14002d2",
+    "tool": "SendMessage",
+    "topic": "P903 STARTED packet to plan",
+    "exact_shas": [
+      "6758949e87e8c5c797acd789f4a8deae40d050da"
+    ]
+  },
+  {
+    "at": "2026-11-25T00:32:50.431Z",
+    "role": "fixture-plan",
+    "type": "queue_enqueue",
+    "source_record_sha256": "f66883d14786532a9550c9a9ba33167f66f06e7b6710d4237f0ceca15d1229af",
+    "topic": "P903 STARTED",
+    "reason": null
+  },
+  {
+    "at": "2026-11-25T00:32:50.431Z",
+    "role": "fixture-plan",
+    "type": "queued_input",
+    "source_record_sha256": "8350a6bb24357af1cdccad2f2818d1b24a4efb05988048cfe432605817fb01ba",
+    "origin": "peer",
+    "human_turn": false,
+    "meta": true,
+    "topic": "P903 STARTED",
+    "prompt_sha256": "e0b8d033edf6bd6e1f04d3eb002a28083b1d2dc1d7902b7f2bd9cd45508293e0"
+  },
+  {
+    "at": "2026-11-25T00:32:50.586Z",
+    "role": "fixture-dev",
+    "type": "native_result",
+    "source_record_sha256": "bffe36973ef7765bbf71cdfef733d472703f050ba73c6eb1b2e96fcc2789f6b7",
+    "tool": "SendMessage",
+    "success": true,
+    "is_error": false,
+    "inbox_not_read": true
+  },
+  {
+    "at": "2026-11-25T00:32:55.282Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "0dd28e72b07574e4cf3038df89c9d33043851f9a1ffe4463b597572cc94f8a54",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P904.md",
+      "docs/planning/reviews/P904-draft-review.md",
+      "docs/planning/reviews/P904-review.md",
+      "fixture_batch.py"
+    ],
+    "action_sha256": "52a6e5a4711729ddf18bf2adddb3ca7511d3189f86787fe3e1ce51b2dbfc0d03"
+  },
+  {
+    "at": "2026-11-25T00:32:56.254Z",
+    "role": "fixture-plan",
+    "type": "queue_remove",
+    "source_record_sha256": "1b1205b69365c233bfb6dc9d5670ec0427689b2796e915b27bdae5571840faa9",
+    "topic": "P903 STARTED",
+    "reason": "absorbed_mid_turn"
+  },
+  {
+    "at": "2026-11-25T00:32:59.338Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "1965d0c5b6156a73270dd379a7ff6bd909966171620b631176c4a5fa4181554d",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P903.md",
+      "docs/verification/P009-supplemental/dev-timeline.md"
+    ],
+    "action_sha256": "1469dca9c285ab89447ca3815a2e02870b0c87fe93f6e439736894a5cd3ebf78"
+  },
+  {
+    "at": "2026-11-25T00:33:01.025Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "3d1469b4c33c77dc077828ee2ba359679d6f1b5b635184255dd990100941425c",
+    "text_sha256": "1a688b61f1778f96289ee986d2fb757eb38f910ae12251e258be7e9e6ba823d4"
+  },
+  {
+    "at": "2026-11-25T00:33:05.968Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "3f2ab0e043b00f03fa322372249ff1d3a445e8668a556475177305c6394ebd3b",
+    "tool": "Write",
+    "file": "fixture_batch.py",
+    "referenced_files": [],
+    "action_sha256": "785c326635c3789ed755cfd3bc47cf4f59fa71d87f8613380bd04c16d995a44b"
+  },
+  {
+    "at": "2026-11-25T00:33:08.017Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "353801f71c90fb538f1f630e8f0e07c5ededfde10d66abf5bd139afa05450612",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [],
+    "action_sha256": "4838fd9ff03103a12655a602c4ba2ed8aa1cf02bc473643285918da3dc83e089"
+  },
+  {
+    "at": "2026-11-25T00:33:10.357Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "489ba1291552f5369f9eeaaa1d4d4b96217f94a5238d6d3029000d7ada35d492",
+    "text_sha256": "f7ee044aac1fd92f7496d0d0a5d476e984d2e05d8565ebb8dda921a7ddc639c2"
+  },
+  {
+    "at": "2026-11-25T00:33:12.486Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "b0360b38b30b9a0e9c53a60ff3a0b8c4b929745cad47f51a9f90b7390ea43bb1",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P904.md",
+      "docs/planning/reviews/P904-handoff.md",
+      "docs/planning/reviews/P904-review.md",
+      "docs/verification/P009-supplemental/plan-timeline.md"
+    ],
+    "action_sha256": "f833c2a4c43a7fd072db3f454f50a76a29875924cbfe1d92014c2efa71bb9318"
+  },
+  {
+    "at": "2026-11-25T00:33:13.132Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "0cade3b15768bfd78f2eaa96ca357ca7f5689c68cd072c65e02048055828b005",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/dev-timeline.md",
+      "fixture_batch.py"
+    ],
+    "action_sha256": "a022b6794a554b0f5ba92bd72d52c8c2edca52f02395e274d2c6038c9dab59ad"
+  },
+  {
+    "at": "2026-11-25T00:33:15.855Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "0ba6744dec5c7f258d465da408687d16dc52360465e84aef93cf741b1aa9934e",
+    "tool": "Edit",
+    "file": "fixture_batch.py",
+    "referenced_files": [],
+    "action_sha256": "05f75cd89e68f457340985c9e3cfede20d523a155c87e86a51ad6874f27e0ac3"
+  },
+  {
+    "at": "2026-11-25T00:33:21.102Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "607ddfbc5b0a539d068372d991a0eb11e4ee729351d31fa04f37da7b8dc123a4",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "fixture_batch.py"
+    ],
+    "action_sha256": "059ef991a2ad7604180962ea28e3131f92d7b5b181f60a647c8516c40035f9b1"
+  },
+  {
+    "at": "2026-11-25T00:33:22.611Z",
+    "role": "fixture-plan",
+    "type": "native_call",
+    "source_record_sha256": "840b9fe3b0e4e7d25a3439ab182b3ad239b25f4b06c3fb86baf23a2bbd52d30e",
+    "tool": "SendMessage",
+    "topic": "P904 WORK_READY handoff to busy fixture-dev",
+    "exact_shas": [
+      "e5a3da0d913d7b253da3d1a2d24e52a4272b801e",
+      "50aa347d87334d51590ba5ba6469247266bce6aa",
+      "98e88dbea1b560dee31017fb980ab78a6bd934b9"
+    ]
+  },
+  {
+    "at": "2026-11-25T00:33:22.707Z",
+    "role": "fixture-dev",
+    "type": "queued_input",
+    "source_record_sha256": "0b708b30f1b98058847fc37f4a84003e1954e8ce224df4e5ee752ee6af2632c3",
+    "origin": "peer",
+    "human_turn": false,
+    "meta": true,
+    "topic": "P904",
+    "prompt_sha256": "1d153a64ac7b3d96056d07fc0d6a95eddd8f322b410d8cfb08d37840d2b44895"
+  },
+  {
+    "at": "2026-11-25T00:33:22.708Z",
+    "role": "fixture-dev",
+    "type": "queue_enqueue",
+    "source_record_sha256": "f58d1184ef96e2cc02ae990427968274812f7b3f30140d89c44049c44f110abc",
+    "topic": "P904",
+    "reason": null
+  },
+  {
+    "at": "2026-11-25T00:33:22.854Z",
+    "role": "fixture-plan",
+    "type": "native_result",
+    "source_record_sha256": "894720d5a9c7312c94229172d3d3ea6dc3888840b078dc0dc96d14cbe5a186d8",
+    "tool": "SendMessage",
+    "success": true,
+    "is_error": false,
+    "inbox_not_read": true
+  },
+  {
+    "at": "2026-11-25T00:33:23.118Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "691d26aba710b3cfa319fdff1b172ce9bab9887b4b0eb2eba73fb0cc980a2e02",
+    "text_sha256": "2c66290567888baf6931359c3563d902b325a849036592e7b27e893d9f37bbe7"
+  },
+  {
+    "at": "2026-11-25T00:33:27.417Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "c5c1d002026324adb9116047b666457d92b5d1d8e58456dbf2034d1b2dbe3985",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/plan-timeline.md"
+    ],
+    "action_sha256": "c80f8e61c44ed642fc67bab4d153b6a179a8088a1557049da7ad3efd6b0b33ed"
+  },
+  {
+    "at": "2026-11-25T00:33:37.488Z",
+    "role": "fixture-plan",
+    "type": "assistant_text",
+    "source_record_sha256": "d018a0449599cbd17a7d6f50244af619727f9879bb933c59a895ff6817d74114",
+    "text_sha256": "8cad719e50c079b72697ebf5b160097f051a81ba52907fa9f751ed4626800d5a"
+  },
+  {
+    "at": "2026-11-25T00:33:42.334Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "8bf39fe8674adffe37378fc34a30176fad5e01ddcd8b9d949e913387ec728c8e",
+    "tool": "Write",
+    "file": "test_fixture_batch.py",
+    "referenced_files": [],
+    "action_sha256": "bc4b135eb7ae9611d9c6f85419317ffee350582043d13c33c3ea875b7b5876b8"
+  },
+  {
+    "at": "2026-11-25T00:33:43.230Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "51387493a33fdfe1adbdc30468906e1557d65831d2be09e58b22a290f5f44608",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [],
+    "action_sha256": "8666bbc6f026d764c7faa7afc76d2dd256f1c0d87eba86e375aeed0ad113489b"
+  },
+  {
+    "at": "2026-11-25T00:33:43.806Z",
+    "role": "fixture-dev",
+    "type": "queue_remove",
+    "source_record_sha256": "f92dc2251d51536e50dc5fbd15f6256bbe33c4c61f84d99c3eecb4353dd0ce53",
+    "topic": "P904",
+    "reason": "absorbed_mid_turn"
+  },
+  {
+    "at": "2026-11-25T00:33:45.885Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "ca552d45a2a083901c8fd5e7a8e69b87317f63e3a1468c959f1cad4732dd9283",
+    "text_sha256": "af12d1b6ebeee849dfae99cffe75bcdb92a145f56f19ad4f1fb79895789d86d6"
+  },
+  {
+    "at": "2026-11-25T00:33:51.184Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "b7585abbdd60bc59c3bb18b549e648fb309f14e0c2c3aae08d72f704c649a3e8",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/P903-tests.md",
+      "docs/verification/P009-supplemental/dev-timeline.md",
+      "fixture_batch.py",
+      "test_fixture_batch.py"
+    ],
+    "action_sha256": "3bf7fc94b5c9b53f94ecd730e0e9a964769092d3ac48bf0f7fcd01ebb70f8eab"
+  },
+  {
+    "at": "2026-11-25T00:33:58.439Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "46b50e10ce8b8efde9fa806718b0c71ff864afeebc724c29e60fb421aa935e71",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P903.md",
+      "docs/verification/P009-supplemental/P903-tests.md",
+      "docs/verification/P009-supplemental/dev-timeline.md"
+    ],
+    "action_sha256": "3e5bf97e09eb8448ae8ff77f80507400ee70e5ad064a05bba399cd8fd1127825"
+  },
+  {
+    "at": "2026-11-25T00:34:00.513Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "db67e5091d884b1490b88754b63ffc188bcaeaa78c08370bc646d7958142ab7b",
+    "text_sha256": "ea9e15a48828a0b59cc5c83c55f4e782724f5e5e164b01fce7324bff5eab8e5b"
+  },
+  {
+    "at": "2026-11-25T00:34:04.166Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "40d76a34865e6bb15a4937dec3c0b54daf28cdc90bcbc4d09f81d09479366750",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P903.md",
+      "docs/planning/plans/P904.md",
+      "docs/planning/reviews/P904-review.md",
+      "docs/verification/P009-supplemental/dev-timeline.md"
+    ],
+    "action_sha256": "001cbd529b749e15b850560799027ba4560271575fd937f99bacf8e48e8d67f3"
+  },
+  {
+    "at": "2026-11-25T00:34:07.769Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "b24599dbd75708203834656551bc00f199cc076cad9f24a86d730254fdb1dd89",
+    "text_sha256": "73e866874dc622dda77d025d3fdd50c8aea97c080afcce22f9e1d886669ee8d9"
+  },
+  {
+    "at": "2026-11-25T00:34:10.918Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "cd3e716c6ea71cb55e4cbb754a7288fd2c50b14571c4a8516eb9bb22807786ff",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P904.md",
+      "docs/verification/P009-supplemental/dev-timeline.md"
+    ],
+    "action_sha256": "0e58c7c533f66b100f401bd323ce21025e24d6122a63d990ffa22388607de0ac"
+  },
+  {
+    "at": "2026-11-25T00:34:13.858Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "820b5eb2165c18b94efb11f00b90ea8df450eed8fcbe378ae98ed6ab49b39fcc",
+    "tool": "Edit",
+    "file": "fixture_batch.py",
+    "referenced_files": [],
+    "action_sha256": "7cd401e761bc2df9f694925b582371277f6cef4e859ee207a729fc6cf51ff6ca"
+  },
+  {
+    "at": "2026-11-25T00:34:17.748Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "10142ef4639ad72aee5258e960aa7e35dedc7a838f18e72076ef7546b57154d6",
+    "tool": "Edit",
+    "file": "fixture_batch.py",
+    "referenced_files": [],
+    "action_sha256": "1e773d04aaf72fec814a9a25907d28b29062f21de2899ab552ba23455fe0042c"
+  },
+  {
+    "at": "2026-11-25T00:34:19.607Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "e000d6fbaf3d8097c5cf1d524fb744a61b8fe23455fec85dcec4fb7e24f8d0c1",
+    "tool": "Edit",
+    "file": "fixture_batch.py",
+    "referenced_files": [],
+    "action_sha256": "fc80fb89c6e105701217db443c3e44793dbb5cbb4f326f2810b134b5cf6aa147"
+  },
+  {
+    "at": "2026-11-25T00:34:21.794Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "729c534d178d1c2e6fa67b2153733495ef2402079ee81136291dbd0c75d838b5",
+    "text_sha256": "1ffd52961c42038c3ce1ea6c16e8b454ef58fcd854f4507eca33af5f7485608e"
+  },
+  {
+    "at": "2026-11-25T00:34:35.395Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "04e23f885d3a3b365335ab7c801cd515b5dca7805ad8afbe6a29792308f1f9be",
+    "tool": "Edit",
+    "file": "test_fixture_batch.py",
+    "referenced_files": [],
+    "action_sha256": "edfd9c420b4a8588529b52b67783f0805d314abc3e0540f29eeb60d62832bed5"
+  },
+  {
+    "at": "2026-11-25T00:34:36.293Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "d5725bffa0667d25d9041a8a8482700b85726ec2508527a66758fb9bd2ed9357",
+    "tool": "Edit",
+    "file": "test_fixture_batch.py",
+    "referenced_files": [],
+    "action_sha256": "c1e31fb2d9c38d71ba5a466100acb01e26a87f9aea4ebc9f5947a9a92df524dc"
+  },
+  {
+    "at": "2026-11-25T00:34:37.143Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "3b8f15d6e7a9ab0745dbf0931b26e036e7bd8f0963b6be440edb429e32eb6475",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [],
+    "action_sha256": "3bebc5430f41249b22084972cf077a3f3fc82bff53ffc5fe5891dd7a05770118"
+  },
+  {
+    "at": "2026-11-25T00:34:39.284Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "53cd6cb6007ae0f74b7090c6ae88c9b159b923e7f1f111705227f0e467fc8fae",
+    "text_sha256": "596167b4e4c443b7287b8eba4f738a2a8983ae01356dfa6568bd4480b4f399b8"
+  },
+  {
+    "at": "2026-11-25T00:34:47.713Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "000a7d92863dc51713ccec21791b6b4a4544ddecc2a0cf2c7c23c2360f59d3a0",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/planning/plans/P904.md",
+      "docs/verification/P009-supplemental/P904-tests.md",
+      "docs/verification/P009-supplemental/dev-timeline.md",
+      "fixture_batch.py",
+      "test_fixture_batch.py"
+    ],
+    "action_sha256": "22f542ce767d881a5b14fb8c585031700360e160158715626f359255f6ee521e"
+  },
+  {
+    "at": "2026-11-25T00:34:52.317Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "9fb0057f44e165995abd71f86aef4a37b741e1404596e1048c8338bdca7feee6",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/dev-timeline.md"
+    ],
+    "action_sha256": "9da210c3a8cd2cb17dfbb8c990864edba7e07a19e74199d27d9374554255c8d3"
+  },
+  {
+    "at": "2026-11-25T00:34:55.509Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "6c9bcced175333ccd67e11e15e6cafa4f839a8a1fb2610f7cefc08e5253d8126",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [],
+    "action_sha256": "983edab8154b2a03465c41a0ca72153cc67930e2f59c35a242b07b7c2495c795"
+  },
+  {
+    "at": "2026-11-25T00:35:00.688Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "6539856c032b349fb77cf6afd76737097ee8a6b522604dd9452c87181b167a17",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/dev-timeline.md"
+    ],
+    "action_sha256": "0038d3a70c34aa412ec0c1534298c59c4674feac3f0b97fffab83d85c427ef9c"
+  },
+  {
+    "at": "2026-11-25T00:35:09.300Z",
+    "role": "fixture-dev",
+    "type": "native_call",
+    "source_record_sha256": "9fb11f77fd599e57935a4cc626a1b5ee15c86f3c787ed3e88a103ecb7cf1b4bd",
+    "tool": "SendMessage",
+    "topic": "P903/P904 supplemental results to plan",
+    "exact_shas": [
+      "e5951a68fa81b28ea7b6e036ab17f0e2acc31580",
+      "98e88dbea1b560dee31017fb980ab78a6bd934b9",
+      "6758949e87e8c5c797acd789f4a8deae40d050da",
+      "e5a3da0d913d7b253da3d1a2d24e52a4272b801e"
+    ]
+  },
+  {
+    "at": "2026-11-25T00:35:09.466Z",
+    "role": "fixture-plan",
+    "type": "queue_enqueue",
+    "source_record_sha256": "fba9c4a5d86a86233759e34ecec06b535484a3fe81387deda996b960af1b66a6",
+    "topic": "other",
+    "reason": null
+  },
+  {
+    "at": "2026-11-25T00:35:09.480Z",
+    "role": "fixture-plan",
+    "type": "queue_dequeue",
+    "source_record_sha256": "9b06cf9176b5f2a955a1189e13d5f35bf8a0eb709a042bfa2299112ea55b80ef",
+    "topic": "other",
+    "reason": null
+  },
+  {
+    "at": "2026-11-25T00:35:09.497Z",
+    "role": "fixture-plan",
+    "type": "input_text",
+    "source_record_sha256": "a635cd07475beb3aed703acbcd501dc7afb69c364be348446782ba673032b13e",
+    "meta": true,
+    "topic": "other",
+    "text_sha256": "474a8159ffd745a04ea043bb3d6b4bebd31a1876ffd78da5060bd10620713af1"
+  },
+  {
+    "at": "2026-11-25T00:35:09.637Z",
+    "role": "fixture-dev",
+    "type": "native_result",
+    "source_record_sha256": "360500c4bff98568257b354f86ab7ffb02e8b4fce050550a4e88e43d7a5c0732",
+    "tool": "SendMessage",
+    "success": true,
+    "is_error": false,
+    "inbox_not_read": true
+  },
+  {
+    "at": "2026-11-25T00:35:14.648Z",
+    "role": "fixture-dev",
+    "type": "work_action",
+    "source_record_sha256": "e1f59d5b36fa0420547278cf506115f8d4ea0303c887eb53f48da7ec4691c0eb",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/dev-timeline.md"
+    ],
+    "action_sha256": "633a84f5b555f12881ed2e1827ae7f4dab6337b45ec0f7b13fde2ec9327ca78a"
+  },
+  {
+    "at": "2026-11-25T00:35:15.290Z",
+    "role": "fixture-plan",
+    "type": "assistant_text",
+    "source_record_sha256": "0cb733a25e5a821a775945912c4d4cb6d0d6562f74b19c271be3ddd244926d14",
+    "text_sha256": "0bbb88cecd8e616e3934cb788455a581de92ae4ab50a04dbd6ecfdb086ce3a15"
+  },
+  {
+    "at": "2026-11-25T00:35:17.301Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "8cfa9dc71c0b5a8cbc408bd264c6ab5d90a63110b8c28eb914e212d69d60fdfa",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/P904-tests.md",
+      "docs/verification/P009-supplemental/dev-timeline.md"
+    ],
+    "action_sha256": "e7ec4d2c47ff8539e0480ccd541b00010a267bc9bfa693c74d087e7ffe0057d1"
+  },
+  {
+    "at": "2026-11-25T00:35:24.277Z",
+    "role": "fixture-dev",
+    "type": "assistant_text",
+    "source_record_sha256": "cecb9809727f0b70a9b4a1b84ccd273579fcbcc8d69eb7d5ea5c09440d4cd4f9",
+    "text_sha256": "1b3264536e13e81ad8d6d02469ac8e839c12fe4328180350dfbcf905dd4fabda"
+  },
+  {
+    "at": "2026-11-25T00:35:26.391Z",
+    "role": "fixture-plan",
+    "type": "assistant_text",
+    "source_record_sha256": "3f8e4cf5bd6629b16174a3818d7e5eb33017bee6a87cdeff38fbe61d0b232bbc",
+    "text_sha256": "156b5d86e11295eaaff80ac84b3e2499d9fe83a8eb78f5bd844878f4cca80d1e"
+  },
+  {
+    "at": "2026-11-25T00:35:45.060Z",
+    "role": "fixture-plan",
+    "type": "work_action",
+    "source_record_sha256": "57db7f93055b131cfb3f033507823a54a63082203050da5b78add8a111761879",
+    "tool": "Bash",
+    "file": null,
+    "referenced_files": [
+      "docs/verification/P009-supplemental/P009-supplemental-results-review.md",
+      "docs/verification/P009-supplemental/plan-timeline.md"
+    ],
+    "action_sha256": "5265ec6f2e3117a7cf4d376ef6508a29ab076afe779aa8b9bec8de341985a69a"
+  },
+  {
+    "at": "2026-11-25T00:35:53.407Z",
+    "role": "fixture-plan",
+    "type": "assistant_text",
+    "source_record_sha256": "f4c589deb6afed39165cb8fe3c817e032d93d1c8f6a8b9efc3ebaded89341c75",
+    "text_sha256": "2351ff4d3aa343da264124d3e1e6e5b0abe754c2da786d5428644f617553ad0a"
+  }
+]

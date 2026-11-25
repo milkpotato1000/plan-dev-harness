@@ -1,0 +1,190 @@
+{
+  "observed_at": "2026-11-25T00:36:16.295797+00:00",
+  "redactions": "Fixture root, local peer names/addresses and UUID identities; source hashes retained. No semantic edits.",
+  "roles": {
+    "plan": {
+      "head": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "clean": true,
+      "commits": [
+        "779e2688685f11e8e0ea0ab6aa768d38022959dc 2026-11-25T09:35:45+09:00 Record P009 C3 supplemental results review and P904 ACK",
+        "ad4afb41deff80fa11d921743e43d39daa071040 2026-11-25T09:33:27+09:00 Record P904 handoff SENT",
+        "0c7d253b849e1b95d6701ca64b5007fb95d2ef13 2026-11-25T09:33:13+09:00 Record P904 WORK_READY pending handoff",
+        "e5a3da0d913d7b253da3d1a2d24e52a4272b801e 2026-11-25T09:33:13+09:00 Add P904 handoff document",
+        "50aa347d87334d51590ba5ba6469247266bce6aa 2026-11-25T09:33:13+09:00 Plan P904: reviewed READY CSV export with confirmed defaults",
+        "fc43dc396f2a696a28b0012e0a77d82c6bca0d80 2026-11-25T09:33:12+09:00 Record P903 handoff ACK from observed STARTED packet",
+        "ca472a5b0a1f1b787f2df08215d061eca65c0f57 2026-11-25T09:32:36+09:00 Record P903 handoff SENT",
+        "3c502f575f42704827ddb3fdd45c2099bd2a4326 2026-11-25T09:32:21+09:00 Record P903 WORK_READY pending handoff",
+        "6758949e87e8c5c797acd789f4a8deae40d050da 2026-11-25T09:32:21+09:00 Add P903 handoff document",
+        "9f78cb9ccd2fd23f8c82d73c2ffe573609696a75 2026-11-25T09:23:07+09:00 Prepare P009 C3 supplemental stage A: P903 READY, P904 DRAFT",
+        "bd8d5f92ad09f6c0ce65ecc328df83d4087ad98e 2026-11-25T08:45:34+09:00 Record P009 live results review and P902 ACK",
+        "0cb558a6d5fdcaefcd32c3d88f8e1edb43eaa8b6 2026-11-25T08:44:16+09:00 Record P902 handoff SENT",
+        "dd669be099b9d8cfd086faf1f7debdea891f8ff8 2026-11-25T08:44:02+09:00 Record P902 WORK_READY pending handoff",
+        "f69f30ae9763dd05085003d8151b0a7d6d134d9c 2026-11-25T08:44:02+09:00 Add P902 handoff document",
+        "af961b0ec68d76b12e9b477b7744dd3751ce7d4b 2026-11-25T08:44:02+09:00 Plan P902: reviewed READY fixture summarize_lines"
+      ]
+    },
+    "dev": {
+      "head": "1be0f27608ec2a107259daa756634a06cde37292",
+      "clean": true,
+      "commits": [
+        "1be0f27608ec2a107259daa756634a06cde37292 2026-11-25T09:35:14+09:00 Record supplemental results send and hash correction",
+        "e5951a68fa81b28ea7b6e036ab17f0e2acc31580 2026-11-25T09:35:00+09:00 Record P009 supplemental overlap summary",
+        "7585115b229c7ad90db3e9799415410afd3b0f6b 2026-11-25T09:34:48+09:00 P904: mark complete with evidence",
+        "1bf5b85dc568577d22659b53c5b4efd0723e822e 2026-11-25T09:34:48+09:00 P904: add --format csv option with tests",
+        "a5f39eb365afcaafde6ffbae486e5edb89fffb5f 2026-11-25T09:34:11+09:00 P904: record start",
+        "afbcbee6f44ba74953f7aa13ad28fb6caecb1539 2026-11-25T09:34:04+09:00 Adopt reviewed P904 plan e5a3da0d913d",
+        "c3239716dfe8e1e0fbc29c4a694338224a3ae8b3 2026-11-25T09:33:58+09:00 P903: mark complete with evidence",
+        "cb393060e92bdef20533b2da802d9ea5058e58a4 2026-11-25T09:33:51+09:00 P903: add JSONL CLI and edge tests; record pending P904",
+        "e5a3da0d913d7b253da3d1a2d24e52a4272b801e 2026-11-25T09:33:13+09:00 Add P904 handoff document",
+        "d8647bab086c55d2dd36bc391c9b93f46e8ff568 2026-11-25T09:33:13+09:00 P903: checkpoint summarize_jsonl core",
+        "50aa347d87334d51590ba5ba6469247266bce6aa 2026-11-25T09:33:13+09:00 Plan P904: reviewed READY CSV export with confirmed defaults",
+        "fc43dc396f2a696a28b0012e0a77d82c6bca0d80 2026-11-25T09:33:12+09:00 Record P903 handoff ACK from observed STARTED packet",
+        "6260dbb83001cc195e0dc16b25979d14ab0f4694 2026-11-25T09:32:59+09:00 P903: record adoption and start",
+        "2ca41fed059826c07a5317ea7d2450d2503cb83f 2026-11-25T09:32:44+09:00 Adopt reviewed P903 plan 6758949e87e8",
+        "ca472a5b0a1f1b787f2df08215d061eca65c0f57 2026-11-25T09:32:36+09:00 Record P903 handoff SENT"
+      ]
+    }
+  },
+  "files": {
+    "exports/plan/docs/planning/plans/P903.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "be8bbd160529ae30b2542d7b5f96a593ec2bdf6a379fc24649ff11e200b7f4c4",
+      "export_sha256": "be8bbd160529ae30b2542d7b5f96a593ec2bdf6a379fc24649ff11e200b7f4c4"
+    },
+    "exports/plan/docs/planning/plans/P904.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "843f58f08fbeb4b6c2c9c8a8890a72b027695face8de5618699b977ec43f30f3",
+      "export_sha256": "843f58f08fbeb4b6c2c9c8a8890a72b027695face8de5618699b977ec43f30f3"
+    },
+    "exports/plan/docs/planning/reviews/P903-handoff.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "e68415e087671a1b25f7566fcebec11797152d2b6194582ab7e1ad6939abd19f",
+      "export_sha256": "e68415e087671a1b25f7566fcebec11797152d2b6194582ab7e1ad6939abd19f"
+    },
+    "exports/plan/docs/planning/reviews/P903-review.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "246f339f683d27bcefd3c9e0f9aa773d91cf71e0035600f4ac64cf183333c319",
+      "export_sha256": "246f339f683d27bcefd3c9e0f9aa773d91cf71e0035600f4ac64cf183333c319"
+    },
+    "exports/plan/docs/planning/reviews/P904-draft-review.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "3a0b33b4cc6c75146ee4a4791ab0ca581859a628fded54e4673e4e4b63c71ee3",
+      "export_sha256": "3a0b33b4cc6c75146ee4a4791ab0ca581859a628fded54e4673e4e4b63c71ee3"
+    },
+    "exports/plan/docs/planning/reviews/P904-handoff.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "2deec3603541337a48524866eab898b5e3b77a9e69107f7558a40ee9dcc55b22",
+      "export_sha256": "2deec3603541337a48524866eab898b5e3b77a9e69107f7558a40ee9dcc55b22"
+    },
+    "exports/plan/docs/planning/reviews/P904-review.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "a2134ba403a6f13b68d4d95505b19d1a1efba5c5c1c6db524d0d4fcbfce758e7",
+      "export_sha256": "a2134ba403a6f13b68d4d95505b19d1a1efba5c5c1c6db524d0d4fcbfce758e7"
+    },
+    "exports/plan/docs/progress/handoffs/plan/1615a8ec44d08e37f0de2afc293cacb226d4dde8a417f7e5f00846216d7d3cba.json": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "1a30f0cc6ec8d1e015ad75fbbe154318554b6bc36dcf088a32e3a7e9c69dab45",
+      "export_sha256": "1a30f0cc6ec8d1e015ad75fbbe154318554b6bc36dcf088a32e3a7e9c69dab45"
+    },
+    "exports/plan/docs/progress/handoffs/plan/bc9abf8f93e27262e58bd26d159a36aa5617e53c6db591bcbd06b0723b65a2de.json": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "b8155b8b83b5fde647ba5d48e8b47719febbdcde77c4b2e6ae0f8d8f0dd87300",
+      "export_sha256": "b8155b8b83b5fde647ba5d48e8b47719febbdcde77c4b2e6ae0f8d8f0dd87300"
+    },
+    "exports/plan/docs/verification/P009-supplemental/P009-supplemental-results-review.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "c07f8c65928befe8d69df24c51504e30b41f5a182ad6965d9654c22fe06c6761",
+      "export_sha256": "c07f8c65928befe8d69df24c51504e30b41f5a182ad6965d9654c22fe06c6761"
+    },
+    "exports/plan/docs/verification/P009-supplemental/plan-timeline.md": {
+      "source_commit": "779e2688685f11e8e0ea0ab6aa768d38022959dc",
+      "source_sha256": "a966c9000181fa198fbcb013b8e1182aa5f3f4556da0ac26ff55ef7b27174b02",
+      "export_sha256": "a966c9000181fa198fbcb013b8e1182aa5f3f4556da0ac26ff55ef7b27174b02"
+    },
+    "exports/dev/.harness/adopted-plan.json": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "334596e555dda49ed9830ace72215483d2691f91f6e74d70804cea42354f4c4d",
+      "export_sha256": "334596e555dda49ed9830ace72215483d2691f91f6e74d70804cea42354f4c4d"
+    },
+    "exports/dev/docs/planning/plans/P903.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "5cd4fbc644ba4be69bfd3a00ecabf0a8dae5313b7e7973bea2a202f73330ca20",
+      "export_sha256": "5cd4fbc644ba4be69bfd3a00ecabf0a8dae5313b7e7973bea2a202f73330ca20"
+    },
+    "exports/dev/docs/planning/plans/P904.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "65d2eff3b5cabf9b6a05629e01bf7e3e5539e3a98f1e4bdbcf5d8ecc2038af37",
+      "export_sha256": "65d2eff3b5cabf9b6a05629e01bf7e3e5539e3a98f1e4bdbcf5d8ecc2038af37"
+    },
+    "exports/dev/docs/planning/reviews/P903-handoff.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "e68415e087671a1b25f7566fcebec11797152d2b6194582ab7e1ad6939abd19f",
+      "export_sha256": "e68415e087671a1b25f7566fcebec11797152d2b6194582ab7e1ad6939abd19f"
+    },
+    "exports/dev/docs/planning/reviews/P903-review.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "246f339f683d27bcefd3c9e0f9aa773d91cf71e0035600f4ac64cf183333c319",
+      "export_sha256": "246f339f683d27bcefd3c9e0f9aa773d91cf71e0035600f4ac64cf183333c319"
+    },
+    "exports/dev/docs/planning/reviews/P904-draft-review.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "3a0b33b4cc6c75146ee4a4791ab0ca581859a628fded54e4673e4e4b63c71ee3",
+      "export_sha256": "3a0b33b4cc6c75146ee4a4791ab0ca581859a628fded54e4673e4e4b63c71ee3"
+    },
+    "exports/dev/docs/planning/reviews/P904-handoff.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "2deec3603541337a48524866eab898b5e3b77a9e69107f7558a40ee9dcc55b22",
+      "export_sha256": "2deec3603541337a48524866eab898b5e3b77a9e69107f7558a40ee9dcc55b22"
+    },
+    "exports/dev/docs/planning/reviews/P904-review.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "a2134ba403a6f13b68d4d95505b19d1a1efba5c5c1c6db524d0d4fcbfce758e7",
+      "export_sha256": "a2134ba403a6f13b68d4d95505b19d1a1efba5c5c1c6db524d0d4fcbfce758e7"
+    },
+    "exports/dev/docs/progress/handoffs/plan/1615a8ec44d08e37f0de2afc293cacb226d4dde8a417f7e5f00846216d7d3cba.json": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "1a30f0cc6ec8d1e015ad75fbbe154318554b6bc36dcf088a32e3a7e9c69dab45",
+      "export_sha256": "1a30f0cc6ec8d1e015ad75fbbe154318554b6bc36dcf088a32e3a7e9c69dab45"
+    },
+    "exports/dev/docs/verification/P009-supplemental/P903-tests.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "bbf512d3f9a49f6d7a5b57444c8ad2521c2cf5ceeb3b9e2e5eeecbf5f4416982",
+      "export_sha256": "bbf512d3f9a49f6d7a5b57444c8ad2521c2cf5ceeb3b9e2e5eeecbf5f4416982"
+    },
+    "exports/dev/docs/verification/P009-supplemental/P904-tests.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "e956f1dd00ad70342b4fb8499c8cbc598c49f9bc039c4e27938c7959084543f4",
+      "export_sha256": "e956f1dd00ad70342b4fb8499c8cbc598c49f9bc039c4e27938c7959084543f4"
+    },
+    "exports/dev/docs/verification/P009-supplemental/dev-timeline.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "6a251e4e334eed86a8a92d3585bbbc18f63e1440a5be1fb0e00cd7632dda3295",
+      "export_sha256": "6a251e4e334eed86a8a92d3585bbbc18f63e1440a5be1fb0e00cd7632dda3295"
+    },
+    "exports/dev/docs/verification/P009-supplemental/plan-timeline.md": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "86d9a5c9597d7705bab2fc12e473d01519ce0f2678cd6cc5265400d8d68d438f",
+      "export_sha256": "86d9a5c9597d7705bab2fc12e473d01519ce0f2678cd6cc5265400d8d68d438f"
+    },
+    "exports/dev/fixture_batch.py": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "3916c6548b9c5dfc8e00fd336fa0bccc939f6af846ff4d4ff4e2de5250d447a4",
+      "export_sha256": "3916c6548b9c5dfc8e00fd336fa0bccc939f6af846ff4d4ff4e2de5250d447a4"
+    },
+    "exports/dev/fixture_format.py": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "2cc29c209d3a5c8d468c4f7b054dfec610ff7c3fcbc7ba2b2ee73a39f835ff25",
+      "export_sha256": "2cc29c209d3a5c8d468c4f7b054dfec610ff7c3fcbc7ba2b2ee73a39f835ff25"
+    },
+    "exports/dev/test_fixture_batch.py": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "8668760b5563fc6e0e5fbad108d4ee4f93fe77d0b4ee22b66541e5afabe9f988",
+      "export_sha256": "8668760b5563fc6e0e5fbad108d4ee4f93fe77d0b4ee22b66541e5afabe9f988"
+    },
+    "exports/dev/test_fixture_format.py": {
+      "source_commit": "1be0f27608ec2a107259daa756634a06cde37292",
+      "source_sha256": "010c3f7ef8da8bcd9257a99d04e72778ea5669af563095e4dfd7d057a901229c",
+      "export_sha256": "010c3f7ef8da8bcd9257a99d04e72778ea5669af563095e4dfd7d057a901229c"
+    }
+  }
+}

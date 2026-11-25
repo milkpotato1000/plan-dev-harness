@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-11-25T00:35:23.278620+00:00",
+  "inventory": [
+    {
+      "role": "fixture-plan",
+      "status": "busy",
+      "kind": "interactive"
+    },
+    {
+      "role": "fixture-dev",
+      "status": "busy",
+      "kind": "interactive"
+    }
+  ],
+  "official_cli_version": "2.1.331 (Claude Code)",
+  "distinct_existing_sessions": true,
+  "final_observed_at": "2026-11-25T00:36:34.735296+00:00",
+  "final_inventory": [
+    {
+      "role": "fixture-plan",
+      "status": "idle",
+      "kind": "interactive"
+    },
+    {
+      "role": "fixture-dev",
+      "status": "idle",
+      "kind": "interactive"
+    }
+  ]
+}
