@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P009-supplemental-live.md",
   "summary": "P009 live timing reviewed; prepare bounded P903/P904 supplement on existing workers without starting implementation before concrete human test inputs",
   "next_action": "Adopt exact supplemental review; coordinate fixture plan-owned preparation only, preserve completed P901/P902, send ready packet to parent plan; no duplicate trust/adoption question",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-25T00:16:11.729367+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-25T00:16:53.092247+00:00",
+      "evidence": "2026-11-25 actual send_message_to_thread success to verified existing same-project dev. Delivered exact98e88dbea1b560dee31017fb980ab78a6bd934b9 and stage-A-only supplemental preparation; preserve real human-turn and busy-receipt gates. No preparation/execution completion inferred."
     }
   ]
 }
