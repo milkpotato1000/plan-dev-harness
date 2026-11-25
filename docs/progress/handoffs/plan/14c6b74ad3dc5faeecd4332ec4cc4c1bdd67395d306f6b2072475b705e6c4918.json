@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/user-reviews/P009-supplemental-stage-A.md",
   "summary": "Supplemental fixture stage A verified at exact9f78cb9: P903 READY and P904 DRAFT; actual human stage B inputs will be guided through parent plan",
   "next_action": "Preserve existing workers; observe bounded stage B native and Git evidence after real human inputs, never type the inputs or start a competing worker",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-25T00:23:48.587418+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-25T00:24:25.355564+00:00",
+      "evidence": "2026-11-25 actual send_message_to_thread success to verified existing same-project dev. Exactcc1f99ac45b7ff56659088ea77c9cd0a2ae1850e and observed fixture9f78cb9 prepared state delivered. Human stage B inputs are to be guided, not yet observed; no live pass inferred."
     }
   ]
 }
