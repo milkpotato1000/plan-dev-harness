@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P009-C3-supplemental-P903-P904-results.md",
   "summary": "P009 supplemental P903 P904 complete; busy receipt PASS, required human timing FAIL; key P009-C3-supplemental-P903-P904-results",
   "next_action": "Review committed native timing and 33 artifact hashes; preserve strict C3 failure and completed fixtures; no automatic rerun, repeated trust/adoption input or lowered criterion.",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-25T00:37:37.311255+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-25T00:38:13.927735+00:00",
+      "evidence": "Actual send_message_to_thread success to verified existing session-plan; key P009-C3-supplemental-P903-P904-results; exact result91ae50ff7b699bee018f6a6dd61028577819bb81 and manifestbfab03ad400f1301899836a81bc6779b4ba10b6a27c2736d6869e13f2e5cf4c9 delivered. Busy receipt PASS, human timing FAIL/C3 incomplete explicit; no ACK polling."
     }
   ]
 }
