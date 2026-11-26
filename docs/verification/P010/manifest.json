@@ -1,0 +1,18 @@
+{
+  "P010-LIVE.md": "5ce7ba84246b04ea7aff42c9832a0fb3f57723e477d6f4770b6fe8cb7111fbfb",
+  "bounded-input-checks.json": "73811a7547bf64d9700edaa6bc8be02c9cc903e4a5fc4449d6a988374a340f80",
+  "claude-dev-hooks.json": "32ed262899d9d9bf8017f2f169d68a5312c6ccfc292f2c5c44a295d68c4adf1f",
+  "claude-plan-hooks.json": "e8e0d3e661f80500892be71f20ed8725b9ed62bbff2aca464866c7c17ee3517e",
+  "codex-dev-hooks.json": "a567d0f53def171ad03f1a228e74f15bccd34f686518f48bf449805a032b73ef",
+  "codex-plan-hooks.json": "63b8d93f4a50d465aae3150bc0f9f14e17ee9ddd825add9e9bb112d2e3686fd4",
+  "environment.json": "495ce85273bb0a8c05ddaaa93010468a8d0c3acd8ffbb3d20f802ee365a1dc5f",
+  "final-checks.json": "2798d73141a80e80fbb4465411fa18d4a9c9cc2fe40a5a50a7b30730d7ee27e1",
+  "focused-initial-failure.log": "26b63d371e9ef4a5ba68254864c5c21073dde016e4f17fb008dace6a24796e76",
+  "focused-tests.log": "ec9225f9e13193dc1d2ec4a5f215ff50b812679ef027246a66033ff94c0b69de",
+  "full-tests-final.log": "bce1e6efb7b187d45c72ad4e7cf41eba3b17aeb7dca33f068424f186b4b20d86",
+  "full-tests-first-candidate.log": "a84f681916e032f2c8634107f16562f7a7695c5fd14564098933e8bec195a228",
+  "host-capabilities.json": "36a1cad4ff43a727f1218b1bb801ff8c12bf2e9736242e3ed82ed25d15ba4ca5",
+  "installation-checks.json": "8adeb912880ff1c8bd79b21e8d9c1bf4f58e9013e6f9dab9990f32c4d15f5ed8",
+  "live-preparation.json": "a4cf70cf260bbc9e9694562b7983deb3d4df8cdb0d7dfed4ec8f7195406e561b",
+  "report.md": "dc8f0862aabd63ac73c906c7aa1186c4851c1fb9b7204b9ed15dba5f07800024"
+}

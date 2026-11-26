@@ -1,0 +1,19 @@
+{
+  "source_commit": "e044e3e7f11ef48d4f9cc4fa41cad7ac00d8e1c8",
+  "version": "0.2.5",
+  "python": "3.9.6",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "host_versions": {
+    "claude": "2.1.332",
+    "codex": "0.160.1"
+  },
+  "parent_runtime": "preserved; distribution updates only",
+  "main_and_v0.2.3": "3ede2e81f53be8252b585a57064f225fb711ccea",
+  "historical_document_hashes_preserved": 512,
+  "runtime_payload_sha256": {
+    "session_registry.py": "1c4f5e7a89e8dff3f8d97c9f89de2f1dbbfa23c6a55f4215bb68981929a30131",
+    "session_handoff.py": "83de65f91c67303f189350c0ae3de413a4764500c7999944503bf1da623b9ce1",
+    "configure_sessions.py": "999e79e54d2dcc66915b71094409fb096476539156e7effba59bdff0ea593f9a"
+  }
+}

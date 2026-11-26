@@ -1,0 +1,21 @@
+test_codex_capabilities_and_fresh_observation_envelope (test_session_registration.SessionTests) ... ok
+test_codex_reconnect_entry_uses_official_observation_without_id_argument (test_session_registration.SessionTests) ... ok
+test_conflict_blocks_dispatch_preserves_busy_and_contender_end (test_session_registration.SessionTests) ... ok
+test_fresh_preview_unicode_shell_paths_inline_hooks_and_configuration_conflict (test_session_registration.SessionTests) ... ok
+test_handoff_exact_event_and_queue_unknown_dedup (test_session_registration.SessionTests) ... ok
+test_hook_command_spaces_unicode_and_no_duplicate_settings (test_session_registration.SessionTests) ... ok
+test_hook_ignores_sensitive_fields_and_rejects_shell_identity (test_session_registration.SessionTests) ... ok
+test_install_partial_failure_rolls_back_owned_changes (test_session_registration.SessionTests) ... ok
+test_keep_custom_fields_owned_conflict_and_inline_codex_refusal (test_session_registration.SessionTests) ... ok
+test_malformed_clock_limits_symlink_and_atomic_failure (test_session_registration.SessionTests) ... ok
+test_nonblocking_lock_and_real_competing_processes (test_session_registration.SessionTests) ... ok
+test_other_clone_branch_cwd_host_and_duplicate_names_fail_closed (test_session_registration.SessionTests) ... ok
+test_restart_requires_end_and_positive_inventory_not_ttl (test_session_registration.SessionTests) ... ok
+test_same_id_closed_resume_positive_proof_and_old_generation (test_session_registration.SessionTests) ... ok
+test_start_order_late_peer_and_idempotent_resume (test_session_registration.SessionTests) ... ok
+test_stops_open_current_work_and_readonly_doctor (test_session_registration.SessionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 34.351s
+
+OK

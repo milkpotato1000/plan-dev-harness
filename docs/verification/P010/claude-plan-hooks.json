@@ -1,0 +1,48 @@
+{
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -B <fixture-container>/p010-claude_plan/scripts/session_registry.py --repo <fixture-container>/p010-claude_plan --host claude hook --role plan",
+            "timeout": 2,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -B <fixture-container>/p010-claude_plan/scripts/session_registry.py --repo <fixture-container>/p010-claude_plan --host claude hook --role plan",
+            "timeout": 2,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -B <fixture-container>/p010-claude_plan/scripts/session_registry.py --repo <fixture-container>/p010-claude_plan --host claude hook --role plan",
+            "timeout": 2,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -B <fixture-container>/p010-claude_plan/scripts/session_registry.py --repo <fixture-container>/p010-claude_plan --host claude hook --role plan",
+            "timeout": 2,
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  }
+}

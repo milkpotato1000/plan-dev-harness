@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "case": "oversized",
+      "exit": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 39,
+      "elapsed_seconds": 0.047,
+      "classification": "simulated stdin, not real host"
+    },
+    {
+      "case": "malformed_json",
+      "exit": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 44,
+      "elapsed_seconds": 0.048,
+      "classification": "simulated stdin, not real host"
+    },
+    {
+      "case": "missing_identity",
+      "exit": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 39,
+      "elapsed_seconds": 0.147,
+      "classification": "simulated stdin, not real host"
+    },
+    {
+      "case": "unsupported_event",
+      "exit": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 39,
+      "elapsed_seconds": 0.142,
+      "classification": "simulated stdin, not real host"
+    }
+  ],
+  "no_registry_created": true
+}

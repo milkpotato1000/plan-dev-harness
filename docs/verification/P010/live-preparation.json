@@ -1,0 +1,47 @@
+{
+  "source_commit": "e044e3e7f11ef48d4f9cc4fa41cad7ac00d8e1c8",
+  "actual_sessions_started": false,
+  "live_status": "NOTRUN",
+  "targets": {
+    "claude": {
+      "plan_head": "4a361b0d5b6caab77859a7a93df644f38eb01b65",
+      "dev_head": "19bbb2403b0aabc3437ff928dd7d17c8aa6a918a",
+      "runbook_sha256": "5ce7ba84246b04ea7aff42c9832a0fb3f57723e477d6f4770b6fe8cb7111fbfb",
+      "private_config_sha256": "c01fd08304c7678d8ea10490857639e554a43f05da2f458ce21864658783e153",
+      "hooks": {
+        "plan": {
+          "source_sha256": "851de1177df4ad513c55484a8307110dca40dbfd8b37ae23741ecead52aa7960",
+          "export_sha256": "e8e0d3e661f80500892be71f20ed8725b9ed62bbff2aca464866c7c17ee3517e",
+          "file": "claude-plan-hooks.json"
+        },
+        "dev": {
+          "source_sha256": "7ae188bf1596323314c18b7e97aa842de27b575a5a37aa165dc58de2a8661219",
+          "export_sha256": "32ed262899d9d9bf8017f2f169d68a5312c6ccfc292f2c5c44a295d68c4adf1f",
+          "file": "claude-dev-hooks.json"
+        }
+      },
+      "runtime_matches_source": true,
+      "registry_before_start": "absent"
+    },
+    "codex": {
+      "plan_head": "52fb676855498bcdab0693b6e6b96af5a1951443",
+      "dev_head": "158033babbe352ae71f09c442418b722a4daf18d",
+      "runbook_sha256": "5ce7ba84246b04ea7aff42c9832a0fb3f57723e477d6f4770b6fe8cb7111fbfb",
+      "private_config_sha256": "948942343c189bbd62c40ad61588a8ebd84fc3d8cf20b11ae14d7b412303aac3",
+      "hooks": {
+        "plan": {
+          "source_sha256": "77a1c9cc3e9aa6a8102876b4e4d4ba202fb3d963465fc8929e9da5d9a4eaca23",
+          "export_sha256": "63b8d93f4a50d465aae3150bc0f9f14e17ee9ddd825add9e9bb112d2e3686fd4",
+          "file": "codex-plan-hooks.json"
+        },
+        "dev": {
+          "source_sha256": "e839721877f0eabaff6cb11103b69d6385d0bb30bebf8022ff4f85a0bb1ac9f9",
+          "export_sha256": "a567d0f53def171ad03f1a228e74f15bccd34f686518f48bf449805a032b73ef",
+          "file": "codex-dev-hooks.json"
+        }
+      },
+      "runtime_matches_source": true,
+      "registry_before_start": "absent"
+    }
+  }
+}

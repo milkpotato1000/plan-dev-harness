@@ -1,0 +1,437 @@
+[
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<P010-private>/source-0.2.4/scripts/bootstrap_workspace.py",
+      "--parent",
+      "<isolated>/upgrade space \ud55c",
+      "--name",
+      "upgrade",
+      "--author-name",
+      "Fixture",
+      "--author-email",
+      "fixture@example.invalid",
+      "--apply"
+    ],
+    "exit": 0,
+    "stdout": "CREATE <isolated>/upgrade space \ud55c/upgrade/upgrade_main\nCREATE <isolated>/upgrade space \ud55c/upgrade/upgrade_plan\nCREATE <isolated>/upgrade space \ud55c/upgrade/upgrade_dev\nCreate initial infrastructure commit, exact dev adoption, then activate local Git hooks. No remotes/push.\nCreated <isolated>/upgrade space \ud55c/upgrade adopted plan 3f67914eb0cbfe8ddc99a52bcf493c1c4eb04fd2\nOpen the container in either agent; initialize plan/dev roles explicitly. Queue is empty.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/workflow_control.py",
+      "pause",
+      "--request",
+      "Fixture explicit both-role stop"
+    ],
+    "exit": 0,
+    "stdout": "docs/progress/sessions/dev.md: local record only; review and commit. No message or work was executed.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "docs/progress/sessions"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Preserve fixture stop"
+    ],
+    "exit": 0,
+    "stdout": "[dev 7f0296a] Preserve fixture stop\n 1 file changed, 9 insertions(+)\n create mode 100644 docs/progress/sessions/dev.md\n",
+    "stderr": "PASS: contracts match adopted plan 3f67914eb0cb\n"
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<source>/scripts/install_harness.py",
+      "--repo",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan",
+      "--protect",
+      "docs/planning",
+      "--protect",
+      "docs/architecture",
+      "--agent",
+      "both",
+      "--upgrade"
+    ],
+    "exit": 0,
+    "stdout": "CREATE scripts/session_registry.py\nCREATE scripts/session_handoff.py\nCREATE scripts/configure_sessions.py\nKEEP scripts/worker_doctor.py\nKEEP scripts/contract_guard.py\nKEEP scripts/work_queue.py\nKEEP scripts/plan_intake.py\nKEEP scripts/workflow_control.py\nKEEP .githooks/pre-commit\nKEEP .githooks/pre-push\nCREATE docs/process/session-registration.md\nKEEP docs/process/worker-adapters.md\nKEEP scripts/plan_cards.py\nKEEP docs/planning/plans/_TEMPLATE.md\nKEEP docs/process/work-queue.md\nKEEP docs/process/plan-intake.md\nKEEP docs/process/workflow-controls.md\nKEEP docs/process/optional-adapters.md\nKEEP docs/process/checkpoint-template.md\nKEEP docs/process/handoff-template.md\nKEEP docs/process/user-review-template.md\nUPDATE .harness/policy.json\nUPDATE AGENTS.md\nUPDATE docs/process/agent-workflow.md\nKEEP CLAUDE.md\nUPDATE .harness/installation.json\nPreview only; repeat with --apply to write files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<source>/scripts/install_harness.py",
+      "--repo",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan",
+      "--protect",
+      "docs/planning",
+      "--protect",
+      "docs/architecture",
+      "--agent",
+      "both",
+      "--upgrade",
+      "--apply"
+    ],
+    "exit": 0,
+    "stdout": "CREATE scripts/session_registry.py\nCREATE scripts/session_handoff.py\nCREATE scripts/configure_sessions.py\nKEEP scripts/worker_doctor.py\nKEEP scripts/contract_guard.py\nKEEP scripts/work_queue.py\nKEEP scripts/plan_intake.py\nKEEP scripts/workflow_control.py\nKEEP .githooks/pre-commit\nKEEP .githooks/pre-push\nCREATE docs/process/session-registration.md\nKEEP docs/process/worker-adapters.md\nKEEP scripts/plan_cards.py\nKEEP docs/planning/plans/_TEMPLATE.md\nKEEP docs/process/work-queue.md\nKEEP docs/process/plan-intake.md\nKEEP docs/process/workflow-controls.md\nKEEP docs/process/optional-adapters.md\nKEEP docs/process/checkpoint-template.md\nKEEP docs/process/handoff-template.md\nKEEP docs/process/user-review-template.md\nUPDATE .harness/policy.json\nUPDATE AGENTS.md\nUPDATE docs/process/agent-workflow.md\nKEEP CLAUDE.md\nUPDATE .harness/installation.json\nApplied local files.\nCommit/integrate, adopt exact plan SHA on dev, then install hooks in every clone.\nNo Git configuration, branch, remote, task approval or agent session was changed.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "scripts",
+      "docs",
+      "AGENTS.md",
+      "CLAUDE.md",
+      ".harness",
+      ".githooks"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Upgrade fixture runtime to 0.2.5"
+    ],
+    "exit": 0,
+    "stdout": "[plan 6751b6f] Upgrade fixture runtime to 0.2.5\n 8 files changed, 765 insertions(+), 4 deletions(-)\n create mode 100644 docs/process/session-registration.md\n create mode 100755 scripts/configure_sessions.py\n create mode 100755 scripts/session_handoff.py\n create mode 100755 scripts/session_registry.py\n",
+    "stderr": "PASS: plan checkpoint and handoff history\n"
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "6751b6f684f902ca6ca3aefc9c731981b56d8730\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge",
+      "--no-ff",
+      "--no-commit",
+      "6751b6f684f902ca6ca3aefc9c731981b56d8730"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Automatic merge went well; stopped before committing as requested\n"
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/contract_guard.py",
+      "adopt",
+      "6751b6f684f902ca6ca3aefc9c731981b56d8730",
+      "--review-reference",
+      "Authorized isolated P010 installation verification"
+    ],
+    "exit": 0,
+    "stdout": "PASS: contracts match adopted plan 6751b6f684f9\nAdoption recorded. Stage and commit .harness/adopted-plan.json; pending semantic decisions remain pending.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      ".harness/adopted-plan.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Adopt exact upgraded fixture runtime"
+    ],
+    "exit": 0,
+    "stdout": "[dev 9c6c462] Adopt exact upgraded fixture runtime\n",
+    "stderr": "PASS: contracts match adopted plan 6751b6f684f9\n"
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan/scripts/configure_sessions.py",
+      "--plan",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan",
+      "--dev",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_dev",
+      "--role-reference",
+      "Isolated P010 explicit role assignment"
+    ],
+    "exit": 0,
+    "stdout": "CREATE <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/plan-dev-sessions/config.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_plan/.claude/settings.local.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_plan/.codex/hooks.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_dev/.claude/settings.local.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_dev/.codex/hooks.json\nCREATE <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/plan-dev-sessions/hooks-installation.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/info/exclude\nPreview only; repeat with --apply.\nNo trust, permission, session, work, pause, approval or delivery was changed.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan/scripts/configure_sessions.py",
+      "--plan",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan",
+      "--dev",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_dev",
+      "--role-reference",
+      "Isolated P010 explicit role assignment",
+      "--apply"
+    ],
+    "exit": 0,
+    "stdout": "CREATE <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/plan-dev-sessions/config.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_plan/.claude/settings.local.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_plan/.codex/hooks.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_dev/.claude/settings.local.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_dev/.codex/hooks.json\nCREATE <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/plan-dev-sessions/hooks-installation.json\nUPDATE <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/info/exclude\nApplied local registration hooks.\nNo trust, permission, session, work, pause, approval or delivery was changed.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan/scripts/configure_sessions.py",
+      "--plan",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan",
+      "--dev",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_dev",
+      "--role-reference",
+      "Isolated P010 explicit role assignment",
+      "--apply"
+    ],
+    "exit": 0,
+    "stdout": "KEEP <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/plan-dev-sessions/config.json\nKEEP <isolated>/upgrade space \ud55c/upgrade/upgrade_plan/.claude/settings.local.json\nKEEP <isolated>/upgrade space \ud55c/upgrade/upgrade_plan/.codex/hooks.json\nKEEP <isolated>/upgrade space \ud55c/upgrade/upgrade_dev/.claude/settings.local.json\nKEEP <isolated>/upgrade space \ud55c/upgrade/upgrade_dev/.codex/hooks.json\nKEEP <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/plan-dev-sessions/hooks-installation.json\nKEEP <isolated>/upgrade space \ud55c/upgrade/upgrade_main/.git/info/exclude\nApplied local registration hooks.\nNo trust, permission, session, work, pause, approval or delivery was changed.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "check-ignore",
+      ".claude/settings.local.json",
+      ".codex/hooks.json"
+    ],
+    "exit": 0,
+    "stdout": ".claude/settings.local.json\n.codex/hooks.json\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "check-ignore",
+      ".claude/settings.local.json",
+      ".codex/hooks.json"
+    ],
+    "exit": 0,
+    "stdout": ".claude/settings.local.json\n.codex/hooks.json\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan/scripts/session_registry.py",
+      "--repo",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan",
+      "--host",
+      "claude",
+      "doctor"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"schema_version\": 1,\n  \"registration\": \"observations_only\",\n  \"dispatch\": \"pending\",\n  \"issues\": [\n    \"plan_missing\",\n    \"dev_missing\",\n    \"workflow_stops_or_open_require_scoped_review\"\n  ],\n  \"peers\": {},\n  \"performs_actions\": false,\n  \"execution\": \"not_authorized_by_registration\",\n  \"next_dev\": null,\n  \"notes\": [\n    \"Recheck exact reviewed handoff, real human grant and recipient capabilities before send.\",\n    \"Busy dev preserves current P and applies pending work only at a safe boundary.\",\n    \"Empty/incomplete host inventory is not evidence that another writer is dead.\"\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/work_queue.py",
+      "--owner",
+      "all",
+      "--brief"
+    ],
+    "exit": 0,
+    "stdout": "dev\ub294 \ucc44\ud0dd\ud55c plan 6751b6f684f9 \uae30\uc900. \uc774\ud6c4 plan \ucd08\uc548\uc740 \uc790\ub3d9 \ucc44\ud0dd\ud558\uc9c0 \uc54a\uc74c.\n\uc0ac\uc6a9\uc790 \uc911\uc9c0 \uae30\ub85d\uc774 \uc801\uc6a9\ub429\ub2c8\ub2e4. \uba85\uc2dc\uc801 \uc7ac\uac1c \uc804\uc5d0\ub294 \ud574\ub2f9 \uc5ed\ud560\uc744 \uc120\ud0dd\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.\nplan \ub2e4\uc74c \uc791\uc5c5: \uc2e4\ud589 \uac00\ub2a5\ud55c \uc2b9\uc778 \uc791\uc5c5 \uc5c6\uc74c\ndev \ub2e4\uc74c \uc791\uc5c5: \uc2e4\ud589 \uac00\ub2a5\ud55c \uc2b9\uc778 \uc791\uc5c5 \uc5c6\uc74c\nplan \uc0c8 \uc694\uad6c \uac80\ud1a0 \ub300\uae30: 0\uac74 (\uad6c\ud604 \uc2b9\uc778\uacfc \ubcc4\uac1c)\n  \uc0ac\uc6a9\uc790 \uc911\uc9c0: dev (all) \u2014 docs/progress/sessions/dev.md\n\uc870\ud68c \uc804\uc6a9 \u00b7 \uc790\ub3d9 \uc2e4\ud589/\uc2b9\uc778/\ubcd1\ud569/\ub124\ud2b8\uc6cc\ud06c \uc811\uadfc \uc5c6\uc74c\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan/scripts/configure_sessions.py",
+      "--plan",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_plan",
+      "--dev",
+      "<isolated>/upgrade space \ud55c/upgrade/upgrade_dev",
+      "--role-reference",
+      "Isolated P010 explicit role assignment",
+      "--apply"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "FAIL: Owned hook customized/missing/duplicated; preserve for review\n"
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<source>/scripts/install_skill.py",
+      "--agent",
+      "claude",
+      "--skills-dir",
+      "<isolated>/claude-skills"
+    ],
+    "exit": 0,
+    "stdout": "CREATE <isolated>/claude-skills/plan-dev-harness for claude (52 files)\nPreview only; repeat with --apply.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<source>/scripts/install_skill.py",
+      "--agent",
+      "claude",
+      "--skills-dir",
+      "<isolated>/claude-skills",
+      "--apply"
+    ],
+    "exit": 0,
+    "stdout": "CREATE <isolated>/claude-skills/plan-dev-harness for claude (52 files)\nInstalled. Reopen the agent session if discovery has not refreshed.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<source>/scripts/install_skill.py",
+      "--agent",
+      "claude",
+      "--skills-dir",
+      "<isolated>/claude-skills",
+      "--apply"
+    ],
+    "exit": 0,
+    "stdout": "KEEP identical skill: <isolated>/claude-skills/plan-dev-harness\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/claude-skills/plan-dev-harness/scripts/configure_sessions.py",
+      "--help"
+    ],
+    "exit": 0,
+    "stdout": "usage: configure_sessions.py [-h] --plan PLAN --dev DEV --role-reference\n                             ROLE_REFERENCE [--host {claude,codex,both}]\n                             [--apply]\n\nPreview/apply explicit local roles and lifecycle hooks, preserving user\nconfiguration.\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --plan PLAN\n  --dev DEV\n  --role-reference ROLE_REFERENCE\n  --host {claude,codex,both}\n  --apply\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/claude-skills/plan-dev-harness/scripts/session_registry.py",
+      "--help"
+    ],
+    "exit": 0,
+    "stdout": "usage: session_registry.py [-h] [--repo REPO] --host {claude,codex}\n                           {hook,reconnect,doctor} ...\n\nProject-local lifecycle observations. Registration never starts or approves\nwork.\n\npositional arguments:\n  {hook,reconnect,doctor}\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --repo REPO\n  --host {claude,codex}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/claude-skills/plan-dev-harness/scripts/session_handoff.py",
+      "--help"
+    ],
+    "exit": 0,
+    "stdout": "usage: session_handoff.py [-h] [--repo REPO] --host {claude,codex} --event\n                          EVENT --authority-reference AUTHORITY_REFERENCE\n                          [--host-observation HOST_OBSERVATION] [--enqueue]\n\nResolve an exact existing handoff against local registration and fresh host\nevidence.\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --repo REPO\n  --host {claude,codex}\n  --event EVENT\n  --authority-reference AUTHORITY_REFERENCE\n  --host-observation HOST_OBSERVATION\n  --enqueue             Explicit Codex CLI queue attempt; never resumes a\n                        worker\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<source>/scripts/install_skill.py",
+      "--agent",
+      "codex",
+      "--skills-dir",
+      "<isolated>/codex-skills"
+    ],
+    "exit": 0,
+    "stdout": "CREATE <isolated>/codex-skills/plan-dev-harness for codex (52 files)\nPreview only; repeat with --apply.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<source>/scripts/install_skill.py",
+      "--agent",
+      "codex",
+      "--skills-dir",
+      "<isolated>/codex-skills",
+      "--apply"
+    ],
+    "exit": 0,
+    "stdout": "CREATE <isolated>/codex-skills/plan-dev-harness for codex (52 files)\nInstalled. Reopen the agent session if discovery has not refreshed.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<source>/scripts/install_skill.py",
+      "--agent",
+      "codex",
+      "--skills-dir",
+      "<isolated>/codex-skills",
+      "--apply"
+    ],
+    "exit": 0,
+    "stdout": "KEEP identical skill: <isolated>/codex-skills/plan-dev-harness\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/codex-skills/plan-dev-harness/scripts/configure_sessions.py",
+      "--help"
+    ],
+    "exit": 0,
+    "stdout": "usage: configure_sessions.py [-h] --plan PLAN --dev DEV --role-reference\n                             ROLE_REFERENCE [--host {claude,codex,both}]\n                             [--apply]\n\nPreview/apply explicit local roles and lifecycle hooks, preserving user\nconfiguration.\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --plan PLAN\n  --dev DEV\n  --role-reference ROLE_REFERENCE\n  --host {claude,codex,both}\n  --apply\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/codex-skills/plan-dev-harness/scripts/session_registry.py",
+      "--help"
+    ],
+    "exit": 0,
+    "stdout": "usage: session_registry.py [-h] [--repo REPO] --host {claude,codex}\n                           {hook,reconnect,doctor} ...\n\nProject-local lifecycle observations. Registration never starts or approves\nwork.\n\npositional arguments:\n  {hook,reconnect,doctor}\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --repo REPO\n  --host {claude,codex}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "<isolated>/codex-skills/plan-dev-harness/scripts/session_handoff.py",
+      "--help"
+    ],
+    "exit": 0,
+    "stdout": "usage: session_handoff.py [-h] [--repo REPO] --host {claude,codex} --event\n                          EVENT --authority-reference AUTHORITY_REFERENCE\n                          [--host-observation HOST_OBSERVATION] [--enqueue]\n\nResolve an exact existing handoff against local registration and fresh host\nevidence.\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --repo REPO\n  --host {claude,codex}\n  --event EVENT\n  --authority-reference AUTHORITY_REFERENCE\n  --host-observation HOST_OBSERVATION\n  --enqueue             Explicit Codex CLI queue attempt; never resumes a\n                        worker\n",
+    "stderr": ""
+  },
+  {
+    "result": "PASS",
+    "checks": [
+      "Actual exact 0.2.4 -> 0.2.5 runtime upgrade, preview no writes, exact dev adoption",
+      "Local hooks preview/apply/KEEP; unknown settings/custom hooks/permission rules preserved",
+      "Existing uncommitted work and explicit both-role stop preserved",
+      "Customized owned hook refused before writes",
+      "Both independent SKILL+CLI payloads version0.2.5/help/KEEP; no personal install change"
+    ],
+    "source_commit": "e044e3e7f11ef48d4f9cc4fa41cad7ac00d8e1c8",
+    "old_source": "4c4b5a3f2ef63deeffa425f49c2bc0161cf48d66"
+  }
+]

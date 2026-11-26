@@ -1,0 +1,48 @@
+{
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -B <fixture-container>/p010-codex_dev/scripts/session_registry.py --repo <fixture-container>/p010-codex_dev --host codex hook --role dev",
+            "timeout": 2,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -B <fixture-container>/p010-codex_dev/scripts/session_registry.py --repo <fixture-container>/p010-codex_dev --host codex hook --role dev",
+            "timeout": 2,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -B <fixture-container>/p010-codex_dev/scripts/session_registry.py --repo <fixture-container>/p010-codex_dev --host codex hook --role dev",
+            "timeout": 2,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -B <fixture-container>/p010-codex_dev/scripts/session_registry.py --repo <fixture-container>/p010-codex_dev --host codex hook --role dev",
+            "timeout": 2,
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  }
+}
