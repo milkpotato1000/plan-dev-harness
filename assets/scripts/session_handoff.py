@@ -17,6 +17,7 @@ def host_rows(path, host, now=None):
     item=registry.read_json(Path(path),registry.LIMIT)
     if not isinstance(item,dict) or item.get('host')!=host or item.get('source')!={'codex':'codex_app_tools','claude':'claude_native_tools'}[host]:
         raise ValueError('Wrong host observation source')
+    if not isinstance(item.get('observed_at'),str):raise ValueError('Host observation timestamp required')
     age=(registry.moment(now)-registry.moment(item['observed_at'])).total_seconds()
     if not 0<=age<=30 or not isinstance(item.get('sessions'),list):raise ValueError('Stale/invalid host observation')
     if len(item['sessions'])>64 or any(not isinstance(r,dict) or not isinstance(r.get('sessionId'),str) or not isinstance(r.get('cwd'),str) or not Path(r['cwd']).is_absolute() for r in item['sessions']):

@@ -173,10 +173,12 @@ def load_registry(directory, cfg):
                 or row.get('branch') != cfg['roles'][role]['branch']
                 or row.get('identity') != identity(row.get('host'), row.get('session_id'))):
             raise ValueError('Invalid session row')
+        if not isinstance(row.get('observed_at'),str):raise ValueError('Missing observation timestamp')
         moment(row['observed_at'])
     for key, row in r['conflicts'].items():
         if not re.fullmatch('[0-9a-f]{64}', key) or not isinstance(row, dict) or row.get('role') not in ('plan', 'dev'):
             raise ValueError('Invalid conflict row')
+        if not isinstance(row.get('observed_at'),str):raise ValueError('Missing observation timestamp')
         moment(row['observed_at'])
     if any(not isinstance(x, str) or not re.fullmatch('[0-9a-f]{64}', x) for x in r['retired']):
         raise ValueError('Invalid retired identities')
@@ -286,7 +288,7 @@ def diagnose(repo, host, inventory=None, now=None, private=False):
             issues.append(role+'_fresh_host_inventory_required')
         else:
             matches=[x for x in inventory if x.get('sessionId')==row['session_id']]
-            if len(matches)!=1 or Path(matches[0].get('cwd','')).resolve()!=Path(row['worktree']):
+            if len(matches)!=1 or not isinstance(matches[0].get('cwd'),str) or not Path(matches[0]['cwd']).is_absolute() or Path(matches[0]['cwd']).resolve()!=Path(row['worktree']):
                 issues.append(role+'_host_identity_mismatch')
             elif len([x for x in inventory if x.get('cwd') and Path(x['cwd']).resolve()==Path(row['worktree'])]) != 1:
                 issues.append(role+'_multiple_host_writers')

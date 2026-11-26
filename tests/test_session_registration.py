@@ -78,6 +78,8 @@ class SessionTests(unittest.TestCase):
         self.assertIn('plan_cross_host_transport_unavailable',reg.diagnose(self.f.plan,'codex',self.rows(),self.now)['issues'])
         duplicate=self.rows()+[dict(sessionId='another',cwd=str(self.f.dev),status='idle',name='same')]
         self.assertIn('dev_multiple_host_writers',reg.diagnose(self.f.plan,'claude',duplicate,self.now)['issues'])
+        missing=self.rows();missing[0].pop('cwd')
+        self.assertIn('plan_host_identity_mismatch',reg.diagnose(self.f.plan,'claude',missing,self.now)['issues'])
         foreign=self.f.root/'clone';self.f.git('clone',str(self.f.plan),str(foreign),cwd=self.f.root)
         with self.assertRaises(FileNotFoundError):reg.config_for(foreign)
         self.f.git('checkout','-b','wrong-role',cwd=self.f.dev)
@@ -93,6 +95,8 @@ class SessionTests(unittest.TestCase):
         p.write_text('{bad')
         with self.assertRaises(ValueError):self.event()
         self.assertEqual(p.read_text(),'{bad');p.write_bytes(before)
+        r=json.loads(before);r['records']['plan']['observed_at']=None;p.write_text(json.dumps(r))
+        with self.assertRaises(ValueError):self.event()
         r=json.loads(before);r['records']['plan']['generation']='wrong';p.write_text(json.dumps(r))
         with self.assertRaises(ValueError):self.event()
         p.unlink();target=self.f.root/'outside';target.write_bytes(before);p.symlink_to(target)
