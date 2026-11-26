@@ -112,3 +112,7 @@ approve, send, adopt or run work. Send results/needed decisions through the plan
 review gateway with one request key; no duplicate user completion questions.
 
 See [Claude workers](references/claude-workers.md) and `scripts/worker_doctor.py`.
+
+## Local session registration — source 0.2.5
+
+After authorized setup, preview/apply `scripts/configure_sessions.py` with explicit plan/dev worktrees and role reference. Read [registration and reconnect](assets/docs/process/session-registration.md). Raw host startup registers identity only; it never approves, sends, resumes, takes over or starts work. Same-host discovery uses fresh official evidence; unsupported CLI/app transport remains pending. Preserve existing hooks/settings and global installations.

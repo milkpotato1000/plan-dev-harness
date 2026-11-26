@@ -1,3 +1,9 @@
+# 0.2.5 (unreleased)
+
+- Add explicit project-local role mapping, bounded private lifecycle registry, atomic updates, conflict/old-end protection and conservative host-verified reconnect.
+- Add preserving hook configuration preview/apply/KEEP and read-only discovery/exact handoff adapter; Codex queue acceptance remains separate from delivery.
+- Preserve current P, user stops, existing work/global installs and released v0.2.3. Actual two-session host verification is a separate gate; unsupported transport stays pending.
+
 # Changelog
 
 ## 0.2.4 — Unreleased

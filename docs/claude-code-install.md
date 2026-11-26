@@ -126,3 +126,21 @@ Native Windows, 실제 회사 Claude Code 로그인·조직 정책·실제 모�
 [두 세션 시작·binding·native 전달·진단](../references/claude-workers.md)을 따르세요.
 사용자가 plan에서 실행 승인하면 독립 dev는 내부 적용하며 다시 채택 입력을 받지 않습니다.
 독립 worker/전송 도구 부재나 hold/refuse는 대기이고, 설정/승인을 우회하지 않습니다.
+
+## 세션 자동 등록·재연결 — 0.2.5 개발 소스
+
+정식 설치 기준은 **v0.2.3**입니다. 미발행 0.2.5 소스에는 프로젝트별 역할 설정,
+공식 시작 hook을 통한 로컬 세션 등록, 상대 발견·보수적인 재연결이 추가됩니다.
+[설정 절차와 host별 한계](../assets/docs/process/session-registration.md)를 확인하세요.
+
+Runtime 설치·정확 통합 이후 먼저 미리봅니다.
+
+```sh
+python3 scripts/configure_sessions.py --plan /absolute/project_plan --dev /absolute/project_dev --role-reference "기존 사용자의 명시 역할 지정"
+```
+
+승인된 프로젝트에서만 `--apply`로 적용합니다. 이후 역할 폴더에서 일반 `claude`/`codex`를
+시작하면 실제 ID를 hook이 받으므로 사람이 ID를 복사하지 않습니다. 등록은 작업 시작·승인·
+중지 해제가 아닙니다. Host trust와 실제 두 세션의 전달·재연결 검증은 별도입니다.
+Codex CLI 0.160.1에는 문서화된 JSON inventory와 queue resume이 없어 확인할 수 없는
+재연결은 대기로 남깁니다. 기존 P009 fixture와 개인 설치는 이 소스 변경으로 갱신되지 않습니다.

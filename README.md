@@ -5,7 +5,7 @@ Git worktree로 plan/dev를 분리하고, 준비된 P카드와 정확한 계획 
 새 요구 접수부터 검증 증거·완료 처리까지 파일로 남겨 도구를 바꿔도 같은 작업을 이어갈 수 있습니다.
 
 Python 표준 라이브러리 + Git만 사용합니다. 계정 토큰, API 키, MCP 서버, 유료 모델 호출이 설치에 필요하지 않습니다.
-현재 소스: **0.2.4 개발 버전 / MIT**. 정식 배포: **0.2.3**, 배포일 **2026-11-24 (Asia/Seoul)**.
+현재 소스: **0.2.5 개발 버전 / MIT**. 정식 배포: **0.2.3**, 배포일 **2026-11-24 (Asia/Seoul)**.
 [정식 릴리스 v0.2.3](https://github.com/milkpotato1000/plan-dev-harness/releases/tag/v0.2.3)과
 [회사 Claude Code 설치 안내](docs/claude-code-install.md)를 제공합니다. Python **3.9 이상**, Git **2.31 이상**, POSIX shell 환경을 대상으로 합니다.
 macOS에서 실제 검증했습니다. Linux/WSL 사용 절차는 같지만 이 릴리스에서 직접 검증하지 않았고,
@@ -268,8 +268,8 @@ install_skill.py에는 --upgrade가 없습니다. Codex 기본 ~/.agents/skills�
 
 ## 독립 plan/dev worker — 0.2.4 개발 버전
 
-공개 정식 릴리스와 기본 설치 명령은 **v0.2.3**에 고정되어 있습니다. 현재 dev 소스는
-0.2.4이며 아직 main/tag/Release로 발행하지 않았습니다.
+공개 정식 릴리스와 기본 설치 명령은 **v0.2.3**에 고정되어 있습니다. 독립 worker는
+0.2.4에서 도입했고 현재 0.2.5 소스에도 포함됩니다. 두 개발 버전은 아직 main/tag/Release로 발행하지 않았습니다.
 [독립 Claude worker 설정](references/claude-workers.md)을 읽고 프로젝트 로컬 preview 후 설치하세요.
 Plan은 실행 승인을 기록하고 독립 dev에 전달한 뒤 다음 기획으로 돌아갑니다. Dev는 정확 SHA를
 내부 수신·적용해 순차 실행하며 사용자에게 채택 문장을 다시 요구하지 않습니다. 연결이 없거나
@@ -281,3 +281,21 @@ python3 scripts/worker_doctor.py --repo "/absolute/workspace/project_dev" --json
 
 진단은 읽기 전용이며 unbound/unknown 결과가 정상일 수 있습니다. 실제 host 도구와 역할·writer·위임
 확인이 필요합니다. CLI 목록만으로 메시지 전달이나 병렬 성공을 주장하지 않습니다.
+
+## 세션 자동 등록·재연결 — 0.2.5 개발 소스
+
+정식 설치 기준은 **v0.2.3**입니다. 미발행 0.2.5 소스에는 프로젝트별 역할 설정,
+공식 시작 hook을 통한 로컬 세션 등록, 상대 발견·보수적인 재연결이 추가됩니다.
+[설정 절차와 host별 한계](assets/docs/process/session-registration.md)를 확인하세요.
+
+Runtime 설치·정확 통합 이후 먼저 미리봅니다.
+
+```sh
+python3 scripts/configure_sessions.py --plan /absolute/project_plan --dev /absolute/project_dev --role-reference "기존 사용자의 명시 역할 지정"
+```
+
+승인된 프로젝트에서만 `--apply`로 적용합니다. 이후 역할 폴더에서 일반 `claude`/`codex`를
+시작하면 실제 ID를 hook이 받으므로 사람이 ID를 복사하지 않습니다. 등록은 작업 시작·승인·
+중지 해제가 아닙니다. Host trust와 실제 두 세션의 전달·재연결 검증은 별도입니다.
+Codex CLI 0.160.1에는 문서화된 JSON inventory와 queue resume이 없어 확인할 수 없는
+재연결은 대기로 남깁니다. 기존 P009 fixture와 개인 설치는 이 소스 변경으로 갱신되지 않습니다.

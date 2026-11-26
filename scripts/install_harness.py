@@ -10,9 +10,9 @@ import sys
 BASE = Path(__file__).resolve().parents[1]
 ASSETS = BASE / 'assets'
 VERSION = (BASE / 'VERSION').read_text().strip()
-EXECUTABLE = ('scripts/worker_doctor.py', 'scripts/contract_guard.py', 'scripts/work_queue.py', 'scripts/plan_intake.py', 'scripts/workflow_control.py', '.githooks/pre-commit', '.githooks/pre-push')
-GENERATED = (*EXECUTABLE, 'docs/process/worker-adapters.md', 'scripts/plan_cards.py', 'docs/planning/plans/_TEMPLATE.md', 'docs/process/work-queue.md', 'docs/process/plan-intake.md', 'docs/process/workflow-controls.md', 'docs/process/optional-adapters.md', 'docs/process/checkpoint-template.md', 'docs/process/handoff-template.md', 'docs/process/user-review-template.md')
-GOVERNANCE = ('scripts/worker_doctor.py', 'AGENTS.md', 'CLAUDE.md', 'docs/process', '.harness/policy.json', '.harness/installation.json', 'scripts/contract_guard.py', 'scripts/plan_cards.py', 'scripts/work_queue.py', 'scripts/plan_intake.py', 'docs/planning/plans', 'docs/planning/request-decisions', 'docs/planning/decision-scopes', 'scripts/workflow_control.py', 'docs/progress/sessions/plan.md', 'docs/progress/handoffs/plan', '.githooks')
+EXECUTABLE = ('scripts/session_registry.py', 'scripts/session_handoff.py', 'scripts/configure_sessions.py', 'scripts/worker_doctor.py', 'scripts/contract_guard.py', 'scripts/work_queue.py', 'scripts/plan_intake.py', 'scripts/workflow_control.py', '.githooks/pre-commit', '.githooks/pre-push')
+GENERATED = (*EXECUTABLE, 'docs/process/session-registration.md', 'docs/process/worker-adapters.md', 'scripts/plan_cards.py', 'docs/planning/plans/_TEMPLATE.md', 'docs/process/work-queue.md', 'docs/process/plan-intake.md', 'docs/process/workflow-controls.md', 'docs/process/optional-adapters.md', 'docs/process/checkpoint-template.md', 'docs/process/handoff-template.md', 'docs/process/user-review-template.md')
+GOVERNANCE = ('scripts/session_registry.py', 'scripts/session_handoff.py', 'scripts/configure_sessions.py', 'scripts/worker_doctor.py', 'AGENTS.md', 'CLAUDE.md', 'docs/process', '.harness/policy.json', '.harness/installation.json', 'scripts/contract_guard.py', 'scripts/plan_cards.py', 'scripts/work_queue.py', 'scripts/plan_intake.py', 'docs/planning/plans', 'docs/planning/request-decisions', 'docs/planning/decision-scopes', 'scripts/workflow_control.py', 'docs/progress/sessions/plan.md', 'docs/progress/handoffs/plan', '.githooks')
 BASELINE = '.harness/adopted-plan.json'
 MANIFEST = '.harness/installation.json'
 
