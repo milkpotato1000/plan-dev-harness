@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P010-dev-handoff.md",
   "summary": "P010 READY: 세션 자동 등록·재연결, 설치형 source 0.2.5; 기존 작업·중지·P009 C3 보존",
   "next_action": "기존 dev가 안전한 경계에서 정확 인계 SHA를 내부 적용하고 W1~W7 구현·검증; 사람 채택 재입력 없이 진행, main/release 변경 금지",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-26T07:37:31.925461+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-26T07:38:17.767249+00:00",
+      "evidence": "2026-11-26 Asia/Seoul: official send_message_to_thread succeeded to verified existing same-project dev; exact delivery SHA 32e00589afa491a47a5e89fadc1aa4f113003a28, common key P010-session-registration-reconnect. Receipt/adoption/completion not yet observed; no ACK wait."
     }
   ]
 }
