@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P010-session-registration-reconnect.md",
   "summary": "P010 source0.2.5 and 105tests/install PASS; prepared actual host prerequisite; key P010-session-registration-reconnect",
   "next_action": "Inspect source/report/16 hashes and prepared isolated targets; route actual terminal/hook-trust input once; preserve C3 NOTRUN, P009 failure, existing workers/stops and released main/tag.",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-26T07:58:10.386903+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-26T07:59:10.492398+00:00",
+      "evidence": "Actual send_message_to_thread success to verified existing session-plan under real same-project grant; common key P010-session-registration-reconnect; exact sourcee044e3e/resultd12e20e and manifest593c8fa7 with 16hashes delivered after verified origin/dev push3da211e. Private prepared startup commands/runbook hash supplied, C3 NOTRUN explicit; no ACK loop."
     }
   ]
 }
