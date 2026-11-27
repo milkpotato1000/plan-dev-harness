@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "6d4c449c3c59e036cb954a6dc53ad7cae9928993",
+  "document": "docs/feedback/dev/reviews/P010-claude-startup-20261128.md",
+  "summary": "P010 actual Claude lifecycle registration verified; first handoff and reconnect pending; common key P010-session-registration-reconnect",
+  "next_action": "Review six hashed checkpoint artifacts; retain existing pending plan continue input and C3 incomplete. No repeated human question or unchanged-state polling; observe actual new fixture events.",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T16:51:47.479677+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
