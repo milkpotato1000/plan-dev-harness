@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P010-claude-startup-20261128.md",
   "summary": "P010 actual Claude lifecycle registration verified; first handoff and reconnect pending; common key P010-session-registration-reconnect",
   "next_action": "Review six hashed checkpoint artifacts; retain existing pending plan continue input and C3 incomplete. No repeated human question or unchanged-state polling; observe actual new fixture events.",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-27T16:51:47.479677+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T16:52:26.649582+00:00",
+      "evidence": "Actual send_message_to_thread success to existing verified session-plan under real project grant; common key P010-session-registration-reconnect; result6d4c449 and six-artifact manifest60ae6324 delivered after verified origin/dev push2c626e6. Actual SessionStart metadata, point-in-time host identity, pending first handoff/C3 scope explicit. No new human action or ACK loop."
     }
   ]
 }
