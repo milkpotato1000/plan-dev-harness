@@ -29,3 +29,33 @@ runbook의 제한된 marker 두 번과 정상 재접속만 허용한다. 새 사
 trust 대리 승인·강제 종료·P009 재시험은 하지 않는다. 플랫폼 도구 부재는 pending으로 남긴다.
 P009 4/5와 역사 실패, 기존 fixture/작업/중지, 개인 설치와 main/tag0.2.3을 유지한다.
 단순 검토 ACK를 발송하거나 완료 대기 loop를 만들지 않는다.
+
+## 실제 사용자 시작 응답과 등록 확인 — 2026-11-28
+
+같은 key의 실제 인간 응답: “둘 다 열고 입력했어. 자동 등록됐는지 확인하고 다음 검증 진행해줘.”
+기존 준비된 Claude 두 역할에 한정된 시작 응답이며 Codex 시작/재접속 완료나 중지 재개로
+확대하지 않는다. 기존 runbook 범위의 다음 검증을 진행하도록 기존 dev 관찰 담당에 인계한다.
+
+읽기 전용으로 실제 fixture plan/dev가 각각 clean이며 plan의 precondition 기록과 dev의
+준비 기록이 커밋됐음을 확인했다. Plan은 먼저 시작해 dev-missing 상태를 기록하고 종료했다.
+Dev의 후행 기록은 양쪽 identity_consistent이나 P901 카드/인계가 아직 없음을 보여 준다.
+Fixture 역할 소유권을 유지하며 부모 plan/dev가 대신 카드나 제품 코드를 쓰지 않는다.
+
+최초 sandbox CLI inventory는 빈 목록이라 doctor가 양쪽 host_identity_mismatch를 반환했다.
+이를 실제 등록 실패로 단정하지 않고 승인된 읽기 전용 host inventory와 doctor를 재확인했다.
+실제 host에는 각 정확 역할 cwd에 하나씩 idle 세션이 있고, doctor는 issues=[]와
+identity_consistent를 반환했다. 등록부는 plan generation 1, dev generation 3이며 idle이다.
+이는 자동 등록과 현재 host identity 일치의 증거다. 세대 번호만으로 재접속 시험 통과를
+주장하지 않는다. 관찰은 2026-11-28 Asia/Seoul이며 원시 ID/개인 경로는 기록하지 않는다.
+
+현재 부모 도구 목록에는 Claude native ListAgents/SendMessage가 없다. 기존 Codex dev
+담당에게는 실제 관찰과 이 정확 시작 응답을 전달할 수 있으나, fixture Claude plan의 다음
+턴을 직접 열었다고 주장하지 않는다. 기존 plan 터미널에서 상대 재확인 후 runbook 첫 P901
+인계를 계속하도록 하는 최소 입력을 사용자에게 안내한다. 이는 세션 재개설/trust/채택
+재승인이 아니라 현재 두 환경 사이의 전달 도구 부재로 필요한 계속 진행 입력이다.
+사용자 입력이 이루어졌다는 기록은 실제 답변/증거가 오기 전 추가하지 않는다.
+
+자동 등록과 상대의 뒤늦은 등장만으로 idle plan이 자동으로 깨어나는 것은 현재 계약의
+등록 전용 lifecycle와 별개다. 이 시작 순서의 실제 사용성 한계를 결과에 보존한다.
+기존 dev는 현재 두 세션을 재사용해 실제 인계/적용/정상 재접속 증거를 수집하고 C3를
+미완료로 유지한다. 재시작/재연결 조작은 실제 첫 작업 완료와 소유권 확인 전 안내하지 않는다.
