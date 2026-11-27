@@ -1,0 +1,30 @@
+{
+  "plan": {
+    "commit": "c5d29c7dd4f3449309e5db2bdf38d4b3df2646f8",
+    "clean": true,
+    "file": "01-plan-precondition.md",
+    "source_sha256": "f70a1a628627c34f806fc12a3a15fec7cda170576572ebfd3f2467620d62b2d8",
+    "input_metadata": [
+      {
+        "at": "2026-11-27T16:44:35.634Z",
+        "origin": "human",
+        "description": "Explicit plan role and P010 runbook scope",
+        "source_record_sha256": "8505bff31a27b30dd10cc75109c91272849681fda2b4aa211a8aea6615f3aa70"
+      }
+    ]
+  },
+  "dev": {
+    "commit": "a8f39aef5be29989f5655cc0569a3061ad19f277",
+    "clean": true,
+    "file": "02-dev-ready.md",
+    "source_sha256": "6c3a9b1129f90c9662735954c2c3c7eb6e51f6e07877200380cbaee066c6ca35",
+    "input_metadata": [
+      {
+        "at": "2026-11-27T16:45:11.751Z",
+        "origin": "human",
+        "description": "Explicit dev role and P010 runbook scope",
+        "source_record_sha256": "b8487bef18ff0588e892a9e918cffa196939b51e287bba2af271d48b42732c14"
+      }
+    ]
+  }
+}

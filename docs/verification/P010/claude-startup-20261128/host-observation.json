@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-11-27T16:49:31.492974+00:00",
+  "timezone": "Asia/Seoul",
+  "method": "official host claude agents --json and installed readonly doctor --live, outside restricted sandbox",
+  "roles": {
+    "plan": {
+      "count_at_exact_cwd": 1,
+      "status": "idle",
+      "generation": 1
+    },
+    "dev": {
+      "count_at_exact_cwd": 1,
+      "status": "idle",
+      "generation": 3
+    }
+  },
+  "doctor": {
+    "both_roles_exit": 0,
+    "dispatch": "identity_consistent",
+    "issues": [],
+    "performs_actions": false,
+    "next_dev": null
+  },
+  "scope": "Point-in-time observation, not later freshness, delivery or reconnect evidence",
+  "no_ids_exported": true
+}
