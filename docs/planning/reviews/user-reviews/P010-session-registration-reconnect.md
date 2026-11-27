@@ -59,3 +59,22 @@ identity_consistent를 반환했다. 등록부는 plan generation 1, dev generat
 등록 전용 lifecycle와 별개다. 이 시작 순서의 실제 사용성 한계를 결과에 보존한다.
 기존 dev는 현재 두 세션을 재사용해 실제 인계/적용/정상 재접속 증거를 수집하고 C3를
 미완료로 유지한다. 재시작/재연결 조작은 실제 첫 작업 완료와 소유권 확인 전 안내하지 않는다.
+
+## 실제 시작 hook 증거 검토 — 2026-11-28
+
+동일 key의 결과 `6d4c449c3c59e036cb954a6dc53ad7cae9928993`에서
+`docs/verification/P010/claude-startup-20261128/report.md`를 읽고 manifest SHA256
+`60ae6324e4f25ee6462af67672fedc08c70c28d02c3dcad414d1423064339046`와 6개 artifact
+hash를 Git blob에서 재검산해 일치를 확인했다. 실제 SessionStart hook은 Asia/Seoul 기준
+plan 01:44:21.436 / dev 01:44:47.199에 registered, exit 0, stdout 비어 있음으로 기록됐다.
+각 소요 410ms/391ms와 후속 Stop hook 성공 증거가 있다. 합성 입력 테스트와 구분한다.
+
+01:49:31 실제 host 관찰과 설치된 doctor 양쪽 일치는 시점 한정 증거다. 새 전송 직전에는
+실제 상대/권한/freshness를 다시 확인해야 한다. 등록부 세대 1/3을 재접속 성공으로 해석하지
+않는다. P010 C3는 미완료다. 첫 정확 인계/적용/완료, 정상 재접속·후속 인계, Codex 실제
+두 세션 시험은 이 checkpoint에서 검증되지 않았다. 새로운 코드 변경이나 전체 회귀 재실행은 없다.
+
+이미 사용자에게 안내한 fixture plan 계속 입력을 중복 요청하지 않는다. 이번 결과에는
+새 사람 행동 요청이 없다. 실제 후속 입력/작업 근거가 도착하면 기존 writer로 계속하며,
+변함없는 상태를 polling하거나 단순 ACK를 역발송하지 않는다. 기존 작업·중지·P009와
+공개 main/tag0.2.3, 개인 설치 보존 범위는 그대로다.
