@@ -1,0 +1,70 @@
+[
+  {
+    "expected": {
+      "to": "p011-fictional-address-cb6a93ded0",
+      "summary": "Synthetic field comparison",
+      "message": "Synthetic amber notebook number forty seven holds three folded paper maps."
+    },
+    "assistant": [
+      {
+        "to": "p011-fictional-address-cb6a93ded0",
+        "summary": "Synthetic field comparison",
+        "message": "Synthetic amber notebook number forty seven holds three folded paper maps.",
+        "type": "message",
+        "recipient": "p011-fictional-address-cb6a93ded0",
+        "recipient_kind": "name",
+        "content": "Synthetic amber notebook number forty seven holds…"
+      }
+    ],
+    "streamed_json": "{\"to\": \"p011-fictional-address-cb6a93ded0\", \"summary\": \"Synthetic field comparison\", \"message\": \"Synthetic amber notebook number forty seven holds three folded paper maps.\"}",
+    "pre": [
+      {
+        "to": "p011-fictional-address-cb6a93ded0",
+        "summary": "Synthetic field comparison",
+        "message": "Synthetic amber notebook number forty seven holds three folded paper maps.",
+        "type": "message",
+        "recipient": "p011-fictional-address-cb6a93ded0",
+        "recipient_kind": "name",
+        "content": "Synthetic amber notebook number forty seven holds…"
+      }
+    ],
+    "errors": [
+      true
+    ],
+    "cost_usd": 0.0334208
+  },
+  {
+    "expected": {
+      "to": "p011-fictional-address-cb6a93ded0",
+      "summary": "Synthetic field comparison",
+      "message": "가상의 연필 상자에는 파란 종이와 노란 종이가 나란히 놓여 있고 그 아래에 짧은 메모가 있습니다."
+    },
+    "assistant": [
+      {
+        "to": "p011-fictional-address-cb6a93ded0",
+        "summary": "Synthetic field comparison",
+        "message": "가상의 연필 상자에는 파란 종이와 노란 종이가 나란히 놓여 있고 그 아래에 짧은 메모가 있습니다.",
+        "type": "message",
+        "recipient": "p011-fictional-address-cb6a93ded0",
+        "recipient_kind": "name",
+        "content": "가상의 연필 상자에는 파란 종이와 노란 종이가 나란…"
+      }
+    ],
+    "streamed_json": "{\"to\": \"p011-fictional-address-cb6a93ded0\", \"summary\": \"Synthetic field comparison\", \"message\": \"가상의 연필 상자에는 파란 종이와 노란 종이가 나란히 놓여 있고 그 아래에 짧은 메모가 있습니다.\"}",
+    "pre": [
+      {
+        "to": "p011-fictional-address-cb6a93ded0",
+        "summary": "Synthetic field comparison",
+        "message": "가상의 연필 상자에는 파란 종이와 노란 종이가 나란히 놓여 있고 그 아래에 짧은 메모가 있습니다.",
+        "type": "message",
+        "recipient": "p011-fictional-address-cb6a93ded0",
+        "recipient_kind": "name",
+        "content": "가상의 연필 상자에는 파란 종이와 노란 종이가 나란…"
+      }
+    ],
+    "errors": [
+      true
+    ],
+    "cost_usd": 0.015127700000000001
+  }
+]
