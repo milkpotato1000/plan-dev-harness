@@ -47,3 +47,11 @@ class RelayBoundary(unittest.TestCase):
         for field in actual:
             self.assertFalse(relay.exact_send(dict(actual, **{field: 'changed'}), args))
         self.assertFalse(relay.exact_send(dict(actual, broadcast=True), args))
+
+    def test_native_preview_requires_full_original_body(self):
+        body = 'P901 검토를 시작해 주세요. 이미 시작된 경우 보존합니다.'
+        expected = {'to': 'plan', 'message': body}
+        args = dict(expected, content=body[:30] + '…')
+        self.assertTrue(relay.exact_send(args, expected))
+        self.assertFalse(relay.exact_send(dict(args, message=args['content']), expected))
+        self.assertFalse(relay.exact_send(dict(args, content=body[:29] + '…'), expected))

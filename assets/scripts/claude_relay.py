@@ -49,6 +49,11 @@ def address(session_id):
 def exact_send(args, arguments):
     allowed = {**arguments, 'recipient': arguments['to'], 'content': arguments['message'],
                'type': 'message', 'summary': 'Reviewed handoff', 'recipient_kind': 'name'}
+    # CLI 2.1.332 includes a display preview alongside the complete message.
+    # Accept only the observed prefix format and still require the full message.
+    message = arguments['message']
+    if len(message) > 30 and args.get('content') == message[:30] + '…':
+        allowed['content'] = args['content']
     return all(args.get(k) == v for k, v in arguments.items()) and all(
         k in allowed and allowed[k] == v for k, v in args.items())
 
