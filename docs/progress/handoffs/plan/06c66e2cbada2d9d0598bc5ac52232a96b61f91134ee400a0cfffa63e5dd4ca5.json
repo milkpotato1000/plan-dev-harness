@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P011-content-diagnostic.md",
   "summary": "P011 recovery 거부 증거 검토; 실제 발송 없는 content 격리 진단",
   "next_action": "최대3회 always-deny synthetic probe로 model/native 입력 차이 확인, 설계/코드/검증 결과 인계; 추가 실제 발송 금지",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T04:56:39.104784+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T04:57:13.579243+00:00",
+      "evidence": "2026-11-28 Asia/Seoul official send_message_to_thread succeeded to existing dev; exactaa5e04344f1fb78200581a138d902714737030c8. Isolated always-deny diagnosis only, no further live send authorized."
     }
   ]
 }
