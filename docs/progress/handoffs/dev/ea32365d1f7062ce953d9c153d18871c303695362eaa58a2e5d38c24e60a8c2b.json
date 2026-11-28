@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P010-continue-diagnostic-20261128.md",
   "summary": "P010 continue-input diagnostic: no recorded new input or P901; stale dispatch separate",
   "next_action": "Review evidence under common key and obtain existing fixture plan visible input/prompt state once; no repeated continue request or reconnect",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T04:09:48.821998+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T04:10:32.908122+00:00",
+      "evidence": "Actual Codex send_message_to_thread success to verified existing project plan on 2026-11-28; result6e680cf4be68665f12ae81caed09f4eb0be96810 and manifest da62f7f68b3f71842381de2a2df451c5deb3fc9c25f942d6175f6fe5a5ba98a2; no ACK claimed"
     }
   ]
 }
