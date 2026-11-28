@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P011-receipt-policy-completion.md",
   "summary": "Native P901 instruction received and acted on; outgoing fixture 0.2.5 event pending freshness",
   "next_action": "Review existing fixture plan exact event and 0.2.5 preflight limitation",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T05:18:42.074979+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T05:19:11.051858+00:00",
+      "evidence": "Actual Codex project plan send succeeded for result cba471c9484511eb412c6544e4cc8d00fdfbd706"
     }
   ]
 }
