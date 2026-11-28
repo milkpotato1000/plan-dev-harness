@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P011-canonical-input-validation.md",
   "summary": "P011 canonical updatedInput 구현·통제 수신 검증, PASS 조건부 실제 전달1회",
   "next_action": "A source/bytes/정책 검증 후에만 B bound recovery 실행; 원래ledger/중지/권한 보존",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T04:59:51.941854+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T05:00:31.079640+00:00",
+      "evidence": "2026-11-28 Asia/Seoul official send_message_to_thread succeeded to verified existing dev; exact691d236befd010cb65332147349ca36be728bf63. Canonical input stageA and evidence-gated B; no ACK wait."
     }
   ]
 }
