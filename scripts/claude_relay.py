@@ -58,6 +58,69 @@ def exact_send(args, arguments):
         k in allowed and allowed[k] == v for k, v in args.items())
 
 
+class CanonicalSend:
+    """Bind one completed model tool call to its SDK pre-execution callback."""
+    def __init__(self, target, message):
+        self.expected = dict(to=target, summary='Reviewed handoff', message=message)
+        self.call_id = None
+        self.index = None
+        self.raw = ''
+        self.closed = False
+        self.invalid = False
+        self.used = False
+        self.message_done = False
+
+    def observe(self, event):
+        kind = event.get('type')
+        idx = event.get('index')
+        if kind == 'content_block_start':
+            block = event.get('content_block', {})
+            if block.get('name') == 'SendMessage':
+                if self.call_id or not isinstance(idx, int) or not block.get('id') or block.get('input') != {}:
+                    self.invalid = True
+                self.call_id = block.get('id')
+                self.index = idx
+        elif self.call_id and not self.closed and idx == self.index:
+            if kind == 'content_block_delta':
+                delta = event.get('delta', {})
+                part = delta.get('partial_json')
+                if delta.get('type') != 'input_json_delta' or not isinstance(part, str) or len(self.raw) + len(part) > 262144:
+                    self.invalid = True
+                elif not self.invalid:
+                    self.raw += part
+            elif kind == 'content_block_stop':
+                self.closed = True
+        if kind == 'message_stop' and self.closed:
+            self.message_done = True
+
+    def replacement(self, ident, event):
+        if self.used or self.invalid or not self.message_done or not ident or ident != self.call_id or event.get('tool_use_id') != ident:
+            return None
+        self.used = True
+
+        def unique(pairs):
+            obj = dict(pairs)
+            if len(obj) != len(pairs):
+                raise ValueError('Duplicate input key')
+            return obj
+
+        try:
+            original = json.loads(self.raw, object_pairs_hook=unique)
+        except (ValueError, RecursionError):
+            return None
+        args = event.get('tool_input')
+        if original != self.expected or not isinstance(args, dict) or event.get('tool_name') != 'SendMessage':
+            return None
+        aliases = dict(recipient=self.expected['to'], recipient_kind='name', type='message')
+        if set(args) - (self.expected.keys() | aliases.keys() | {'content'}):
+            return None
+        if any(args.get(k) != v for k, v in self.expected.items()):
+            return None
+        if any(args.get(k) != v for k, v in aliases.items()) or not isinstance(args.get('content'), str):
+            return None
+        return {'hookSpecificOutput': {'hookEventName': 'PreToolUse', 'updatedInput': self.expected.copy()}}
+
+
 def reserve(directory, key, arguments, generation):
     with registry.locked(directory):
         path = directory / 'claude-relay-attempts.json'
@@ -101,6 +164,7 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
     root, directory, cfg = registry.config_for(repo)
     peer = current_peers(root)[role]
     arguments = {'to': address(peer['session_id']), 'message': message}
+    gate = CanonicalSend(arguments['to'], message)
     listed = attempted = False
     result_status = 'unknown'
     trace = []
@@ -117,7 +181,8 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
         trace.append({'tool': name, 'target_matches': args.get('to') == arguments['to'],
                       'body_matches': args.get('message') == message, 'exact': exact_send(args, arguments)})
         valid = name == 'ListAgents' and args == {} and not listed
-        if name == 'SendMessage' and listed and not attempted and exact_send(args, arguments):
+        replacement = gate.replacement(ident, event) if name == 'SendMessage' else None
+        if replacement and listed and not attempted:
             try:
                 latest = current_peers(root)[role]
                 if address(latest['session_id']) == arguments['to'] and all(latest[k] == peer[k] for k in ('session_id', 'generation')):
@@ -132,7 +197,7 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
                 full_content=args.get('content') == message,
                 display_preview=args.get('content') == message[:30] + '…')
         if valid:
-            return {}
+            return replacement or {}
         return {'hookSpecificOutput': {'hookEventName': 'PreToolUse',
                 'permissionDecision': 'deny', 'permissionDecisionReason': 'Outside reviewed handoff'}}
 
@@ -141,7 +206,7 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
         if event['tool_name'] == 'ListAgents':
             listing = str(event.get('tool_response', ''))
             listed = len(re.findall(re.escape(arguments['to']) + r' \[([a-f0-9]+)\]', listing)) == 1
-        elif attempted and event['tool_name'] == 'SendMessage' and exact_send(event['tool_input'], arguments):
+        elif attempted and event['tool_name'] == 'SendMessage' and ident == gate.call_id and all(event['tool_input'].get(k) == v for k, v in gate.expected.items()):
             response = event.get('tool_response')
             if isinstance(response, dict):
                 detail = str(response.get('message', '')).lower()
@@ -157,12 +222,13 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
         hooks = {name: [sdk.HookMatcher(hooks=[fn], on_failure='block')]
                  for name, fn in [('PreToolUse', before), ('PostToolUse', after)]}
         options = sdk.ClaudeAgentOptions(cwd=cwd, cli_path=shutil.which('claude'),
-            tools=['ListAgents', 'SendMessage'], strict_mcp_config=True, hooks=hooks,
+            tools=['ListAgents', 'SendMessage'], strict_mcp_config=True, hooks=hooks, include_partial_messages=True,
             permission_mode='default', extra_args={'safe-mode': None, 'no-session-persistence': None,
             'permission-prompts': 'none'}, max_budget_usd=0.5, max_turns=4, max_buffer_size=262144)
         async with sdk.ClaudeSDKClient(options=options) as client:
             await client.query('Call ListAgents once. Then call SendMessage exactly once with this JSON. Stop on any failure. ' + json.dumps({**arguments, 'summary': 'Reviewed handoff'}, ensure_ascii=False))
             async for event in client.receive_response():
+                gate.observe(getattr(event, 'event', {}))
                 if isinstance(event, sdk.ResultMessage):
                     print(json.dumps({'status': result_status, 'attempted': attempted,
                                       'cost_usd': event.total_cost_usd, 'trace': trace}))

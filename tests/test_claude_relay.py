@@ -85,3 +85,31 @@ class RelayBoundary(unittest.TestCase):
                 self.assertEqual(sorted(workers.map(attempt, range(2))), [False, True])
             self.assertFalse(attempt(0))
             self.assertEqual(original, (d/'claude-relay-attempts.json').read_bytes())
+
+    def test_canonical_input_stream_and_callback(self):
+        import json
+        for mutation in ('ok','duplicate','extra','short','wrong-target','missing-end','second','bad-id','alias','type','unexpected'):
+            gate = relay.CanonicalSend('unit-target', '한글\n' + 'x'*90)
+            original = dict(gate.expected)
+            if mutation == 'extra': original['content']='wrong'
+            if mutation == 'short': original['message']='한'
+            if mutation == 'wrong-target': original['to']='other'
+            raw = json.dumps(original)
+            if mutation == 'duplicate': raw=raw.replace('{','{"to":"first",',1)
+            start=dict(type='content_block_start',index=1,content_block=dict(type='tool_use',name='SendMessage',id='id',input={}))
+            gate.observe(start)
+            gate.observe(dict(type='content_block_delta',index=1,delta=dict(type='input_json_delta',partial_json=raw)))
+            gate.observe(dict(type='content_block_stop',index=1))
+            if mutation != 'missing-end': gate.observe(dict(type='message_stop'))
+            if mutation == 'second': gate.observe(start)
+            args=dict(gate.expected,recipient='unit-target',recipient_kind='name',type='message',content='synthetic preview')
+            if mutation == 'alias': args['recipient']='elsewhere'
+            if mutation == 'type': args['message']=1
+            if mutation == 'unexpected': args['other']='unexpected'
+            event=dict(tool_use_id='id',tool_name='SendMessage',tool_input=args)
+            result=gate.replacement('other' if mutation=='bad-id' else 'id',event)
+            with self.subTest(mutation=mutation):
+                if mutation=='ok':
+                    self.assertEqual(result,{'hookSpecificOutput':{'hookEventName':'PreToolUse','updatedInput':gate.expected}})
+                    self.assertIsNone(gate.replacement('id',event))
+                else: self.assertIsNone(result)
