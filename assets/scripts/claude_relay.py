@@ -38,10 +38,10 @@ def current_peers(repo):
 def address(session_id):
     rows = registry.inventory_for_claude()
     match = [r for r in rows if r.get('sessionId') == session_id]
-    if len(match) != 1:
+    if len(match) != 1 or match[0].get('kind') != 'interactive':
         raise ValueError('Session changed')
     name = match[0].get('name')
-    if not name or sum(row.get('name') == name for row in rows) != 1:
+    if not isinstance(name, str) or not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9_.-]{0,127}', name) or sum(row.get('name') == name for row in rows) != 1:
         raise ValueError('Ambiguous peer name')
     return name
 
@@ -78,7 +78,8 @@ async def relay(repo, role, key, message, verify):
     async def before(event, ident, context):
         nonlocal attempted
         name, args = event['tool_name'], event['tool_input']
-        trace.append({'tool': name, 'fields': sorted(args), 'exact': exact_send(args, arguments)})
+        trace.append({'tool': name, 'target_matches': args.get('to') == arguments['to'],
+                      'body_matches': args.get('message') == message, 'exact': exact_send(args, arguments)})
         valid = name == 'ListAgents' and args == {} and not listed
         if name == 'SendMessage' and listed and not attempted and exact_send(args, arguments):
             try:
