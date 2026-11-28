@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P011-P901-source-dispatch.md",
   "summary": "P901 existing event sent, exact adoption, marker and plan review verified",
   "next_action": "Inspect final evidence and preserve separate reconnect scope",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T05:24:49.704689+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T05:25:21.680314+00:00",
+      "evidence": "Actual verified parent plan send for P901 result a7feb3914c28c2b7401ceef3677009c4d8e3831f"
     }
   ]
 }
