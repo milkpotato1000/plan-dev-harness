@@ -69,12 +69,19 @@ class CanonicalSend:
         self.invalid = False
         self.used = False
         self.message_done = False
+        self.turn_tools = 0
 
     def observe(self, event):
         kind = event.get('type')
         idx = event.get('index')
+        if kind == 'message_start':
+            self.turn_tools = 0
         if kind == 'content_block_start':
             block = event.get('content_block', {})
+            if block.get('type') == 'tool_use':
+                self.turn_tools += 1
+                if self.turn_tools > 1 and (self.call_id or block.get('name') == 'SendMessage'):
+                    self.invalid = True
             if block.get('name') == 'SendMessage':
                 if self.call_id or not isinstance(idx, int) or not block.get('id') or block.get('input') != {}:
                     self.invalid = True

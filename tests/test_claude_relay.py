@@ -88,7 +88,7 @@ class RelayBoundary(unittest.TestCase):
 
     def test_canonical_input_stream_and_callback(self):
         import json
-        for mutation in ('ok','duplicate','extra','short','wrong-target','missing-end','second','bad-id','alias','type','unexpected'):
+        for mutation in ('ok','duplicate','extra','short','wrong-target','missing-end','second','mixed-call','bad-id','alias','type','unexpected'):
             gate = relay.CanonicalSend('unit-target', '한글\n' + 'x'*90)
             original = dict(gate.expected)
             if mutation == 'extra': original['content']='wrong'
@@ -102,6 +102,7 @@ class RelayBoundary(unittest.TestCase):
             gate.observe(dict(type='content_block_stop',index=1))
             if mutation != 'missing-end': gate.observe(dict(type='message_stop'))
             if mutation == 'second': gate.observe(start)
+            if mutation == 'mixed-call': gate.observe(dict(start,content_block=dict(type='tool_use',name='ListAgents',id='other',input={})))
             args=dict(gate.expected,recipient='unit-target',recipient_kind='name',type='message',content='synthetic preview')
             if mutation == 'alias': args['recipient']='elsewhere'
             if mutation == 'type': args['message']=1
