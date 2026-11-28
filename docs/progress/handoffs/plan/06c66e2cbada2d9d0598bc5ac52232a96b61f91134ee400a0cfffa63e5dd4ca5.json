@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "0827e349eb89cd348303c42df8a1d32265a459cf",
+  "document": "docs/planning/reviews/P011-content-diagnostic.md",
+  "summary": "P011 recovery 거부 증거 검토; 실제 발송 없는 content 격리 진단",
+  "next_action": "최대3회 always-deny synthetic probe로 model/native 입력 차이 확인, 설계/코드/검증 결과 인계; 추가 실제 발송 금지",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T04:56:39.104784+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}

@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P011-bounded-recovery.md",
   "summary": "P011 기존 거부 증거 보존; 사전 미실행 증명 조건부 bounded recovery 1회",
   "next_action": "정확 리뷰 채택, R1 증명 후 같은 logical key에 연결된 recovery 1회; UNKNOWN이면 발송 금지, 최종 회귀 및 실제 수신 검증",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T04:49:46.409542+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T04:50:21.956844+00:00",
+      "evidence": "2026-11-28 Asia/Seoul official send_message_to_thread succeeded to verified existing dev; exact9f986f4085d1978c272847dad84515d2617aa9e2 bounded recovery review. No ACK/completion wait."
     }
   ]
 }
