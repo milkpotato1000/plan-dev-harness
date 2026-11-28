@@ -1,0 +1,100 @@
+[
+  {
+    "probe": "correlate",
+    "order": [
+      [
+        "start",
+        0
+      ],
+      [
+        "end",
+        0
+      ],
+      [
+        "hook",
+        true,
+        true,
+        true,
+        1,
+        166
+      ],
+      [
+        "end",
+        0
+      ]
+    ],
+    "denied": true,
+    "cost_usd": 0.0138571,
+    "gate": null
+  },
+  {
+    "probe": "correlate-gate",
+    "order": [
+      [
+        "start",
+        0
+      ],
+      [
+        "end",
+        0
+      ],
+      [
+        "hook",
+        true,
+        true,
+        true,
+        1,
+        156
+      ],
+      [
+        "end",
+        0
+      ]
+    ],
+    "denied": true,
+    "cost_usd": 0.0139992,
+    "gate": {
+      "closed": true,
+      "message_done": false,
+      "invalid": false,
+      "bound": false
+    }
+  },
+  {
+    "probe": "correlate-bounded",
+    "order": [
+      [
+        "end",
+        0
+      ],
+      [
+        "start",
+        1
+      ],
+      [
+        "end",
+        1
+      ],
+      [
+        "hook",
+        true,
+        true,
+        true,
+        2,
+        156
+      ],
+      [
+        "end",
+        0
+      ]
+    ],
+    "denied": true,
+    "cost_usd": 0.0125516,
+    "gate": {
+      "closed": true,
+      "message_done": true,
+      "invalid": false,
+      "bound": true
+    }
+  }
+]

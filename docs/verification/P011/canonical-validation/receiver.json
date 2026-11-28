@@ -1,0 +1,36 @@
+{
+  "source": "d97c948186e7fd74d4d69d783d95f1d55f655448",
+  "review": "691d236befd010cb65332147349ca36be728bf63",
+  "fixture_receivers": 1,
+  "sender_probe_count": 5,
+  "receiver": {
+    "origin": "peer",
+    "record": "user/isMeta",
+    "frame_newlines": true,
+    "expected_hash": "5fa6ba4b5559e8c2ab67325b23eaf2335dfe6952ac755717927db25fae5b6441",
+    "received_hash": "5fa6ba4b5559e8c2ab67325b23eaf2335dfe6952ac755717927db25fae5b6441",
+    "bytes": 517,
+    "matched": true,
+    "receiver_cost": 0.015231999999999999
+  },
+  "synthetic_message": "Synthetic ledger of paper cranes.\n가을 바람 속의 종이학.\nBlue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. Blue paper / 푸른 종이. END",
+  "sender_deny": {
+    "callbacks": 0,
+    "native_results": 0,
+    "cost_usd": 0.011094199999999999
+  },
+  "ordinary": {
+    "callback": [
+      {
+        "id_bound": true,
+        "replacement": true,
+        "complete": true
+      }
+    ],
+    "post_tool_matched_id": true,
+    "native_success": true,
+    "cost_usd": 0.0230599
+  },
+  "inbound_refuse": "NOTRUN",
+  "stage_b": "NOTRUN"
+}
