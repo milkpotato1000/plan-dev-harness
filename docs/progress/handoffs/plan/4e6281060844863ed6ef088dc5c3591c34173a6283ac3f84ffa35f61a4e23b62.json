@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P011-live-completion-review.md",
   "summary": "P011 실제두전달/정확채택/16byte완료 확인; 누적증거와 카드최종상태 정리",
   "next_action": "C1~C5 실제증거대응 후 실행필드/append로그 정리, 실패보존, 최종결과인계",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T05:25:51.718301+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T05:26:38.565837+00:00",
+      "evidence": "2026-11-28 Asia/Seoul official send_message_to_thread succeeded to existing dev; exactc24f4f6595549bdf288b690bb5e1ca34cfbcf39e. Final evidence/status reconciliation, no new fixture scope."
     }
   ]
 }
