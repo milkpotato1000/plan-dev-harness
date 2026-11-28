@@ -114,3 +114,27 @@ class RelayBoundary(unittest.TestCase):
                     self.assertEqual(result,{'hookSpecificOutput':{'hookEventName':'PreToolUse','updatedInput':gate.expected}})
                     self.assertIsNone(gate.replacement('id',event))
                 else: self.assertIsNone(result)
+
+    def test_native_notice_classification(self):
+        captured = "“Reviewed handoff” → test (another Claude session on this machine; in that session's inbox, not yet read by its Claude — a notice follows if that session holds it or refuses it)"
+        for response, status in [
+            (dict(success=True,message=captured,msg_id='id'),'native_success'),
+            (dict(success=True,message=captured,msg_id='id',status='refused'),'unknown'),
+            (dict(success=False,message='Refused by receiver'),'refused'),
+            (dict(success=False,message='Held pending decision'),'held'),
+            (dict(success=False,message='Refused by receiver',status='held'),'unknown'),
+            (dict(success=False,message='timeout'),'unknown'), (None,'unknown')]:
+            self.assertEqual(relay.native_status(response),status)
+
+    def test_receipt_dedup_and_framing(self):
+        import json
+        body='\n한글\nsecond line\n'
+        origin=dict(kind='peer',msg_id='message',body=body,verifiedLocal=True)
+        envelope='Another Claude session sent a message:\n<cross-session-message from="test">\n'+body+'\n</cross-session-message>\ncontext'
+        row=dict(sessionId='receiver',type='user',isMeta=True,origin=origin,message=dict(content=envelope))
+        queued=dict(sessionId='receiver',type='attachment',attachment=dict(type='queued_command',origin=origin,prompt=body))
+        def observe(*rows):
+            return relay.receipt_records([json.dumps(r)+'\n' for r in rows]+['{"partial":','broken\n'],'receiver','message',body)
+        self.assertEqual(observe(row,row,queued),['peer_input','queued'])
+        self.assertEqual(observe(dict(row,sessionId='other'),dict(row,isMeta=False),
+            dict(row,origin=dict(origin,msg_id='other')),dict(row,message=dict(content=envelope.replace(body,body.strip())))),[])

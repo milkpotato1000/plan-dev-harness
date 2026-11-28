@@ -58,6 +58,64 @@ def exact_send(args, arguments):
         k in allowed and allowed[k] == v for k, v in args.items())
 
 
+def native_status(response):
+    """Classify a native send response, independently of receiver input."""
+    if not isinstance(response, dict):
+        return 'unknown'
+    success = response.get('success')
+    detail = response.get('message')
+    if type(success) is not bool or not isinstance(detail, str):
+        return 'unknown'
+    detail = detail.casefold().strip()
+    state = response.get('status')
+    negative = ('refused', 'held')
+    if state in negative or detail.startswith(negative):
+        if success or any(detail.startswith(other) and state not in (None, other) for other in negative):
+            return 'unknown'
+        for status in negative:
+            if state == status or (state is None and detail.startswith(status)):
+                return status
+        return 'unknown'
+    if success and state in (None, 'sent', 'delivered') and 'in that session\'s inbox' in detail and response.get('msg_id'):
+        return 'native_success'
+    return 'unknown'
+
+
+def receipt_records(lines, session_id, message_id, body):
+    """Read complete JSONL peer events for one pinned receiver and native message."""
+    evidence = set()
+    for line in lines:
+        if not line.endswith('\n'):
+            continue
+        try:
+            row = json.loads(line)
+        except ValueError:
+            continue
+        if not isinstance(row, dict) or row.get('sessionId') != session_id:
+            continue
+        kind = row.get('type')
+        if kind == 'user' and row.get('isMeta') is True:
+            event = row
+            content = row.get('message', {}).get('content')
+        elif kind == 'attachment' and row.get('attachment', {}).get('type') == 'queued_command':
+            event = row['attachment']
+            content = event.get('prompt', event.get('content'))
+        else:
+            continue
+        origin = event.get('origin')
+        if not isinstance(origin, dict) or origin.get('kind') != 'peer' or not message_id or origin.get('msg_id') != message_id:
+            continue
+        if origin.get('body') != body or origin.get('verifiedLocal') is not True or not isinstance(content, str):
+            continue
+        if kind == 'attachment' and content == body:
+            evidence.add('queued')
+            continue
+        opening = re.match(r'Another Claude session sent a message:\n<cross-session-message [^>\n]+>\n', content)
+        if opening and content[opening.end():].startswith(body + '\n</cross-session-message>') and content.count('</cross-session-message>') == 1:
+            evidence.add('peer_input' if kind == 'user' else 'queued')
+    return sorted(evidence)
+
+
 class CanonicalSend:
     """Bind one completed model tool call to its SDK pre-execution callback."""
     def __init__(self, target, message):
@@ -221,14 +279,7 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
             listed = len(re.findall(re.escape(arguments['to']) + r' \[([a-f0-9]+)\]', listing)) == 1
         elif attempted and event['tool_name'] == 'SendMessage' and ident == gate.call_id and all(event['tool_input'].get(k) == v for k, v in gate.expected.items()):
             response = event.get('tool_response')
-            if isinstance(response, dict):
-                detail = str(response.get('message', '')).lower()
-                if 'held' in detail:
-                    result_status = 'held'
-                elif 'refus' in detail:
-                    result_status = 'refused'
-                elif response.get('success') is True:
-                    result_status = 'native_success'
+            result_status = native_status(response)
         return {}
 
     with tempfile.TemporaryDirectory() as cwd:
