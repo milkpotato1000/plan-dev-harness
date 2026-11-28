@@ -1,0 +1,18 @@
+{
+  "full_suite_runs": [
+    [
+      "Ran 105 tests in 209.542s",
+      "",
+      "OK"
+    ],
+    [
+      "Ran 108 tests in 256.323s",
+      "",
+      "OK"
+    ]
+  ],
+  "final_preview_fix_focused_tests": 4,
+  "final_preview_fix_focused_result": "OK",
+  "guard": "PASS",
+  "source_asset_equality": "PASS"
+}

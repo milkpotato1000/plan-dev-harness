@@ -1,0 +1,50 @@
+{
+  "steps": 34,
+  "summary": {
+    "result": "PASS",
+    "checks": [
+      "Actual exact 0.2.5 -> 0.2.6 runtime upgrade, preview no writes, exact dev adoption",
+      "Local hooks preview/apply/KEEP; unknown settings/custom hooks/permission rules preserved",
+      "Existing uncommitted work and explicit both-role stop preserved",
+      "Customized owned hook refused before writes",
+      "Both independent SKILL+CLI payloads version0.2.6/help/KEEP; no personal install change"
+    ],
+    "source_commit": "1c3dd70c54f5e27a536ab820e0c36bc4126ab2de",
+    "old_source": "e044e3e7f11ef48d4f9cc4fa41cad7ac00d8e1c8"
+  },
+  "command_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

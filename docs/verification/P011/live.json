@@ -1,0 +1,57 @@
+{
+  "claude_code": "2.1.332",
+  "optional_sdk": "0.2.189",
+  "cli_init_tools": [
+    "ListAgents",
+    "SendMessage"
+  ],
+  "timeout_seconds": 60,
+  "model_budget_usd": 0.5,
+  "isolated_pretooluse_denials": [
+    "ListAgents",
+    "SendMessage"
+  ],
+  "first_probe": {
+    "cost_usd": 0.0346559,
+    "send_authorized_by_callback": false
+  },
+  "normalized_arguments_probe": {
+    "to_and_recipient": true,
+    "message_and_content": true,
+    "additional_fields": [
+      "recipient_kind",
+      "type",
+      "summary"
+    ]
+  },
+  "live_with_name_binding": {
+    "trace": [
+      "ListAgents",
+      "SendMessage"
+    ],
+    "exact_send_arguments": false,
+    "send_authorized_by_callback": false,
+    "cost_usd": 0.0269688,
+    "cli_result": "unknown",
+    "attempt_key_reserved": true
+  },
+  "receiver_check": {
+    "plan_key_count": 0,
+    "dev_key_count": 0,
+    "plan_head": "c5d29c7dd4f3449309e5db2bdf38d4b3df2646f8",
+    "dev_head": "a8f39aef5be29989f5655cc0569a3061ad19f277"
+  },
+  "second_delivery": "not run",
+  "probed_source": "pre-preview implementation",
+  "final_source": "1c3dd70c54f5e27a536ab820e0c36bc4126ab2de",
+  "synthetic_comparison": {
+    "to": true,
+    "summary": true,
+    "message": true,
+    "type": true,
+    "recipient": true,
+    "recipient_kind": true,
+    "content_is_full_body": false,
+    "content_is_first_30_plus_ellipsis": true
+  }
+}
