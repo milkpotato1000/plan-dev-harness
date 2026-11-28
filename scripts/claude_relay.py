@@ -165,6 +165,7 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
     peer = current_peers(root)[role]
     arguments = {'to': address(peer['session_id']), 'message': message}
     gate = CanonicalSend(arguments['to'], message)
+    stream_complete = asyncio.Event()
     listed = attempted = False
     result_status = 'unknown'
     trace = []
@@ -181,6 +182,11 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
         trace.append({'tool': name, 'target_matches': args.get('to') == arguments['to'],
                       'body_matches': args.get('message') == message, 'exact': exact_send(args, arguments)})
         valid = name == 'ListAgents' and args == {} and not listed
+        if name == 'SendMessage' and not gate.message_done:
+            try:
+                await asyncio.wait_for(stream_complete.wait(), 3)
+            except asyncio.TimeoutError:
+                pass
         replacement = gate.replacement(ident, event) if name == 'SendMessage' else None
         if replacement and listed and not attempted:
             try:
@@ -229,6 +235,8 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
             await client.query('Call ListAgents once. Then call SendMessage exactly once with this JSON. Stop on any failure. ' + json.dumps({**arguments, 'summary': 'Reviewed handoff'}, ensure_ascii=False))
             async for event in client.receive_response():
                 gate.observe(getattr(event, 'event', {}))
+                if gate.message_done:
+                    stream_complete.set()
                 if isinstance(event, sdk.ResultMessage):
                     print(json.dumps({'status': result_status, 'attempted': attempted,
                                       'cost_usd': event.total_cost_usd, 'trace': trace}))
