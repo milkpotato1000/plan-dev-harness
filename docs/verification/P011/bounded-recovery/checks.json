@@ -1,0 +1,16 @@
+{
+  "source": "de40ec9255b67959e871247a676d8cb920214031",
+  "regression_tests": 110,
+  "seconds": 257.614,
+  "result": "PASS",
+  "install_steps": 34,
+  "installation": [
+    "Actual exact 0.2.5 -> 0.2.6 runtime upgrade, preview no writes, exact dev adoption",
+    "Local hooks preview/apply/KEEP; unknown settings/custom hooks/permission rules preserved",
+    "Existing uncommitted work and explicit both-role stop preserved",
+    "Customized owned hook refused before writes",
+    "Both independent SKILL+CLI payloads version0.2.6/help/KEEP; no personal install change"
+  ],
+  "guard": "PASS",
+  "source_asset_equality": "PASS"
+}

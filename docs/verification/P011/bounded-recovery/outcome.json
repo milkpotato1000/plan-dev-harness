@@ -1,0 +1,39 @@
+{
+  "original_preserved": true,
+  "disposition": "REJECTED_BEFORE_SEND",
+  "disposition_sha256": "7a47c15a6203531bbc130bc00ba340afaebc2dcd7884255435f4c82df1ffb3e7",
+  "original_evidence": "106124cbc89a4057ff441239716a4d9d8382ec8403e77f1f32028ec172820213",
+  "original_sender_exit": 0,
+  "recovery": {
+    "send_authorized": false,
+    "status": "unknown",
+    "trace": [
+      {
+        "body_matches": false,
+        "exact": false,
+        "target_matches": false,
+        "tool": "ListAgents"
+      },
+      {
+        "authorized": false,
+        "body_matches": true,
+        "display_preview": false,
+        "exact": false,
+        "full_content": false,
+        "listed": true,
+        "recipient_matches": true,
+        "summary_matches": true,
+        "target_matches": true,
+        "tool": "SendMessage"
+      }
+    ]
+  },
+  "cost_usd": 0.0218493,
+  "sender_exit": 0,
+  "source": "de40ec9255b67959e871247a676d8cb920214031",
+  "review": "9f986f4085d1978c272847dad84515d2617aa9e2",
+  "receipt": {
+    "plan": 0,
+    "dev": 0
+  }
+}
