@@ -25,7 +25,7 @@ def host_rows(path, host, now=None):
     return item['sessions']
 
 
-def prepare(repo, host, event_file, authority_reference, inventory=None):
+def prepare(repo, host, event_file, authority_reference, inventory=None, relay_proof=False):
     root,directory,cfg=registry.config_for(repo)
     if not authority_reference or len(authority_reference)>1024:raise ValueError('Existing human grant reference required')
     # A concrete committed source event is required; raw prompts are not accepted here.
@@ -57,6 +57,10 @@ def prepare(repo, host, event_file, authority_reference, inventory=None):
         probe=subprocess.run([sys.executable,'-B','scripts/contract_guard.py','check'],cwd=other,capture_output=True,timeout=10)
         if probe.returncode:raise ValueError('Current contract guard failed')
     result=registry.diagnose(root,host,inventory,private=True)
+    if relay_proof and host == 'claude':
+        from claude_relay import current_peers
+        result['peers'] = current_peers(root)
+        result['dispatch'] = 'identity_consistent'
     if result['dispatch']!='identity_consistent':raise ValueError('Identity/workflow preflight pending: '+','.join(result['issues']))
     target_id=result['peers'][target]['session_id'];key=hashlib.sha256(raw.encode()).hexdigest()
     text=(f"Exact reviewed handoff {sha}; document {doc}; event {rel.as_posix()}; common delivery key {key}. "

@@ -5,7 +5,7 @@ Git worktree로 plan/dev를 분리하고, 준비된 P카드와 정확한 계획 
 새 요구 접수부터 검증 증거·완료 처리까지 파일로 남겨 도구를 바꿔도 같은 작업을 이어갈 수 있습니다.
 
 Python 표준 라이브러리 + Git만 사용합니다. 계정 토큰, API 키, MCP 서버, 유료 모델 호출이 설치에 필요하지 않습니다.
-현재 소스: **0.2.5 개발 버전 / MIT**. 정식 배포: **0.2.3**, 배포일 **2026-11-24 (Asia/Seoul)**.
+현재 소스: **0.2.6 개발 버전 / MIT**. 정식 배포: **0.2.3**, 배포일 **2026-11-24 (Asia/Seoul)**.
 [정식 릴리스 v0.2.3](https://github.com/milkpotato1000/plan-dev-harness/releases/tag/v0.2.3)과
 [회사 Claude Code 설치 안내](docs/claude-code-install.md)를 제공합니다. Python **3.9 이상**, Git **2.31 이상**, POSIX shell 환경을 대상으로 합니다.
 macOS에서 실제 검증했습니다. Linux/WSL 사용 절차는 같지만 이 릴리스에서 직접 검증하지 않았고,
@@ -299,3 +299,18 @@ python3 scripts/configure_sessions.py --plan /absolute/project_plan --dev /absol
 중지 해제가 아닙니다. Host trust와 실제 두 세션의 전달·재연결 검증은 별도입니다.
 Codex CLI 0.160.1에는 문서화된 JSON inventory와 queue resume이 없어 확인할 수 없는
 재연결은 대기로 남깁니다. 기존 P009 fixture와 개인 설치는 이 소스 변경으로 갱신되지 않습니다.
+
+## Codex에서 기존 Claude 세션으로 인계하기 (0.2.6 개발 소스)
+
+등록한 두 역할과 커밋된 PENDING 인계가 있는 프로젝트에서 실행합니다.
+전달 전용 Python 가상환경에 `claude-agent-sdk==0.2.189`를 설치하고 평소 사용하는
+Claude CLI로 로그인합니다. 인계 문서의 실제 승인 근거를 지정합니다.
+
+```sh
+python scripts/claude_relay.py --repo . --event docs/progress/handoffs/plan/EVENT.json --authority-reference '검토 문서와 사용자 승인 위치'
+```
+
+중계는 모델을 한 번 실행하며 예산은 0.50 USD, 제한 시간은 60초입니다.
+중복 키와 불명확한 결과는 수신 기록을 검토해야 합니다. 수신 세션의 hold 또는
+refuse 정책이 적용됩니다. 현재 실제 환경에서는 도구 노출과 사전 거부를 확인했고
+첫 P901의 수신과 후속 인계는 검증 중입니다.

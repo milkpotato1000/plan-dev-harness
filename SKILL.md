@@ -116,3 +116,18 @@ See [Claude workers](references/claude-workers.md) and `scripts/worker_doctor.py
 ## Local session registration — source 0.2.5
 
 After authorized setup, preview/apply `scripts/configure_sessions.py` with explicit plan/dev worktrees and role reference. Read [registration and reconnect](assets/docs/process/session-registration.md). Raw host startup registers identity only; it never approves, sends, resumes, takes over or starts work. Same-host discovery uses fresh official evidence; unsupported CLI/app transport remains pending. Preserve existing hooks/settings and global installations.
+
+## Codex에서 기존 Claude 세션으로 인계하기 (0.2.6 개발 소스)
+
+등록한 두 역할과 커밋된 PENDING 인계가 있는 프로젝트에서 실행합니다.
+전달 전용 Python 가상환경에 `claude-agent-sdk==0.2.189`를 설치하고 평소 사용하는
+Claude CLI로 로그인합니다. 인계 문서의 실제 승인 근거를 지정합니다.
+
+```sh
+python scripts/claude_relay.py --repo . --event docs/progress/handoffs/plan/EVENT.json --authority-reference '검토 문서와 사용자 승인 위치'
+```
+
+중계는 모델을 한 번 실행하며 예산은 0.50 USD, 제한 시간은 60초입니다.
+중복 키와 불명확한 결과는 수신 기록을 검토해야 합니다. 수신 세션의 hold 또는
+refuse 정책이 적용됩니다. 현재 실제 환경에서는 도구 노출과 사전 거부를 확인했고
+첫 P901의 수신과 후속 인계는 검증 중입니다.

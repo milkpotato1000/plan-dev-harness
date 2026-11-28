@@ -1,3 +1,7 @@
+# 0.2.6 (unreleased)
+
+Add an optional Claude Agent SDK relay for committed handoffs. Live receipt verification is pending.
+
 # 0.2.5 (unreleased)
 
 - Add explicit project-local role mapping, bounded private lifecycle registry, atomic updates, conflict/old-end protection and conservative host-verified reconnect.
