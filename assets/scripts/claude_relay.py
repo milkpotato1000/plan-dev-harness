@@ -69,7 +69,34 @@ def reserve(directory, key, arguments, generation):
         registry.atomic_json(path, attempts)
 
 
-async def relay(repo, role, key, message, verify):
+def reserve_recovery(directory, key, message, peer, role, review):
+    """Consume one externally reviewed disposition under the original registry lock."""
+    if not re.fullmatch(r'[0-9a-f]{64}', key) or not re.fullmatch(r'[0-9a-f]{40}', review):
+        raise ValueError('Invalid recovery reference')
+    disposition = directory / ('relay-disposition-' + key + '.json')
+    receipt = directory / ('relay-recovery-' + key + '.json')
+    with registry.locked(directory):
+        if receipt.exists() or not disposition.is_file():
+            raise ValueError('Recovery absent or already consumed')
+        grant = registry.read_json(disposition)
+        ledger = directory / 'claude-relay-attempts.json'
+        entry = registry.read_json(ledger).get(key, {})
+        expected = dict(review=review, key=key, payload=digest(message),
+                        generation=peer['generation'], target=digest(peer['session_id']),
+                        role=role, state='REJECTED_BEFORE_SEND')
+        if any(grant.get(k) != v for k, v in expected.items()):
+            raise ValueError('Recovery authorization does not match attempt')
+        if not all(re.fullmatch(r'[0-9a-f]{64}', grant.get(k, '')) for k in ('evidence', 'original_entry')):
+            raise ValueError('Missing reviewed evidence')
+        if (entry.get('status') != 'unknown' or entry.get('payload') != expected['payload']
+                or entry.get('generation') != expected['generation']
+                or digest(json.dumps(entry, sort_keys=True)) != grant['original_entry']):
+            raise ValueError('Original ledger entry changed')
+        registry.atomic_json(receipt, {**expected, 'state': 'consumed', 'at': registry.moment().isoformat()})
+    return receipt
+
+
+async def relay(repo, role, key, message, verify, recovery_review=None):
     import claude_agent_sdk as sdk
     root, directory, cfg = registry.config_for(repo)
     peer = current_peers(root)[role]
@@ -78,7 +105,11 @@ async def relay(repo, role, key, message, verify):
     result_status = 'unknown'
     trace = []
     verify()
-    reserve(directory, key, arguments, peer['generation'])
+    recovery = None
+    if recovery_review is None:
+        reserve(directory, key, arguments, peer['generation'])
+    else:
+        recovery = reserve_recovery(directory, key, message, peer, role, recovery_review)
 
     async def before(event, ident, context):
         nonlocal attempted
@@ -94,6 +125,12 @@ async def relay(repo, role, key, message, verify):
                     attempted = valid = True
             except (ValueError, OSError, subprocess.SubprocessError):
                 valid = False
+        if name == 'SendMessage':
+            trace[-1].update(listed=listed, authorized=valid,
+                summary_matches=args.get('summary') == 'Reviewed handoff',
+                recipient_matches=args.get('recipient') == arguments['to'],
+                full_content=args.get('content') == message,
+                display_preview=args.get('content') == message[:30] + '…')
         if valid:
             return {}
         return {'hookSpecificOutput': {'hookEventName': 'PreToolUse',
@@ -130,10 +167,14 @@ async def relay(repo, role, key, message, verify):
                     print(json.dumps({'status': result_status, 'attempted': attempted,
                                       'cost_usd': event.total_cost_usd, 'trace': trace}))
     with registry.locked(directory):
-        path = directory / 'claude-relay-attempts.json'
-        attempts = registry.read_json(path)
-        attempts[key]['status'] = result_status
-        registry.atomic_json(path, attempts)
+        if recovery:
+            registry.atomic_json(recovery.with_suffix('.result.json'), {
+                'status': result_status, 'send_authorized': attempted, 'trace': trace})
+        else:
+            path = directory / 'claude-relay-attempts.json'
+            attempts = registry.read_json(path)
+            attempts[key]['status'] = result_status
+            registry.atomic_json(path, attempts)
     return result_status
 
 
@@ -142,6 +183,7 @@ def main():
     parser.add_argument('--repo', required=True)
     parser.add_argument('--event', required=True)
     parser.add_argument('--authority-reference', required=True)
+    parser.add_argument('--recovery-review', help='Reviewed disposition commit for one consumed attempt')
     args = parser.parse_args()
     def prepare():
         return session_handoff.prepare(args.repo, 'claude', args.event, args.authority_reference,
@@ -153,7 +195,7 @@ def main():
             if latest[field] != packet[field]:
                 raise ValueError('Handoff changed')
     state = asyncio.run(asyncio.wait_for(relay(args.repo, packet['target_role'], packet['key'],
-                        packet['action']['arguments']['message'], verify), 60))
+                        packet['action']['arguments']['message'], verify, args.recovery_review), 60))
     return 0 if state == 'native_success' else 1
 
 

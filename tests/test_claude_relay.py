@@ -55,3 +55,33 @@ class RelayBoundary(unittest.TestCase):
         self.assertTrue(relay.exact_send(args, expected))
         self.assertFalse(relay.exact_send(dict(args, message=args['content']), expected))
         self.assertFalse(relay.exact_send(dict(args, content=body[:29] + '…'), expected))
+
+    def test_recovery_requires_review_and_consumes_once(self):
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            key, review, message = 'a'*64, 'b'*40, 'exact'
+            peer = dict(generation=3, session_id='private')
+            relay.reserve(d, key, {'message':message}, 3)
+            original = (d/'claude-relay-attempts.json').read_bytes()
+            entry = json.loads(original)[key]
+            grant = dict(state='REJECTED_BEFORE_SEND', key=key, role='plan', review=review,
+                         generation=3, payload=relay.digest(message), target=relay.digest('private'),
+                         original_entry=relay.digest(json.dumps(entry, sort_keys=True)), evidence='c'*64)
+            disposition = d/('relay-disposition-'+key+'.json')
+            def attempt(_):
+                try:
+                    relay.reserve_recovery(d,key,message,peer,'plan',review)
+                    return True
+                except ValueError:
+                    return False
+            self.assertFalse(attempt(0))
+            for change in [dict(state='UNKNOWN'), dict(state='revoked'), dict(review='0'*40),
+                           dict(generation=4), dict(target='wrong'), dict(payload='changed')]:
+                disposition.write_text(json.dumps(dict(grant, **change)))
+                self.assertFalse(attempt(0))
+            disposition.write_text(json.dumps(grant))
+            with concurrent.futures.ThreadPoolExecutor(2) as workers:
+                self.assertEqual(sorted(workers.map(attempt, range(2))), [False, True])
+            self.assertFalse(attempt(0))
+            self.assertEqual(original, (d/'claude-relay-attempts.json').read_bytes())
