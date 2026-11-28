@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/user-reviews/P010-session-registration-reconnect.md",
   "summary": "P010 실제 인간 plan 계속 입력 응답; 접수·처리 상태와 stale 진단 후 기존 live 이어가기",
   "next_action": "기존 observer/writer 재사용, 실제 host 입력·hook 증거 진단; 중복 인간 입력·새 세션·stale 우회 금지",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T04:06:29.752177+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T04:07:04.814800+00:00",
+      "evidence": "2026-11-28 Asia/Seoul official send_message_to_thread succeeded to verified existing dev; exact ee7db607a364f48e76366a497a968821a93df75d. Human continue input reported; actual fixture processing remains unverified. No ACK wait."
     }
   ]
 }

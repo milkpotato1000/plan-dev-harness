@@ -98,3 +98,36 @@ plan_stale_or_future 및 dev_stale_or_future로 dispatch pending을 반환했다
 다른 작업자 생성, stale timestamp 수동 갱신, 안전 검사 우회, fixture 카드 대행, 반복 발송,
 강제 종료/재시작은 하지 않는다. 새 검증 범위나 P009 재시험 권한이 아니다.
 첫 작업 실제 완료 전 재접속 조작을 시작하지 않으며 C3는 기존 미완료 상태를 유지한다.
+
+## 계속 입력 접수 진단 검토 — 2026-11-28
+
+결과 `6e680cf4be68665f12ae81caed09f4eb0be96810`의 continue report를 읽고 manifest
+SHA256 `da62f7f68b3f71842381de2a2df451c5deb3fc9c25f942d6175f6fe5a5ba98a2` 및 두
+artifact hash를 확인했다. 첫 검산은 이전 flat mapping을 가정해 실패했으며 실제 artifacts
+배열 형식에 맞춘 재검산이 통과했다. 제품 검증 실패로 해석하지 않는다.
+
+13:09 KST 관찰은 정확 fixture 두 세션이 idle이나 최초 이후 인간 입력/queued input/도구 호출,
+native SendMessage가 관찰되지 않았음을 보여 준다. 실제 인간의 계속 입력 확인은 보존하며
+이를 host 접수 증거로 바꾸지 않는다. P901 미인계·C3 미완료이고 stale 관찰은 입력 부재의
+입증된 원인이 아니다. 권한 문제/다른 터미널/미제출이라고 단정하지 않는다.
+
+같은 key로 필요한 누락 정보는 기존 fixture plan 터미널의 현재 표시 상태 하나다.
+계속 문장이 대화 턴에 있는지, 입력칸에 남았는지, 구체적 prompt/error/마지막 응답이 무엇인지
+사용자에게 한 번 확인한다. 세션 ID/전체 대화/새 터미널/계속 문장 반복 입력은 필요 없다.
+응답 전 새 실행·재시작·등록 시각 변경을 지시하지 않는다. 동일 상태 polling/ACK 역발송 없이
+이 화면 상태 응답에 따라 기존 검증을 이어간다. 기존 작업·중지·P009·main/tag는 보존한다.
+
+## 사용자 지정 세션 직접 전달 시도 — 2026-11-28
+
+사용자가 로컬 세션 ID를 제공하며 Codex에서 Claude에 직접 작업을 지시하도록 요청했다.
+공식 host inventory에서 제공된 ID가 기존 fixture plan의 정확 cwd, interactive/idle 세션
+한 개와 일치함을 확인했다. 원시 ID는 이 공개 기록에 넣지 않는다.
+현재 `claude --help`에는 실행 중인 interactive 세션에 입력하는 send 명령이 없고,
+부모 도구에도 Claude native 메시지 도구가 없다. resume/background는 살아 있는 writer에
+단순 메시지를 보내는 동작으로 간주하지 않으며 실행하지 않았다.
+
+사용자의 직접 전달 요청에 따라 컴퓨터 제어 도구로 기존 iTerm 접근을 시도했으나,
+도구가 안전상 해당 앱 사용을 금지한다는 오류를 반환했다. 화면 읽기/키 입력/메시지 발송은
+수행되지 않았다. 이 접근 차단을 AppleScript, 터미널 주입, socket, 다른 에이전트로 우회하지
+않는다. 결과는 NOT SENT이며 하네스 native 전송 시험 성공도 아니다.
+기존 두 세션·작업·중지와 C3 미완료 상태를 보존한다. 새 실행이나 재접속은 시작하지 않았다.

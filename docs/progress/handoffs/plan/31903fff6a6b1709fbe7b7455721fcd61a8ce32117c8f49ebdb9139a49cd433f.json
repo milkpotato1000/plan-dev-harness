@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "eefa18becf46d18fefe3427a1d88d30768b4d854",
+  "document": "docs/planning/reviews/P011-dev-handoff.md",
+  "summary": "P011 READY: 공식 Claude CLI relay로 Codex→기존 Claude 전달, 설치형0.2.6; 반복 인간 입력 제거",
+  "next_action": "정확 검토 SHA 내부 채택, W1~W7 구현/격리 검증 후 기존 P010 fixture 실제 수신 확인; 기존 작업/중지/권한 보존",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T04:37:38.539119+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
