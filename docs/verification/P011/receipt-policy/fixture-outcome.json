@@ -1,0 +1,12 @@
+{
+  "plan_card": "057ecbc4ca8ae0c4cb5d64fe1247afd4b7bccdf3",
+  "plan_event": "69d2de4ea1e6c6384f5bea4521de5f6d07dfeca3",
+  "plan_checkpoint": "9975ce8cefbbcf1bbed9319a1d994ee3845197ec",
+  "report": "docs/verification/P010-live/04-plan-P901-send.md",
+  "report_sha256": "b04532966f3ee369b5ace9f867ad245326067cb66a2cbbeab5dca1f3f151dfbd",
+  "dev_head": "a8f39aef5be29989f5655cc0569a3061ad19f277",
+  "event_state": "PENDING",
+  "issue": "dev_stale_or_future",
+  "dev_native_send": false,
+  "second_delivery": "NOTRUN"
+}

@@ -1,0 +1,39 @@
+{
+  "native": "native_success",
+  "send_authorized": true,
+  "callbacks": [
+    {
+      "body_matches": false,
+      "exact": false,
+      "target_matches": false,
+      "tool": "ListAgents"
+    },
+    {
+      "authorized": true,
+      "body_matches": true,
+      "display_preview": false,
+      "exact": false,
+      "full_content": false,
+      "listed": true,
+      "recipient_matches": true,
+      "summary_matches": true,
+      "target_matches": true,
+      "tool": "SendMessage"
+    }
+  ],
+  "receipt": {
+    "plan": [
+      "peer_input"
+    ],
+    "dev": []
+  },
+  "heads": {
+    "plan": "c5d29c7dd4f3449309e5db2bdf38d4b3df2646f8",
+    "dev": "a8f39aef5be29989f5655cc0569a3061ad19f277"
+  },
+  "cards": {
+    "plan": [],
+    "dev": []
+  },
+  "native_message_id_hash": "026f3636cac727fa67a7563062bc7a7f16247a1ad5d757d25d563612921dfdc6"
+}
