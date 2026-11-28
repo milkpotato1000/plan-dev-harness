@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P011-official-claude-relay.md",
   "summary": "0.2.6 relay source and isolated verification, actual P901 argument rejection",
   "next_action": "Review consumed attempt and recovery disposition under P011-official-claude-relay",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T04:48:24.758381+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T04:48:58.008698+00:00",
+      "evidence": "Codex send_message_to_thread succeeded for verified project plan, result 335183562eb1d990bbce96ced55ae29b502cd53c"
     }
   ]
 }
