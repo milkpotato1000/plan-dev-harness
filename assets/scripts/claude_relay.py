@@ -224,7 +224,40 @@ def reserve_recovery(directory, key, message, peer, role, review):
     return receipt
 
 
-async def relay(repo, role, key, message, verify, recovery_review=None):
+def reserve_validation(directory, key, message, peer, role, review):
+    """Consume the reviewed validation attempt after both earlier pre-send denials."""
+    if not re.fullmatch(r'[0-9a-f]{64}', key) or not re.fullmatch(r'[0-9a-f]{40}', review):
+        raise ValueError('Invalid validation review')
+    with registry.locked(directory):
+        target = directory / ('relay-validation-' + key + '.json')
+        if target.exists():
+            raise ValueError('Validation already consumed')
+        grant = registry.read_json(directory / ('relay-validation-grant-' + key + '.json'))
+        first = registry.read_json(directory / ('relay-disposition-' + key + '.json'))
+        entry = registry.read_json(directory / 'claude-relay-attempts.json')[key]
+        recovery = directory / ('relay-recovery-' + key + '.json')
+        consumed = registry.read_json(recovery)
+        outcome = registry.read_json(recovery.with_suffix('.result.json'))
+        required = dict(key=key, payload=digest(message), target=digest(peer['session_id']),
+                        generation=peer['generation'], role=role)
+        if any(record.get(k) != v for record in (grant, first, consumed) for k,v in required.items()):
+            raise ValueError('Previous recipient or payload changed')
+        if (grant.get('review') != review or grant.get('state') != 'approved'
+                or not re.fullmatch(r'[0-9a-f]{40}', grant.get('canonical_review',''))
+                or not re.fullmatch(r'[0-9a-f]{40}', grant.get('source',''))
+                or not re.fullmatch(r'[0-9a-f]{64}', grant.get('a_evidence',''))
+                or first.get('state') != 'REJECTED_BEFORE_SEND' or consumed.get('state') != 'consumed'
+                or entry.get('status') != 'unknown' or digest(json.dumps(entry,sort_keys=True)) != first.get('original_entry')
+                or outcome.get('status') != 'unknown' or outcome.get('send_authorized') is not False):
+            raise ValueError('Validation evidence mismatch')
+        sends = [x for x in outcome['trace'] if x['tool'] == 'SendMessage']
+        if len(sends) != 1 or sends[0].get('authorized') is not False:
+            raise ValueError('Missing unique pre-execution denial')
+        registry.atomic_json(target, {**grant,'state':'consumed','at':registry.moment().isoformat()})
+        return target
+
+
+async def relay(repo, role, key, message, verify, recovery_review=None, validation_review=None):
     import claude_agent_sdk as sdk
     root, directory, cfg = registry.config_for(repo)
     peer = current_peers(root)[role]
@@ -236,7 +269,11 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
     trace = []
     verify()
     recovery = None
-    if recovery_review is None:
+    if validation_review is not None:
+        if recovery_review is not None:
+            raise ValueError('Choose one recovery type')
+        recovery = reserve_validation(directory, key, message, peer, role, validation_review)
+    elif recovery_review is None:
         reserve(directory, key, arguments, peer['generation'])
     else:
         recovery = reserve_recovery(directory, key, message, peer, role, recovery_review)
@@ -279,6 +316,8 @@ async def relay(repo, role, key, message, verify, recovery_review=None):
             listed = len(re.findall(re.escape(arguments['to']) + r' \[([a-f0-9]+)\]', listing)) == 1
         elif attempted and event['tool_name'] == 'SendMessage' and ident == gate.call_id and all(event['tool_input'].get(k) == v for k, v in gate.expected.items()):
             response = event.get('tool_response')
+            if isinstance(response, dict) and isinstance(response.get('msg_id'), str):
+                trace.append({'native_message_id': response['msg_id']})
             result_status = native_status(response)
         return {}
 
