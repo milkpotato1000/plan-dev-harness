@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    {
+      "path": "docs/verification/P010/claude-continue-20261128/observation.json",
+      "sha256": "1d2603e12dba75331bfb1072f1a584069a7a55c4a1eace2fb38af105df9048b5"
+    },
+    {
+      "path": "docs/verification/P010/claude-continue-20261128/report.md",
+      "sha256": "9bc16c9795b656575565053bb66aff1cf65c4803636bee40bde377e7a5df6c20"
+    }
+  ]
+}

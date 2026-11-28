@@ -1,0 +1,170 @@
+{
+  "observed_at": "2026-11-28T04:09:00.341227+00:00",
+  "method": "official claude agents --json and exact matching session JSONL metadata only",
+  "roles": {
+    "plan": {
+      "host_matches": 1,
+      "host_states": [
+        "idle"
+      ],
+      "head": "c5d29c7dd4f3449309e5db2bdf38d4b3df2646f8",
+      "clean": true,
+      "cards": [],
+      "doctor_exit": 0,
+      "doctor": {
+        "schema_version": 1,
+        "registration": "observations_only",
+        "dispatch": "pending",
+        "issues": [
+          "plan_stale_or_future",
+          "dev_stale_or_future"
+        ],
+        "peers": {
+          "plan": {
+            "role": "plan",
+            "host": "claude",
+            "generation": 1,
+            "state": "idle",
+            "observed_at": "2026-11-27T16:45:10.150534+00:00"
+          },
+          "dev": {
+            "role": "dev",
+            "host": "claude",
+            "generation": 3,
+            "state": "idle",
+            "observed_at": "2026-11-27T16:45:46.726154+00:00"
+          }
+        },
+        "performs_actions": false,
+        "execution": "not_authorized_by_registration",
+        "next_dev": null,
+        "notes": [
+          "Recheck exact reviewed handoff, real human grant and recipient capabilities before send.",
+          "Busy dev preserves current P and applies pending work only at a safe boundary.",
+          "Empty/incomplete host inventory is not evidence that another writer is dead."
+        ]
+      },
+      "matching_session_record_files": 1,
+      "session_metadata": {
+        "last_timestamp": "2026-11-27T16:48:11.584Z",
+        "user_inputs": [
+          {
+            "at": "2026-11-27T16:44:35.634Z",
+            "is_meta": false,
+            "record_sha256": "8505bff31a27b30dd10cc75109c91272849681fda2b4aa211a8aea6615f3aa70"
+          }
+        ],
+        "queued_inputs": [],
+        "harness_hooks": [
+          {
+            "at": "2026-11-27T16:44:21.436Z",
+            "event": "SessionStart",
+            "exit": 0,
+            "stderr": "plan-dev-harness: registered\n",
+            "record_sha256": "ac8950c00e9407428bf38d53eb891ce40df9599d9c3e4004e4e9e23b585e2ff6"
+          },
+          {
+            "at": "2026-11-27T16:45:10.157Z",
+            "event": "Stop",
+            "exit": 0,
+            "stderr": "plan-dev-harness: registered\n",
+            "record_sha256": "728d0046b90d2d39e348b0063e5dba8c0e168cea7d465d2bcf18c5805a04c2fb"
+          }
+        ],
+        "last_tool": {
+          "at": "2026-11-27T16:45:03.851Z",
+          "name": "Bash",
+          "record_sha256": "1103e8b416a658cddd54836d331e7bf6981a06df2e7892ae2a5bb360ee14f22c"
+        },
+        "after_startup_checkpoint": {
+          "cutoff": "2026-11-27T16:49:00Z",
+          "record_count": 0,
+          "tool_count": 0
+        },
+        "native_send_count": 0
+      }
+    },
+    "dev": {
+      "host_matches": 1,
+      "host_states": [
+        "idle"
+      ],
+      "head": "a8f39aef5be29989f5655cc0569a3061ad19f277",
+      "clean": true,
+      "cards": [],
+      "doctor_exit": 0,
+      "doctor": {
+        "schema_version": 1,
+        "registration": "observations_only",
+        "dispatch": "pending",
+        "issues": [
+          "plan_stale_or_future",
+          "dev_stale_or_future"
+        ],
+        "peers": {
+          "plan": {
+            "role": "plan",
+            "host": "claude",
+            "generation": 1,
+            "state": "idle",
+            "observed_at": "2026-11-27T16:45:10.150534+00:00"
+          },
+          "dev": {
+            "role": "dev",
+            "host": "claude",
+            "generation": 3,
+            "state": "idle",
+            "observed_at": "2026-11-27T16:45:46.726154+00:00"
+          }
+        },
+        "performs_actions": false,
+        "execution": "not_authorized_by_registration",
+        "next_dev": null,
+        "notes": [
+          "Recheck exact reviewed handoff, real human grant and recipient capabilities before send.",
+          "Busy dev preserves current P and applies pending work only at a safe boundary.",
+          "Empty/incomplete host inventory is not evidence that another writer is dead."
+        ]
+      },
+      "matching_session_record_files": 1,
+      "session_metadata": {
+        "last_timestamp": "2026-11-27T16:48:48.114Z",
+        "user_inputs": [
+          {
+            "at": "2026-11-27T16:45:11.751Z",
+            "is_meta": false,
+            "record_sha256": "b8487bef18ff0588e892a9e918cffa196939b51e287bba2af271d48b42732c14"
+          }
+        ],
+        "queued_inputs": [],
+        "harness_hooks": [
+          {
+            "at": "2026-11-27T16:44:47.199Z",
+            "event": "SessionStart",
+            "exit": 0,
+            "stderr": "plan-dev-harness: registered\n",
+            "record_sha256": "f0478293f41e4cc12cc43ece29accfea94ddc52fa418c10611cf6a3cd02fd518"
+          },
+          {
+            "at": "2026-11-27T16:45:46.731Z",
+            "event": "Stop",
+            "exit": 0,
+            "stderr": "plan-dev-harness: registered\n",
+            "record_sha256": "acdb120563732bdedcc2c8f34836f7b2f27c63b205d56f8c093616d4111ebbf5"
+          }
+        ],
+        "last_tool": {
+          "at": "2026-11-27T16:45:39.649Z",
+          "name": "Bash",
+          "record_sha256": "6056873e3266aaba5bdba82bdd5ffbbea56950840cb23c08b17a675a017ff31f"
+        },
+        "after_startup_checkpoint": {
+          "cutoff": "2026-11-27T16:49:00Z",
+          "record_count": 0,
+          "tool_count": 0
+        },
+        "native_send_count": 0
+      }
+    }
+  }
+}
