@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "plan",
+  "source_role": "dev",
+  "commit": "ea3808b1a5e19eaade9474b4a3b299c2a1353974",
+  "document": "docs/feedback/dev/reviews/P011-canonical-input-validation.md",
+  "summary": "Canonical input and neutral receiver byte proof; inbound refusal outstanding",
+  "next_action": "Review corrected isolated refusal test and native result classification before real delivery",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T05:08:20.150772+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
