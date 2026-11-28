@@ -1,0 +1,13 @@
+{
+  "adopted": "057ecbc4ca8ae0c4cb5d64fe1247afd4b7bccdf3",
+  "adoption_commit": "444f4f16a2faab7069c278f2a2e52ab6172ec6ec",
+  "completion_commit": "10a4f5fa9407b949113d1c77f151782cdc8a98e8",
+  "expected_hex": "5039303120eba788ecbba420e29c930a",
+  "verified_blob_hex": "5039303120eba788ecbba420e29c930a",
+  "bytes": 16,
+  "marker_sha256": "0b3cecdb67a04937c647fbb8686afff2b54a58ba0f17940d2166a666ebd1eb6f",
+  "evidence_document": "docs/verification/P010-live/03-dev-P901.md",
+  "evidence_sha256": "6d2c76723c92812512f698ba594b6ce84366f07c4932d243b7694e43627186ea",
+  "card": "complete",
+  "criteria_passed": 3
+}

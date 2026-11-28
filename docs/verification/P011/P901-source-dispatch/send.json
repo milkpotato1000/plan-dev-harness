@@ -1,0 +1,18 @@
+{
+  "source": "cb5b529d082c204325b0222f02c5b24a1cf5f275",
+  "review": "50b979b563d9e2dfb3122734c1c7f60cef9c9ec8",
+  "exact": "057ecbc4ca8ae0c4cb5d64fe1247afd4b7bccdf3",
+  "preflight_plan": "9975ce8cefbbcf1bbed9319a1d994ee3845197ec",
+  "preflight_dev": "a8f39aef5be29989f5655cc0569a3061ad19f277",
+  "document_hashes": {
+    "docs/planning/plans/P901.md": "d06c14cd336a95ea23e0ad451815f5a1c33fd643f00851ceb946af9f79c7f068",
+    "docs/planning/reviews/P901-review.md": "5555d19bf3c626a590528af21b43ceac3bd9017c5bb54456f4296c775cbe3345",
+    "docs/progress/handoffs/plan/f1f4e6df11271e771c44423b967c2cca04f96d028c1a807a2a8058ae6cec3423.json": "1d8d418c5577a3bbb4a9e280abb33a07b68a1d3d101990f2191fc57dbf124440"
+  },
+  "receiver_generation": 3,
+  "send_attempts": 1,
+  "native": "native_success",
+  "matched_receipt": "peer_input",
+  "matched_message_sha256": "0614230af4e674ac5501320baf6661a1f9a87a5d8ac289117b93c3fdd5308098",
+  "sender_cost_usd": 0.0294539
+}
