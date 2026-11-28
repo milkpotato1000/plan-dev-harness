@@ -1,0 +1,41 @@
+{
+  "source": "cb5b529d082c204325b0222f02c5b24a1cf5f275",
+  "canonical_review": "691d236befd010cb65332147349ca36be728bf63",
+  "policy_review": "aa08705e79e9d9d61130c300bd3925d694781d9d",
+  "payload_bytes": 519,
+  "body_hash": "609214c6a100cba47bc301bd6180d313854b2cad70b70d247d92a9fa697abdcb",
+  "rows": [
+    {
+      "mode": "ordinary",
+      "callbacks": [
+        {
+          "id_bound": true,
+          "replacement": true,
+          "complete": true
+        }
+      ],
+      "native": "native_success",
+      "receipts": [
+        "peer_input"
+      ],
+      "refusal_record_hashes": [],
+      "cost_usd": 0.0234306
+    },
+    {
+      "mode": "refuse",
+      "callbacks": [
+        {
+          "id_bound": true,
+          "replacement": true,
+          "complete": true
+        }
+      ],
+      "native": "native_success",
+      "receipts": [],
+      "refusal_record_hashes": [
+        "75eab3a70caeeb5377c5eb5cd8b42b36d553dd733622fa38c0d0e107e5d3977b"
+      ],
+      "cost_usd": 0.024067099999999998
+    }
+  ]
+}
