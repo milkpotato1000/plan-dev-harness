@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P011-receipt-policy-completion.md",
   "summary": "P011 실제517byte 수신 확인; observer/classifier/거부 시험 보완",
   "next_action": "격리A 잔여 정책 검증 후 기존B1회 조건 적용, 기존모든실패/키/중지 보존",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T05:09:28.340225+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T05:10:07.235188+00:00",
+      "evidence": "2026-11-28 Asia/Seoul official send_message_to_thread succeeded to existing dev; exactaa08705e79e9d9d61130c300bd3925d694781d9d. Remaining A tests; prior B budget unchanged."
     }
   ]
 }
