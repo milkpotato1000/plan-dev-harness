@@ -7,12 +7,17 @@
   "document": "docs/planning/reviews/P011-P901-source-dispatch.md",
   "summary": "P011 첫 기존Claude실제수신 확인; P901 기존PENDING을 검증된0.2.6 source로전달",
   "next_action": "writer/통제/같은event 미발송 재확인 후 transport만1회; fixture runtime/소유권보존",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T05:20:04.620815+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T05:20:43.395338+00:00",
+      "evidence": "2026-11-28 Asia/Seoul official send_message_to_thread succeeded to existing dev; exact50b979b563d9e2dfb3122734c1c7f60cef9c9ec8 P901 source transport only. No completion wait."
     }
   ]
 }
