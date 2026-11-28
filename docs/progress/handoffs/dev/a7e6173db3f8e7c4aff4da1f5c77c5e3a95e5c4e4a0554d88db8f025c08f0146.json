@@ -7,12 +7,17 @@
   "document": "docs/feedback/dev/reviews/P011-content-diagnostic.md",
   "summary": "Two synthetic stream and hook comparisons plus replacement design",
   "next_action": "Review canonical input construction and controlled receiver acceptance conditions",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T04:58:39.121337+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T04:59:06.789543+00:00",
+      "evidence": "Codex project plan send succeeded for diagnostic 75c85d4cbdb0d1aba6b654ea687ea08e4af7ab76"
     }
   ]
 }
